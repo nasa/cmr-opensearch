@@ -1,0 +1,7 @@
+<section id="metrics">
+	Displaying <%= start_hit(cursor, number_of_results, number_of_hits) %> to <%= stop_hit(cursor, length, number_of_results, number_of_hits) %> of <%= number_of_hits %>
+	<% unless parent.nil? %>
+	granules for collection '<%= parent %>'
+	<% end %>
+    (took <%= time %> seconds)
+</section>

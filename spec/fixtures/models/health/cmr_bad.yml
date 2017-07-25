@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/health
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Mar 2016 13:50:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cmr-Request-Id:
+      - f97c7ea0-126a-44cd-8ff2-92e1e109da2a
+      Content-Length:
+      - '208'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: '{"echo":{"ok?":true},"internal-metadata-db":{"ok?":false,"dependencies":{"oracle":{"ok?":true},"echo":{"ok?":true}}},"index-set":{"ok?":true,"dependencies":{"elastic_search":{"ok?":true},"echo":{"ok?":true}}}}'
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 13:50:48 GMT
+recorded_with: VCR 2.9.2

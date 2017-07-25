@@ -1,0 +1,26 @@
+current: &current
+  opensearch_url: http://localhost:3000
+  catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
+  echo_rest_endpoint: https://api.echo.nasa.gov/echo-rest/
+  contact: @MAIL_SENDER@
+  mode: @MODE@
+  public_catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
+  version: @ECHO_VERSION@
+  release_page: https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information
+  documentation_page: https://wiki.earthdata.nasa.gov/display/CMR/Common+Metadata+Repository+Home
+  display_banner: '@DISPLAY_BANNER@'
+  organization: NASA EOSDIS
+  organization_contact_email: stephen.w.berrick@nasa.gov
+  organization_contact_name: Stephen Berrick
+
+development:
+  <<: *current
+
+production:
+  <<: *current
+  catalog_rest_endpoint: @CMR_SEARCH_ENDPOINT@/
+  echo_rest_endpoint: @REST_ROOT_URL_FOR_REVERB@
+  opensearch_url: @PUBLIC_SSL_PROTOCOL@://@PUBLIC_SERVER@:@PUBLIC_SSL_PORT@/opensearch
+  public_catalog_rest_endpoint: @CMR_PUBLIC_SEARCH_ENDPOINT@/
+test: &test
+  <<: *current

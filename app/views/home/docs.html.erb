@@ -1,0 +1,283 @@
+<h1>CMR OpenSearch Documentation</h1>
+<ul>
+  <li><a href="#overview">CMR OpenSearch overview</a></li>
+  <ul>
+    <li><a href="#specs-of-interest">Specifications of interest</a></li>
+  </ul>
+  <li><a href="#collections">Searching for CMR collections using OpenSearch</a></li>
+  <ul>
+    <li><a href="#cwic-collections">Searching for CWIC CMR collections using OpenSearch</a></li>
+  </ul>
+  <li><a href="#granules">Searching for CMR granules using OpenSearch</a></li>
+  <li><a href="#osdd-validation">Validating the standards compliance of the CMR OpenSearch implementation</a></li>
+  <li><a href="#schemas">XML and RELAX NG schemas used for validating the CMR OpenSearch Descriptor Document</a></li>
+</ul>
+<section>
+  <h2><a name="overview"/>CMR OpenSearch Overview</h2>
+  <p>CMR OpenSearch is a CMR collections and granules search implementation based on the
+    <a class="ext" target="_blank" href='http://www.opensearch.org/Home'>OpenSearch 1.1 (Draft 5) specification</a>. It
+    allows clients to formulate OpenSearch compliant queries against the CMR collections and granules inventory and
+    specify
+    the desired search results format as OpenSearch compliant
+    <a class="ext" target="_blank" href='http://tools.ietf.org/html/rfc4287'>ATOM</a>
+    or <a class="ext" target="_blank" href='https://www.w3.org/TR/html5/'>HTML</a>. The typical two-step usage scenario
+    is
+    described in the
+    <a class="ext" target="_blank" href='http://wiki.esipfed.org/images/9/97/Combined_Open_Search_Best_Practices_v0.4.pdf'>ESIP
+      Earth Data discovery OpenSearch best practices</a>
+    document.
+
+  </p>
+  <h3><a name="specs-of-interest"/>Specifications of interest</h3>
+  <p>CMR OpenSearch is compliant with the following specifications, best practices and implementation guides:
+  <ul>
+    <li><a class="ext" target="_blank" href='http://www.opensearch.org/Home'>OpenSearch 1.1 (Draft 5) specification</a>
+    </li>
+    <li>
+      <a class="ext" target="_blank" href='http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2'>OpenSearch
+        Geo extension 1.0 (Draft 2)</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://www.opensearch.org/Specifications/OpenSearch/Extensions/Time/1.0/Draft_1'>OpenSearch
+        Time extension 1.0 (Draft 1)</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0'>OpenSearch
+        Parameter extension 1.0 (Draft 1)</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://www.opensearch.org/Specifications/OpenSearch/Extensions/Relevance/1.0/Draft_1'>OpenSearch
+        Relevance extension 1.0 (Draft 1)</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://www.opengeospatial.org/standards/opensearchgeo'>OGC OpenSearch Geo and
+        Time extensions</a></li>
+    <li><a class="ext" target="_blank" href='https://portal.opengeospatial.org/files/65168'>OGC OpenSearch extension for
+      Earth Observation</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://www.loc.gov/standards/sru/sru-2-0.html'>OASIS Search Retrieve via URL
+        2.0</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://ceos.org/document_management/Working_Groups/WGISS/Interest_Groups/OpenSearch/CEOS-OPENSEARCH-BP-V1.1-Final.pdf'>CEOS
+        OpenSearch best practices 1.1</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://wiki.esipfed.org/images/9/97/Combined_Open_Search_Best_Practices_v0.4.pdf'>ESIP
+        Earth Data discovery OpenSearch best practices</a></li>
+    <li>
+      <a class="ext" target="_blank" href='http://ceos.org/wp-content/uploads/2014/12/CEOSOpenSearchBestPracticeDocument-PublicComment.pdf'>CEOS
+        OpenSearch developer guide 1.4</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2><a name="collections"/>Searching for CMR collections (datasets) using OpenSearch</h2>
+  <p>
+    The <%= link_to 'CMR OpenSearch root OSDD', descriptor_document_collections_path(:format => "xml", :clientId => 'cswOpenSearchDoc', :target => '_blank') %>
+    describes the supported search
+    query parameters for CMR OpenSearch collection searches. CMR OpenSearch provides an
+    alternate <%= link_to "facet-enabled CMR OpenSearch root OSDD", descriptor_document_facets_collections_path(:format => "xml", :clientId => 'cswOpenSearchDoc', :target => '_blank') %>
+    ,
+    which allows the client to request the presentation of the faceted search results as specified in the
+    <a class="ext" target="_blank" href='http://www.loc.gov/standards/sru/sru-2-0.html'>OASIS Search Retrieve via URL
+      2.0 specification</a>.  When requested, facet information is added to the end of the ATOM feed in order to maintain
+      the ATOM response compatibility.
+    The OSDD request requires a clientId query parameter used to uniquely identify the client as illustrated in the
+    examples below:
+  </p>
+  <ul>
+    <li>GET CMR root OSDD with a clientId = cswOpenSearchDoc:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections/descriptor_document.xml?clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections/descriptor_document.xml?clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the <span class="emphasis">facet enabled</span> CMR root OSDD with a clientId = cswOpenSearchDoc:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections/descriptor_document_facets.xml?clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections/descriptor_document_facets.xml?clientId=cswOpenSearchDoc</a>
+    </li>
+  </ul>
+  <ul>
+    <p>Sample <span class="emphasis">CMR OpenSearch collections</span> searches:</p>
+    <li>GET the first 10 CMR collections with results in the ATOM format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR collections with results in the ATOM format and facet information in the output:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?numberOfResults=10&facetLimit=100&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?numberOfResults=10&facetLimit=100&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR collections with results in the HTML format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections?numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections?numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR collections containing the term MODIS with results in the ATOM output format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?keyword=MODIS&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?keyword=MODIS&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR collections containing the term MODIS and intersecting the -179,-89,179,89 bounding box
+      with results in the ATOM output format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?keyword=MODIS&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?keyword=MODIS&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR collections containing the term MODIS, with the temporal coverage between
+      2000-09-06T00:00:00Z and
+      2016-09-06T00:00:00Z and intersecting the -179,-89,179,89 bounding box with results in the ATOM output format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?keyword=MODIS&startTime=2000-09-06T00:00:00Z&endTime=2016-09-06T00:00:00Z&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?keyword=MODIS&startTime=2000-09-06T00:00:00Z&endTime=2016-09-06T00:00:00Z&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+  </ul>
+  <h3><a name="cwic-collections"/>Searching for CWIC CMR collections using OpenSearch</h3>
+  <p>CMR OpenSearch can restrict the scope of the search queries to CEOS WGISS Integrated Catalog (CWIC) collections via
+    the queryParamter <span class=emphasis>isCwic = true</span>.
+    CWIC collections are tagged in the CMR inventory as special collections for which granules are provided via a CWIC
+    OpenSearch interface according to the
+    <a class="ext" target="_blank" href='http://wiki.esipfed.org/images/9/97/Combined_Open_Search_Best_Practices_v0.4.pdf'>ESIP
+      Earth Data discovery OpenSearch best practices</a>. Details about CWIC can be found at
+    <a target="_blank" class="ext" href="http://ceos.org/ourwork/workinggroups/wgiss/access/cwic/">Committee for Earth
+      Observation Satellites CWIC project page.</a></p>
+  <ul>
+    <p>Sample CMR OpenSearch <span class="emphasis">CWIC CMR collections</span> searches:</p>
+    <li>GET the first 10 CWIC CMR collections with results in the ATOM format and facet information in the output:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?numberOfResults=10&facetLimit=100&isCwic=true&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?numberOfResults=10&facetLimit=100&isCwic=true&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CWIC CMR collections with results in the HTML format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections?numberOfResults=10&isCwic=true&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections?numberOfResults=10&isCwic=true&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CWIC CMR collections containing the term MODIS with results in the ATOM output format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/collections.atom?keyword=MODIS&isCwic=true&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /collections.atom?keyword=MODIS&isCwic=true&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2><a name="granules"/>Searching for CMR granules using OpenSearch</h2>
+  <p>
+    A CMR collection specific OSDD allow searches for granules within a specified collection. There is no facet-enabled
+    collection specific OSDD.  An OpenSearch CMR collection must be uniquely identified by its shortName, versionId and
+    dataCenter as illustrated by the sample CMR OpenSearch collection specific OSDD below:
+  </p>
+  <ul>
+    <li>GET CMR OpenSearch collection specific OSDD with a clientId = cswOpenSearchDoc:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/granules/descriptor_document.xml?dataCenter=PODAAC&shortName=ARESE_ER2_MAS&versionId=1&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /granules/descriptor_document.xml?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&clientId=cswOpenSearchDoc</a>
+    </li>
+  </ul>
+
+  <ul>
+    <p>Sample <span class="emphasis">CMR OpenSearch granules</span> searches within the above collection:</p>
+    <li>GET the first 10 CMR granules in the specified collection with results in the ATOM format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR granules in the specified collection with results in the HTML format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/granules?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /granules?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR granules in the specified collection and the granule spatial coverage intersecting the -179,-89,179,89 bounding box
+      with results in the ATOM output format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+    <li>GET the first 10 CMR granules in the specified collection with the granules temporal coverage between
+      1995-09-06T00:00:00Z and 2016-09-06T00:00:00Z and the granule temporal coverage intersecting the -179,-89,179,89 bounding box
+      with results in the ATOM output format:
+      <a target="_blank" href="<%= root_url.chomp '/' %>/granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&startTime=1995-09-06T00:00:00Z&endTime=2016-09-06T00:00:00Z&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc"><%= root_url.chomp '/' %>
+        /granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&startTime=1995-09-06T00:00:00Z&endTime=2016-09-06T00:00:00Z&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc</a>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2><a name="osdd-validation"/>Validating the standards compliance of the CMR OpenSearch implementation</h2>
+  <p>
+    The CMR OpenSearch or any other implementation which has a publicly accessible OpenSearch Description Document can
+    be validated for compliance with all off the <a href="#specs-of-interest">Specifications of interest</a> by
+    providing the URL
+    of the OSDD to be validated to the
+    <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/validations">CWICSmart OSDD validation
+      tool</a>.
+  </p>
+  <p>The tool will provide individual validation scores for OpenSearch features as well as an overall validation score.
+    For features which failed validation, the tool will suggest ways to achieve compliance.
+  </p>
+</section>
+
+<section>
+  <h2><a name="schemas"/>XML and RELAX NG schemas used for validating the CMR OpenSearch Descriptor Document:</h2>
+  <ul>
+    <li>XML schemas:</li>
+    <ul>
+      <li>
+        <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/OpenSearch.xsd">OpenSearch.xsd</a>
+        was developed
+        by developed by the <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/">CWICSmart</a>
+        team based on an existing public domain schema at
+        <a target="_blank" class="ext" href="http://weblogs.asp.net/wkriebel/archive/2008/02/04/opensearch-xsd.aspx">http://weblogs.asp.net/wkriebel/archive/2008/02/04/opensearch-xsd.aspx</a>
+      </li>
+      </li>
+      <li><a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/ATOM.xsd">ATOM.xsd</a> public
+        domain schema identical with
+        <a target="_blank" class="ext" href="https://tools.oasis-open.org/version-control/browse/wsvn/cmis/trunk/SchemaProject/schema/ATOM.xsd">https://tools.oasis-open.org/version-control/browse/wsvn/cmis/trunk/SchemaProject/schema/ATOM.xsd</a>
+      </li>
+      </li>
+      <li><a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/xml.xsd">xml.xsd</a> public
+        domain schema referenced by
+        <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/ATOM.xsd">ATOM.xsd</a>
+        identical with the OASIS
+        <a target="_blank" class="ext" href="https://tools.oasis-open.org/version-control/browse/wsvn/cmis/trunk/SchemaProject/schema/xml.xsd">https://tools.oasis-open.org/version-control/browse/wsvn/cmis/trunk/SchemaProject/schema/xml.xsd</a>
+      </li>
+      </li>
+    </ul>
+    <p></p>
+    <li>RELAX NG compact syntax schemas:</li>
+    Becuase the
+    <a class="ext" target="_blank" href='https://portal.opengeospatial.org/files/65168'>OGC OpenSearch extension for
+      Earth Observation</a>
+    and the<a class="ext" target="_blank" href='http://www.opengeospatial.org/standards/opensearchgeo'>OGC OpenSearch
+    Geo and Time extensions</a>
+    specifications are in different maturity levels, their individual RELAX NG schemas have not yet been unified into
+    a single set of RELAX NG schemas that can be applied to both specifications.
+    <ul>
+      <li>Schemas used by the
+        <a class="ext" target="_blank" href='https://portal.opengeospatial.org/files/65168'>OGC OpenSearch extension for
+          Earth Observation</a>:
+      </li>
+      <ul>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osxeo/atomeo_0.rnc">atomeo.rnc</a>
+        </li>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osxeo/osdd_0.rnc">osdd.rnc</a>
+        </li>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osxeo/osddeo_0.rnc">osddeo.rnc</a>
+        </li>
+      </ul>
+    </ul>
+    <ul>
+      <li>Schemas used by the
+        <a class="ext" target="_blank" href='http://www.opengeospatial.org/standards/opensearchgeo'>OGC OpenSearch Geo
+          and Time extensions</a>:
+      </li>
+      <ul>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/atom_feed.rnc">atom_feed.rnc</a>
+        </li>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/atomgeo.rnc">atom_geo.rnc</a>
+        </li>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/atomtime.rnc">atom_time.rnc</a>
+        </li>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osxeo/osddeo_0.rnc">osddeo.rnc</a>
+        </li>
+        <li><a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osatom.rnc">osatom.rnc</a>
+        </li>
+        <li><a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osdd.rnc">osdd.rnc</a></li>
+        <li><a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osddgeo.rnc">osddgeo.rnc</a>
+        </li>
+        <li>
+          <a target="_blank" class="ext" href="http://api.echo.nasa.gov/cwic-smart/assets/osddtime.rnc">osddtime.rnc</a>
+        </li>
+      </ul>
+    </ul>
+  </ul>
+</section>

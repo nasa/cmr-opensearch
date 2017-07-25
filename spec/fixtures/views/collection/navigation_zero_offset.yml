@@ -1,0 +1,311 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&offset=0&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 28 Sep 2016 17:06:24 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '32279'
+      Cmr-Took:
+      - '13'
+      Cmr-Request-Id:
+      - 3102717e-6c93-4b0e-a599-fc5fb9714730
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '27922'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2016-09-28T17:06:24.571Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core&amp;page_size=10&amp;offset=0</id><title
+        type=\"text\">ECHO dataset metadata</title><entry><id>C1214621811-SCIOPS</id><title
+        type=\"text\">(SCI) The Bowen Island GeoLibrary (Data Collection)</title><summary
+        type=\"text\">The Bowen Island GeoLibrary is a collection of map, text and
+        image-based\n      information that reflects what we currently know about
+        our island and about\n      ourselves as a community.\n      \n      It includes
+        an atlas of biophysical and land use planning maps, and a\n      repository
+        of key documents, including the Bowen Island Official Community\n      Plan,
+        the Green Zone report, the State of Bowen Island Report, the Crown Lands\n
+        \     Report and more.\n      \n      The Bowen Island Sustainability Project
+        (BISP) was initiated in June 2000 as an\n      extension of work conducted
+        by the Capilano College Environmental Science\n      Program.\n      \n      BISP
+        proceeded with direct funding by the Real Estate Foundation, and through\n
+        \     partnerships with Bowen Island Municipality, the Geological Survey of
+        Canada\n      and Capilano College. The deliverables from this project are
+        two-fold: a) State\n      of Bowen Island (SoBI) report and b) Bowen Island
+        Information System. The Bowen\n      Island Information System includes four
+        subdeliverables: a database catalogue,\n      Geographic Information System
+        (GIS) atlas, maps &amp; spatial data for the SoBI\n      report, and an information
+        system summary report.\n      \n      Through the deliverables, the Bowen
+        Island Sustainability Project will assist\n      the community, the municipality,
+        and any future initiatives in evaluating and\n      facilitating the decision
+        making processes that leads to more sustainable\n      communities.The purpose
+        of developing the information system as part of the\n      Bowen Island Sustainability
+        Project is to support and provide critical\n      information about Bowen
+        Island for the ?State of Bowen Island' report. It also\n      facilitates
+        the use of information, both spatial and non-spatial, on Bowen\n      Island
+        in future initiatives, by compiling a vital information catalogue and a\n
+        \     collection of GIS data for the community.\n      Spatial Data Organization
+        Information -\n      \n          Indirect Spatial Reference:\n          Direct
+        Spatial Reference:\n          Raster Object Type:\n          Row Count:\n
+        \         Column Count:\n          Vertical Count:\n      Spatial Reference
+        Information -\n           Horizontal Coordinate System Definition -\n      \n
+        \     Planar -\n      \n      \n      \n      \n          Planar Coordinate
+        Encoding Method:\n          Coordinate Representation:\n           Abscissa
+        Resolution:\n           Ordinate Resolution:\n          Distance and Bearing
+        Representation:\n           Distance Resolution:\n           Bearing Resolution:\n
+        \          Bearing Units:\n           Bearing Reference Direction:\n           Bearing
+        Reference Meridian:\n          Planar Distance Units:\n      \n         Geodetic
+        Model:\n           Horizontal Datum Name:\n          Ellipsoid Name:\n          Semi-major
+        Axis:\n          Denominator of Flattening Ratio:</summary><updated>2015-12-03T00:00:00.000Z</updated><echo:datasetId>(SCI)
+        The Bowen Island GeoLibrary (Data Collection)</echo:datasetId><echo:shortName>Canada_SCI_BowenIsGeoLibrary</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>BIFWMS</echo:archiveCenter><echo:organization>BIFWMS</echo:organization><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>49.337
+        -123.45 49.426 -123.325</georss:box><echo:difId>Canada_SCI_BowenIsGeoLibrary</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214587974-SCIOPS</id><title
+        type=\"text\">(U-Th)/He ages from the Kukri Hills of southern Victoria Land</title><summary
+        type=\"text\">The data set consists of (U-Th)/He ages collected from three
+        vertical profiles\n      from the the Kukri Hills (north side of the Ferrar
+        Glacier) of Southern\n      Victoria Land.  The data set provides information
+        on the cooling history and\n      hence the denduation history of the Transantarctic
+        Mountains in this area.\n      Analyses were all carried out at the (U-Th)/He
+        lab of Ken Farley at the\n      Californai Institute of Technology.</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>(U-Th)/He
+        ages from the Kukri Hills of southern Victoria Land</echo:datasetId><echo:shortName>KUKRI_He</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>SYRACUSE/ES/TGIGRG</echo:archiveCenter><echo:organization>SYRACUSE/ES/TGIGRG</echo:organization><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         Thermochronology
+        and Tectonics Research Group at Syracuse University\n      \" hreflang=\"en-US\"
+        href=\"http://su-thermochronology.syr.edu/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-77.7
+        162.7 -77.7 162.7</georss:box><echo:difId>KUKRI_He</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214305813-AU_AADC</id><title
+        type=\"text\">0.5 hour 1 M HCl extraction data for the Windmill Islands marine
+        sediments</title><summary type=\"text\">These results are for the 0.5 hour
+        extraction of HCl.\n\nSee also the metadata records for the 4 hour extraction
+        of HCl, and the time trial data for 1 M HCl extractions.\n\nA regional survey
+        of potential contaminants in marine or estuarine sediments is often one of
+        the first steps in a post-disturbance environmental impact assessment. Of
+        the many different chemical extraction or digestion procedures that have been
+        proposed to quantify metal contamination, partial acid extractions are probably
+        the best overall compromise between selectivity, sensitivity, precision, cost
+        and expediency.  The extent to which measured metal concentrations relate
+        to the anthropogenic fraction that is bioavailable is contentious, but is
+        one of the desired outcomes of an assessment or prediction of biological impact.
+        \ As part of a regional survey of metal contamination associated with Australia's
+        past waste management activities in Antarctica, we wanted to identify an acid
+        type and extraction protocol that would allow a reasonable definition of the
+        anthropogenic bioavailable fraction for a large number of samples.  From a
+        kinetic study of the 1 M HCl extraction of two certified Certified Reference
+        Materials (MESS-2 and PACS-2) and two Antarctic marine sediments, we concluded
+        that a 4 hour extraction time allows the equilibrium dissolution of relatively
+        labile metal contaminants, but does not favour the extraction of natural geogenic
+        metals.  In a regional survey of 88 marine samples from the Casey Station
+        area of East Antarctica, the 4 h extraction procedure correlated best with
+        biological data, and most clearly identified those sediments thought to be
+        contaminated by runoff from abandoned waste disposal sites.  Most importantly
+        the 4 hour extraction provided better definition of the low to moderately
+        contaminated locations by picking up small differences in anthropogenic metal
+        concentrations.  For the purposes of inter-regional comparison, we recommend
+        a 4 hour 1 M HCl acid extraction as a standard method for assessing metal
+        contamination in Antarctica.\n\nThe fields in this dataset are\n\nLocation\nSite\nReplicate\nAntimony\nArsenic\nCadmium\nChromium\nCopper\nIron\nLead\nManganese\nNickel\nSilver\nTin\nZinc</summary><updated>2015-11-29T00:00:00.000Z</updated><echo:datasetId>0.5
+        hour 1 M HCl extraction data for the Windmill Islands marine sediments</echo:datasetId><echo:shortName>ASAC_2201_HCL_0.5</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>AU_AADC</echo:dataCenter><echo:archiveCenter>AU/AADC</echo:archiveCenter><echo:organization>AU/AADC</echo:organization><time:start>1997-10-01T00:00:00.000Z</time:start><time:end>1999-03-31T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" title=\"Download point for
+        the data\" hreflang=\"en-US\" href=\"http://data.aad.gov.au/aadc/portal/download_file.cfm?file_id=1677\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Public information
+        for ASAC project 2201\" hreflang=\"en-US\" href=\"https://secure3.aad.gov.au/proms/public/projects/report_project_public.cfm?project_no=2201\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Citation reference
+        for this metadata record and dataset\" hreflang=\"en-US\" href=\"http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=ASAC_2201_HCL_0.5\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-66
+        110 -66 110</georss:box><echo:difId>ASAC_2201_HCL_0.5</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214608509-SCIOPS</id><title
+        type=\"text\">1 Kilometer Land Cover Product from the University of Maryland</title><summary
+        type=\"text\">Over the past several years, researchers have increasingly turned
+        to remotely sensed data to improve the accuracy of data sets that describe
+        the geographic distribution of land cover at regional and global scales. To
+        develop improved methodologies for global land cover classifications as well
+        as to provide global land cover products for immediate use in global change
+        research, we have employed the NASA/NOAA Pathfinder Land (PAL) data set with
+        a spatial resolution of 1km. This data set has a length of record of 14 years
+        (1981-1994), providing the ability to test the stability of classification
+        algorithms. Furthermore, this data set includes red, infrared, and thermal
+        bands in addition to the Normalized Difference Vegetation Index (NDVI). Inclusion
+        of these additional bands improves discrimination between cover types. We
+        aim through this study to 1) develop methodologies for global land cover classifications
+        that are objective, reproducible, and feasible to implement on data from additional
+        years and 2) produce a global land cover classification at 1 km spatial resolution
+        accessible to the global change research community.</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>1
+        Kilometer Land Cover Product from the University of Maryland</echo:datasetId><echo:shortName>GLCF_GLC_1km</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>UMD/GLCF</echo:archiveCenter><echo:organization>UMD/GLCF</echo:organization><time:start>1981-01-01T00:00:00.000Z</time:start><time:end>1994-01-01T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" title=\"Download the Land
+        Cover Product.\" hreflang=\"en-US\" href=\"http://glcf.umd.edu/data/landcover/data.shtml\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90
+        -180 90 180</georss:box><echo:difId>GLCF_GLC_1km_1.0</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214607073-SCIOPS</id><title
+        type=\"text\">1 Km Resolution Land Cover Map of Canada</title><summary type=\"text\">Thirteen
+        land cover classes are covered using 1 km resolution data.\n\n      The land
+        cover classes include; mixedwood forest, deciduous forest, water\nbodies and
+        rivers, transitional forest, coniferous forest, arctic/alpine\ntundra, barren
+        lands, perennial snow or ice, agricultural cropland, rangeland\nand pasture,
+        built-up areas, United States of America and Greenland, boundary\nlines of
+        provinces and territories and permanent polar ice.\n\n      The Canada map
+        is at a scale of 1:6,500,000. Each provincial map is\navailable at 1:1,000,000
+        and 1:2,000,000 scale.Data is used for global change\nresearch and mapping.\nSpatial
+        Data Organization Information -\n\n    Indirect Spatial Reference:\n    Direct
+        Spatial Reference:\n    Raster Object Type:\n    Row Count:\n    Column Count:\n
+        \   Vertical Count:\nSpatial Reference Information -\n     Horizontal Coordinate
+        System Definition -\n\nPlanar -\n\n    Planar Coordinate Encoding Method:\n
+        \   Coordinate Representation:\n     Abscissa Resolution:\n     Ordinate Resolution:\n
+        \   Distance and Bearing Representation:\n     Distance Resolution:\n     Bearing
+        Resolution:\n     Bearing Units:\n     Bearing Reference Direction:\n     Bearing
+        Reference Meridian:\n    Planar Distance Units:\n\n   Geodetic Model:\n     Horizontal
+        Datum Name:\n    Ellipsoid Name:\n    Semi-major Axis:\n    Denominator of
+        Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>1
+        Km Resolution Land Cover Map of Canada</echo:datasetId><echo:shortName>CANEMRCCRSMANCANMAP</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>CA/MB/MC/GEO/MRSC</echo:archiveCenter><echo:organization>CA/MB/MC/GEO/MRSC</echo:organization><time:start>1991-01-01T00:00:00.000Z</time:start><time:end>1993-12-31T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>41
+        -141 70 -52</georss:box><echo:difId>CANEMRCCRSMANCANMAP</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214590112-SCIOPS</id><title
+        type=\"text\">1-100Hz ULF/ELF Electromagnetic Wave Observation at Syowa Station</title><summary
+        type=\"text\">1-100Hz ULF/ELF Electromagnetic Wave Observation at Syowa Station</summary><updated>2016-08-10T00:00:00.000Z</updated><echo:datasetId>1-100Hz
+        ULF/ELF Electromagnetic Wave Observation at Syowa Station</echo:datasetId><echo:shortName>NIPR_UAP_ELF_SYO</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>TOHOKU/PAT</echo:archiveCenter><echo:organization>TOHOKU/PAT</echo:organization><time:start>2000-01-01T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" title=\"EDAC (ELF Data Archive
+        Center)\" hreflang=\"en-US\" href=\"http://edac.geophys.tohoku.ac.jp/\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://scidbase.nipr.ac.jp/?ml_lang=en\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-69
+        39.6 -69 39.6</georss:box><echo:difId>NIPR_UAP_ELF_SYO</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214558130-NOAA_NCEI</id><title
+        type=\"text\">1-deg x 1-deg Terrestrial Mean Free-Air Anomalies</title><summary
+        type=\"text\">The 1x1 degree Terrestrial Mean Free-Air Gravity Anomaly and
+        Geoid Undulations Data Base was compiled and developed by the Ohio State University.
+        This data base was received in March 1993. Principal gravity parameters include
+        mean elevation, mean free-air anomaly and source id. The gravity anomaly computation
+        uses the Geodetic Reference System 1967 (GRS 67) theoretical formula. The
+        data are global in coverage where data are available.</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>1-deg
+        x 1-deg Terrestrial Mean Free-Air Anomalies</echo:datasetId><echo:shortName>gov.noaa.ngdc.mgg.geophysics.G01414</echo:shortName><echo:versionId>1999
+        Edition</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>NOAA_NCEI</echo:dataCenter><echo:archiveCenter>DOC/NOAA/NEOSDIS/NCEI</echo:archiveCenter><echo:organization>DOC/NOAA/NEOSDIS/NCEI</echo:organization><echo:organization>DOC/NOAA/NEOSDIS/NGDC</echo:organization><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://www.ngdc.noaa.gov/mgg/fliers/se-0703.html\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://www.ngdc.noaa.gov/mgg/gravity/1999/document/html/tablegri.html\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         View
+        Source Metadata\n      \" hreflang=\"en-US\" href=\"http://www.ngdc.noaa.gov/nmmrview/xmls/xml-to-text.jsp?id=gov.noaa.ngdc.mgg.geophysics:G01414\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-71
+        0 72 -1</georss:box><echo:difId>gov.noaa.ngdc.mgg.geophysics.G01414_1999 Edition</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214615490-SCIOPS</id><title
+        type=\"text\">1-km Water Fraction From National Topographic Data Base Maps,
+        Canada</title><summary type=\"text\">This product is a raster coverage representing
+        the fraction of area within each\n      1km grid cell over Canada's land mass
+        covered by waterbodies, as mapped within\n      the National Topographic Data
+        Base v3.1. In NTDB, waterbody is defined as area\n      covered by open water
+        belonging to one of five categories (section 1.5.1). The\n      product involves
+        negligible errors due to aggregation and data format\n      conversion in
+        comparison with the NTDB digital base maps used in its\n      generation.
+        As such, the errors between mapped and actual water fractions are\n      primarily
+        due to differences between the NTDB source maps and the actual\n      waterbody
+        coverage in a grid cell. Since water area fluctuates seasonally and\n      interanually
+        one should use caution in applying this product for local mapping\n      and
+        modeling purposes. At a minimum, one should verify that the survey dates of\n
+        \     the source NTDB maps are appropriate. Furthermore, some consideration
+        should be\n      given to seasonal shifts in waterbody extent. The majority
+        of NTDB source maps\n      were surveyed within the growing season (post snow-melt)
+        and should therefore\n      be relatively unbiased during the growing season
+        in the absence of drought or\n      severe precipitation events. At regional
+        and national scales we expect that\n      seasonal (weather-induced) fluctuations
+        in water extent are the major\n      uncertainty in water fractions.There
+        are three major objectives for generating\n      this product:\n      \n               1.
+        \    Providing information of water fraction coverage as input to\n      the
+        processing, analysis and interpretation of satellite data.\n               2.
+        \    Providing a visualization of regional and national water\n      fraction
+        coverage.\n               3.     Providing initial estimates of water fraction
+        coverage for\n      numerical simulation models independent of topology information
+        available from\n      hydrographic networks.\n      \n               There
+        may be other applications we have not envisioned. The spatial\n      resolution
+        of the raster grid can be easily improved, limited only by copyright\n      restrictions
+        when the resolution allows representation of base map features\n      indistinguishable
+        from the vector data layers.\n      \n               The release of this data
+        on GeoGratis is to promote geomatics use and\n      education by providing
+        a web and file transfer protocol (ftp) site that\n      distributes geospatial
+        data of Canada. Data is available for download, without\n      charge.\n      Spatial
+        Data Organization Information -\n      \n          Indirect Spatial Reference:\n
+        \         Direct Spatial Reference: Raster\n          Raster Object Type:\n
+        \         Row Count:\n          Column Count:\n          Vertical Count: \n
+        \     Spatial Reference Information -\n           Horizontal Coordinate System
+        Definition -\n      \n      Planar -\n      \n            Map Projection Name:
+        Lambert Conformal Conic\n          Standard Parallel:\n          Standard
+        Parallel:\n          Longitude of Central Meridian:\n          Latitude of
+        Projection Origin:\n          False Easting:\n          False Northing:\n
+        \         Planar Coordinate Encoding Method:\n          Coordinate Representation:\n
+        \          Abscissa Resolution:\n           Ordinate Resolution:\n          Distance
+        and Bearing Representation:\n           Distance Resolution:\n           Bearing
+        Resolution:\n           Bearing Units:\n           Bearing Reference Direction:\n
+        \          Bearing Reference Meridian:\n          Planar Distance Units:\n
+        \     \n         Geodetic Model:\n           Horizontal Datum Name: The North
+        American Datum of 1983 (NAD83)\n          Ellipsoid Name: Clarke 1866\n          Semi-major
+        Axis:\n          Denominator of Flattening Ratio: \n      \n      Metadata
+        for this dataset is included with the image in the compressed file\n      (waterfraction.zip).</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>1-km
+        Water Fraction From National Topographic Data Base Maps, Canada</echo:datasetId><echo:shortName>Canada_GeoGratis_1kmWatFracNTDB</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>CA/NRCAN/ESS/GC/CCRS/GEO</echo:archiveCenter><echo:organization>CA/NRCAN/ESS/GC/CCRS/GEO</echo:organization><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>41.5
+        -141 84 -52</georss:box><echo:difId>Canada_GeoGratis_1kmWatFracNTDB</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214313574-AU_AADC</id><title
+        type=\"text\">10 m firn temperature data: LGB traverses 1990-95</title><summary
+        type=\"text\">The Lambert Glacier Basin (LGB) series of five oversnow traverses
+        were conducted from 1989-95. Ten metre depth (10 m) firn temperatures, as
+        a proxy indicator of annual mean surface temperature at a site, were recorded
+        approximately every 30 km along the 2014 km main traverse route from LGB00
+        (68.6543 S, 61.1201 E) near Mawson Station, to LGB72 (69.9209 S, 76.4933 E)
+        near Davis Station.\n\n10 m depth firn temperatures were recorded manually
+        in field notebooks and the data transferred to spreadsheet files (MS Excel).\n\nSummary
+        data (30 km spatial resolution) can be obtained from CRC Research Note No.09
+        &amp;Surface Mass Balance and Snow Surface Properties from the Lambert Glacier
+        Basin Traverses 1990-94&amp;.\n\nThis work was completed as part of ASAC projects
+        3 and 2216.\n\nSome of this data have been stored in a very old format.  The
+        majority of files have been updated to current formats, but some files (kaleidograph
+        files in particular) were not able to be modified due to a lack of appropriate
+        software.  However, these files are simply figures, and can be regernerated
+        from the raw data (also provided).\n\nThe fields in this dataset are:\n\nLatitutde\nLongitude\nHeight\nCane\nDistance\nElevation\nDensity\nMass
+        Accumulation\nYear\nDelta Oxygen-18\nGrain Size\nIce Crusts\nDepth Hoar</summary><updated>2015-11-30T00:00:00.000Z</updated><echo:datasetId>10
+        m firn temperature data: LGB traverses 1990-95</echo:datasetId><echo:shortName>LGB_10m_traverse</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>AU_AADC</echo:dataCenter><echo:archiveCenter>AU/AADC</echo:archiveCenter><echo:organization>AU/AADC</echo:organization><time:start>1989-11-01T00:00:00.000Z</time:start><time:end>1995-02-28T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" title=\"\n         Download
+        point for the data\n      \" hreflang=\"en-US\" href=\"http://data.aad.gov.au/aadc/portal/download_file.cfm?file_id=1278\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         Public
+        information for ASAC project 3\n      \" hreflang=\"en-US\" href=\"https://secure3.aad.gov.au/proms/public/projects/report_project_public.cfm?project_no=3\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         Public
+        information for ASAC project 2216\n      \" hreflang=\"en-US\" href=\"https://secure3.aad.gov.au/proms/public/projects/report_project_public.cfm?project_no=2216\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         Citation
+        reference for this metadata record and dataset\n      \" hreflang=\"en-US\"
+        href=\"http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=LGB_10m_traverse\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-77
+        54 -69 78</georss:box><echo:difId>LGB_10m_traverse</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214586614-SCIOPS</id><title
+        type=\"text\">10 sec GPS ground tracking data</title><summary type=\"text\">This
+        data set comprises GPS ground data of a sample rate of 10 sec, generated\n
+        \     by decoding and sampling GPS high  rate ground data. This raw data passed
+        no\n      quality control. The data are given in the Rinex 2.1 format.</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>10
+        sec GPS ground tracking data</echo:datasetId><echo:shortName>CH-OG-1-GPS-10S</echo:shortName><echo:versionId>0.0</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:archiveCenter>DE/GFZ/ISDC</echo:archiveCenter><echo:organization>DE/GFZ/ISDC</echo:organization><time:start>2001-05-28T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" title=\"\n         The CHAMP
+        Rapid Science Orbit dataset are available via the ISDC\n         Homepage.\n
+        \     \" hreflang=\"en-US\" href=\"http://isdc.gfz-potsdam.de/champ\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GFZ
+        Potsdam, Section 1.2., Gravity Missions and Analysis home page.\n      \"
+        hreflang=\"en-US\" href=\"http://www.gfz-potsdam.de/portal/-\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-45.69
+        -63.51 78.87 170.42</georss:box><echo:difId>CH-OG-1-GPS-10S_0.0</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry></feed>"
+    http_version: 
+  recorded_at: Wed, 28 Sep 2016 17:06:24 GMT
+recorded_with: VCR 2.9.2

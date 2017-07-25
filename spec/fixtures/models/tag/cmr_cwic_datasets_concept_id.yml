@@ -1,0 +1,436 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&tag_key=org.ceos.wgiss.cwic.granules.prod
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 30 Aug 2016 13:44:15 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '1800'
+      Cmr-Took:
+      - '18'
+      Cmr-Request-Id:
+      - fb0240f0-ab81-43c9-950f-3e27c4b85eb4
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '32984'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+            <updated>2016-08-30T19:42:44.253Z</updated>
+            <id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core&page_num=1&page_size=10&tag_key=org.ceos.wgiss.cwic.granules.prod</id>
+            <title type="text">ECHO dataset metadata</title>
+            <entry>
+                <id>C1239566345-EUMETSAT</id>
+                <title type="text">All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</title>
+                <summary type="text">This is the first release of the reprocessed SEVIRI All Sky Radiances (ASR) product. The ASR product contains information on mean brightness temperatures (16x16 pixels so around 50km at nadir) from all thermal (e.g. infrared and water vapour) channels. It includes both clear and cloudy sky brightness temperatures. The ASR product also contains the fraction of clear sky and the solar zenith angle. The final ASR product is BUFR encoded 3-hourly at every third quarter of the hour (e.g. 00:45, 01:45 ...).Note that the reprocessing was done using the latest version of the EUMETSAT software (Version 1.5.3, 2013) ingesting  original level 1.5 SEVIRI images and the ECMWF ERA-interim as a  as a forecast input re-analysis data.</summary>
+                <updated></updated>
+                <echo:datasetId>All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</echo:datasetId>
+                <echo:shortName>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100</echo:shortName>
+                <echo:versionId>2015-06-01</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2004-03-01T00:00:00.000Z</time:start>
+                <time:end>2012-12-31T23:59:59.000Z</time:end>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-81 -79 81 79</georss:box>
+                <echo:difId>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100_2015-06-01</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1214598104-SCIOPS</id>
+                <title type="text">Aqua 1 MODIS Imagery</title>
+                <summary type="text">Imagery from MODIS sensor, abord Aqua platform, held by INPE.</summary>
+                <updated>2015-12-02T00:00:00.000Z</updated>
+                <echo:datasetId>Aqua 1 MODIS Imagery</echo:datasetId>
+                <echo:shortName>INPE_AQUA1_MODIS</echo:shortName>
+                <echo:versionId>Not provided</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>SCIOPS</echo:dataCenter>
+                <echo:organization>BR/INPE/DGI</echo:organization>
+                <time:start>2005-06-12T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://www.dgi.inpe.br/CDSR/"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-36 -79 10 -33</georss:box>
+                <echo:difId>INPE_AQUA1_MODIS</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"INPE"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"INPE_AQUA1_MODIS"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225774163-EUMETSAT</id>
+                <title type="text">ASCAT Coastal Winds at 12.5 km Swath Grid - Metop</title>
+                <summary type="text">Equivalent neutral 10m winds over the global oceans, with specific sampling to provide as many observations as possible near the coasts.</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT Coastal Winds at 12.5 km Swath Grid - Metop</echo:datasetId>
+                <echo:shortName>acronym.OASWC12.fileid.EO.EUM.DAT.METOP.OSI-104</echo:shortName>
+                <echo:versionId>2011-09-28</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT/OSISAF</echo:organization>
+                <time:start>2011-09-28T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="EUMETSAT OSI SAF page" hreflang="en-US" href="http://www.eumetsat.int/website/home/Satellites/GroundSegment/Safs/OceanandSeaIce/index.html"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OSI_SAF" hreflang="en-US" href="http://www.osi-saf.org/index.php"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OSI SAF ASCAT Coastal product viewer" hreflang="en-US" href="http://www.knmi.nl/scatterometer/ascat_osi_co_prod/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Wind Product User Manual" hreflang="en-US" href="http://www.knmi.nl/scatterometer/publications/pdf/ASCAT_Product_Manual.pdf"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT coastal winds validation report" hreflang="en-US" href="http://www.knmi.nl/scatterometer/publications/pdf/ASCAT_validation_coa.pdf"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.OASWC12.fileid.EO.EUM.DAT.METOP.OSI-104_2011-09-28</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.OASWC12.fileid.EO.EUM.DAT.METOP.OSI-104"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225779016-EUMETSAT</id>
+                <title type="text">ASCAT GDS Level 1 Sigma0 at Full Sensor Resolution - Metop</title>
+                <summary type="text">The prime objective of the Advanced SCATterometer (ASCAT) is to measure wind speed and direction over the oceans, and the main operational application is the assimilation of ocean winds in NWP models. Other operational applications, based on the use of measurements of the backscattering coefficient, are sea ice edge detection and monitoring, monitoring sea ice, snow cover, soil moisture and surface parameters. This product consists of geo-located radar backscatter values along the six ASCAT beams. The different beam measurements are not collocated into a regular swath grid and the individual measurements are not spatially averaged. The resolution of each of the 255 backscatter values per each beam varies slightly along the beam, but it is approximately 10km (in the along beam direction) x 25 km (across the beam). This product is usually referred to as 'ASCAT Level 1B Full resolution product'. Note that some of the data are reprocessed. Please refer to the associated product validation reports or product release notes for further information.</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT GDS Level 1 Sigma0 at Full Sensor Resolution - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSZF1B.fileid.EO.EUM.DAT.METOP.ASCSZF1B</echo:shortName>
+                <echo:versionId>2010-09-21</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-05-31T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Reprocessing Phase 1 - Dataset Description" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_LEV1_PHASE_1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Factsheet" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_ascat_factsheet&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_97233-EPS-ASCAT-L1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT-B Level 1 Calibration and Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT-B_L1_PVR&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Calibration 2010" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_CALIBRATION_2010&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Verification, Calibration and Validation Plan" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_VER_CAL_VAL_PLN&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Reprocessing Phase 1 - Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_REPROCESS_1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Estimation of ASCAT-Normalised Radar Cross Section: ATBD" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_EST_ASCAT_NRCS_ATBD&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSZF1B.fileid.EO.EUM.DAT.METOP.ASCSZF1B_2010-09-21</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSZF1B.fileid.EO.EUM.DAT.METOP.ASCSZF1B"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225782892-EUMETSAT</id>
+                <title type="text">ASCAT GDS Level 1 Sigma0 resampled at 12.5 km Swath Grid - Metop</title>
+                <summary type="text">The prime objective of the Advanced SCATterometer (ASCAT) is to measure wind speed and direction over the oceans, and the main operational application is the assimilation of ocean winds in NWP models. Other operational applications, based on the use of measurements of the backscattering coefficient, are sea ice edge detection and monitoring, monitoring sea ice, snow cover, soil moisture and surface parameters. The product is available from the archive in 2 different spatial resolutions; 25 km and 12.5 km. Note that some of the data are reprocessed. Please refer to the associated product validation reports or product release notes for further information.</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT GDS Level 1 Sigma0 resampled at 12.5 km Swath Grid - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSZR1B.fileid.EO.EUM.DAT.METOP.ASCSZR1B</echo:shortName>
+                <echo:versionId>2010-09-21</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-03-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Reprocessing Phase 1 - Dataset Description" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_LEV1_PHASE_1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Factsheet" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_ascat_factsheet&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_97233-EPS-ASCAT-L1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT-B Level 1 Calibration and Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT-B_L1_PVR&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Calibration 2010" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_CALIBRATION_2010&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Verification, Calibration and Validation Plan" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_VER_CAL_VAL_PLN&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Reprocessing Phase 1 - Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_REPROCESS_1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Estimation of ASCAT-Normalised Radar Cross Section: ATBD" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_EST_ASCAT_NRCS_ATBD&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSZR1B.fileid.EO.EUM.DAT.METOP.ASCSZR1B_2010-09-21</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSZR1B.fileid.EO.EUM.DAT.METOP.ASCSZR1B"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1226051802-EUMETSAT</id>
+                <title type="text">ASCAT GDS Level 1 Sigma0 resampled at 25 km Swath Grid - Metop</title>
+                <summary type="text">The prime objective of the Advanced SCATterometer (ASCAT) is to measure wind speed and direction over the oceans, and the main operational application is the assimilation of ocean winds in NWP models. Other operational applications, based on the use of measurements of the backscattering coefficient, are sea ice edge detection and monitoring, monitoring sea ice, snow cover, soil moisture and surface parameters. The product is available from the archive in 2 different spatial resolutions; 25 km and 12.5 km. Note that some of the data are reprocessed. Please refer to the associated product validation reports or product release notes for further information.</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT GDS Level 1 Sigma0 resampled at 25 km Swath Grid - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSZO1B.fileid.EO.EUM.DAT.METOP.ASCSZO1B</echo:shortName>
+                <echo:versionId>2010-09-21</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-03-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Reprocessing Phase 1 - Dataset Description" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_LEV1_PHASE_1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Factsheet" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_ascat_factsheet&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_97233-EPS-ASCAT-L1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT-B Level 1 Calibration and Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT-B_L1_PVR&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Calibration 2010" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_CALIBRATION_2010&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Verification, Calibration and Validation Plan" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_VER_CAL_VAL_PLN&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Reprocessing Phase 1 - Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_REPROCESS_1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Estimation of ASCAT-Normalised Radar Cross Section: ATBD" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_EST_ASCAT_NRCS_ATBD&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSZO1B.fileid.EO.EUM.DAT.METOP.ASCSZO1B_2010-09-21</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSZO1B.fileid.EO.EUM.DAT.METOP.ASCSZO1B"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225778252-EUMETSAT</id>
+                <title type="text">ASCAT L1 SZF Climate Data Record Release 2 - Metop</title>
+                <summary type="text">Reprocessed L1B data from the Advanced Scatterometer (ASCAT) on METOP-A, resampled at full resolution (SZF). Normalized radar cross section (NRCS) of the Earth surface together with measurement time, location (latitude and longitude) and geometrical information (incidence and azimuth angles). The prime objective of the Advanced SCATterometer (ASCAT) is to measure wind speed and direction over the oceans, and the main operational application is the assimilation of ocean winds in NWP models. Other operational applications, based on the use of measurements of the backscattering coefficient, are sea ice edge detection and monitoring, monitoring sea ice, snow cover, soil moisture and surface parameters. This product is also available at 12.5 and 25 km Swath Grids. This is a Fundamental Climate Data Record (FCDR).</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT L1 SZF Climate Data Record Release 2 - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSZF1B0200.fileid.EO.EUM.CM.METOP.ASCSZFR02</echo:shortName>
+                <echo:versionId>2014-10-07</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-01-01T00:00:00.000Z</time:start>
+                <time:end>2014-03-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Factsheet" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_ascat_factsheet&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_97233-EPS-ASCAT-L1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Calibration 2010" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_CALIBRATION_2010&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Verification, Calibration and Validation Plan" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_VER_CAL_VAL_PLN&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Metop-A ASCAT L1 Data Record Release 2 (CF-003): User Guide" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_MA_ASCAT_L1_CDR_003_User_Guide&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Estimation of ASCAT-Normalised Radar Cross Section: ATBD" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_EST_ASCAT_NRCS_ATBD&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Metop-A ASCAT L1 Data Record Release 2 (CF-003): Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_MA_ASCAT_L1_DR_VR&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSZF1B0200.fileid.EO.EUM.CM.METOP.ASCSZFR02_2014-10-07</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSZF1B0200.fileid.EO.EUM.CM.METOP.ASCSZFR02"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225778362-EUMETSAT</id>
+                <title type="text">ASCAT L1 SZO Climate Data Record Release 2 - Metop</title>
+                <summary type="text">Reprocessed L1B data from the Advanced Scatterometer (ASCAT) on METOP-A, resampled at 25 km Swath Grid (SZO). Normalized radar cross section (NRCS) triplets of the Earth surface together with measurement time, location (latitude and longitude) and geometrical information (incidence and azimuth angles). The prime objective of the Advanced SCATterometer (ASCAT) is to measure wind speed and direction over the oceans, and the main operational application is the assimilation of ocean winds in NWP models. Other operational applications, based on the use of measurements of the backscattering coefficient, are sea ice edge detection and monitoring, monitoring sea ice, snow cover, soil moisture and surface parameters. This product is also available at full resolution and at 12.5 km Swath Grid. This is a Fundamental Climate Data Record (FCDR).</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT L1 SZO Climate Data Record Release 2 - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSZO1B0200.fileid.EO.EUM.CM.METOP.ASCSZOR02</echo:shortName>
+                <echo:versionId>2014-10-07</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-01-01T00:00:00.000Z</time:start>
+                <time:end>2014-03-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Factsheet" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_ascat_factsheet&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_97233-EPS-ASCAT-L1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Calibration 2010" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_CALIBRATION_2010&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Verification, Calibration and Validation Plan" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_VER_CAL_VAL_PLN&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Metop-A ASCAT L1 Data Record Release 2 (CF-003): User Guide" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_MA_ASCAT_L1_CDR_003_User_Guide&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Estimation of ASCAT-Normalised Radar Cross Section: ATBD" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_EST_ASCAT_NRCS_ATBD&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Metop-A ASCAT L1 Data Record Release 2 (CF-003): Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_MA_ASCAT_L1_DR_VR&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSZO1B0200.fileid.EO.EUM.CM.METOP.ASCSZOR02_2014-10-07</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSZO1B0200.fileid.EO.EUM.CM.METOP.ASCSZOR02"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225778383-EUMETSAT</id>
+                <title type="text">ASCAT L1 SZR Climate Data Record Release 2 - Metop</title>
+                <summary type="text">Reprocessed L1B data from the Advanced Scatterometer (ASCAT) on METOP-A, resampled at 12.5 km Swath Grid (SZR). Normalized radar cross section (NRCS) triplets of the Earth surface together with measurement time, location (latitude and longitude) and geometrical information (incidence and azimuth angles). The prime objective of the Advanced SCATterometer (ASCAT) is to measure wind speed and direction over the oceans, and the main operational application is the assimilation of ocean winds in NWP models. Other operational applications, based on the use of measurements of the backscattering coefficient, are sea ice edge detection and monitoring, monitoring sea ice, snow cover, soil moisture and surface parameters. This product is also available at full resolution and at 25 km Swath Grid. This is a Fundamental Climate Data Record (FCDR).</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT L1 SZR Climate Data Record Release 2 - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSZR1B0200.fileid.EO.EUM.CM.METOP.ASCSZRR02</echo:shortName>
+                <echo:versionId>2014-10-07</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-01-01T00:00:00.000Z</time:start>
+                <time:end>2014-03-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Factsheet" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_ascat_factsheet&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 1 Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_97233-EPS-ASCAT-L1&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Calibration 2010" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_CALIBRATION_2010&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Verification, Calibration and Validation Plan" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_VER_CAL_VAL_PLN&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Metop-A ASCAT L1 Data Record Release 2 (CF-003): User Guide" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_MA_ASCAT_L1_CDR_003_User_Guide&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Estimation of ASCAT-Normalised Radar Cross Section: ATBD" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_EST_ASCAT_NRCS_ATBD&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Metop-A ASCAT L1 Data Record Release 2 (CF-003): Validation Report" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_MA_ASCAT_L1_DR_VR&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSZR1B0200.fileid.EO.EUM.CM.METOP.ASCSZRR02_2014-10-07</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSZR1B0200.fileid.EO.EUM.CM.METOP.ASCSZRR02"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1225762738-EUMETSAT</id>
+                <title type="text">ASCAT Soil Moisture at 12.5 km Swath Grid - Metop</title>
+                <summary type="text">The Surface Soil Moisture L2 product is derived from the Advanced SCATterometer (ASCAT) data and given in swath geometry. This product provides an estimate of the water saturation of the 5 cm topsoil layer, in relative units between 0 and 100 [%]. The algorithm used to derive this parameter is based on a linear relationship of soil moisture and scatterometer backscatter and uses change detection techniques to eliminate the contributions of vegetation, land cover and surface topography, considered invariant from year to year. Seasonal vegetation effects are modelled by exploiting the multiple viewing capabilities of ASCAT. The processor has been developed by the Institute of Photogrammetry and Remote Sensing of the Vienna University of Technology. Note that some of the data are reprocessed. Please refer to the associated product validation reports or product release notes for further information.</summary>
+                <updated>2015-05-21T00:00:00.000Z</updated>
+                <echo:datasetId>ASCAT Soil Moisture at 12.5 km Swath Grid - Metop</echo:datasetId>
+                <echo:shortName>acronym.ASCSMR02.fileid.EO.EUM.DAT.METOP.SOMO12</echo:shortName>
+                <echo:versionId>2010-06-21</echo:versionId>
+                <echo:originalFormat>DIF</echo:originalFormat>
+                <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                <echo:organization>EUMETSAT</echo:organization>
+                <time:start>2007-06-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (PDF)" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_PRODUCT_GUIDE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Product Guide (HTML)" hreflang="en-US" href="http://oiswww.eumetsat.org/WEBOPS/eps-pg/ASCAT/ASCAT-PG-index.htm"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Level 2 Soil Moisture Reprocessing Phase 1 - Dataset Description" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_ASCAT_LEV2_SOIL_MOISTURE&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT L2 Soil Moisture Product Format Specification" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=PDF_TEN_0343-EPS-ASCATL2-PFS&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="ASCAT Soil Moisture Product Handbook" hreflang="en-US" href="http://www.eumetsat.int/website/wcm/idc/idcplg?IdcService=GET_FILE&dDocName=pdf_soilmoisture_prod_hb&RevisionSelectionMethod=LatestReleased&Rendition=Web"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>acronym.ASCSMR02.fileid.EO.EUM.DAT.METOP.SOMO12_2010-06-21</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.provider</echo:tagKey>
+                    <echo:data>"EUMETSAT"</echo:data>
+                </echo:tag>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.native_id</echo:tagKey>
+                    <echo:data>"acronym.ASCSMR02.fileid.EO.EUM.DAT.METOP.SOMO12"</echo:data>
+                </echo:tag>
+            </entry>
+        </feed>
+    http_version:
+  recorded_at: Tue, 30 Aug 2016 13:44:15 GMT
+recorded_with: VCR 2.9.2

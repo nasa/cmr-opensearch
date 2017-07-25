@@ -1,0 +1,263 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?instrument=CZCS&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 28 Sep 2016 19:08:11 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '95268'
+      Cmr-Took:
+      - '3753'
+      Cmr-Request-Id:
+      - b91e487f-d5ea-46fb-b0b2-8b6420813ac9
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '28418'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2016-09-28T19:08:14.934Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?page_num=1&amp;page_size=10&amp;instrument=CZCS</id><title
+        type=\"text\">ECHO granule metadata</title><entry><id>G1220194852-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_670_9km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_670_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.250829</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_670_9km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_670_9km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220194859-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_670_4km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_670_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.873203</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_670_4km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_670_4km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220194882-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_443_4km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_443_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.873206</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_443_4km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_443_4km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220194885-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_aot_670_4km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_aot_670_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.873171</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_aot_670_4km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_aot_670_4km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220194901-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_520_9km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_520_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.250833</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_520_9km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_520_9km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220195119-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_520_4km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_520_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.873207</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_520_4km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_520_4km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220195139-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_443_9km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_443_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.250831</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_443_9km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_443_9km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220195140-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_550_9km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_550_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.250828</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_550_9km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_550_9km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220195437-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_Rrs_550_4km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_Rrs_550_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.873202</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_Rrs_550_4km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_Rrs_550_4km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1220195491-OB_DAAC</id><title
+        type=\"text\">C1978303.L3m_DAY_RRS_aot_670_9km.nc</title><updated>2015-12-09T01:11:19.000Z</updated><echo:datasetId>CZCS_L3m_RRS</echo:datasetId><echo:producerGranuleId>C1978303.L3m_DAY_RRS_aot_670_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>0.2508</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1978-10-30T00:00:00.000Z</time:start><time:end>1978-10-30T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_RRS_aot_670_9km.nc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" type=\"application/x-netcdf\"
+        title=\"(GET DATA : OPENDAP DATA (DODS))\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_RRS_aot_670_9km.nc\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L3M Remote-Sensing
+        Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA : OPENDAP DATA (DODS)\" title=\"OPeNDAP Site for CZCS Small Mapped Image
+        (SMI) Product Suite\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/RRS/2014\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90
+        -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>"
+    http_version: 
+  recorded_at: Wed, 28 Sep 2016 19:08:14 GMT
+recorded_with: VCR 2.9.2

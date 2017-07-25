@@ -1,0 +1,3 @@
+errbit_host: @ERRBIT_HOST@
+errbit_port: @ERRBIT_PORT@
+errbit_api_key: @OPENSEARCH_ERRBIT_API_KEY@

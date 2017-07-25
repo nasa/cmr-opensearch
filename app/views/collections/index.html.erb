@@ -1,0 +1,121 @@
+<%= javascript_include_tag params[:controller] %>
+<%= stylesheet_link_tag params[:controller] %>
+<div class="breadcrumb">
+  <ol>
+    <li><a href='<%= Rails.configuration.relative_url_root %>'>Home</a></li>
+    <li>Collection search</li>
+  </ol>
+</div>
+<h2>Collection Search</h2>
+<section id="search-form">
+  <%= form_tag("#{Rails.configuration.relative_url_root}/collections", :method => 'get', :class => 'collections') do %>
+      <%= hidden_field_tag(:clientId, @client_id) %>
+      <%= render :partial => 'shared/errors', :locals => {:errors => @collection.errors} %>
+      <p class="form-parameter">
+        <%= label_tag 'keyword', 'Keyword: ' %>
+        <%= text_field_tag :keyword, @collection.keyword, :placeholder => 'e.g. modis', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'provider', 'Provider: ' %>
+        <%= text_field_tag :provider, @collection.provider, :placeholder => 'e.g. LARC', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'instrument', 'Instrument: ' %>
+        <%= text_field_tag :instrument, @collection.instrument, :placeholder => 'e.g MODIS', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'satellite', 'Satellite: ' %>
+        <%= text_field_tag :satellite, @collection.satellite, :placeholder => 'e.g Terra', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'startTime', 'Start time: ' %>
+        <%= text_field_tag :startTime, @collection.start_time, :class => 'temporal-input', :placeholder => 'e.g 2010-01-01T00:00:00Z', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'endTime', 'End time: ' %>
+        <%= text_field_tag :endTime, @collection.end_time, :class => 'temporal-input', :placeholder => 'e.g 2011-01-01T23:59:59Z', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'spatial_type', 'Spatial type: ' %>
+        <%= select_tag 'spatial_type', options_from_collection_for_select(spatial_types, 'id', 'name', @spatial_type) %>
+      </p>
+
+      <p class="form-parameter bbox">
+        <%= label_tag 'boundingBox', 'Spatial bounding box: ' %>
+        <%= text_field_tag :boundingBox, @collection.bounding_box, :placeholder => 'e.g. -180.0,-90.0,180.0,90.0', :size => 120 %>
+      </p>
+
+      <p class="form-parameter geometry">
+        <%= label_tag 'geometry', 'Spatial geometry: ' %>
+        <%= text_field_tag :geometry, @collection.geometry, :placeholder => 'e.g. POINT (1 2)', :size => 120 %>
+      </p>
+
+      <p class="form-parameter placename">
+        <%= label_tag 'placeName', 'Spatial place name: ' %>
+        <%= text_field_tag :placeName, @collection.place_name, :placeholder => 'e.g. washington, dc', :size => 120 %>
+      </p>
+
+      <p class="form-parameter uid">
+        <%= label_tag 'uid', 'Unique ID: ' %>
+        <%= text_field_tag :uid, @collection.uid, :placeholder => 'e.g. C-1234_PROV', :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'numberOfResults', 'Number of results: ' %>
+        <%= text_field_tag :numberOfResults, @number_of_results, :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'cursor', 'Cursor: ' %>
+        <%= text_field_tag :cursor, @cursor, :size => 120 %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'hasGranules', 'Has granules?: ' %>
+        <%= select_tag 'hasGranules', options_from_collection_for_select(boolean_types, 'id', 'name', @has_granules_type) %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'isCwic', 'From CWIC?: ' %>
+        <%= select_tag 'isCwic', options_from_collection_for_select(true_only_types, 'id', 'name', @is_cwic_type) %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'isEosdis', 'EOSDIS collection?: ' %>
+        <%= select_tag 'isEosdis', options_from_collection_for_select(true_only_types, 'id', 'name', @is_eosdis_type) %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'isGeoss', 'GEOSS collection?: ' %>
+        <%= select_tag 'isGeoss', options_from_collection_for_select(true_only_types, 'id', 'name', @is_geoss_type) %>
+        <%= submit_tag 'Search', class: 'btn btn-default btn-round' %>
+      </p>
+
+  <% end %>
+</section>
+<div style="clear: both;"></div>
+<section class="navigation">
+  <%= render :partial => 'shared/result_metrics', :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @collection_models.length, :number_of_hits => @number_of_hits, :parent => nil, :time => @time} -%>
+  <%= render :partial => 'shared/pagination',
+             :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @collection_models.length, :number_of_hits => @number_of_hits, :parent => false, :model => @collection, :spatial_type => @spatial_type, :position => 'top'} %>
+</section>
+<section id="results">
+  <ul class="results" itemscope itemtype='http://schema.org/DataCatalog'>
+    <% @collection_models.each do |collection| %>
+        <li class="result resource<%= cycle('', ' alt') %>" itemscope itemtype='http://schema.org/Dataset'>
+          <%= render :partial => 'shared/result', :locals => {:resource => collection, :resource_type => 'collection'} %>
+        </li>
+    <% end %>
+  </ul>
+</section>
+<section class="navigation">
+  <%= render :partial => 'shared/pagination',
+             :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @collection_models.length, :number_of_hits => @number_of_hits, :parent => false, :model => @collection, :spatial_type => @spatial_type, :position => 'bottom'} %>
+</section>
+</div>

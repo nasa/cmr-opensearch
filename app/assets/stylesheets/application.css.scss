@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+p.required-field-note {
+  text-align: right;
+}
+
+span.required {
+  font-family: Courier New, monospace;
+  color: rgb(231,76,60);
+  font-size: 12pt;
+}
+
+form {
+  margin-top: 1.5em;
+  margin-right: 0px;
+  margin-bottom: 1.5em;
+  margin-left: 0px;
+  display: table;
+  label {
+    display: table-cell;
+  }
+  input, select {
+    display: table-cell;
+    margin-left: 1em;
+  }
+}
+
+p.form-parameter {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: table-row;
+  select {
+    width: 56em;
+  }
+}
+footer {
+  background-color: rgb(44, 62, 80);
+}
+
+.masthead-logo {
+
+  a:link {
+    background-image: url(cmr-opensearch-logo-small.png);
+
+  }
+
+  a:hover {
+    background-image: url(cmr-opensearch-logo-small-hover.png);
+  }
+}
+
+section.hero {
+  padding-top: 0em;
+  height: 150px;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgb(44, 62, 80);
+  a:link, a:visited
+  {
+    color: #ffffff;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+  }
+}
+
+span.emphasis {
+  font-weight: bold;
+}

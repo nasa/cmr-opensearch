@@ -1,0 +1,1872 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>none-supplied-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '227'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNDRlYjM2NGQ3ODhjMWU0YzFmNzM5MDUxODJlMWRkMTk%3D--b3509c035d61b7b28855c4766b5bd22d0d3288c5; path=/; HttpOnly
+      X-Runtime:
+      - '0.062000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sun, 01 Mar 2015 14:32:33 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAE2OTQqDMBSE955C3EcjanQRIynVE7RrEfNoQ/VFEpUev9p/
+        ZjUzH8Pw6j4O/grWaYNlEIc08AF7ozReyuB8akgRVMLjs7kBCs/3uVYipjSP
+        WR2TNE0acshYRo4yTwhrZM0kZbIpCh5t4M4vDix2I4jLAm7m0dfvZT9owLnd
+        UDQIxC3TtCWKmAnQQWf7K1Gw8ujHfSZbPbWdUhacEzR86rX9X3g8eh9/AMiI
+        Hs/oAAAA
+    http_version:
+  recorded_at: Sun, 01 Mar 2015 14:32:33 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_facets=true&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&processing_level=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Mar 2015 14:32:34 GMT
+      Access-Control-Allow-Origin:
+      - '*'
+      Cmr-Hits:
+      - '1685'
+      Cmr-Took:
+      - '71'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+        	<updated>2015-03-01T14:39:21.042Z</updated>
+        	<id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_facets=true&amp;page_num=1&amp;page_size=10&amp;processing_level=3</id>
+        	<title type="text">ECHO dataset metadata</title>
+        	<entry>
+        		<id>C179003030-ORNL_DAAC</id>
+        		<title type="text">15 Minute Stream Flow Data: USGS (FIFE)</title>
+        		<summary type="text">USGS 15 minute stream flow data for Kings Creek on the Konza Prairie</summary>
+        		<updated>2008-12-02T00:00:00.000Z</updated>
+        		<echo:datasetId>15 Minute Stream Flow Data: USGS (FIFE)</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1984-12-25T00:00:00Z</time:start>
+        		<time:end>1988-03-04T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/FIFE/guides/15_min_strm_flow.html" hreflang="en-US" title="USGS 15 minute stream flow data for Kings Creek on the Konza Prairie (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:point>39.1 -96.6</georss:point>
+        		<echo:difId>FIFE_STRM_15M</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179002914-ORNL_DAAC</id>
+        		<title type="text">30 Minute Rainfall Data (FIFE)</title>
+        		<summary type="text">30 minute rainfall data for the Konza Prairie</summary>
+        		<updated>1994-07-24T00:00:00.000Z</updated>
+        		<echo:datasetId>30 Minute Rainfall Data (FIFE)</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/2</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1987-05-29T00:00:00Z</time:start>
+        		<time:end>1987-10-26T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=2" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/FIFE/guides/30_Min_Rain_Data.html" hreflang="en-US" title="30 minute rainfall data for the Konza Prairie (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>39.08 -96.6 39.11 -96.55</georss:box>
+        		<echo:difId>FIFE_RAIN_30M</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C1000000000-ORNL_DAAC</id>
+        		<title type="text">A Compilation of Global Soil Microbial Biomass Carbon, Nitrogen, and Phosphorus Data</title>
+        		<summary type="text">This data set provides the concentrations of soil microbial biomass carbon (C), nitrogen (N) and phosphorus (P), soil organic carbon, total nitrogen, and total phosphorus at biome and global scales. The data were compiled from a comprehensive survey of publications from the late 1970s to 2012 and include 3,422 data points from 315 papers. These data are from soil samples collected primarily at 0-15 cm depth with some from 0-30 cm. In addition, data were compiled for soil microbial biomass concentrations from soil profile samples to depths of 100 cm. Sampling site latitude and longitude were available for the majority of the samples that enabled assembling additional soil properties, site characteristics, vegetation distributions, biomes, and long-term climate data from several global sources of soil, land-cover, and climate data. These site attributes are included with the microbial biomass data. This data set contains two *.csv files of the soil microbial biomass C, N, P data. The first provides all compiled results emphasizing the full spatial extent of the data, while the second is a subset that provides only data from a series of profile samples emphasizing the vertical distribution of microbial biomass concentrations.There is a companion file, also in .csv format, of the references for the surveyed publications. A reference_number relates the data to the respective publication.The concentrations of soil microbial biomass, in combination with other soil databases, were used to estimate the global storage of soil microbial biomass C and N in 0-30 cm and 0-100 cm soil profiles. These storage estimates were combined with a spatial map of 12 major biomes (boreal forest, temperate coniferous forest, temperate broadleaf forest, tropical and subtropical forests, mixed forest, grassland, shrub, tundra, desert, natural wetland, cropland, and pasture) at 0.05-degree by 0.5-degree spatial resolution. The biome map and six estimates of C and N storage and C:N ration in soil microbial biomass are provided in a single netCDF format file. </summary>
+        		<updated>2015-01-12T00:00:00.000Z</updated>
+        		<echo:datasetId>A Compilation of Global Soil Microbial Biomass Carbon, Nitrogen, and Phosphorus Data</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1264</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1977-11-16T00:00:00Z</time:start>
+        		<time:end>2012-06-01T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1264" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/SOILS/guides/Global_Microbial_Biomass_C_N_P.html" hreflang="en-US" title="This data set provides the concentrations of soil microbial biomass carbon (C), nitrogen (N) and phosphorus (P), soil organic carbon, total nitrogen, and total phosphorus at biome and global scales. The data were compiled from a comprehensive survey of publications from the late 1970s to 2012 and include 3,422 data points from 315 papers. These data are from soil samples collected primarily at 0-15 cm depth with some from 0-30 cm. In addition, data were compiled for soil microbial biomass concentrations from soil profile samples to depths of 100 cm. Sampling site latitude and longitude were available for the majority of the samples that enabled assembling additional soil properties, site characteristics, vegetation distributions, biomes, and long-term climate data from several global sources of soil, land-cover, and climate data. These site attributes are included with the microbial biomass data. This data set contains two *.csv files of the soil microbial biomass C, N, P data. The first provides all compiled results emphasizing the full spatial extent of the data, while the second is a subset that provides only data from a series of profile samples emphasizing the vertical distribution of microbial biomass concentrations.There is a companion file, also in .csv format, of the references for the surveyed publications. A reference_number relates the data to the respective publication.The concentrations of soil microbial biomass, in combination with other soil databases, were used to estimate the global storage of soil microbial biomass C and N in 0-30 cm and 0-100 cm soil profiles. These storage estimates were combined with a spatial map of 12 major biomes (boreal forest, temperate coniferous forest, temperate broadleaf forest, tropical and subtropical forests, mixed forest, grassland, shrub, tundra, desert, natural wetland, cropland, and pasture) at 0.05-degree by 0.5-degree spatial resolution. The biome map and six estimates of C and N storage and C:N ration in soil microbial biomass are provided in a single netCDF format file.  (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-90 -180 79 177.9</georss:box>
+        		<echo:difId>GLOBAL_MICROBIAL_BIOMASS_C_N_P</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179126725-ORNL_DAAC</id>
+        		<title type="text">A Global Data Set of Leaf Photosynthetic Rates, Leaf N and P, and Specific Leaf Area</title>
+        		<summary type="text">This global data set of photosynthetic rates and leaf nutrient traits was compiled from a comprehensive literature review. It includes estimates of Vcmax (maximum rate of carboxylation), Jmax (maximum rate of electron transport), leaf nitrogen content (N), leaf phosphorus content (P), and specific leaf area (SLA) data from both experimental and ambient field conditions, for a total of 325 species and treatment combinations. Both the original published Vcmax and Jmax values as well as estimates at standard temperature are reported. The maximum rate of carboxylation (Vcmax) and the maximum rate of electron transport (Jmax) are primary determinants of photosynthetic rates in plants, and modeled carbon fluxes are highly sensitive to these parameters. Previous studies have shown that Vcmax and Jmax correlate with leaf nitrogen across species and regions, and locally across species with leaf phosphorus and specific leaf area, yet no universal relationship suitable for global-scale models is currently available. These data are suitable for exploring the general relationships of Vcmax and Jmax with each other and with leaf N, P and SLA. This data set contains one *.csv file.</summary>
+        		<updated>2014-06-27T00:00:00.000Z</updated>
+        		<echo:datasetId>A Global Data Set of Leaf Photosynthetic Rates, Leaf N and P, and Specific Leaf Area</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1224</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1993-01-01T00:00:00Z</time:start>
+        		<time:end>2010-12-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1224" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/VEGETATION/guides/Leaf_Photosynthesis_Traits.html" hreflang="en-US" title="This global data set of photosynthetic rates and leaf nutrient traits was compiled from a comprehensive literature review. It includes estimates of Vcmax (maximum rate of carboxylation), Jmax (maximum rate of electron transport), leaf nitrogen content (N), leaf phosphorus content (P), and specific leaf area (SLA) data from both experimental and ambient field conditions, for a total of 325 species and treatment combinations. Both the original published Vcmax and Jmax values as well as estimates at standard temperature are reported. The maximum rate of carboxylation (Vcmax) and the maximum rate of electron transport (Jmax) are primary determinants of photosynthetic rates in plants, and modeled carbon fluxes are highly sensitive to these parameters. Previous studies have shown that Vcmax and Jmax correlate with leaf nitrogen across species and regions, and locally across species with leaf phosphorus and specific leaf area, yet no universal relationship suitable for global-scale models is currently available. These data are suitable for exploring the general relationships of Vcmax and Jmax with each other and with leaf N, P and SLA. This data set contains one *.csv file. (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-43.2 -122.4 58.42 176.13</georss:box>
+        		<echo:difId>LEAF_PHOTOSYNTHESIS_TRAITS</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179003380-ORNL_DAAC</id>
+        		<title type="text">A Global Database of Carbon and Nutrient Concentrations of Green and Senesced Leaves</title>
+        		<summary type="text">This data set provides carbon (C), nitrogen (N), phosphorus (P), potassium (K), calcium (Ca), and magnesium (Mg) concentrations in green and senesced leaves. Vegetation characteristics reported include species growth habit, leaf area, mass, and mass loss with senescence. The data were compiled from 86 selected studies in 31 countries, and resulted in approximately 1,000 data points for both green and senesced leaves from woody and non-woody vegetation as described in Vergutz et al (2012). The studies were conducted from 1970-2009. There are two comma-delimited data files with this data set.</summary>
+        		<updated>2012-07-19T00:00:00.000Z</updated>
+        		<echo:datasetId>A Global Database of Carbon and Nutrient Concentrations of Green and Senesced Leaves</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1106</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1970-01-01T00:00:00Z</time:start>
+        		<time:end>2009-12-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1106" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/VEGETATION/guides/Leaf_carbon_nutrients.html" hreflang="en-US" title="This data set provides carbon (C), nitrogen (N), phosphorus (P), potassium (K), calcium (Ca), and magnesium (Mg) concentrations in green and senesced leaves. Vegetation characteristics reported include species growth habit, leaf area, mass, and mass loss with senescence. The data were compiled from 86 selected studies in 31 countries, and resulted in approximately 1,000 data points for both green and senesced leaves from woody and non-woody vegetation as described in Vergutz et al (2012). The studies were conducted from 1970-2009. There are two comma-delimited data files with this data set. (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-50 -159.7 68.5 176.9</georss:box>
+        		<echo:difId>LEAF_CARBON_NUTRIENTS</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179130805-ORNL_DAAC</id>
+        		<title type="text">A Global Database of Field-observed Leaf Area Index in Woody Plant Species, 1932-2011</title>
+        		<summary type="text">This data set provides global leaf area index (LAI) values for woody species. The data are a compilation of field-observed data from 1,216 locations obtained from 554 literature sources published between 1932 and 2011. Only site-specific maximum LAI values were included from the sources; values affected by significant artificial treatments (e.g. continuous fertilization and/or irrigation) and LAI values that were low due to drought or disturbance (e.g. intensive thinning, wildfire, or disease), or because vegetation was immature or old/declining, were excluded (Lio et al., 2014). To maximize the generic applicability of the data, original LAI values from source literature and values standardized using the definition of half of total surface area (HSA) are included. Supporting information, such as geographical coordinates of plot, altitude, stand age, name of dominant species, plant functional types, and climate data are also provided in the data file. There is one data file in comma-separated (.csv) format with this data set and one companion file which provides the data sources.</summary>
+        		<updated>2014-07-22T00:00:00.000Z</updated>
+        		<echo:datasetId>A Global Database of Field-observed Leaf Area Index in Woody Plant Species, 1932-2011</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1231</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1932-01-01T00:00:00Z</time:start>
+        		<time:end>2011-12-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1231" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/VEGETATION/guides/LAI_Woody_Plants.html" hreflang="en-US" title="This data set provides global leaf area index (LAI) values for woody species. The data are a compilation of field-observed data from 1,216 locations obtained from 554 literature sources published between 1932 and 2011. Only site-specific maximum LAI values were included from the sources; values affected by significant artificial treatments (e.g. continuous fertilization and/or irrigation) and LAI values that were low due to drought or disturbance (e.g. intensive thinning, wildfire, or disease), or because vegetation was immature or old/declining, were excluded (Lio et al., 2014). To maximize the generic applicability of the data, original LAI values from source literature and values standardized using the definition of half of total surface area (HSA) are included. Supporting information, such as geographical coordinates of plot, altitude, stand age, name of dominant species, plant functional types, and climate data are also provided in the data file. There is one data file in comma-separated (.csv) format with this data set and one companion file which provides the data sources. (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-54.2 -164.78 78.42 175.62</georss:box>
+        		<echo:difId>LAI_WOODY_PLANTS</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179003657-ORNL_DAAC</id>
+        		<title type="text">A Global Database of Gas Fluxes from Soils after Rewetting or Thawing, Version 1.0</title>
+        		<summary type="text">This database contains information compiled from published studies on gas flux from soil following rewetting or thawing. The resulting database includes 222 field and laboratory observations focused on rewetting of dry soils, and 116 field laboratory observations focused on thawing of frozen soils studies conducted from 1956 to 2010. Fluxes of carbon dioxide, methane, nitrous oxide, nitrogen oxide, and ammonia (CO2, CH4, N2O, NO and NH3) were compiled from the literature and the flux rates were normalized for ease of comparison. Field observations of gas flux following rewetting of dry soils include events caused by natural rainfall, simulated rainfall in natural ecosystems, and irrigation in agricultural lands. Similarly, thawing of frozen soils include field observations of natural thawing, simulated freezing-thawing events (i.e., thawing of simulated frozen soil by snow removal), and thawing of seasonal ice in temperate and high latitude regions (Kim et al., 2012). Reported parameters include experiment type, location, site type, vegetation, climate, soil properties, rainfall, soil moisture, soil gas flux after wetting and thawing, peak soil gas flux properties, and the corresponding study references. There is one comma-delimited data file. </summary>
+        		<updated>2012-04-16T00:00:00.000Z</updated>
+        		<echo:datasetId>A Global Database of Gas Fluxes from Soils after Rewetting or Thawing, Version 1.0</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1078</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1956-01-01T00:00:00Z</time:start>
+        		<time:end>2009-12-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1078" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/SOILS/guides/global_rtsg_flux_v1.html" hreflang="en-US" title="This database contains information compiled from published studies on gas flux from soil following rewetting or thawing. The resulting database includes 222 field and laboratory observations focused on rewetting of dry soils, and 116 field laboratory observations focused on thawing of frozen soils studies conducted from 1956 to 2010. Fluxes of carbon dioxide, methane, nitrous oxide, nitrogen oxide, and ammonia (CO2, CH4, N2O, NO and NH3) were compiled from the literature and the flux rates were normalized for ease of comparison. Field observations of gas flux following rewetting of dry soils include events caused by natural rainfall, simulated rainfall in natural ecosystems, and irrigation in agricultural lands. Similarly, thawing of frozen soils include field observations of natural thawing, simulated freezing-thawing events (i.e., thawing of simulated frozen soil by snow removal), and thawing of seasonal ice in temperate and high latitude regions (Kim et al., 2012). Reported parameters include experiment type, location, site type, vegetation, climate, soil properties, rainfall, soil moisture, soil gas flux after wetting and thawing, peak soil gas flux properties, and the corresponding study references. There is one comma-delimited data file.  (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-36.45 -149.63 74.5 160.52</georss:box>
+        		<echo:difId>GLOBAL_RTSG_FLUX_V1</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179130785-ORNL_DAAC</id>
+        		<title type="text">A Global Database of Soil Phosphorus Compiled from Studies Using Hedley Fractionation</title>
+        		<summary type="text">This data set provides concentrations of soil phosphorus (P) compiled from the peer-reviewed literature that cited the Hedley fractionation method (Hedley and Stewart, 1982). This database contains estimates of different forms of naturally occurring soil phosphorus, including labile inorganic P, organic P, occluded P, secondary mineral P, apatite P, and total P, based on the analyses of the various Hedley soil fractions.The recent literature survey (Yang and Post, 2011) was restricted to studies of natural, unfertilized, and uncultivated soils since 1995. Ninety measurements of soil P fractions were identified. These were added to the 88 values from soils in natural ecosystems that Cross and Schlesinger (1995) had compiled. Cross and Schlesinger provided a comprehensive survey on Hedley P data prior to 1995. Measurement data are provided for studies published from 1985 through 2010. In addition to the Hedley P fraction measurement data Yang and Post (2011) also compiled information on soil order, soil pH, organic carbon and nitrogen content, as well as the geographic location (longitude and latitude) of the measurement sites. </summary>
+        		<updated>2014-07-18T00:00:00.000Z</updated>
+        		<echo:datasetId>A Global Database of Soil Phosphorus Compiled from Studies Using Hedley Fractionation</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1230</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1985-01-01T00:00:00Z</time:start>
+        		<time:end>2010-12-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1230" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/SOILS/guides/Global_Phosphorus_Hedley_Fract.html" hreflang="en-US" title="This data set provides concentrations of soil phosphorus (P) compiled from the peer-reviewed literature that cited the Hedley fractionation method (Hedley and Stewart, 1982). This database contains estimates of different forms of naturally occurring soil phosphorus, including labile inorganic P, organic P, occluded P, secondary mineral P, apatite P, and total P, based on the analyses of the various Hedley soil fractions.The recent literature survey (Yang and Post, 2011) was restricted to studies of natural, unfertilized, and uncultivated soils since 1995. Ninety measurements of soil P fractions were identified. These were added to the 88 values from soils in natural ecosystems that Cross and Schlesinger (1995) had compiled. Cross and Schlesinger provided a comprehensive survey on Hedley P data prior to 1995. Measurement data are provided for studies published from 1985 through 2010. In addition to the Hedley P fraction measurement data Yang and Post (2011) also compiled information on soil order, soil pH, organic carbon and nitrogen content, as well as the geographic location (longitude and latitude) of the measurement sites.  (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-42.5 -117.86 63.23 117.6</georss:box>
+        		<echo:difId>GLOBAL_PHOSPHORUS_HEDLEY_FRACT</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179130985-ORNL_DAAC</id>
+        		<title type="text">A Global Database of Soil Respiration Data, Version 3.0</title>
+        		<summary type="text">This data set provides an update of the soil respiration database (SRDB), a near-universal compendium of published soil respiration (RS) data. Soil respiration, the flux of autotrophically- and heterotrophically-generated CO2 from the soil to the atmosphere, remains the least well-constrained component of the terrestrial Carbon cycle. The database encompasses all published studies that report at least one of the following data measured in the field (not laboratory): annual RS, mean seasonal RS, a seasonal or annual partitioning of RS into its sources fluxes, RS temperature response (Q10), or RS at 10 degrees C. The SRDB's orientation is thus to seasonal and annual fluxes, not shorter-term or chamber-specific measurements, and the database is dominated by temperate, well-drained forest measurement locations. The data set includes a file of RS data and a linked file of study bibliographic data; both files are in comma-separated format.</summary>
+        		<updated>2014-08-04T00:00:00.000Z</updated>
+        		<echo:datasetId>A Global Database of Soil Respiration Data, Version 3.0</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/1235</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1961-01-01T00:00:00Z</time:start>
+        		<time:end>2011-12-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1235" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/SOILS/guides/global_srdb_v3.html" hreflang="en-US" title="This data set provides an update of the soil respiration database (SRDB), a near-universal compendium of published soil respiration (RS) data. Soil respiration, the flux of autotrophically- and heterotrophically-generated CO2 from the soil to the atmosphere, remains the least well-constrained component of the terrestrial Carbon cycle. The database encompasses all published studies that report at least one of the following data measured in the field (not laboratory): annual RS, mean seasonal RS, a seasonal or annual partitioning of RS into its sources fluxes, RS temperature response (Q10), or RS at 10 degrees C. The SRDB's orientation is thus to seasonal and annual fluxes, not shorter-term or chamber-specific measurements, and the database is dominated by temperate, well-drained forest measurement locations. The data set includes a file of RS data and a linked file of study bibliographic data; both files are in comma-separated format. (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>-78.02 -162.2 78.17 175.5</georss:box>
+        		<echo:difId>GLOBAL_SRDB_V3</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<entry>
+        		<id>C179003112-ORNL_DAAC</id>
+        		<title type="text">Aircraft Flux-Detrended: NRCC (FIFE)</title>
+        		<summary type="text">Detrended boundary layer fluxes recorded on aircraft flights over the Konza</summary>
+        		<updated>1994-07-24T00:00:00.000Z</updated>
+        		<echo:datasetId>Aircraft Flux-Detrended: NRCC (FIFE)</echo:datasetId>
+        		<echo:shortName>doi:10.3334/ORNLDAAC/3</echo:shortName>
+        		<echo:versionId>1</echo:versionId>
+        		<echo:originalFormat>ECHO10</echo:originalFormat>
+        		<echo:dataCenter>ORNL_DAAC</echo:dataCenter>
+        		<echo:archiveCenter>ORNL_DAAC</echo:archiveCenter>
+        		<echo:processingLevelId>3</echo:processingLevelId>
+        		<time:start>1987-06-26T00:00:00Z</time:start>
+        		<time:end>1989-10-31T00:00:00Z</time:end>
+        		<link href="http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=3" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
+        		<link href="http://daac.ornl.gov/FIFE/guides/air_flux_det_nrcc.html" hreflang="en-US" title="Detrended boundary layer fluxes recorded on aircraft flights over the Konza (VIEW RELATED INFORMATION)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+        		<echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+        		<echo:orbitParameters/>
+        		<georss:box>37 -102 40 -95</georss:box>
+        		<echo:difId>FIFE_AF_DET_M</echo:difId>
+        		<echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+        		<echo:browseFlag>false</echo:browseFlag>
+        	</entry>
+        	<echo:facets>
+        		<echo:facet field="archive_center">
+        			<echo:value count="1031">ORNL_DAAC</echo:value>
+        			<echo:value count="193">PO.DAAC</echo:value>
+        			<echo:value count="129">LaRC</echo:value>
+        			<echo:value count="101">LPDAAC</echo:value>
+        			<echo:value count="62">Atmospheric Science Data Center</echo:value>
+        			<echo:value count="47">NSIDC</echo:value>
+        			<echo:value count="41">GHRC</echo:value>
+        			<echo:value count="30">OBPG</echo:value>
+        			<echo:value count="24">GEOSDISC</echo:value>
+        			<echo:value count="23">LAADS</echo:value>
+        			<echo:value count="4">MODAPS</echo:value>
+        		</echo:facet>
+        		<echo:facet field="project">
+        			<echo:value count="1055">EOSDIS</echo:value>
+        			<echo:value count="1055">ESIP</echo:value>
+        			<echo:value count="262">Large Scale Biosphere-Atmosphere </echo:value>
+        			<echo:value count="256">Boreal Ecosystem-Atmosphere Study</echo:value>
+        			<echo:value count="108">SAFARI 2000 (S2K)</echo:value>
+        			<echo:value count="89">First ISLSCP Field Experiment (FIFE)</echo:value>
+        			<echo:value count="82">Net Primary Productivity (NPP)</echo:value>
+        			<echo:value count="51">ISLSCP Initiative II (ISLSCP II)</echo:value>
+        			<echo:value count="34">CERES</echo:value>
+        			<echo:value count="25">Boreal Ecosystem-Atmosphere Follow-On </echo:value>
+        			<echo:value count="24">North American Carbon Program (NACP)</echo:value>
+        			<echo:value count="23">Vegetation Collections</echo:value>
+        			<echo:value count="18">Soil Collections</echo:value>
+        			<echo:value count="15">SRB</echo:value>
+        			<echo:value count="15">TOVS PATHFINDER</echo:value>
+        			<echo:value count="14">Oregon Transect Ecosystem Research </echo:value>
+        			<echo:value count="12">Russian Land Cover (RLC)</echo:value>
+        			<echo:value count="11">TRMM</echo:value>
+        			<echo:value count="10">Climate Collections</echo:value>
+        			<echo:value count="9">FIFE</echo:value>
+        			<echo:value count="9">Superior National Forest (SNF)</echo:value>
+        			<echo:value count="7">LIS</echo:value>
+        			<echo:value count="6">BigFoot</echo:value>
+        			<echo:value count="5">Accelerated Canopy Chemistry Program</echo:value>
+        			<echo:value count="5">GCPEX</echo:value>
+        			<echo:value count="5">NVAP-M</echo:value>
+        			<echo:value count="5">Prototype Validation Exercise (PROVE)</echo:value>
+        			<echo:value count="4">EOS Land Validation</echo:value>
+        			<echo:value count="4">Hydroclimatology Collections</echo:value>
+        			<echo:value count="4">ISCCP</echo:value>
+        			<echo:value count="4">N/A</echo:value>
+        			<echo:value count="3">2009_AN_NASA</echo:value>
+        			<echo:value count="3">2010_AN_NASA</echo:value>
+        			<echo:value count="3">2010_GR_NASA</echo:value>
+        			<echo:value count="3">2011_AN_NASA</echo:value>
+        			<echo:value count="3">2011_GR_NASA</echo:value>
+        			<echo:value count="3">2012_AN_NASA</echo:value>
+        			<echo:value count="3">2012_GR_NASA</echo:value>
+        			<echo:value count="3">2013_AN_NASA</echo:value>
+        			<echo:value count="3">2013_GR_NASA</echo:value>
+        			<echo:value count="3">Carbon Monitoring System (CMS)</echo:value>
+        			<echo:value count="3">FLUXNET</echo:value>
+        			<echo:value count="3">GRIP</echo:value>
+        			<echo:value count="3">LPVEX</echo:value>
+        			<echo:value count="3">MC3E</echo:value>
+        			<echo:value count="3">Vegetation-Ecosystem Modeling &amp; Analysis</echo:value>
+        			<echo:value count="2">2009_AN_CRESIS</echo:value>
+        			<echo:value count="2">2014_AN_NASA</echo:value>
+        			<echo:value count="2">2014_GR_NASA</echo:value>
+        			<echo:value count="2">Arctic-Boreal Vulnerability Experiment</echo:value>
+        			<echo:value count="2">CALIPSO</echo:value>
+        			<echo:value count="2">CAMEX-4</echo:value>
+        			<echo:value count="2">DISCOVER</echo:value>
+        			<echo:value count="2">EOS</echo:value>
+        			<echo:value count="2">FLASHFLUX</echo:value>
+        			<echo:value count="2">GPCP</echo:value>
+        			<echo:value count="2">IFLOODS</echo:value>
+        			<echo:value count="2">TransCom Experiment (TransCom)</echo:value>
+        			<echo:value count="1">2015_AN_NASA</echo:value>
+        			<echo:value count="1">2015_GR_NASA</echo:value>
+        			<echo:value count="1">Daymet</echo:value>
+        			<echo:value count="1">IPHEX</echo:value>
+        			<echo:value count="1">River Discharge (RIVDIS)</echo:value>
+        			<echo:value count="1">TC4</echo:value>
+        		</echo:facet>
+        		<echo:facet field="platform">
+        			<echo:value count="478">FIELD INVESTIGATION</echo:value>
+        			<echo:value count="131">COMPUTER MODEL</echo:value>
+        			<echo:value count="127">LABORATORY</echo:value>
+        			<echo:value count="89">Terra</echo:value>
+        			<echo:value count="86">AQUARIUS_SAC-D </echo:value>
+        			<echo:value count="85">AM-1</echo:value>
+        			<echo:value count="75">Aqua</echo:value>
+        			<echo:value count="68">METEOROLOGICAL STATION</echo:value>
+        			<echo:value count="61">TERRA</echo:value>
+        			<echo:value count="58">NOAA-11</echo:value>
+        			<echo:value count="56">TOWER</echo:value>
+        			<echo:value count="54">NOAA-9</echo:value>
+        			<echo:value count="51">AQUA</echo:value>
+        			<echo:value count="44">Aura</echo:value>
+        			<echo:value count="41">TOPOGRAPHIC MAP</echo:value>
+        			<echo:value count="40">NOAA-14</echo:value>
+        			<echo:value count="38">NOAA-10</echo:value>
+        			<echo:value count="36">NOAA-7</echo:value>
+        			<echo:value count="35">TERRA (MORNING EQUATORIAL CROSSING TIME SATELLITE)</echo:value>
+        			<echo:value count="30">NOAA-12</echo:value>
+        			<echo:value count="25">LANDSAT-5</echo:value>
+        			<echo:value count="23">GOES-8</echo:value>
+        			<echo:value count="22">GOES-7</echo:value>
+        			<echo:value count="22">NOAA-16</echo:value>
+        			<echo:value count="21">GRACE</echo:value>
+        			<echo:value count="20">NOAA-8</echo:value>
+        			<echo:value count="19">InSitu</echo:value>
+        			<echo:value count="19">NOAA-17</echo:value>
+        			<echo:value count="19">NOAA-18</echo:value>
+        			<echo:value count="19">VEGETATION SURVEY</echo:value>
+        			<echo:value count="18">METEOSAT-6</echo:value>
+        			<echo:value count="18">METEOSAT-7</echo:value>
+        			<echo:value count="18">NOAA-14 (NATIONAL OCEANIC &amp; ATMOSPHERIC ADMINISTRATION-14)</echo:value>
+        			<echo:value count="18">Nimbus-7</echo:value>
+        			<echo:value count="18">PHOTOSYNTHESIS CHAMBER</echo:value>
+        			<echo:value count="18">TRMM</echo:value>
+        			<echo:value count="17">C-130</echo:value>
+        			<echo:value count="17">GMS-4</echo:value>
+        			<echo:value count="17">METEOSAT-4</echo:value>
+        			<echo:value count="17">METEOSAT-5</echo:value>
+        			<echo:value count="16">FIELD SURVEY</echo:value>
+        			<echo:value count="16">GMS-2</echo:value>
+        			<echo:value count="16">GMS-3</echo:value>
+        			<echo:value count="16">GMS-5</echo:value>
+        			<echo:value count="16">GOES-10</echo:value>
+        			<echo:value count="16">GOES-6</echo:value>
+        			<echo:value count="16">GOES-9</echo:value>
+        			<echo:value count="16">INSAT-1B</echo:value>
+        			<echo:value count="16">METEOSAT-2</echo:value>
+        			<echo:value count="16">METEOSAT-3</echo:value>
+        			<echo:value count="15">WEATHER BALLOON</echo:value>
+        			<echo:value count="13">LANDSAT-7</echo:value>
+        			<echo:value count="12">GMS-1</echo:value>
+        			<echo:value count="11">GROUND STATION</echo:value>
+        			<echo:value count="11">SOIL SURVEY</echo:value>
+        			<echo:value count="10">ADEOS-I</echo:value>
+        			<echo:value count="10">GROUND-BASED OBSERVATIONS</echo:value>
+        			<echo:value count="10">MICROLAB-1</echo:value>
+        			<echo:value count="9">OV-105</echo:value>
+        			<echo:value count="8">AERIAL PHOTOGRAPH</echo:value>
+        			<echo:value count="8">HELICOPTER</echo:value>
+        			<echo:value count="8">KINGAIR</echo:value>
+        			<echo:value count="8">LANDSAT-5 (LAND REMOTE-SENSING SATELLITE-5)</echo:value>
+        			<echo:value count="8">MAPS</echo:value>
+        			<echo:value count="8">SAC-D</echo:value>
+        			<echo:value count="8">STREAMFLOW STATION</echo:value>
+        			<echo:value count="8">TWIN OTTER</echo:value>
+        			<echo:value count="6">DIGITAL ELEVATION MODEL</echo:value>
+        			<echo:value count="6">NOAA-15</echo:value>
+        			<echo:value count="6">TIROS-N</echo:value>
+        			<echo:value count="5">CV-580</echo:value>
+        			<echo:value count="5">FAO SOIL MAP</echo:value>
+        			<echo:value count="5">LANDSAT</echo:value>
+        			<echo:value count="5">NASA ER-2</echo:value>
+        			<echo:value count="5">SATELLITE</echo:value>
+        			<echo:value count="5">SURFACE</echo:value>
+        			<echo:value count="5">ULTRALIGHT</echo:value>
+        			<echo:value count="4">AEM-2</echo:value>
+        			<echo:value count="4">AERO COMMANDER</echo:value>
+        			<echo:value count="4">AQUA (AFTERNOON EQUATORIAL CROSSING TIME SATELLITE)</echo:value>
+        			<echo:value count="4">DMSP-F10</echo:value>
+        			<echo:value count="4">GOES-13</echo:value>
+        			<echo:value count="4">GROUND STATIONS</echo:value>
+        			<echo:value count="4">JERS-1 (JAPANESE EARTH RESOURCES SATELLITE-1)</echo:value>
+        			<echo:value count="4">LANDSAT-7 (LAND REMOTE-SENSING SATELLITE-7)</echo:value>
+        			<echo:value count="4">NIMBUS-7</echo:value>
+        			<echo:value count="4">Nimbus-1</echo:value>
+        			<echo:value count="4">Nimbus-2</echo:value>
+        			<echo:value count="4">Nimbus-3</echo:value>
+        			<echo:value count="4">QUIKSCAT</echo:value>
+        			<echo:value count="3">AIRCRAFT</echo:value>
+        			<echo:value count="3">CHIEFTAIN NAVAHO</echo:value>
+        			<echo:value count="3">DC-8</echo:value>
+        			<echo:value count="3">DMSP-F11</echo:value>
+        			<echo:value count="3">GOES (NOAA GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES)</echo:value>
+        			<echo:value count="3">GOES-8 (GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITE-8)</echo:value>
+        			<echo:value count="3">GROUND-BASED OBSERVATION</echo:value>
+        			<echo:value count="3">LANDSAT-4</echo:value>
+        			<echo:value count="3">NASA DC-8</echo:value>
+        			<echo:value count="3">NOAA-6</echo:value>
+        			<echo:value count="3">P-3B</echo:value>
+        			<echo:value count="3">RADIOSONDES</echo:value>
+        			<echo:value count="3">SATELLITES</echo:value>
+        			<echo:value count="3">SPACE SHUTTLES</echo:value>
+        			<echo:value count="3">SPOT-4</echo:value>
+        			<echo:value count="3">SURFACE WATER WEIR</echo:value>
+        			<echo:value count="2"> FIELD INVESTIGATION</echo:value>
+        			<echo:value count="2">ANALYSIS</echo:value>
+        			<echo:value count="2">CALIPSO</echo:value>
+        			<echo:value count="2">DMSP 5D-2/F10</echo:value>
+        			<echo:value count="2">DMSP 5D-2/F11</echo:value>
+        			<echo:value count="2">DMSP 5D-2/F13</echo:value>
+        			<echo:value count="2">DMSP 5D-2/F14</echo:value>
+        			<echo:value count="2">DMSP 5D-2/F15</echo:value>
+        			<echo:value count="2">DMSP 5D-2/F8</echo:value>
+        			<echo:value count="2">DMSP 5D-3/F16</echo:value>
+        			<echo:value count="2">DMSP 5D-3/F17</echo:value>
+        			<echo:value count="2">DMSP-F13</echo:value>
+        			<echo:value count="2">EO-1 (EARTH OBSERVING 1)</echo:value>
+        			<echo:value count="2">EP-TOMS</echo:value>
+        			<echo:value count="2">FLUX TOWER</echo:value>
+        			<echo:value count="2">GOES-11</echo:value>
+        			<echo:value count="2">GOES-12</echo:value>
+        			<echo:value count="2">GOES-5</echo:value>
+        			<echo:value count="2">LANDSAT (LAND REMOTE-SENSING SATELLITE)</echo:value>
+        			<echo:value count="2">LANDSAT-1</echo:value>
+        			<echo:value count="2">LANDSAT-2</echo:value>
+        			<echo:value count="2">LANDSAT-7 </echo:value>
+        			<echo:value count="2">METOP-A</echo:value>
+        			<echo:value count="2">NATIONAL LIGHTNING DETECTION NETWORK</echo:value>
+        			<echo:value count="2">NCAR ELECTRA</echo:value>
+        			<echo:value count="2">NOAA-19</echo:value>
+        			<echo:value count="2">NPP</echo:value>
+        			<echo:value count="2">Nimbus-4</echo:value>
+        			<echo:value count="2">OPERATIONAL NAVIGATION CHART</echo:value>
+        			<echo:value count="2">OrbView-2</echo:value>
+        			<echo:value count="2">SEASTAR</echo:value>
+        			<echo:value count="2">SPOT-1</echo:value>
+        			<echo:value count="2">SPOT-4 (SYSTEME PROBATOIRE POUR L'OBSERVATION DE LA TERRE-4)</echo:value>
+        			<echo:value count="1">AERIAL PHOTOGRAPH </echo:value>
+        			<echo:value count="1">ALOS (Advanced Land Observing Satellite)</echo:value>
+        			<echo:value count="1">AQUA (AFTERNOON EQUATORIAL CROSSING TIME SATELLITE) </echo:value>
+        			<echo:value count="1">BOAT</echo:value>
+        			<echo:value count="1">CESSNA SINGLE-ENGINE AIRCRAFT</echo:value>
+        			<echo:value count="1">DEM (DIGITAL ELEVATION MODEL)</echo:value>
+        			<echo:value count="1">DMSP-5B-F3</echo:value>
+        			<echo:value count="1">DMSP-F08</echo:value>
+        			<echo:value count="1">DMSP-F1</echo:value>
+        			<echo:value count="1">DMSP-F12</echo:value>
+        			<echo:value count="1">DMSP-F14</echo:value>
+        			<echo:value count="1">DMSP-F17</echo:value>
+        			<echo:value count="1">DMSP-F7</echo:value>
+        			<echo:value count="1">DMSP-F8</echo:value>
+        			<echo:value count="1">ERS-1</echo:value>
+        			<echo:value count="1">ERS-2</echo:value>
+        			<echo:value count="1">ERS-2 (EUROPEAN REMOTE SENSING SATELLITE-2)</echo:value>
+        			<echo:value count="1">FIELD CAMPAIGN</echo:value>
+        			<echo:value count="1">FIELD INVESTIGATION </echo:value>
+        			<echo:value count="1">FIELD SURVEY </echo:value>
+        			<echo:value count="1">Field station</echo:value>
+        			<echo:value count="1">G-V</echo:value>
+        			<echo:value count="1">GEOS-4</echo:value>
+        			<echo:value count="1">GEOSTATIONARY SATELLITES</echo:value>
+        			<echo:value count="1">GOES-12 (AQUA/TERRA)</echo:value>
+        			<echo:value count="1">GOES-12 (GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITE-12)</echo:value>
+        			<echo:value count="1">HUMAN OBSERVER</echo:value>
+        			<echo:value count="1">ICE CHARTS</echo:value>
+        			<echo:value count="1">ICESAT</echo:value>
+        			<echo:value count="1">INVESTIGATION</echo:value>
+        			<echo:value count="1">Inerferometric Synthetic Aperture Radar (InSAR)</echo:value>
+        			<echo:value count="1">Inerferometric Synthetic Apeture Radar (InSAR)</echo:value>
+        			<echo:value count="1">Interferometric Synthetic Aperture Radar (InSAR)</echo:value>
+        			<echo:value count="1">JERS-1</echo:value>
+        			<echo:value count="1">LABORATORY </echo:value>
+        			<echo:value count="1">LANDSAT-2 (LAND REMOTE-SENSING SATELLITE-2)</echo:value>
+        			<echo:value count="1">LANDSAT-2 (LAND REMOTE-SENSING SATELLITE-2) </echo:value>
+        			<echo:value count="1">LANDSAT-3</echo:value>
+        			<echo:value count="1">LANDSAT-4 (LAND REMOTE-SENSING SATELLITE-4)</echo:value>
+        			<echo:value count="1">LANDSAT-5 (LAND REMOTE-SENSING SATELLITE-5) </echo:value>
+        			<echo:value count="1">LIGHTNING DETECTION NETWORK</echo:value>
+        			<echo:value count="1">Landsat</echo:value>
+        			<echo:value count="1">MIPS</echo:value>
+        			<echo:value count="1">MODEL</echo:value>
+        			<echo:value count="1">MODELS</echo:value>
+        			<echo:value count="1">MTSAT-1R</echo:value>
+        			<echo:value count="1">MetOp-A</echo:value>
+        			<echo:value count="1">Model</echo:value>
+        			<echo:value count="1">NASA C-130B</echo:value>
+        			<echo:value count="1">NASA C-130Q</echo:value>
+        			<echo:value count="1">NMP/EO-1</echo:value>
+        			<echo:value count="1">NOAA LONG-EZ</echo:value>
+        			<echo:value count="1">NOAA-10 (NATIONAL OCEANIC &amp; ATMOSPHERIC ADMINISTRATION-10)</echo:value>
+        			<echo:value count="1">NOAA-12 (NATIONAL OCEANIC &amp; ATMOSPHERIC ADMINISTRATION-12)</echo:value>
+        			<echo:value count="1">PROPERTY MAPS</echo:value>
+        			<echo:value count="1">QUICKBIRD</echo:value>
+        			<echo:value count="1">QUICKBIRD (DIGITALGLOBE'S QUICKBIRD)</echo:value>
+        			<echo:value count="1">RADARSAT-1</echo:value>
+        			<echo:value count="1">SMART</echo:value>
+        			<echo:value count="1">SNOW CHARTS</echo:value>
+        			<echo:value count="1">SOIL CHEMISTRY</echo:value>
+        			<echo:value count="1">SOIL TEXTURE</echo:value>
+        			<echo:value count="1">SRL-1</echo:value>
+        			<echo:value count="1">SRL-2</echo:value>
+        			<echo:value count="1">SRTM (SHUTTLE RADAR TOPOGRAPHY MISSION) </echo:value>
+        			<echo:value count="1">Suomi NPP</echo:value>
+        			<echo:value count="1">TETHERED BALLOON</echo:value>
+        			<echo:value count="1">UW C131</echo:value>
+        			<echo:value count="1">UWA CV580</echo:value>
+        			<echo:value count="1">WEATHER  BALLOON</echo:value>
+        			<echo:value count="1">WEATHER STATIONS</echo:value>
+        			<echo:value count="1">TERRA (MORNING EQUATORIAL CROSSING TIME SATELLITE)</echo:value>
+        		</echo:facet>
+        		<echo:facet field="instrument">
+        			<echo:value count="242">ANALYSIS</echo:value>
+        			<echo:value count="183">MODIS</echo:value>
+        			<echo:value count="144">WEIGHING BALANCE</echo:value>
+        			<echo:value count="118">HUMAN OBSERVER</echo:value>
+        			<echo:value count="91">STEEL MEASURING TAPE</echo:value>
+        			<echo:value count="86">AQUARIUS_SCATTEROMETER</echo:value>
+        			<echo:value count="82">RAIN GAUGE</echo:value>
+        			<echo:value count="74">MISR</echo:value>
+        			<echo:value count="73">QUADRAT SAMPLING FRAME</echo:value>
+        			<echo:value count="71">SOIL CORING DEVICE</echo:value>
+        			<echo:value count="58">PYRANOMETER</echo:value>
+        			<echo:value count="56">AQUARIUS_RADIOMETER</echo:value>
+        			<echo:value count="51">AVHRR</echo:value>
+        			<echo:value count="49">THERMOCOUPLE</echo:value>
+        			<echo:value count="44">QUANTUM SENSOR</echo:value>
+        			<echo:value count="44">TES</echo:value>
+        			<echo:value count="43">ANEMOMETER</echo:value>
+        			<echo:value count="43">NET RADIOMETER</echo:value>
+        			<echo:value count="40">DIGITIZER</echo:value>
+        			<echo:value count="36">CERES SCANNER</echo:value>
+        			<echo:value count="36">EDDY CORRELATION APPARATUS</echo:value>
+        			<echo:value count="36">MODIS (MODERATE-RESOLUTION IMAGING SPECTRORADIOMETER)</echo:value>
+        			<echo:value count="34">LEAF AREA METER</echo:value>
+        			<echo:value count="31">HUMIDITY SENSOR</echo:value>
+        			<echo:value count="31">HYGROMETER</echo:value>
+        			<echo:value count="31">MODEL ANALYSIS</echo:value>
+        			<echo:value count="27">BAROMETER</echo:value>
+        			<echo:value count="27">IRGA</echo:value>
+        			<echo:value count="27">SPECTRORADIOMETER</echo:value>
+        			<echo:value count="26">GAS EXCHANGE SYSTEM</echo:value>
+        			<echo:value count="24">LANDSAT TM</echo:value>
+        			<echo:value count="24">TEMPERATURE SENSOR</echo:value>
+        			<echo:value count="23">AVHRR-3</echo:value>
+        			<echo:value count="22">AIR THERMOMETER</echo:value>
+        			<echo:value count="22">AVHRR (ADVANCED VERY HIGH RESOLUTION RADIOMETER)</echo:value>
+        			<echo:value count="22">IR CO2 ANALYZER</echo:value>
+        			<echo:value count="22">MASS SPECTROMETER</echo:value>
+        			<echo:value count="22">SOIL HEAT FLUX TRANSDUCER</echo:value>
+        			<echo:value count="22">THERMOMETER</echo:value>
+        			<echo:value count="21">GRACE ACC</echo:value>
+        			<echo:value count="21">GRACE KBR</echo:value>
+        			<echo:value count="21">GRACE SCA</echo:value>
+        			<echo:value count="20">THERMISTOR</echo:value>
+        			<echo:value count="20">VISSR</echo:value>
+        			<echo:value count="19">InSitu</echo:value>
+        			<echo:value count="18">CZCS</echo:value>
+        			<echo:value count="18">INFRARED THERMOMETER</echo:value>
+        			<echo:value count="18">IRGA (INFRARED GAS ANALYZER)</echo:value>
+        			<echo:value count="18">SPECTROPHOTOMETER</echo:value>
+        			<echo:value count="18">SUN PHOTOMETER</echo:value>
+        			<echo:value count="18">WIND SENSOR</echo:value>
+        			<echo:value count="17">ALGORITHM</echo:value>
+        			<echo:value count="17">AMSR-E</echo:value>
+        			<echo:value count="17">CHN ANALYZER</echo:value>
+        			<echo:value count="17">RADIOSONDE</echo:value>
+        			<echo:value count="16">ASTER</echo:value>
+        			<echo:value count="16">CHEMILUMINESCENCE</echo:value>
+        			<echo:value count="16">MIR</echo:value>
+        			<echo:value count="15">AVHRR-2</echo:value>
+        			<echo:value count="15">GC</echo:value>
+        			<echo:value count="15">HIRS/2</echo:value>
+        			<echo:value count="15">KJELDAHL DIGESTION</echo:value>
+        			<echo:value count="15">PRESSURE SENSOR</echo:value>
+        			<echo:value count="15">PRESSURE TRANSDUCER</echo:value>
+        			<echo:value count="14">INFRARED RADIOMETER</echo:value>
+        			<echo:value count="14">PYRGEOMETER</echo:value>
+        			<echo:value count="14">SONIC ANEMOMETER</echo:value>
+        			<echo:value count="14">TEMPERATURE PROBE</echo:value>
+        			<echo:value count="14">TOVS</echo:value>
+        			<echo:value count="13">CARBON ANALYZER</echo:value>
+        			<echo:value count="13">MOPITT</echo:value>
+        			<echo:value count="13">SOIL TEMPERATURE PROBE</echo:value>
+        			<echo:value count="12">BOWEN RATIO APPARATUS</echo:value>
+        			<echo:value count="12">SSM/I</echo:value>
+        			<echo:value count="11">ANEROID BAROMETER</echo:value>
+        			<echo:value count="11">GC-FID (GAS CHROMATOGRAPH/FLAME IONIZATION DETECTOR)</echo:value>
+        			<echo:value count="10">GOES-8 IMAGER</echo:value>
+        			<echo:value count="10">LANDSAT ETM+</echo:value>
+        			<echo:value count="10">LIS</echo:value>
+        			<echo:value count="10">OCTS</echo:value>
+        			<echo:value count="10">OTD</echo:value>
+        			<echo:value count="10">STREAM GAUGE</echo:value>
+        			<echo:value count="9">ION CHROMATOGRAPH</echo:value>
+        			<echo:value count="9">NDIR GAS ANALYZER</echo:value>
+        			<echo:value count="9">PLANT CANOPY ANALYZER</echo:value>
+        			<echo:value count="9">RADIO ALTIMETER</echo:value>
+        			<echo:value count="9">SRTM</echo:value>
+        			<echo:value count="9">TIME DOMAIN REFLECTOMETER</echo:value>
+        			<echo:value count="9">ULTRASONIC DEPTH GAUGE</echo:value>
+        			<echo:value count="9">WIND PROFILER</echo:value>
+        			<echo:value count="8">ETM+ (ENHANCED THEMATIC MAPPER PLUS)</echo:value>
+        			<echo:value count="8">GC-FID</echo:value>
+        			<echo:value count="8">MODULAR MULTIBAND RADIOMETER</echo:value>
+        			<echo:value count="8">PH METER</echo:value>
+        			<echo:value count="8">TM (THEMATIC MAPPER)</echo:value>
+        			<echo:value count="7">Aquarius_Radiometer</echo:value>
+        			<echo:value count="7">CERES-FM1</echo:value>
+        			<echo:value count="7">DEWPOINT HYDROMETER</echo:value>
+        			<echo:value count="7">DISDROMETERS</echo:value>
+        			<echo:value count="7">GC-MS</echo:value>
+        			<echo:value count="7">GUST PROBE</echo:value>
+        			<echo:value count="7">OZONE SENSOR</echo:value>
+        			<echo:value count="7">WATER LEVEL GAUGE</echo:value>
+        			<echo:value count="6">GC-ECD (GAS CHROMATOGRAPH/ELECTRON CAPTURE DETECTOR)</echo:value>
+        			<echo:value count="6">GYPSUM BLOCK</echo:value>
+        			<echo:value count="6">LANDSAT MSS</echo:value>
+        			<echo:value count="6">SNOW TUBE</echo:value>
+        			<echo:value count="6">SPECTROMETER</echo:value>
+        			<echo:value count="5">AIRS</echo:value>
+        			<echo:value count="5">AUTOANALYZER</echo:value>
+        			<echo:value count="5">BUGEYE</echo:value>
+        			<echo:value count="5">CERES-FM3</echo:value>
+        			<echo:value count="5">CLINOMETER</echo:value>
+        			<echo:value count="5">DRY BULB THERMOMETER</echo:value>
+        			<echo:value count="5">GPS</echo:value>
+        			<echo:value count="5">HUMAN OBSERVER </echo:value>
+        			<echo:value count="5">HUMIDITY PROBE</echo:value>
+        			<echo:value count="5">LANDSAT TM (LANDSAT THEMATIC MAPPER)</echo:value>
+        			<echo:value count="5">MICROSCOPE</echo:value>
+        			<echo:value count="5">PHOTOSYNTHESIS CHAMBER</echo:value>
+        			<echo:value count="5">RADIOMETERS</echo:value>
+        			<echo:value count="5">SAR (SYNTHETIC APERTURE RADAR)</echo:value>
+        			<echo:value count="5">SNOW MEASURING ROD</echo:value>
+        			<echo:value count="5">SOIL MOISTURE PROBE</echo:value>
+        			<echo:value count="5">SPOT MULTISPECTRAL</echo:value>
+        			<echo:value count="5">TURBIDITY METERS</echo:value>
+        			<echo:value count="5">UV OZONE DETECTOR</echo:value>
+        			<echo:value count="4">2DVD</echo:value>
+        			<echo:value count="4">AA (ATOMIC ABSORPTION SPECTROMETER)</echo:value>
+        			<echo:value count="4">APU</echo:value>
+        			<echo:value count="4">CAMERAS</echo:value>
+        			<echo:value count="4">CEILOMETER</echo:value>
+        			<echo:value count="4">CO2 SENSOR</echo:value>
+        			<echo:value count="4">CONDUCTIVITY METERS</echo:value>
+        			<echo:value count="4">DENSIOMETER</echo:value>
+        			<echo:value count="4">GAS CHROMATOGRAPHS</echo:value>
+        			<echo:value count="4">GC (GAS CHROMATOGRAPH)</echo:value>
+        			<echo:value count="4">GPS (GLOBAL POSITIONING SYSTEM)</echo:value>
+        			<echo:value count="4">OZONESONDE</echo:value>
+        			<echo:value count="4">POLDER</echo:value>
+        			<echo:value count="4">PRESSURE CHAMBER</echo:value>
+        			<echo:value count="4">PSYCHROMETER</echo:value>
+        			<echo:value count="4">SEAWINDS</echo:value>
+        			<echo:value count="3">AMSU-A</echo:value>
+        			<echo:value count="3">CASI</echo:value>
+        			<echo:value count="3">CERES-FM2</echo:value>
+        			<echo:value count="3">CERES-FM4</echo:value>
+        			<echo:value count="3">CERES-PFM</echo:value>
+        			<echo:value count="3">DENDROMETERS</echo:value>
+        			<echo:value count="3">FLUORESCENCE SPECTROSCOPY</echo:value>
+        			<echo:value count="3">ICP-AES (INDUCTIVELY COUPLED PLASMA ATOMIC EMISSION SPECTROMETER)</echo:value>
+        			<echo:value count="3">MSS (MULTISPECTRAL SCANNER)</echo:value>
+        			<echo:value count="3">MSU</echo:value>
+        			<echo:value count="3">MULTIBAND VEGETATION IMAGER</echo:value>
+        			<echo:value count="3">NEPHELOMETER</echo:value>
+        			<echo:value count="3">NEUTRON PROBE</echo:value>
+        			<echo:value count="3">NS-001 MULTISPECTRAL SCANNER</echo:value>
+        			<echo:value count="3">OLS</echo:value>
+        			<echo:value count="3">PAR SENSOR</echo:value>
+        			<echo:value count="3">PARABOLA RADIOMETER</echo:value>
+        			<echo:value count="3">PR</echo:value>
+        			<echo:value count="3">RASS</echo:value>
+        			<echo:value count="3">RF ANTENNA</echo:value>
+        			<echo:value count="3">SOIL GAS CHAMBER</echo:value>
+        			<echo:value count="3">SRTM (SHUTTLE RADAR TOPOGRAPHY MISSION)</echo:value>
+        			<echo:value count="3">SSMIS</echo:value>
+        			<echo:value count="3">STILLING WELL</echo:value>
+        			<echo:value count="3">SUNFLECK CEPTOMETER</echo:value>
+        			<echo:value count="3">TDR (TIME DOMAIN REFLECTOMETRY PROBE)</echo:value>
+        			<echo:value count="3">TMI</echo:value>
+        			<echo:value count="3">TOMS</echo:value>
+        			<echo:value count="3">TUNABLE DIODE LASER</echo:value>
+        			<echo:value count="3">VAS</echo:value>
+        			<echo:value count="3">WET BULB THERMOMETER</echo:value>
+        			<echo:value count="2">AAS</echo:value>
+        			<echo:value count="2">ASAS</echo:value>
+        			<echo:value count="2">ASD RADIOMETER</echo:value>
+        			<echo:value count="2">AVCS Nimbus-1</echo:value>
+        			<echo:value count="2">AVCS Nimbus-2</echo:value>
+        			<echo:value count="2">Advanced Land Observation Satellite (ALOS)</echo:value>
+        			<echo:value count="2">CAPACITIVE SENSOR</echo:value>
+        			<echo:value count="2">CERES-FM5</echo:value>
+        			<echo:value count="2">CONDENSATION NUCLEI COUNTER</echo:value>
+        			<echo:value count="2">DIGITAL HEMISPHERICAL CAMERA</echo:value>
+        			<echo:value count="2">DOPPLER RADAR</echo:value>
+        			<echo:value count="2">DRIFTING BUOYS</echo:value>
+        			<echo:value count="2">FLUOROMETER</echo:value>
+        			<echo:value count="2">FOURIER TRANSFORM SPECTROMETER</echo:value>
+        			<echo:value count="2">GAMMA RADIATION DETECTOR</echo:value>
+        			<echo:value count="2">GC-TCD</echo:value>
+        			<echo:value count="2">GOES I-M IMAGER</echo:value>
+        			<echo:value count="2">GOES-13 IMAGER</echo:value>
+        			<echo:value count="2">GOES-13 Imager</echo:value>
+        			<echo:value count="2">HIGH RESOLUTION CAMERA</echo:value>
+        			<echo:value count="2">HPLC</echo:value>
+        			<echo:value count="2">HRIR Nimbus-1</echo:value>
+        			<echo:value count="2">HRIR Nimbus-2</echo:value>
+        			<echo:value count="2">HRIR Nimbus-3</echo:value>
+        			<echo:value count="2">IDCS Nimbus-3</echo:value>
+        			<echo:value count="2">IDCS Nimbus-4</echo:value>
+        			<echo:value count="2">INCLINOMETER</echo:value>
+        			<echo:value count="2">INTEGRATING SPHERE</echo:value>
+        			<echo:value count="2">LICOR PLANT CANOPY ANALYZER</echo:value>
+        			<echo:value count="2">LIDAR</echo:value>
+        			<echo:value count="2">MAS</echo:value>
+        			<echo:value count="2">MCoRDS</echo:value>
+        			<echo:value count="2">MICROWAVE RADIOMETER</echo:value>
+        			<echo:value count="2">OPTICAL COUNTER</echo:value>
+        			<echo:value count="2">OSMOMETER</echo:value>
+        			<echo:value count="2">PERMEAMETER</echo:value>
+        			<echo:value count="2">PHOTOMETER</echo:value>
+        			<echo:value count="2">PYRHELIOMETER</echo:value>
+        			<echo:value count="2">RAIN GAUGES</echo:value>
+        			<echo:value count="2">SAR</echo:value>
+        			<echo:value count="2">SCINTILLATION COUNTER</echo:value>
+        			<echo:value count="2">SEAWIFS</echo:value>
+        			<echo:value count="2">SMMR (SCANNING MULTICHANNEL MICROWAVE RADIOMETER)</echo:value>
+        			<echo:value count="2">SNOW DENSITY CUTTER</echo:value>
+        			<echo:value count="2">SOIL HEAT PROBE</echo:value>
+        			<echo:value count="2">SOIL PRESSURE PLATE</echo:value>
+        			<echo:value count="2">SSMI</echo:value>
+        			<echo:value count="2">STEEL MEASURING TAPE </echo:value>
+        			<echo:value count="2">SeaWiFS</echo:value>
+        			<echo:value count="2">TENSION INFILTROMETER</echo:value>
+        			<echo:value count="2">THEMATIC MAPPER SIMULATOR</echo:value>
+        			<echo:value count="2">TIMS</echo:value>
+        			<echo:value count="2">TOVS-HIRS/2</echo:value>
+        			<echo:value count="2">TOVS-MSU</echo:value>
+        			<echo:value count="2">VISIBILITY SENSOR</echo:value>
+        			<echo:value count="2">WEIGHING BALANCE </echo:value>
+        			<echo:value count="2">WIND VANE</echo:value>
+        			<echo:value count="1">AERI</echo:value>
+        			<echo:value count="1">AEROSOL SPECTROMETER PROBE</echo:value>
+        			<echo:value count="1">AEROSOL/CLOUD PARTICLE SIZER</echo:value>
+        			<echo:value count="1">AIRBORNE SUN PHOTOMETER</echo:value>
+        			<echo:value count="1">ALI</echo:value>
+        			<echo:value count="1">ALTIMETERS</echo:value>
+        			<echo:value count="1">AMI-SAR</echo:value>
+        			<echo:value count="1">AMS (ACCELERATOR MASS SPECTROMETER)</echo:value>
+        			<echo:value count="1">AMS (ACCELERATOR MASS SPECTROMETERS)</echo:value>
+        			<echo:value count="1">ANALYSIS </echo:value>
+        			<echo:value count="1">ANTHRONE COLORIMETER</echo:value>
+        			<echo:value count="1">AOCI</echo:value>
+        			<echo:value count="1">ATSR</echo:value>
+        			<echo:value count="1">ATSR (ALONG TRACK SCANNING RADIOMETER AND MICROWAVE SOUNDER)</echo:value>
+        			<echo:value count="1">AVIRIS</echo:value>
+        			<echo:value count="1">Aquarius_Scatterometer</echo:value>
+        			<echo:value count="1">BALANCE</echo:value>
+        			<echo:value count="1">CALIPERS</echo:value>
+        			<echo:value count="1">CAMERA</echo:value>
+        			<echo:value count="1">CARBON ANALYZER </echo:value>
+        			<echo:value count="1">CARBON MONOXIDE ANALYZER</echo:value>
+        			<echo:value count="1">CHN ANALYZER </echo:value>
+        			<echo:value count="1">CLOUD ABSORPTION RADIOMETER</echo:value>
+        			<echo:value count="1">CLOUD CHAMBER</echo:value>
+        			<echo:value count="1">COLORIMETER</echo:value>
+        			<echo:value count="1">COLORIMETERS</echo:value>
+        			<echo:value count="1">COUNTERFLOW VIRTUAL IMPACTOR</echo:value>
+        			<echo:value count="1">CUP ANEMOMETER</echo:value>
+        			<echo:value count="1">CURRENT METER</echo:value>
+        			<echo:value count="1">DBH TAPE</echo:value>
+        			<echo:value count="1">DENDROMETER BANDS</echo:value>
+        			<echo:value count="1">DIELECTRIC PROBE</echo:value>
+        			<echo:value count="1">DMS</echo:value>
+        			<echo:value count="1">DOPPLER LIDAR</echo:value>
+        			<echo:value count="1">DREDGING DEVICES</echo:value>
+        			<echo:value count="1">ECHO SOUNDERS</echo:value>
+        			<echo:value count="1">ETM+</echo:value>
+        			<echo:value count="1">ETM+ </echo:value>
+        			<echo:value count="1">FIELD SURVEY</echo:value>
+        			<echo:value count="1">FLUORESCENCE MICROSCOPY</echo:value>
+        			<echo:value count="1">FTIR SPECTROMETER (FOURIER TRANSFORM INFRARED SPECTROMETER)</echo:value>
+        			<echo:value count="1">GAS CHROMATOGRAPH</echo:value>
+        			<echo:value count="1">GC-MS (GAS CHROMATOGRAPH/MASS SPECTROMETRY)</echo:value>
+        			<echo:value count="1">GLAS (GEOSCIENCE LASER ALTIMETER SYSTEM)</echo:value>
+        			<echo:value count="1">GOES-11 IMAGER</echo:value>
+        			<echo:value count="1">GPS (GLOBAL POSITIONING SYSTEM) </echo:value>
+        			<echo:value count="1">Gas Chromatograph</echo:value>
+        			<echo:value count="1">HOT-WIRE</echo:value>
+        			<echo:value count="1">HRVIR</echo:value>
+        			<echo:value count="1">HSRL</echo:value>
+        			<echo:value count="1">HYDROMETER</echo:value>
+        			<echo:value count="1">HYPERION</echo:value>
+        			<echo:value count="1">HYPERION (HYPERSPECTRAL IMAGER)</echo:value>
+        			<echo:value count="1">IMAGER</echo:value>
+        			<echo:value count="1">IMAGING RADIOMETERS</echo:value>
+        			<echo:value count="1">INTEGRATING NEPHELOMETER</echo:value>
+        			<echo:value count="1">ION CHROMATOGRAPH  </echo:value>
+        			<echo:value count="1">IR CO2 ANALYZER </echo:value>
+        			<echo:value count="1">IR CO2 ANALYZER (INFRARED CARBON DIOXIDE ANALYZER</echo:value>
+        			<echo:value count="1">IRMS (Isotope Ratio Mass Spectrometer)</echo:value>
+        			<echo:value count="1">JERS-1 SAR</echo:value>
+        			<echo:value count="1">LANDSAT TM  (LANDSAT THEMATIC MAPPER)</echo:value>
+        			<echo:value count="1">LASER ALTIMETER</echo:value>
+        			<echo:value count="1">LASER RANGE FINDER</echo:value>
+        			<echo:value count="1">LICOR 6262 GAS ANALYZER</echo:value>
+        			<echo:value count="1">LICOR GAS EXCHANGE SYSTEM</echo:value>
+        			<echo:value count="1">LIDAR (LIGHT DETECTION AND RANGING)</echo:value>
+        			<echo:value count="1">LINE INTERSECT SAMPLING</echo:value>
+        			<echo:value count="1">LYSIMETERS</echo:value>
+        			<echo:value count="1">MASS SPECTROMETER </echo:value>
+        			<echo:value count="1">MEASURING TAPE</echo:value>
+        			<echo:value count="1">MICROPULSE LIDAR</echo:value>
+        			<echo:value count="1">MODEL</echo:value>
+        			<echo:value count="1">MODIS (MODERATE-RESOLUTION IMAGING SPECTRORADIOMETER </echo:value>
+        			<echo:value count="1">MSS (MULTISPECTRAL SCANNER) </echo:value>
+        			<echo:value count="1">MULTIBAND LEAF RADIOMETER</echo:value>
+        			<echo:value count="1">Model</echo:value>
+        			<echo:value count="1">NDIR GAS ANALYZER (NONDISPERSIVE INFRARED GAS ANALYZER)</echo:value>
+        			<echo:value count="1">NO2 CHEMILUMINESCENT DETECTOR</echo:value>
+        			<echo:value count="1">OXYGEN ANALYZER</echo:value>
+        			<echo:value count="1">OXYGEN ANALYZER </echo:value>
+        			<echo:value count="1">OXYGEN METERS</echo:value>
+        			<echo:value count="1">PALSAR (Phased Array type L-band Synthetic Aperture Radar)</echo:value>
+        			<echo:value count="1">PH METER </echo:value>
+        			<echo:value count="1">PLANT STRESS MONITOR</echo:value>
+        			<echo:value count="1">PLATINUM RESISTANCE</echo:value>
+        			<echo:value count="1">PMS 2D-C PROBE</echo:value>
+        			<echo:value count="1">PMS 2D-P PROBE</echo:value>
+        			<echo:value count="1">POROMETER</echo:value>
+        			<echo:value count="1">PRESSURE PROBE</echo:value>
+        			<echo:value count="1">PTR-MS (PROTON TRANSFER MASS SPECTROMETER)</echo:value>
+        			<echo:value count="1">PYRANOMETERS</echo:value>
+        			<echo:value count="1">PYRRADIOMETERS</echo:value>
+        			<echo:value count="1">SECCHI DISKS </echo:value>
+        			<echo:value count="1">SEDIMENT CORERS</echo:value>
+        			<echo:value count="1">SIR-C</echo:value>
+        			<echo:value count="1">SODAR</echo:value>
+        			<echo:value count="1">SODAR (SOUND DETECTION AND RANGING)</echo:value>
+        			<echo:value count="1">SOIL DEPTH PROBE</echo:value>
+        			<echo:value count="1">SOIL SAMPLER</echo:value>
+        			<echo:value count="1">SOLAR MONITOR</echo:value>
+        			<echo:value count="1">SPATIAL COORDINATE APPARATUS</echo:value>
+        			<echo:value count="1">SSFR</echo:value>
+        			<echo:value count="1">STREAM GAUGE </echo:value>
+        			<echo:value count="1">STREAM GUAGE</echo:value>
+        			<echo:value count="1">TEMPERATURE PROBE </echo:value>
+        			<echo:value count="1">TENSIOMETER</echo:value>
+        			<echo:value count="1">TERRA (MORNING EQUATORIAL CROSSING TIME SATELLITE)</echo:value>
+        			<echo:value count="1">TETHERED BALLOON</echo:value>
+        			<echo:value count="1">TM</echo:value>
+        			<echo:value count="1">TM (THEMATIC MAPPER) </echo:value>
+        			<echo:value count="1">TOMS (TOTAL OZONE MAPPING SPECTROMETER)</echo:value>
+        			<echo:value count="1">TOVS-SSU</echo:value>
+        			<echo:value count="1">VERTICAL POINTING RADAR</echo:value>
+        			<echo:value count="1">VIDEO CAMERA</echo:value>
+        			<echo:value count="1">VIIRS</echo:value>
+        			<echo:value count="1">VIL</echo:value>
+        			<echo:value count="1">VIRR</echo:value>
+        			<echo:value count="1">VIRS</echo:value>
+        			<echo:value count="1">VIRS (TRMM VISIBLE INFRARED SCANNER)</echo:value>
+        			<echo:value count="1">WIND MONITOR</echo:value>
+        			<echo:value count="1">WSR-100</echo:value>
+        			<echo:value count="1">X-RAY DENSITOMETRY</echo:value>
+        		</echo:facet>
+        		<echo:facet field="sensor">
+        			<echo:value count="242">ANALYSIS</echo:value>
+        			<echo:value count="183">MODIS</echo:value>
+        			<echo:value count="144">WEIGHING BALANCE</echo:value>
+        			<echo:value count="118">HUMAN OBSERVER</echo:value>
+        			<echo:value count="91">STEEL MEASURING TAPE</echo:value>
+        			<echo:value count="86">AQUARIUS_SCATTEROMETER</echo:value>
+        			<echo:value count="82">RAIN GAUGE</echo:value>
+        			<echo:value count="73">AA</echo:value>
+        			<echo:value count="73">AF</echo:value>
+        			<echo:value count="73">AN</echo:value>
+        			<echo:value count="73">BA</echo:value>
+        			<echo:value count="73">BF</echo:value>
+        			<echo:value count="73">CA</echo:value>
+        			<echo:value count="73">CF</echo:value>
+        			<echo:value count="73">DA</echo:value>
+        			<echo:value count="73">DF</echo:value>
+        			<echo:value count="73">QUADRAT SAMPLING FRAME</echo:value>
+        			<echo:value count="71">SOIL CORING DEVICE</echo:value>
+        			<echo:value count="58">PYRANOMETER</echo:value>
+        			<echo:value count="56">AQUARIUS_RADIOMETER</echo:value>
+        			<echo:value count="51">AVHRR</echo:value>
+        			<echo:value count="49">THERMOCOUPLE</echo:value>
+        			<echo:value count="44">FTS</echo:value>
+        			<echo:value count="44">QUANTUM SENSOR</echo:value>
+        			<echo:value count="43">ANEMOMETER</echo:value>
+        			<echo:value count="43">NET RADIOMETER</echo:value>
+        			<echo:value count="40">DIGITIZER</echo:value>
+        			<echo:value count="36">CERES SCANNER</echo:value>
+        			<echo:value count="36">EDDY CORRELATION APPARATUS</echo:value>
+        			<echo:value count="36">MODIS (MODERATE-RESOLUTION IMAGING SPECTRORADIOMETER)</echo:value>
+        			<echo:value count="34">LEAF AREA METER</echo:value>
+        			<echo:value count="31">HUMIDITY SENSOR</echo:value>
+        			<echo:value count="31">HYGROMETER</echo:value>
+        			<echo:value count="31">MODEL ANALYSIS</echo:value>
+        			<echo:value count="27">BAROMETER</echo:value>
+        			<echo:value count="27">IRGA</echo:value>
+        			<echo:value count="27">SPECTRORADIOMETER</echo:value>
+        			<echo:value count="26">GAS EXCHANGE SYSTEM</echo:value>
+        			<echo:value count="24">LANDSAT TM</echo:value>
+        			<echo:value count="24">TEMPERATURE SENSOR</echo:value>
+        			<echo:value count="23">AVHRR-3</echo:value>
+        			<echo:value count="22">AIR THERMOMETER</echo:value>
+        			<echo:value count="22">AVHRR (ADVANCED VERY HIGH RESOLUTION RADIOMETER)</echo:value>
+        			<echo:value count="22">IR CO2 ANALYZER</echo:value>
+        			<echo:value count="22">MASS SPECTROMETER</echo:value>
+        			<echo:value count="22">SOIL HEAT FLUX TRANSDUCER</echo:value>
+        			<echo:value count="22">THERMOMETER</echo:value>
+        			<echo:value count="21">GRACE ACC</echo:value>
+        			<echo:value count="21">GRACE KBR</echo:value>
+        			<echo:value count="21">GRACE SCA</echo:value>
+        			<echo:value count="20">THERMISTOR</echo:value>
+        			<echo:value count="20">VISSR</echo:value>
+        			<echo:value count="19">InSitu</echo:value>
+        			<echo:value count="18">INFRARED THERMOMETER</echo:value>
+        			<echo:value count="18">IRGA (INFRARED GAS ANALYZER)</echo:value>
+        			<echo:value count="18">SPECTROPHOTOMETER</echo:value>
+        			<echo:value count="18">SUN PHOTOMETER</echo:value>
+        			<echo:value count="18">WIND SENSOR</echo:value>
+        			<echo:value count="17">ALGORITHM</echo:value>
+        			<echo:value count="17">AMSR-E</echo:value>
+        			<echo:value count="17">CHN ANALYZER</echo:value>
+        			<echo:value count="17">RADIOSONDE</echo:value>
+        			<echo:value count="16">CHEMILUMINESCENCE</echo:value>
+        			<echo:value count="16">MIR</echo:value>
+        			<echo:value count="15">AVHRR-2</echo:value>
+        			<echo:value count="15">GC</echo:value>
+        			<echo:value count="15">HIRS/2</echo:value>
+        			<echo:value count="15">KJELDAHL DIGESTION</echo:value>
+        			<echo:value count="15">PRESSURE SENSOR</echo:value>
+        			<echo:value count="15">PRESSURE TRANSDUCER</echo:value>
+        			<echo:value count="14">INFRARED RADIOMETER</echo:value>
+        			<echo:value count="14">PYRGEOMETER</echo:value>
+        			<echo:value count="14">SONIC ANEMOMETER</echo:value>
+        			<echo:value count="14">TEMPERATURE PROBE</echo:value>
+        			<echo:value count="14">TOVS</echo:value>
+        			<echo:value count="13">CARBON ANALYZER</echo:value>
+        			<echo:value count="13">SOIL TEMPERATURE PROBE</echo:value>
+        			<echo:value count="13">SWIR</echo:value>
+        			<echo:value count="13">TIR</echo:value>
+        			<echo:value count="13">VNIR</echo:value>
+        			<echo:value count="12">2.3um Radiometer</echo:value>
+        			<echo:value count="12">2.4um Radiometer</echo:value>
+        			<echo:value count="12">4.7um Radiometer</echo:value>
+        			<echo:value count="12">BOWEN RATIO APPARATUS</echo:value>
+        			<echo:value count="12">SSM/I</echo:value>
+        			<echo:value count="11">ANEROID BAROMETER</echo:value>
+        			<echo:value count="11">GC-FID (GAS CHROMATOGRAPH/FLAME IONIZATION DETECTOR)</echo:value>
+        			<echo:value count="10">GOES-8 IMAGER</echo:value>
+        			<echo:value count="10">LANDSAT ETM+</echo:value>
+        			<echo:value count="10">LIS</echo:value>
+        			<echo:value count="10">OTD</echo:value>
+        			<echo:value count="10">STREAM GAUGE</echo:value>
+        			<echo:value count="9">C-Band Radar</echo:value>
+        			<echo:value count="9">ION CHROMATOGRAPH</echo:value>
+        			<echo:value count="9">NDIR GAS ANALYZER</echo:value>
+        			<echo:value count="9">PLANT CANOPY ANALYZER</echo:value>
+        			<echo:value count="9">RADIO ALTIMETER</echo:value>
+        			<echo:value count="9">TIME DOMAIN REFLECTOMETER</echo:value>
+        			<echo:value count="9">ULTRASONIC DEPTH GAUGE</echo:value>
+        			<echo:value count="9">WIND PROFILER</echo:value>
+        			<echo:value count="8">ETM+ (ENHANCED THEMATIC MAPPER PLUS)</echo:value>
+        			<echo:value count="8">GC-FID</echo:value>
+        			<echo:value count="8">MODULAR MULTIBAND RADIOMETER</echo:value>
+        			<echo:value count="8">PH METER</echo:value>
+        			<echo:value count="8">TM (THEMATIC MAPPER)</echo:value>
+        			<echo:value count="7">Aquarius_Radiometer</echo:value>
+        			<echo:value count="7">CERES-FM1</echo:value>
+        			<echo:value count="7">DEWPOINT HYDROMETER</echo:value>
+        			<echo:value count="7">DISDROMETERS</echo:value>
+        			<echo:value count="7">GC-MS</echo:value>
+        			<echo:value count="7">GUST PROBE</echo:value>
+        			<echo:value count="7">OZONE SENSOR</echo:value>
+        			<echo:value count="7">WATER LEVEL GAUGE</echo:value>
+        			<echo:value count="6">GC-ECD (GAS CHROMATOGRAPH/ELECTRON CAPTURE DETECTOR)</echo:value>
+        			<echo:value count="6">GYPSUM BLOCK</echo:value>
+        			<echo:value count="6">LANDSAT MSS</echo:value>
+        			<echo:value count="6">SNOW TUBE</echo:value>
+        			<echo:value count="6">SPECTROMETER</echo:value>
+        			<echo:value count="5">AIRS</echo:value>
+        			<echo:value count="5">AUTOANALYZER</echo:value>
+        			<echo:value count="5">BUGEYE</echo:value>
+        			<echo:value count="5">CERES-FM3</echo:value>
+        			<echo:value count="5">CLINOMETER</echo:value>
+        			<echo:value count="5">DRY BULB THERMOMETER</echo:value>
+        			<echo:value count="5">GPS</echo:value>
+        			<echo:value count="5">HUMAN OBSERVER </echo:value>
+        			<echo:value count="5">HUMIDITY PROBE</echo:value>
+        			<echo:value count="5">LANDSAT TM (LANDSAT THEMATIC MAPPER)</echo:value>
+        			<echo:value count="5">MICROSCOPE</echo:value>
+        			<echo:value count="5">PHOTOSYNTHESIS CHAMBER</echo:value>
+        			<echo:value count="5">RADIOMETERS</echo:value>
+        			<echo:value count="5">SAR (SYNTHETIC APERTURE RADAR)</echo:value>
+        			<echo:value count="5">SNOW MEASURING ROD</echo:value>
+        			<echo:value count="5">SOIL MOISTURE PROBE</echo:value>
+        			<echo:value count="5">SPOT MULTISPECTRAL</echo:value>
+        			<echo:value count="5">TURBIDITY METERS</echo:value>
+        			<echo:value count="5">UV OZONE DETECTOR</echo:value>
+        			<echo:value count="4">2DVD</echo:value>
+        			<echo:value count="4">AA (ATOMIC ABSORPTION SPECTROMETER)</echo:value>
+        			<echo:value count="4">APU</echo:value>
+        			<echo:value count="4">CAMERAS</echo:value>
+        			<echo:value count="4">CEILOMETER</echo:value>
+        			<echo:value count="4">CO2 SENSOR</echo:value>
+        			<echo:value count="4">CONDUCTIVITY METERS</echo:value>
+        			<echo:value count="4">DENSIOMETER</echo:value>
+        			<echo:value count="4">GAS CHROMATOGRAPHS</echo:value>
+        			<echo:value count="4">GC (GAS CHROMATOGRAPH)</echo:value>
+        			<echo:value count="4">GPS (GLOBAL POSITIONING SYSTEM)</echo:value>
+        			<echo:value count="4">OZONESONDE</echo:value>
+        			<echo:value count="4">POLDER</echo:value>
+        			<echo:value count="4">PRESSURE CHAMBER</echo:value>
+        			<echo:value count="4">PSYCHROMETER</echo:value>
+        			<echo:value count="4">SEAWINDS</echo:value>
+        			<echo:value count="3">AMSU-A</echo:value>
+        			<echo:value count="3">ASTER</echo:value>
+        			<echo:value count="3">CASI</echo:value>
+        			<echo:value count="3">CERES-FM2</echo:value>
+        			<echo:value count="3">CERES-FM4</echo:value>
+        			<echo:value count="3">CERES-PFM</echo:value>
+        			<echo:value count="3">DENDROMETERS</echo:value>
+        			<echo:value count="3">FLUORESCENCE SPECTROSCOPY</echo:value>
+        			<echo:value count="3">ICP-AES (INDUCTIVELY COUPLED PLASMA ATOMIC EMISSION SPECTROMETER)</echo:value>
+        			<echo:value count="3">MSS (MULTISPECTRAL SCANNER)</echo:value>
+        			<echo:value count="3">MSU</echo:value>
+        			<echo:value count="3">MULTIBAND VEGETATION IMAGER</echo:value>
+        			<echo:value count="3">NEPHELOMETER</echo:value>
+        			<echo:value count="3">NEUTRON PROBE</echo:value>
+        			<echo:value count="3">NS-001 MULTISPECTRAL SCANNER</echo:value>
+        			<echo:value count="3">OLS</echo:value>
+        			<echo:value count="3">PAR SENSOR</echo:value>
+        			<echo:value count="3">PARABOLA RADIOMETER</echo:value>
+        			<echo:value count="3">PR</echo:value>
+        			<echo:value count="3">RASS</echo:value>
+        			<echo:value count="3">RF ANTENNA</echo:value>
+        			<echo:value count="3">SOIL GAS CHAMBER</echo:value>
+        			<echo:value count="3">SRTM (SHUTTLE RADAR TOPOGRAPHY MISSION)</echo:value>
+        			<echo:value count="3">SSMIS</echo:value>
+        			<echo:value count="3">STILLING WELL</echo:value>
+        			<echo:value count="3">SUNFLECK CEPTOMETER</echo:value>
+        			<echo:value count="3">TDR (TIME DOMAIN REFLECTOMETRY PROBE)</echo:value>
+        			<echo:value count="3">TMI</echo:value>
+        			<echo:value count="3">TOMS</echo:value>
+        			<echo:value count="3">TUNABLE DIODE LASER</echo:value>
+        			<echo:value count="3">VAS</echo:value>
+        			<echo:value count="3">WET BULB THERMOMETER</echo:value>
+        			<echo:value count="2">1um Radiometer</echo:value>
+        			<echo:value count="2">4um Radiometer</echo:value>
+        			<echo:value count="2">AAS</echo:value>
+        			<echo:value count="2">ASAS</echo:value>
+        			<echo:value count="2">ASD RADIOMETER</echo:value>
+        			<echo:value count="2">AVCS Nimbus-1</echo:value>
+        			<echo:value count="2">AVCS Nimbus-2</echo:value>
+        			<echo:value count="2">Advanced Land Observation Satellite (ALOS)</echo:value>
+        			<echo:value count="2">CAPACITIVE SENSOR</echo:value>
+        			<echo:value count="2">CERES-FM5</echo:value>
+        			<echo:value count="2">CONDENSATION NUCLEI COUNTER</echo:value>
+        			<echo:value count="2">DIGITAL HEMISPHERICAL CAMERA</echo:value>
+        			<echo:value count="2">DOPPLER RADAR</echo:value>
+        			<echo:value count="2">DRIFTING BUOYS</echo:value>
+        			<echo:value count="2">FLUOROMETER</echo:value>
+        			<echo:value count="2">FOURIER TRANSFORM SPECTROMETER</echo:value>
+        			<echo:value count="2">GAMMA RADIATION DETECTOR</echo:value>
+        			<echo:value count="2">GC-TCD</echo:value>
+        			<echo:value count="2">GOES I-M IMAGER</echo:value>
+        			<echo:value count="2">GOES-13 IMAGER</echo:value>
+        			<echo:value count="2">GOES-13 Imager</echo:value>
+        			<echo:value count="2">HIGH RESOLUTION CAMERA</echo:value>
+        			<echo:value count="2">HPLC</echo:value>
+        			<echo:value count="2">IDCS Nimbus-3</echo:value>
+        			<echo:value count="2">IDCS Nimbus-4</echo:value>
+        			<echo:value count="2">INCLINOMETER</echo:value>
+        			<echo:value count="2">INTEGRATING SPHERE</echo:value>
+        			<echo:value count="2">LICOR PLANT CANOPY ANALYZER</echo:value>
+        			<echo:value count="2">LIDAR</echo:value>
+        			<echo:value count="2">MAS</echo:value>
+        			<echo:value count="2">MCoRDS</echo:value>
+        			<echo:value count="2">MICROWAVE RADIOMETER</echo:value>
+        			<echo:value count="2">OPTICAL COUNTER</echo:value>
+        			<echo:value count="2">OSMOMETER</echo:value>
+        			<echo:value count="2">PERMEAMETER</echo:value>
+        			<echo:value count="2">PHOTOMETER</echo:value>
+        			<echo:value count="2">PYRHELIOMETER</echo:value>
+        			<echo:value count="2">RAIN GAUGES</echo:value>
+        			<echo:value count="2">SAR</echo:value>
+        			<echo:value count="2">SCINTILLATION COUNTER</echo:value>
+        			<echo:value count="2">SEAWIFS</echo:value>
+        			<echo:value count="2">SMMR (SCANNING MULTICHANNEL MICROWAVE RADIOMETER)</echo:value>
+        			<echo:value count="2">SNOW DENSITY CUTTER</echo:value>
+        			<echo:value count="2">SOIL HEAT PROBE</echo:value>
+        			<echo:value count="2">SOIL PRESSURE PLATE</echo:value>
+        			<echo:value count="2">SSMI</echo:value>
+        			<echo:value count="2">STEEL MEASURING TAPE </echo:value>
+        			<echo:value count="2">TENSION INFILTROMETER</echo:value>
+        			<echo:value count="2">THEMATIC MAPPER SIMULATOR</echo:value>
+        			<echo:value count="2">TIMS</echo:value>
+        			<echo:value count="2">TOVS-HIRS/2</echo:value>
+        			<echo:value count="2">TOVS-MSU</echo:value>
+        			<echo:value count="2">VISIBILITY SENSOR</echo:value>
+        			<echo:value count="2">WEIGHING BALANCE </echo:value>
+        			<echo:value count="2">WIND VANE</echo:value>
+        			<echo:value count="1">AERI</echo:value>
+        			<echo:value count="1">AEROSOL SPECTROMETER PROBE</echo:value>
+        			<echo:value count="1">AEROSOL/CLOUD PARTICLE SIZER</echo:value>
+        			<echo:value count="1">AIRBORNE SUN PHOTOMETER</echo:value>
+        			<echo:value count="1">ALI</echo:value>
+        			<echo:value count="1">ALTIMETERS</echo:value>
+        			<echo:value count="1">AMI-SAR</echo:value>
+        			<echo:value count="1">AMS (ACCELERATOR MASS SPECTROMETER)</echo:value>
+        			<echo:value count="1">AMS (ACCELERATOR MASS SPECTROMETERS)</echo:value>
+        			<echo:value count="1">ANALYSIS </echo:value>
+        			<echo:value count="1">ANTHRONE COLORIMETER</echo:value>
+        			<echo:value count="1">AOCI</echo:value>
+        			<echo:value count="1">ATSR</echo:value>
+        			<echo:value count="1">ATSR (ALONG TRACK SCANNING RADIOMETER AND MICROWAVE SOUNDER)</echo:value>
+        			<echo:value count="1">AVIRIS</echo:value>
+        			<echo:value count="1">Aquarius_Scatterometer</echo:value>
+        			<echo:value count="1">BALANCE</echo:value>
+        			<echo:value count="1">CALIPERS</echo:value>
+        			<echo:value count="1">CAMERA</echo:value>
+        			<echo:value count="1">CARBON ANALYZER </echo:value>
+        			<echo:value count="1">CARBON MONOXIDE ANALYZER</echo:value>
+        			<echo:value count="1">CHN ANALYZER </echo:value>
+        			<echo:value count="1">CLOUD ABSORPTION RADIOMETER</echo:value>
+        			<echo:value count="1">CLOUD CHAMBER</echo:value>
+        			<echo:value count="1">COLORIMETER</echo:value>
+        			<echo:value count="1">COLORIMETERS</echo:value>
+        			<echo:value count="1">COUNTERFLOW VIRTUAL IMPACTOR</echo:value>
+        			<echo:value count="1">CUP ANEMOMETER</echo:value>
+        			<echo:value count="1">CURRENT METER</echo:value>
+        			<echo:value count="1">DBH TAPE</echo:value>
+        			<echo:value count="1">DENDROMETER BANDS</echo:value>
+        			<echo:value count="1">DIELECTRIC PROBE</echo:value>
+        			<echo:value count="1">DMS</echo:value>
+        			<echo:value count="1">DOPPLER LIDAR</echo:value>
+        			<echo:value count="1">DREDGING DEVICES</echo:value>
+        			<echo:value count="1">ECHO SOUNDERS</echo:value>
+        			<echo:value count="1">ETM+</echo:value>
+        			<echo:value count="1">ETM+ </echo:value>
+        			<echo:value count="1">FIELD SURVEY</echo:value>
+        			<echo:value count="1">FLUORESCENCE MICROSCOPY</echo:value>
+        			<echo:value count="1">FTIR SPECTROMETER (FOURIER TRANSFORM INFRARED SPECTROMETER)</echo:value>
+        			<echo:value count="1">GAS CHROMATOGRAPH</echo:value>
+        			<echo:value count="1">GC-MS (GAS CHROMATOGRAPH/MASS SPECTROMETRY)</echo:value>
+        			<echo:value count="1">GLAS (GEOSCIENCE LASER ALTIMETER SYSTEM)</echo:value>
+        			<echo:value count="1">GOES-11 IMAGER</echo:value>
+        			<echo:value count="1">GPS (GLOBAL POSITIONING SYSTEM) </echo:value>
+        			<echo:value count="1">Gas Chromatograph</echo:value>
+        			<echo:value count="1">HOT-WIRE</echo:value>
+        			<echo:value count="1">HRVIR</echo:value>
+        			<echo:value count="1">HSRL</echo:value>
+        			<echo:value count="1">HYDROMETER</echo:value>
+        			<echo:value count="1">HYPERION</echo:value>
+        			<echo:value count="1">HYPERION (HYPERSPECTRAL IMAGER)</echo:value>
+        			<echo:value count="1">IMAGER</echo:value>
+        			<echo:value count="1">IMAGING RADIOMETERS</echo:value>
+        			<echo:value count="1">INTEGRATING NEPHELOMETER</echo:value>
+        			<echo:value count="1">ION CHROMATOGRAPH  </echo:value>
+        			<echo:value count="1">IR CO2 ANALYZER </echo:value>
+        			<echo:value count="1">IR CO2 ANALYZER (INFRARED CARBON DIOXIDE ANALYZER</echo:value>
+        			<echo:value count="1">IRMS (Isotope Ratio Mass Spectrometer)</echo:value>
+        			<echo:value count="1">JERS-1 SAR</echo:value>
+        			<echo:value count="1">LANDSAT TM  (LANDSAT THEMATIC MAPPER)</echo:value>
+        			<echo:value count="1">LASER ALTIMETER</echo:value>
+        			<echo:value count="1">LASER RANGE FINDER</echo:value>
+        			<echo:value count="1">LICOR 6262 GAS ANALYZER</echo:value>
+        			<echo:value count="1">LICOR GAS EXCHANGE SYSTEM</echo:value>
+        			<echo:value count="1">LIDAR (LIGHT DETECTION AND RANGING)</echo:value>
+        			<echo:value count="1">LINE INTERSECT SAMPLING</echo:value>
+        			<echo:value count="1">LYSIMETERS</echo:value>
+        			<echo:value count="1">MASS SPECTROMETER </echo:value>
+        			<echo:value count="1">MEASURING TAPE</echo:value>
+        			<echo:value count="1">MICROPULSE LIDAR</echo:value>
+        			<echo:value count="1">MISR</echo:value>
+        			<echo:value count="1">MODEL</echo:value>
+        			<echo:value count="1">MODIS (MODERATE-RESOLUTION IMAGING SPECTRORADIOMETER </echo:value>
+        			<echo:value count="1">MOPITT</echo:value>
+        			<echo:value count="1">MSS (MULTISPECTRAL SCANNER) </echo:value>
+        			<echo:value count="1">MULTIBAND LEAF RADIOMETER</echo:value>
+        			<echo:value count="1">Model</echo:value>
+        			<echo:value count="1">NDIR GAS ANALYZER (NONDISPERSIVE INFRARED GAS ANALYZER)</echo:value>
+        			<echo:value count="1">NO2 CHEMILUMINESCENT DETECTOR</echo:value>
+        			<echo:value count="1">OXYGEN ANALYZER</echo:value>
+        			<echo:value count="1">OXYGEN ANALYZER </echo:value>
+        			<echo:value count="1">OXYGEN METERS</echo:value>
+        			<echo:value count="1">PALSAR (Phased Array type L-band Synthetic Aperture Radar)</echo:value>
+        			<echo:value count="1">PH METER </echo:value>
+        			<echo:value count="1">PLANT STRESS MONITOR</echo:value>
+        			<echo:value count="1">PLATINUM RESISTANCE</echo:value>
+        			<echo:value count="1">PMS 2D-C PROBE</echo:value>
+        			<echo:value count="1">PMS 2D-P PROBE</echo:value>
+        			<echo:value count="1">POROMETER</echo:value>
+        			<echo:value count="1">PRESSURE PROBE</echo:value>
+        			<echo:value count="1">PTR-MS (PROTON TRANSFER MASS SPECTROMETER)</echo:value>
+        			<echo:value count="1">PYRANOMETERS</echo:value>
+        			<echo:value count="1">PYRRADIOMETERS</echo:value>
+        			<echo:value count="1">SECCHI DISKS </echo:value>
+        			<echo:value count="1">SEDIMENT CORERS</echo:value>
+        			<echo:value count="1">SIR-C</echo:value>
+        			<echo:value count="1">SODAR</echo:value>
+        			<echo:value count="1">SODAR (SOUND DETECTION AND RANGING)</echo:value>
+        			<echo:value count="1">SOIL DEPTH PROBE</echo:value>
+        			<echo:value count="1">SOIL SAMPLER</echo:value>
+        			<echo:value count="1">SOLAR MONITOR</echo:value>
+        			<echo:value count="1">SPATIAL COORDINATE APPARATUS</echo:value>
+        			<echo:value count="1">SSFR</echo:value>
+        			<echo:value count="1">STREAM GAUGE </echo:value>
+        			<echo:value count="1">STREAM GUAGE</echo:value>
+        			<echo:value count="1">TEMPERATURE PROBE </echo:value>
+        			<echo:value count="1">TENSIOMETER</echo:value>
+        			<echo:value count="1">TERRA (MORNING EQUATORIAL CROSSING TIME SATELLITE)</echo:value>
+        			<echo:value count="1">TETHERED BALLOON</echo:value>
+        			<echo:value count="1">TM</echo:value>
+        			<echo:value count="1">TM (THEMATIC MAPPER) </echo:value>
+        			<echo:value count="1">TOMS (TOTAL OZONE MAPPING SPECTROMETER)</echo:value>
+        			<echo:value count="1">TOVS-SSU</echo:value>
+        			<echo:value count="1">VERTICAL POINTING RADAR</echo:value>
+        			<echo:value count="1">VIDEO CAMERA</echo:value>
+        			<echo:value count="1">VIIRS</echo:value>
+        			<echo:value count="1">VIL</echo:value>
+        			<echo:value count="1">VIRR</echo:value>
+        			<echo:value count="1">VIRS</echo:value>
+        			<echo:value count="1">VIRS (TRMM VISIBLE INFRARED SCANNER)</echo:value>
+        			<echo:value count="1">WIND MONITOR</echo:value>
+        			<echo:value count="1">WSR-100</echo:value>
+        			<echo:value count="1">X-RAY DENSITOMETRY</echo:value>
+        		</echo:facet>
+        		<echo:facet field="two_d_coordinate_system_name">
+        			<echo:value count="54">MODIS Tile SIN</echo:value>
+        			<echo:value count="4">MODIS Tile EASE</echo:value>
+        		</echo:facet>
+        		<echo:facet field="processing_level_id">
+        			<echo:value count="1685">3</echo:value>
+        		</echo:facet>
+        		<echo:facet field="category">
+        			<echo:value count="1510">EARTH SCIENCE</echo:value>
+        			<echo:value count="30">Oceans</echo:value>
+        		</echo:facet>
+        		<echo:facet field="topic">
+        			<echo:value count="568">BIOSPHERE</echo:value>
+        			<echo:value count="541">ATMOSPHERE</echo:value>
+        			<echo:value count="464">LAND SURFACE</echo:value>
+        			<echo:value count="212">OCEANS</echo:value>
+        			<echo:value count="77">HYDROSPHERE</echo:value>
+        			<echo:value count="68">SPECTRAL/ENGINEERING</echo:value>
+        			<echo:value count="37">CRYOSPHERE</echo:value>
+        			<echo:value count="37">HUMAN DIMENSIONS</echo:value>
+        			<echo:value count="30">Ocean Optics</echo:value>
+        			<echo:value count="27">SOLID EARTH</echo:value>
+        			<echo:value count="24">TERRESTRIAL HYDROSPHERE</echo:value>
+        			<echo:value count="20">AGRICULTURE</echo:value>
+        			<echo:value count="3">RADIANCE OR IMAGERY</echo:value>
+        			<echo:value count="2"> BIOSPHERE</echo:value>
+        			<echo:value count="2">BIOOSPHERE</echo:value>
+        			<echo:value count="2">CLIMATE INDICATORS</echo:value>
+        			<echo:value count="1">ATMOSPHERE-BIOSPHERE INTERACTIONS</echo:value>
+        			<echo:value count="1">BIOMASS</echo:value>
+        			<echo:value count="1">BIOSPHERE </echo:value>
+        		</echo:facet>
+        		<echo:facet field="term">
+        			<echo:value count="382">VEGETATION</echo:value>
+        			<echo:value count="220">ATMOSPHERIC RADIATION</echo:value>
+        			<echo:value count="215">ATMOSPHERIC TEMPERATURE</echo:value>
+        			<echo:value count="202">ECOLOGICAL DYNAMICS</echo:value>
+        			<echo:value count="197">SOILS</echo:value>
+        			<echo:value count="184">ATMOSPHERIC WATER VAPOR</echo:value>
+        			<echo:value count="150">LAND USE/LAND COVER</echo:value>
+        			<echo:value count="144">PRECIPITATION</echo:value>
+        			<echo:value count="144">SURFACE RADIATIVE PROPERTIES</echo:value>
+        			<echo:value count="120">ATMOSPHERIC CHEMISTRY</echo:value>
+        			<echo:value count="107">ATMOSPHERIC WINDS</echo:value>
+        			<echo:value count="96">ATMOSPHERIC PRESSURE</echo:value>
+        			<echo:value count="94">OCEAN TEMPERATURE</echo:value>
+        			<echo:value count="88">LAND TEMPERATURE</echo:value>
+        			<echo:value count="69">TERRESTRIAL ECOSYSTEMS</echo:value>
+        			<echo:value count="66">CLOUDS</echo:value>
+        			<echo:value count="56">SALINITY/DENSITY</echo:value>
+        			<echo:value count="52">SURFACE WATER</echo:value>
+        			<echo:value count="49">SNOW/ICE</echo:value>
+        			<echo:value count="48">TOPOGRAPHY</echo:value>
+        			<echo:value count="46">ATMOSPHERIC CHEMISTRY/CARBON AND HYDROCARBON COMPOUNDS</echo:value>
+        			<echo:value count="40">OCEAN WINDS</echo:value>
+        			<echo:value count="37">AIR QUALITY</echo:value>
+        			<echo:value count="37">INFRARED WAVELENGTHS</echo:value>
+        			<echo:value count="36">AEROSOLS</echo:value>
+        			<echo:value count="30">Ocean Color</echo:value>
+        			<echo:value count="27">ATMOSPHERIC CHEMISTRY/OXYGEN COMPOUNDS</echo:value>
+        			<echo:value count="27">MICROWAVE</echo:value>
+        			<echo:value count="24">OCEAN PRESSURE</echo:value>
+        			<echo:value count="22">GEODETICS/GRAVITY</echo:value>
+        			<echo:value count="20">VISIBLE WAVELENGTHS</echo:value>
+        			<echo:value count="19">SEA ICE</echo:value>
+        			<echo:value count="17">ATMOSPHERIC ELECTRICITY</echo:value>
+        			<echo:value count="16">ALTITUDE</echo:value>
+        			<echo:value count="16">RADAR</echo:value>
+        			<echo:value count="15">ATMOSPHERIC CHEMISTRY/NITROGEN COMPOUNDS</echo:value>
+        			<echo:value count="15">SEA SURFACE TOPOGRAPHY</echo:value>
+        			<echo:value count="14">ENVIRONMENTAL IMPACTS</echo:value>
+        			<echo:value count="11">ATMOSPHERIC PHENOMENA</echo:value>
+        			<echo:value count="11">GROUND WATER</echo:value>
+        			<echo:value count="9">FOREST SCIENCE</echo:value>
+        			<echo:value count="8">NATURAL HAZARDS</echo:value>
+        			<echo:value count="7">EROSION/SEDIMENTATION</echo:value>
+        			<echo:value count="7">WATER QUALITY/WATER CHEMISTRY</echo:value>
+        			<echo:value count="6">BOUNDARIES</echo:value>
+        			<echo:value count="6">WETLANDS</echo:value>
+        			<echo:value count="5">ATMOSPHERIC CHEMISTRY/SULFUR COMPOUNDS</echo:value>
+        			<echo:value count="5">RADIATION BUDGET</echo:value>
+        			<echo:value count="4">AQUATIC ECOSYSTEMS</echo:value>
+        			<echo:value count="4">HABITAT CONVERSION/FRAGMENTATION</echo:value>
+        			<echo:value count="4">LANDSCAPE</echo:value>
+        			<echo:value count="3">POPULATION</echo:value>
+        			<echo:value count="2">AGRICULTURAL PLANT SCIENCE</echo:value>
+        			<echo:value count="2">AQUATIC HABITAT</echo:value>
+        			<echo:value count="2">FROZEN GROUND</echo:value>
+        			<echo:value count="2">GEOCHEMISTRY</echo:value>
+        			<echo:value count="2">GLACIERS/ICE SHEETS</echo:value>
+        			<echo:value count="2">INFRASTRUCTURE</echo:value>
+        			<echo:value count="2">WATER QUALITY/CHEMISTRY</echo:value>
+        			<echo:value count="1"> AQUATIC ECOSYSTEMS</echo:value>
+        			<echo:value count="1">ALLOMETRY</echo:value>
+        			<echo:value count="1">ATMOSPHERIC CHEMISTRY/HALONS AND HALOGENS</echo:value>
+        			<echo:value count="1">ATMOSPHERIC CONDITIONS</echo:value>
+        			<echo:value count="1">ATTITUDES,PREFERENCES,BEHAVIOR</echo:value>
+        			<echo:value count="1">CARBON DYNAMICS</echo:value>
+        			<echo:value count="1">DEFORESTATION</echo:value>
+        			<echo:value count="1">ECONOMIC RESOURCES</echo:value>
+        			<echo:value count="1">FORESTS</echo:value>
+        			<echo:value count="1">GEOMORPHOLOGY</echo:value>
+        			<echo:value count="1">HYPERSPECTRAL WAVELENGTHS</echo:value>
+        			<echo:value count="1">LAND RECORDS</echo:value>
+        			<echo:value count="1">NATURAL RESOURCES</echo:value>
+        			<echo:value count="1">NEUTRINOS</echo:value>
+        			<echo:value count="1">NFRARED WAVELENGTHS</echo:value>
+        			<echo:value count="1">OCEAN CIRCULATION</echo:value>
+        			<echo:value count="1">OCEAN OPTICS</echo:value>
+        			<echo:value count="1">RAIN</echo:value>
+        			<echo:value count="1">SOCIOECONOMIC DEMOGRAPHIC</echo:value>
+        			<echo:value count="1">TERRESTRIAL HYDROSPHERE</echo:value>
+        			<echo:value count="1">ULTRAVIOLET WAVELENGTHS</echo:value>
+        			<echo:value count="1">WIND</echo:value>
+        		</echo:facet>
+        		<echo:facet field="variable_level_1">
+        			<echo:value count="157">REFLECTANCE</echo:value>
+        			<echo:value count="154">BIOMASS</echo:value>
+        			<echo:value count="133">AIR TEMPERATURE</echo:value>
+        			<echo:value count="126">PRECIPITATION AMOUNT</echo:value>
+        			<echo:value count="125">SURFACE WINDS</echo:value>
+        			<echo:value count="121">LAND COVER</echo:value>
+        			<echo:value count="110">PRIMARY PRODUCTION</echo:value>
+        			<echo:value count="110">WATER VAPOR</echo:value>
+        			<echo:value count="100">CARBON DIOXIDE</echo:value>
+        			<echo:value count="99">SURFACE AIR TEMPERATURE</echo:value>
+        			<echo:value count="97">LEAF CHARACTERISTICS</echo:value>
+        			<echo:value count="94">SEA SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="87">LAND SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="87">VEGETATION COVER</echo:value>
+        			<echo:value count="84">HUMIDITY</echo:value>
+        			<echo:value count="74">CANOPY CHARACTERISTICS</echo:value>
+        			<echo:value count="72">SOIL MOISTURE/WATER CONTENT</echo:value>
+        			<echo:value count="67">PHOTOSYNTHETICALLY ACTIVE RADIATION</echo:value>
+        			<echo:value count="63">CARBON</echo:value>
+        			<echo:value count="63">VEGETATION SPECIES</echo:value>
+        			<echo:value count="61">SOIL TEMPERATURE</echo:value>
+        			<echo:value count="59">VEGETATION INDEX</echo:value>
+        			<echo:value count="56">SALINITY</echo:value>
+        			<echo:value count="53">ATMOSPHERIC PRESSURE MEASUREMENTS</echo:value>
+        			<echo:value count="53">HEAT FLUX</echo:value>
+        			<echo:value count="52">NITROGEN</echo:value>
+        			<echo:value count="50">PLANT CHARACTERISTICS</echo:value>
+        			<echo:value count="47">CLOUD AMOUNT/FREQUENCY</echo:value>
+        			<echo:value count="47">EMISSIVITY</echo:value>
+        			<echo:value count="44">NET RADIATION</echo:value>
+        			<echo:value count="41">FORESTS</echo:value>
+        			<echo:value count="41">OZONE</echo:value>
+        			<echo:value count="41">SURFACE PRESSURE</echo:value>
+        			<echo:value count="40">TERRAIN ELEVATION</echo:value>
+        			<echo:value count="39">ALBEDO</echo:value>
+        			<echo:value count="35">LONGWAVE RADIATION</echo:value>
+        			<echo:value count="33">UPPER LEVEL WINDS</echo:value>
+        			<echo:value count="31">CARBON MONOXIDE</echo:value>
+        			<echo:value count="31">FOREST COMPOSITION/VEGETATION STRUCTURE</echo:value>
+        			<echo:value count="30">SOIL TEXTURE</echo:value>
+        			<echo:value count="28">FIRE OCCURRENCE</echo:value>
+        			<echo:value count="28">METHANE</echo:value>
+        			<echo:value count="27">BRIGHTNESS TEMPERATURE</echo:value>
+        			<echo:value count="27">RADIATIVE FLUX</echo:value>
+        			<echo:value count="26">PRECIPITATION RATE</echo:value>
+        			<echo:value count="26">SOIL CHEMISTRY</echo:value>
+        			<echo:value count="26">SOLAR RADIATION</echo:value>
+        			<echo:value count="25">INFRARED IMAGERY</echo:value>
+        			<echo:value count="24">AEROSOL PARTICLE PROPERTIES</echo:value>
+        			<echo:value count="24">SEA LEVEL PRESSURE</echo:value>
+        			<echo:value count="24">SHORTWAVE RADIATION</echo:value>
+        			<echo:value count="24">SOIL GAS/AIR</echo:value>
+        			<echo:value count="23">SOIL CLASSIFICATION</echo:value>
+        			<echo:value count="23">SOLAR IRRADIANCE</echo:value>
+        			<echo:value count="23">TOPOGRAPHICAL RELIEF</echo:value>
+        			<echo:value count="22">GRAVITY</echo:value>
+        			<echo:value count="22">LITTER CHARACTERISTICS</echo:value>
+        			<echo:value count="22">SOIL BULK DENSITY</echo:value>
+        			<echo:value count="21">MICROWAVE IMAGERY</echo:value>
+        			<echo:value count="21">OXYGEN COMPOUNDS</echo:value>
+        			<echo:value count="21">RESPIRATION</echo:value>
+        			<echo:value count="21">SOIL HEAT BUDGET</echo:value>
+        			<echo:value count="20">OUTGOING LONGWAVE RADIATION</echo:value>
+        			<echo:value count="20">PRECIPITABLE WATER</echo:value>
+        			<echo:value count="19">IRRADIANCE</echo:value>
+        			<echo:value count="19">PHOTOSYNTHESIS</echo:value>
+        			<echo:value count="18">AGRICULTURAL LANDS</echo:value>
+        			<echo:value count="18">DEW POINT TEMPERATURE</echo:value>
+        			<echo:value count="18">DISCHARGE/FLOW</echo:value>
+        			<echo:value count="18">RAIN</echo:value>
+        			<echo:value count="17">CLOUD CONDENSATION NUCLEI</echo:value>
+        			<echo:value count="17">CLOUD HEIGHT</echo:value>
+        			<echo:value count="17">CLOUD LIQUID WATER/ICE</echo:value>
+        			<echo:value count="17">ICE EXTENT</echo:value>
+        			<echo:value count="17">SNOW DEPTH</echo:value>
+        			<echo:value count="16">LIGHTNING</echo:value>
+        			<echo:value count="16">OPTICAL DEPTH/THICKNESS</echo:value>
+        			<echo:value count="16">RIVERS/STREAMS</echo:value>
+        			<echo:value count="16">SOIL HORIZONS/PROFILE</echo:value>
+        			<echo:value count="15">CLOUD OPTICAL DEPTH/THICKNESS</echo:value>
+        			<echo:value count="15">INCOMING SOLAR RADIATION</echo:value>
+        			<echo:value count="15">SEA SURFACE HEIGHT</echo:value>
+        			<echo:value count="15">VISIBLE IMAGERY</echo:value>
+        			<echo:value count="15">WETLANDS</echo:value>
+        			<echo:value count="14">ATMOSPHERIC STABILITY</echo:value>
+        			<echo:value count="14">BIOGEOCHEMICAL CYCLES</echo:value>
+        			<echo:value count="14">BIOMASS BURNING</echo:value>
+        			<echo:value count="14">CLOUD REFLECTANCE</echo:value>
+        			<echo:value count="14">CLOUD TOP PRESSURE</echo:value>
+        			<echo:value count="14">CLOUD TOP TEMPERATURE</echo:value>
+        			<echo:value count="14">EMISSIONS</echo:value>
+        			<echo:value count="14">NITROGEN OXIDES</echo:value>
+        			<echo:value count="13">ANISOTROPY</echo:value>
+        			<echo:value count="13">DROPLET CONCENTRATION/SIZE</echo:value>
+        			<echo:value count="13">EVAPOTRANSPIRATION</echo:value>
+        			<echo:value count="13">GEOPOTENTIAL HEIGHT</echo:value>
+        			<echo:value count="13">GRASSLANDS</echo:value>
+        			<echo:value count="13">LAND USE CLASSES</echo:value>
+        			<echo:value count="13">NUTRIENTS</echo:value>
+        			<echo:value count="13">ORGANIC MATTER</echo:value>
+        			<echo:value count="13">POTENTIAL TEMPERATURE</echo:value>
+        			<echo:value count="13">SNOW COVER</echo:value>
+        			<echo:value count="13">VOLATILE ORGANIC COMPOUNDS</echo:value>
+        			<echo:value count="12">CLOUD EMISSIVITY</echo:value>
+        			<echo:value count="12">DEW POINT</echo:value>
+        			<echo:value count="12">ECOSYSTEM FUNCTIONS</echo:value>
+        			<echo:value count="12">FIRES</echo:value>
+        			<echo:value count="12">MAXIMUM/MINIMUM TEMPERATURE</echo:value>
+        			<echo:value count="12">NITROUS OXIDE</echo:value>
+        			<echo:value count="12">PHOSPHORUS</echo:value>
+        			<echo:value count="11">SAVANNAS</echo:value>
+        			<echo:value count="11">TEMPERATURE PROFILES</echo:value>
+        			<echo:value count="11">TRANSMITTANCE</echo:value>
+        			<echo:value count="10">CHLOROPHYLL</echo:value>
+        			<echo:value count="10">CROWN</echo:value>
+        			<echo:value count="10">DEFORESTATION</echo:value>
+        			<echo:value count="10">DRAINAGE</echo:value>
+        			<echo:value count="10">LANDFORMS</echo:value>
+        			<echo:value count="10">SKIN TEMPERATURE</echo:value>
+        			<echo:value count="10">SOIL DEPTH</echo:value>
+        			<echo:value count="10">SOIL RESPIRATION</echo:value>
+        			<echo:value count="10">TRACE GASES/TRACE SPECIES</echo:value>
+        			<echo:value count="9">AEROSOL EXTINCTION</echo:value>
+        			<echo:value count="9">BAROMETRIC ALTITUDE</echo:value>
+        			<echo:value count="9">DROPLET SIZE</echo:value>
+        			<echo:value count="9">FIRE CHARACTERISTICS</echo:value>
+        			<echo:value count="9">RADAR IMAGERY</echo:value>
+        			<echo:value count="9">SNOW WATER EQUIVALENT</echo:value>
+        			<echo:value count="9">SNOW/ICE TEMPERATURE</echo:value>
+        			<echo:value count="9">SOIL COLOR</echo:value>
+        			<echo:value count="9">WATER PRESSURE</echo:value>
+        			<echo:value count="8">AEROSOL OPTICAL DEPTH/THICKNESS</echo:value>
+        			<echo:value count="8">DECIDUOUS VEGETATION</echo:value>
+        			<echo:value count="8">THERMAL PROPERTIES</echo:value>
+        			<echo:value count="8">VIRTUAL TEMPERATURE</echo:value>
+        			<echo:value count="8">WATER TEMPERATURE</echo:value>
+        			<echo:value count="7">ATMOSPHERIC PRESSURE</echo:value>
+        			<echo:value count="7">DECOMPOSITION</echo:value>
+        			<echo:value count="7">EVERGREEN VEGETATION</echo:value>
+        			<echo:value count="7">NITRIC OXIDE</echo:value>
+        			<echo:value count="7">NON-METHANE HYDROCARBONS</echo:value>
+        			<echo:value count="7">PH</echo:value>
+        			<echo:value count="7">SEDIMENT TRANSPORT</echo:value>
+        			<echo:value count="7">TROPOSPHERIC OZONE</echo:value>
+        			<echo:value count="7">VISIBLE RADIANCE</echo:value>
+        			<echo:value count="7">WATER TABLE</echo:value>
+        			<echo:value count="7">WATER VAPOR PROFILES</echo:value>
+        			<echo:value count="6">AMMONIA</echo:value>
+        			<echo:value count="6">CARBON AND HYDROCARBON COMPOUNDS</echo:value>
+        			<echo:value count="6">HYDROMETEORS</echo:value>
+        			<echo:value count="6">ICE EDGES</echo:value>
+        			<echo:value count="6">ICE TEMPERATURE</echo:value>
+        			<echo:value count="6">INUNDATION</echo:value>
+        			<echo:value count="6">ISOTOPES</echo:value>
+        			<echo:value count="6">LAKE ICE</echo:value>
+        			<echo:value count="6">LAKES</echo:value>
+        			<echo:value count="6">TURBIDITY</echo:value>
+        			<echo:value count="6">WATER DEPTH</echo:value>
+        			<echo:value count="5">CALCIUM</echo:value>
+        			<echo:value count="5">CATION EXCHANGE CAPACITY</echo:value>
+        			<echo:value count="5">DISSOLVED SOLIDS</echo:value>
+        			<echo:value count="5">FROST</echo:value>
+        			<echo:value count="5">INFRARED RADIANCE</echo:value>
+        			<echo:value count="5">LAND MANAGEMENT</echo:value>
+        			<echo:value count="5">PARTICULATE MATTER</echo:value>
+        			<echo:value count="5">PERMAFROST</echo:value>
+        			<echo:value count="5">POTASSIUM</echo:value>
+        			<echo:value count="5">PRESSURE TENDENCY</echo:value>
+        			<echo:value count="5">RADIATIVE FORCING</echo:value>
+        			<echo:value count="5">SOIL COMPACTION</echo:value>
+        			<echo:value count="5">SOIL PH</echo:value>
+        			<echo:value count="5">SOIL POROSITY</echo:value>
+        			<echo:value count="5">SOIL STRUCTURE</echo:value>
+        			<echo:value count="5">STAGE HEIGHT</echo:value>
+        			<echo:value count="5">WATER ION CONCENTRATION</echo:value>
+        			<echo:value count="4">AEROSOL BACKSCATTER</echo:value>
+        			<echo:value count="4">AEROSOL RADIANCE</echo:value>
+        			<echo:value count="4">ALKALINITY</echo:value>
+        			<echo:value count="4">CARBON DIOXIDE FLUX</echo:value>
+        			<echo:value count="4">CARBONACEOUS AEROSOLS</echo:value>
+        			<echo:value count="4">CLOUD CEILING</echo:value>
+        			<echo:value count="4">CONDUCTIVITY</echo:value>
+        			<echo:value count="4">DOMINANT SPECIES</echo:value>
+        			<echo:value count="4">EVAPORATION</echo:value>
+        			<echo:value count="4">GROUNDWATER CHEMISTRY</echo:value>
+        			<echo:value count="4">MAGNESIUM</echo:value>
+        			<echo:value count="4">MARSHES</echo:value>
+        			<echo:value count="4">NITROGEN COMPOUNDS</echo:value>
+        			<echo:value count="4">PHOSPHATE</echo:value>
+        			<echo:value count="4">PLANT PHENOLOGY</echo:value>
+        			<echo:value count="4">SEA ICE CONCENTRATION</echo:value>
+        			<echo:value count="4">SHRUBLAND/SCRUB</echo:value>
+        			<echo:value count="4">SNOW DENSITY</echo:value>
+        			<echo:value count="4">SOIL WATER HOLDING CAPACITY</echo:value>
+        			<echo:value count="4">STABLE ISOTOPES</echo:value>
+        			<echo:value count="4">SULFUR DIOXIDE</echo:value>
+        			<echo:value count="4">SUSPENDED SOLIDS</echo:value>
+        			<echo:value count="4">SWAMPS</echo:value>
+        			<echo:value count="4">TRACE GASES</echo:value>
+        			<echo:value count="4">TREE RINGS</echo:value>
+        			<echo:value count="4">VERTICAL WIND MOTION</echo:value>
+        			<echo:value count="4">WATERSHED CHARACTERISTICS</echo:value>
+        			<echo:value count="3">ABOVEGROUND BIOMASS</echo:value>
+        			<echo:value count="3">ADMINISTRATIVE DIVISIONS</echo:value>
+        			<echo:value count="3">AEROSOLS OPTICAL DEPTH/THICKNESS</echo:value>
+        			<echo:value count="3">ALPINE/TUNDRA</echo:value>
+        			<echo:value count="3">BIOGEOCHEMISTRY</echo:value>
+        			<echo:value count="3">CLOUD PRECIPITABLE WATER</echo:value>
+        			<echo:value count="3">DUST/ASH/SMOKE</echo:value>
+        			<echo:value count="3">FOREST COMPOSITION/STRUCTURE</echo:value>
+        			<echo:value count="3">FOREST MANAGEMENT</echo:value>
+        			<echo:value count="3">HYDRAULIC CONDUCTIVITY</echo:value>
+        			<echo:value count="3">LAND CLASSES</echo:value>
+        			<echo:value count="3">LAND PRODUCTIVITY</echo:value>
+        			<echo:value count="3">LANDSCAPE PATTERN</echo:value>
+        			<echo:value count="3">MOSSES AND LIVERWORTS</echo:value>
+        			<echo:value count="3">NITRATE PARTICLES</echo:value>
+        			<echo:value count="3">NITRIC ACID</echo:value>
+        			<echo:value count="3">NITROGEN DIOXIDE</echo:value>
+        			<echo:value count="3">ORGANIC CARBON</echo:value>
+        			<echo:value count="3">ORGANIC PARTICLES</echo:value>
+        			<echo:value count="3">OXYGEN</echo:value>
+        			<echo:value count="3">PESTICIDES</echo:value>
+        			<echo:value count="3">PLANETARY BOUNDARY LAYER HEIGHT</echo:value>
+        			<echo:value count="3">POPULATION SIZE</echo:value>
+        			<echo:value count="3">RADAR BACKSCATTER</echo:value>
+        			<echo:value count="3">RADAR REFLECTIVITY</echo:value>
+        			<echo:value count="3">RUNOFF</echo:value>
+        			<echo:value count="3">SULFATE PARTICLES</echo:value>
+        			<echo:value count="3">SULFUR COMPOUNDS</echo:value>
+        			<echo:value count="3">SURFACE WATER CHEMISTRY</echo:value>
+        			<echo:value count="3">TEMPERATURE ANOMALIES</echo:value>
+        			<echo:value count="3">THERMAL INFRARED</echo:value>
+        			<echo:value count="2">ACTIVE LAYER</echo:value>
+        			<echo:value count="2">AFFORESTATION/REFORESTATION</echo:value>
+        			<echo:value count="2">AGE DETERMINATIONS</echo:value>
+        			<echo:value count="2">CARBON DIOXIDE </echo:value>
+        			<echo:value count="2">CLOUD TYPES</echo:value>
+        			<echo:value count="2">CLOUD VERTICAL DISTRIBUTION</echo:value>
+        			<echo:value count="2">DROUGHT</echo:value>
+        			<echo:value count="2">DUNES</echo:value>
+        			<echo:value count="2">FOREST</echo:value>
+        			<echo:value count="2">FOREST YIELDS</echo:value>
+        			<echo:value count="2">FORMALDEHYDE</echo:value>
+        			<echo:value count="2">GLACIER ELEVATION/ICE SHEET ELEVATION</echo:value>
+        			<echo:value count="2">GLACIER THICKNESS/ICE SHEET THICKNESS</echo:value>
+        			<echo:value count="2">HERBIVORY</echo:value>
+        			<echo:value count="2">LANDSCAPE PATTERNS</echo:value>
+        			<echo:value count="2">NITRATE</echo:value>
+        			<echo:value count="2">NUTRIENT CYCLING</echo:value>
+        			<echo:value count="2">POLITICAL DIVISIONS</echo:value>
+        			<echo:value count="2">POPULATION DISTRIBUTION</echo:value>
+        			<echo:value count="2">RECLAMATION/REVEGETATION/RESTORATION</echo:value>
+        			<echo:value count="2">REFORESTATION</echo:value>
+        			<echo:value count="2">RIVER NETWORK</echo:value>
+        			<echo:value count="2">RIVERS/STREAM HABITAT</echo:value>
+        			<echo:value count="2">SCATTERING</echo:value>
+        			<echo:value count="2">SNOW</echo:value>
+        			<echo:value count="2">SOIL IMPEDANCE</echo:value>
+        			<echo:value count="2">SOIL MOISTURE</echo:value>
+        			<echo:value count="2">SUNSHINE</echo:value>
+        			<echo:value count="2">TOPOGRAPHIC EFFECTS</echo:value>
+        			<echo:value count="2">TOTAL SURFACE WATER</echo:value>
+        			<echo:value count="2">TRANSPORTATION</echo:value>
+        			<echo:value count="2">VISIBILITY</echo:value>
+        			<echo:value count="2">WIND PROFILES</echo:value>
+        			<echo:value count="1"> 	WETLANDS</echo:value>
+        			<echo:value count="1"> FOREST FIRE SCIENCE </echo:value>
+        			<echo:value count="1">ABSORPTION</echo:value>
+        			<echo:value count="1">ACID DEPOSITION</echo:value>
+        			<echo:value count="1">AGRICULTURAL EXPANSION</echo:value>
+        			<echo:value count="1">AQUIFER TRANSMISSIVITY</echo:value>
+        			<echo:value count="1">ATMOSPHERIC EMITTED RADIATION</echo:value>
+        			<echo:value count="1">BATHYMETRY</echo:value>
+        			<echo:value count="1">BOUNDARY LAYER TEMPERATURE</echo:value>
+        			<echo:value count="1">BOUNDARY SURVEYS</echo:value>
+        			<echo:value count="1">BULK DENSITY</echo:value>
+        			<echo:value count="1">CHLORIDE</echo:value>
+        			<echo:value count="1">CLIMATE</echo:value>
+        			<echo:value count="1">CLOUD BASE</echo:value>
+        			<echo:value count="1">CLOUD DROPLET DISTRIBUTION</echo:value>
+        			<echo:value count="1">COMBUSTION</echo:value>
+        			<echo:value count="1">COMMUNITY STRUCTURE</echo:value>
+        			<echo:value count="1">CONSUMPTION</echo:value>
+        			<echo:value count="1">CROP/PLANT YIELDS</echo:value>
+        			<echo:value count="1">CULTURAL FEATURES</echo:value>
+        			<echo:value count="1">DBH</echo:value>
+        			<echo:value count="1">DEPTH</echo:value>
+        			<echo:value count="1">DIAMETER AT BREAST HEIGHT</echo:value>
+        			<echo:value count="1">DIAMETER AT BREAST HEIGHT (DBH)</echo:value>
+        			<echo:value count="1">DIFFERENTIAL PRESSURE</echo:value>
+        			<echo:value count="1">DISCHARGE FLOW</echo:value>
+        			<echo:value count="1">DISSOLVED GASES</echo:value>
+        			<echo:value count="1">DOPPLER SPEED</echo:value>
+        			<echo:value count="1">DOPPLER VELOCITY</echo:value>
+        			<echo:value count="1">ELECTRICITY</echo:value>
+        			<echo:value count="1">ENDANGERED SPECIES</echo:value>
+        			<echo:value count="1">ENVIRONMENTAL ASSESSMENTS</echo:value>
+        			<echo:value count="1">FIRE ECOLOGY</echo:value>
+        			<echo:value count="1">FLIGHT LEVEL WINDS</echo:value>
+        			<echo:value count="1">FLOODS</echo:value>
+        			<echo:value count="1">FOREST FIRE SCIENCE</echo:value>
+        			<echo:value count="1">FOREST HARVESTING AND ENGINEERING</echo:value>
+        			<echo:value count="1">FOREST MENSURATION</echo:value>
+        			<echo:value count="1">FORESTS </echo:value>
+        			<echo:value count="1">FOSSIL FUEL BURNING</echo:value>
+        			<echo:value count="1">FREEZE/THAW</echo:value>
+        			<echo:value count="1">H2O FLUX</echo:value>
+        			<echo:value count="1">HALOCARBONS</echo:value>
+        			<echo:value count="1">HALOCARBONS AND HALOGENS</echo:value>
+        			<echo:value count="1">HYDROPATTERN</echo:value>
+        			<echo:value count="1">INCOMING SHORTWAVE RADIATION</echo:value>
+        			<echo:value count="1">INFRARED IMAGERY </echo:value>
+        			<echo:value count="1">INORGANIC MATTER</echo:value>
+        			<echo:value count="1">INVERSION HEIGHT</echo:value>
+        			<echo:value count="1">LAND RESOURCE DEPLETION</echo:value>
+        			<echo:value count="1">LAND RESOURCES</echo:value>
+        			<echo:value count="1">LEAF AREA INDEX</echo:value>
+        			<echo:value count="1">LICHENS</echo:value>
+        			<echo:value count="1">LIQUID WATER EQUIVALENT</echo:value>
+        			<echo:value count="1">LOGGING DAMAGE</echo:value>
+        			<echo:value count="1">MAPS</echo:value>
+        			<echo:value count="1">METHANE </echo:value>
+        			<echo:value count="1">METHANE FLUX</echo:value>
+        			<echo:value count="1">MICRONUTRIENTS/TRACE ELEMENTS</echo:value>
+        			<echo:value count="1">MICROWAVE RADIANCE</echo:value>
+        			<echo:value count="1">NECROMASS</echo:value>
+        			<echo:value count="1">NITRIC OXIDE FLUX</echo:value>
+        			<echo:value count="1">NITRIC OXIDES</echo:value>
+        			<echo:value count="1">NITROUS OXIDE FLUX</echo:value>
+        			<echo:value count="1">OXYGEN </echo:value>
+        			<echo:value count="1">OXYGEN ISOTOPES</echo:value>
+        			<echo:value count="1">PEATLANDS</echo:value>
+        			<echo:value count="1">PERCOLATION</echo:value>
+        			<echo:value count="1">PHENOLOGY</echo:value>
+        			<echo:value count="1">PHOTOSYNTHESIS </echo:value>
+        			<echo:value count="1">PLANT AVAILABLE WATER</echo:value>
+        			<echo:value count="1">RADAR CROSS-SECTION</echo:value>
+        			<echo:value count="1">RADIANCE</echo:value>
+        			<echo:value count="1">RADIOISOTOPES</echo:value>
+        			<echo:value count="1">RAINFALL</echo:value>
+        			<echo:value count="1">REFLECTED INFRARED</echo:value>
+        			<echo:value count="1">RIPARIAN WETLANDS</echo:value>
+        			<echo:value count="1">RIVER SINUOSITY</echo:value>
+        			<echo:value count="1">SEA ICE AGE</echo:value>
+        			<echo:value count="1">SEA ICE MOTION</echo:value>
+        			<echo:value count="1">SEDIMENT CHEMISTRY</echo:value>
+        			<echo:value count="1">SEDIMENT COMPOSITION</echo:value>
+        			<echo:value count="1">SEDIMENTS</echo:value>
+        			<echo:value count="1">SOCIAL BEHAVIOR</echo:value>
+        			<echo:value count="1">SODIUM</echo:value>
+        			<echo:value count="1">SOIL CONSISTENCE</echo:value>
+        			<echo:value count="1">SOIL FERTILITY</echo:value>
+        			<echo:value count="1">SOIL INFILTRATION</echo:value>
+        			<echo:value count="1">SOIL MATRIC PRESSURE</echo:value>
+        			<echo:value count="1">SOIL NUTRIENTS</echo:value>
+        			<echo:value count="1">SOIL ROOTING DEPTH</echo:value>
+        			<echo:value count="1">SOIL WATER PRESSURE</echo:value>
+        			<echo:value count="1">SOILS</echo:value>
+        			<echo:value count="1">SPECIES/POPULATION INTERACTIONS</echo:value>
+        			<echo:value count="1">SPECIFIC LEAF AREA</echo:value>
+        			<echo:value count="1">SULFATE</echo:value>
+        			<echo:value count="1">SULFUR HEXAFLUORIDE</echo:value>
+        			<echo:value count="1">SURFACE ROUGHNESS</echo:value>
+        			<echo:value count="1">SURVEYS</echo:value>
+        			<echo:value count="1">THERMAL CONDUCTIVITY</echo:value>
+        			<echo:value count="1">TRACE ELEMENTS/TRACE METALS</echo:value>
+        			<echo:value count="1">ULTRAVIOLET RADIANCE</echo:value>
+        			<echo:value count="1">ULTRAVIOLET RADIATION</echo:value>
+        			<echo:value count="1">UPPERLEVEL WINDS</echo:value>
+        			<echo:value count="1">URBANIZATION</echo:value>
+        			<echo:value count="1">VEGETATION CHARACTERISTICS</echo:value>
+        			<echo:value count="1">VEGETATION SPECIES </echo:value>
+        			<echo:value count="1">WATER FLUX</echo:value>
+        			<echo:value count="1">WATER TABLE DEPTH</echo:value>
+        			<echo:value count="1">WATER TEMPERATURE </echo:value>
+        			<echo:value count="1">WAVE SPEED/DIRECTION</echo:value>
+        			<echo:value count="1">WEATHERING</echo:value>
+        			<echo:value count="1">WIND DIRECTION</echo:value>
+        			<echo:value count="1">WIND SPEED</echo:value>
+        		</echo:facet>
+        		<echo:facet field="variable_level_2">
+        			<echo:value count="21">OZONE</echo:value>
+        		</echo:facet>
+        		<echo:facet field="variable_level_3"/>
+        		<echo:facet field="detailed_variable">
+        			<echo:value count="15">BLENDED SEA SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="15">HUMIDITY</echo:value>
+        			<echo:value count="4">OCEAN BOTTOM PRESSURE</echo:value>
+        			<echo:value count="3">BULK SEA SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="3">SKIN SEA SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="3">SUBSKIN SEA SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="2">OCEAN SURFACE WIND VECTORS</echo:value>
+        			<echo:value count="2">SUB-SKIN SEA SURFACE TEMPERATURE</echo:value>
+        			<echo:value count="2">SURFACE WIND SPEED</echo:value>
+        			<echo:value count="1">OCEAN SURFACE EASTWARD WIND</echo:value>
+        			<echo:value count="1">OCEAN SURFACE NORTHWARD WIND</echo:value>
+        			<echo:value count="1">OCEAN SURFACE WIND SPEED</echo:value>
+        			<echo:value count="1">SUBSKIN SEA SURFACE TEMPERATURE (SSTSUBSKIN)</echo:value>
+        			<echo:value count="1">VEGETATION WATER CONTENT</echo:value>
+        		</echo:facet>
+        	</echo:facets>
+        </feed>
+    http_version:
+  recorded_at: Sun, 01 Mar 2015 14:32:34 GMT
+recorded_with: VCR 2.9.2

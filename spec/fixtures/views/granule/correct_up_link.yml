@@ -1,0 +1,310 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>goodUplink-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '224'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlODNkOTU5MmI0ZDk4MzU0NDM1MGRlOWIwN2Y5YmE1MTU%3D--33d80054acbaa81b048e4b3590865537a25ff2f4; path=/; HttpOnly
+      X-Runtime:
+      - '0.043000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 21 Nov 2015 13:17:58 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAE2OywqDMBRE936FZB+jVdoIMeLzC+paxFxsUBMxKv38at/M
+        apjDYVh8Hwd7g9lIrSLkOS6yQbVaSNVFqLqWmKKYW2zRPShu2TaTgp/KIqUX
+        74yLIKE4dGmIaZ6VOEkzz/fzPCgDn5EdPPjVwKyaEXi3glkY+fZjbAcJaql3
+        tNNaVNMgVY/1BMpAM7c3LGBj5Ad9fLWc6kaIGYzhrvPMS/w/WIy8Xz8ArDa5
+        0eUAAAA=
+    http_version:
+  recorded_at: Sat, 21 Nov 2015 13:17:58 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OB_DAAC&short_name=MODISA_L3m_CHL&temporal=2005-01-01T00:00:01Z,2005-01-01T23:59:59Z&version=2014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - echo-token-here
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Nov 2015 13:17:58 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Allow-Origin:
+      - '*'
+      Cmr-Hits:
+      - '136'
+      Cmr-Took:
+      - '555'
+      Content-Length:
+      - '23194'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"\
+        \ xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"\
+        \ xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"\
+        \ xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"\
+        http://www.opengis.net/gml\" esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"\
+        ><updated>2015-11-21T13:17:58.881Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=MODISA_L3m_CHL&amp;version=2014&amp;provider=OB_DAAC&amp;page_num=1&amp;page_size=10&amp;temporal=2005-01-01T00%3A00%3A01Z%2C2005-01-01T23%3A59%3A59Z</id><title\
+        \ type=\"text\">ECHO granule metadata</title><entry><id>G1205807916-OB_DAAC</id><title\
+        \ type=\"text\">A20021822014212.L3m_MC_CHL_chlor_a_4km.nc</title><updated>2015-06-26T09:44:53.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021822014212.L3m_MC_CHL_chlor_a_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>46.69225</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-07-31T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021822014212.L3m_MC_CHL_chlor_a_4km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205807946-OB_DAAC</id><title\
+        \ type=\"text\">A20021822014212.L3m_MC_CHL_chlor_a_9km.nc</title><updated>2015-06-26T09:44:53.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021822014212.L3m_MC_CHL_chlor_a_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>14.148778</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-07-31T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021822014212.L3m_MC_CHL_chlor_a_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205807961-OB_DAAC</id><title\
+        \ type=\"text\">A20021822014212.L3m_MC_CHL_chl_ocx_4km.nc</title><updated>2015-06-26T09:44:53.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021822014212.L3m_MC_CHL_chl_ocx_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>46.904194</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-07-31T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021822014212.L3m_MC_CHL_chl_ocx_4km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205807962-OB_DAAC</id><title\
+        \ type=\"text\">A20021822014212.L3m_MC_CHL_chl_ocx_9km.nc</title><updated>2015-06-26T09:44:53.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021822014212.L3m_MC_CHL_chl_ocx_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>14.193225</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-07-31T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021822014212.L3m_MC_CHL_chl_ocx_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205811034-OB_DAAC</id><title\
+        \ type=\"text\">A20021722014263.L3m_SCSU_CHL_chlor_a_4km.nc</title><updated>2015-06-26T11:05:19.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021722014263.L3m_SCSU_CHL_chlor_a_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>52.372658</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-09-20T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021722014263.L3m_SCSU_CHL_chlor_a_4km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205811035-OB_DAAC</id><title\
+        \ type=\"text\">A20021722014263.L3m_SCSU_CHL_chl_ocx_4km.nc</title><updated>2015-06-26T11:05:18.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021722014263.L3m_SCSU_CHL_chl_ocx_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>52.60742</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-09-20T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021722014263.L3m_SCSU_CHL_chl_ocx_4km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205811044-OB_DAAC</id><title\
+        \ type=\"text\">A20021722014263.L3m_SCSU_CHL_chl_ocx_9km.nc</title><updated>2015-06-26T11:05:19.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021722014263.L3m_SCSU_CHL_chl_ocx_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>16.578213</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-09-20T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021722014263.L3m_SCSU_CHL_chl_ocx_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205811046-OB_DAAC</id><title\
+        \ type=\"text\">A20021722014263.L3m_SCSU_CHL_chlor_a_9km.nc</title><updated>2015-06-26T11:05:19.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021722014263.L3m_SCSU_CHL_chlor_a_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>16.52295</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2014-09-20T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021722014263.L3m_SCSU_CHL_chlor_a_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205913769-OB_DAAC</id><title\
+        \ type=\"text\">A20021822015212.L3m_MC_CHL_chl_ocx_4km.nc</title><updated>2015-08-18T04:23:53.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021822015212.L3m_MC_CHL_chl_ocx_4km.nc</echo:producerGranuleId><echo:granuleSizeMB>46.918793</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2015-07-31T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021822015212.L3m_MC_CHL_chl_ocx_4km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1205913787-OB_DAAC</id><title\
+        \ type=\"text\">A20021822015212.L3m_MC_CHL_chl_ocx_9km.nc</title><updated>2015-08-18T04:23:53.000Z</updated><echo:datasetId>MODISA_L3m_CHL</echo:datasetId><echo:producerGranuleId>A20021822015212.L3m_MC_CHL_chl_ocx_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>14.200429</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>2002-07-04T00:00:00.000Z</time:start><time:end>2015-07-31T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20021822015212.L3m_MC_CHL_chl_ocx_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for MODIS-Aqua\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/MODISA/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS-Aqua Description Website (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/aqua\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC MODIS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"\
+        http://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3M/CHL/2014\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>"
+    http_version:
+  recorded_at: Sat, 21 Nov 2015 13:17:59 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,95 @@
+<%= javascript_include_tag params[:controller] %>
+<%= stylesheet_link_tag params[:controller] %>
+<div class="breadcrumb">
+  <ol>
+    <li><a href='<%= Rails.configuration.relative_url_root %>'>Home</a></li>
+    <li><%= link_to content_tag(:span, 'Collection search', :class => 'button'), :controller => 'collections', :clientId => 'our_html_ui', :keyword => @granule.keyword, :instrument => @granule.instrument, :satellite => @granule.satellite, :startTime => @granule.start_time, :endTime => @granule.end_time, :spatial_type => @spatial_type, :boundingBox => @granule.bounding_box, :geometry => @granule.geometry, :placeName => @granule.place_name, :cursor => session[:collection_cursor], :numberOfResults => session[:collection_number_of_results] %>
+    </li>
+    <li>Granule search</li>
+  </ol>
+</div>
+<h2 class="title">Granule Search</h2>
+<section id="search-form">
+  <%= form_tag("#{Rails.configuration.relative_url_root}/granules", :method => 'get', :class => 'granules') do %>
+      <%= hidden_field_tag(:clientId, @client_id) %>
+      <%= hidden_field_tag(:keyword, @granule.keyword) %>
+      <%= hidden_field_tag(:instrument, @granule.instrument) %>
+      <%= hidden_field_tag(:satellite, @granule.satellite) %>
+      <%= render :partial => 'shared/errors', :locals => {:errors => @granule.errors}, :class => 'granules' %>
+      <p class="form-parameter">
+        <%= label_tag 'parentIdentifier', 'Collection concept ID: ' %>
+        <%= text_field_tag :parentIdentifier, @granule.parent_identifier, :placeholder => 'e.g. C90758174-LAADS', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag 'shortName', 'Short name: ' %>
+        <%= text_field_tag :shortName, @granule.short_name, :placeholder => 'e.g. MOD02QKM', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag 'versionId', 'Version ID: ' %>
+        <%= text_field_tag :versionId, @granule.version_id, :placeholder => 'e.g. 5', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+                <%= label_tag 'dataCenter', 'Data center: ' %>
+              <%= text_field_tag :dataCenter, @granule.data_center, :placeholder => 'e.g. LAADS', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag 'startTime', 'Start time: ' %>
+        <%= text_field_tag :startTime, @granule.start_time, :class => 'temporal-input', :placeholder => 'e.g. 2010-01-01T00:00:00Z', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag 'endTime', 'End time: ' %>
+        <%= text_field_tag :endTime, @granule.end_time, :class => 'temporal-input', :placeholder => 'e.g. 2011-01-01T23:59:59Z', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag 'spatial_type', 'Spatial type: ' %>
+        <%= select_tag 'spatial_type', options_from_collection_for_select(spatial_types, 'id', 'name', @spatial_type) %>
+      </p>
+      <p class="form-parameter bbox">
+        <%= label_tag 'boundingBox', 'Spatial bounding box: ' %>
+        <%= text_field_tag :boundingBox, @granule.bounding_box, :placeholder => 'e.g. -180.0,-90.0,180.0,90.0', :size => 124 %>
+      </p>
+      <p class="form-parameter geometry">
+        <%= label_tag 'geometry', 'Spatial geometry: ' %>
+        <%= text_field_tag :geometry, @granule.geometry, :placeholder => 'e.g. POINT (1 2)', :size => 124 %>
+      </p>
+      <p class="form-parameter placename">
+        <%= label_tag 'placeName', 'Spatial place name: ' %>
+        <%= text_field_tag :placeName, @granule.place_name, :placeholder => 'e.g. washington, dc', :size => 124 %>
+      </p>
+      <p class="form-parameter uid">
+        <%= label_tag 'uid', 'Unique ID: ' %>
+        <%= text_field_tag :uid, @granule.uid, :placeholder => 'e.g. C-1234_PROV', :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag ':numberOfResults', 'Number of results: ' %>
+        <%= text_field_tag :numberOfResults, @number_of_results, :size => 124 %>
+      </p>
+      <p class="form-parameter">
+        <%= label_tag 'cursor', 'Cursor: ' %>
+        <%= text_field_tag :cursor, @cursor, :size => 48 %>
+        <%= submit_tag 'Search', class: 'btn btn-default btn-round' %>
+      </p>
+
+  <% end %>
+</section>
+<div class="clear-no-pad">
+  <section class="navigation">
+    <%= render :partial => "shared/result_metrics", :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @granule_models.length, :number_of_hits => @number_of_hits, :parent => @dataset_id, :time => @time} -%>
+    <%= render :partial => "shared/pagination",
+               :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @granule_models.length, :number_of_hits => @number_of_hits, :parent => true, :model => @granule, :spatial_type => @spatial_type, :position => 'top'} %>
+  </section>
+  <section id="results">
+    <ul class='results'>
+      <% @granule_models.each do |granule| %>
+          <li class="result resource<%= cycle('', ' alt') %>" itemscope itemtype='http://schema.org/Dataset'>
+            <%= render :partial => 'shared/result', :locals => {:resource => granule, :resource_type => 'granule'} %>
+          </li>
+      <% end %>
+    </ul>
+  </section>
+  <section class="navigation">
+    <%= render :partial => "shared/pagination",
+               :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @granule_models.length, :number_of_hits => @number_of_hits, :parent => true, :model => @granule, :spatial_type => @spatial_type, :position => 'bottom'} %>
+  </section>
+</div>
+

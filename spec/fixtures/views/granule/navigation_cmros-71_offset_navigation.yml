@@ -1,0 +1,579 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?offset=0&page_size=10&provider=USGS_EROS&short_name=Landsat_8_OLI_TIRS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Cmr-Hits:
+      - '969989'
+      Cmr-Request-Id:
+      - 2d3f14ff-e948-4e75-8640-921485f484ba
+      Cmr-Took:
+      - '192'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Date:
+      - Thu, 27 Apr 2017 13:54:26 GMT
+      Server:
+      - nginx/1.10.3
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '13710'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:41.235Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=0</id><title
+        type="text">ECHO granule metadata</title><entry><id>G185201166-USGS_EROS</id><title
+        type="text">LC80980112013101LGN01</title><updated>2017-02-07T04:36:09.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:14:30.000Z</time:start><time:end>2013-04-11T00:15:00.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980112013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/011/LC80980112013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>69.20139
+        169.46215 68.49027 173.75305 69.95283 175.8931 70.70529 171.35329 69.20139
+        169.46215</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185196733-USGS_EROS</id><title
+        type="text">LC80980122013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:14:54.000Z</time:start><time:end>2013-04-11T00:15:23.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980122013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/012/LC80980122013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>67.84949
+        167.97446 67.17344 172.06343 68.65575 173.97944 69.36778 169.65934 67.84949
+        167.97446</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185196723-USGS_EROS</id><title
+        type="text">LC80980132013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:15:17.000Z</time:start><time:end>2013-04-11T00:15:47.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980132013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/013/LC80980132013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>66.48725
+        166.63854 65.84239 170.54008 67.3413 172.26656 68.01756 168.15154 66.48725
+        166.63854</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185210895-USGS_EROS</id><title
+        type="text">LC80980142013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:15:41.000Z</time:start><time:end>2013-04-11T00:16:11.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980142013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/014/LC80980142013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>65.11639
+        165.43029 64.49929 169.15869 66.01227 170.72381 66.65682 166.79874 65.11639
+        165.43029</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185196598-USGS_EROS</id><title
+        type="text">LC80980152013101LGN01</title><updated>2017-02-07T04:33:57.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:16:05.000Z</time:start><time:end>2013-04-11T00:16:35.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980152013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/015/LC80980152013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>63.73749
+        164.32933 63.14512 167.89832 64.67018 169.32532 65.28656 165.57538 63.73749
+        164.32933</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185201180-USGS_EROS</id><title
+        type="text">LC80980162013101LGN01</title><updated>2017-02-07T04:33:57.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:16:29.000Z</time:start><time:end>2013-04-11T00:16:59.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980162013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/016/LC80980162013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>62.35286
+        163.32025 61.78237 166.74392 63.31769 168.05181 63.90923 164.4616 62.35286
+        163.32025</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206398-USGS_EROS</id><title
+        type="text">LC80980172013101LGN01</title><updated>2017-02-07T04:28:55.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:16:53.000Z</time:start><time:end>2013-04-11T00:17:23.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980172013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/017/LC80980172013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>60.96238
+        162.39011 60.41151 165.67989 61.95575 166.88472 62.52509 163.4416 60.96238
+        162.39011</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185222376-USGS_EROS</id><title
+        type="text">LC80980182013101LGN01</title><updated>2017-02-07T04:28:55.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:17:17.000Z</time:start><time:end>2013-04-11T00:17:46.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980182013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/018/LC80980182013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>59.56685
+        161.52822 59.03355 164.69505 60.58553 165.80999 61.13506 162.50185 59.56685
+        161.52822</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185195501-USGS_EROS</id><title
+        type="text">LC80980192013101LGN01</title><updated>2017-02-07T04:34:02.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:17:41.000Z</time:start><time:end>2013-04-11T00:18:10.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980192013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/019/LC80980192013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>58.16704
+        160.72604 57.64959 163.77923 59.20841 164.8156 59.74011 161.63203 58.16704
+        160.72604</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206391-USGS_EROS</id><title
+        type="text">LC80980202013101LGN01</title><updated>2017-02-07T04:34:02.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:18:04.000Z</time:start><time:end>2013-04-11T00:18:34.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980202013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/020/LC80980202013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>56.76365
+        159.97644 56.26057 162.92432 57.82547 163.89152 58.34104 160.82322 56.76365
+        159.97644</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>
+    http_version: 
+  recorded_at: Thu, 27 Apr 2017 13:54:41 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?offset=10&page_size=10&provider=USGS_EROS&short_name=Landsat_8_OLI_TIRS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Cmr-Hits:
+      - '969989'
+      Cmr-Request-Id:
+      - cac42b7d-2617-4878-809d-7c7ad540f5cd
+      Cmr-Took:
+      - '187'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Date:
+      - Thu, 27 Apr 2017 13:53:39 GMT
+      Server:
+      - nginx/1.10.3
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '13709'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:41.554Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=10</id><title
+        type="text">ECHO granule metadata</title><entry><id>G185223643-USGS_EROS</id><title
+        type="text">LC80980212013101LGN01</title><updated>2017-02-07T04:25:34.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:18:28.000Z</time:start><time:end>2013-04-11T00:18:58.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980212013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/021/LC80980212013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>55.35638
+        159.27255 54.86634 162.1228 56.43659 163.0289 56.93759 160.06731 55.35638
+        159.27255</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185219079-USGS_EROS</id><title
+        type="text">LC80980222013101LGN01</title><updated>2017-02-07T04:25:34.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:18:52.000Z</time:start><time:end>2013-04-11T00:19:22.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980222013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/022/LC80980222013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>53.9466
+        158.60939 53.4684 161.36916 55.04351 162.22121 55.53129 159.35835 53.9466
+        158.60939</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185219869-USGS_EROS</id><title
+        type="text">LC80980232013101LGN01</title><updated>2017-02-07T04:35:42.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:19:16.000Z</time:start><time:end>2013-04-11T00:19:46.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980232013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/023/LC80980232013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>52.53358
+        157.9822 52.06621 160.65773 53.64565 161.46146 54.12139 158.69037 52.53358
+        157.9822</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206382-USGS_EROS</id><title
+        type="text">LC80980242013101LGN01</title><updated>2017-02-07T04:35:42.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:19:40.000Z</time:start><time:end>2013-04-11T00:20:10.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980242013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/024/LC80980242013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>51.11816
+        157.38663 50.66051 159.98468 52.24388 160.74534 52.70881 158.05857 51.11816
+        157.38663</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206392-USGS_EROS</id><title
+        type="text">LC80980632013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:35:11.000Z</time:start><time:end>2013-04-11T00:35:41.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980632013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/063/LC80980632013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-4.9702
+        143.02681 -5.33366 144.70676 -3.71097 145.05114 -3.35104 143.37505 -4.9702
+        143.02681</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185196628-USGS_EROS</id><title
+        type="text">LC80980642013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:35:35.000Z</time:start><time:end>2013-04-11T00:36:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980642013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/064/LC80980642013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-6.41535
+        142.71453 -6.77928 144.39951 -5.15698 144.74425 -4.79665 143.06436 -6.41535
+        142.71453</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206431-USGS_EROS</id><title
+        type="text">LC80980652013101LGN01</title><updated>2017-02-07T04:35:37.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:35:59.000Z</time:start><time:end>2013-04-11T00:36:29.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980652013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/065/LC80980652013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-7.86094
+        142.40051 -8.22533 144.09118 -6.60344 144.43661 -6.24272 142.75227 -7.86094
+        142.40051</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185183067-USGS_EROS</id><title
+        type="text">LC80980662013101LGN01</title><updated>2017-02-07T04:35:37.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:36:23.000Z</time:start><time:end>2013-04-11T00:36:53.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980662013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/066/LC80980662013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-9.3065
+        142.08555 -9.67098 143.78084 -8.04923 144.1273 -7.68852 142.43959 -9.3065
+        142.08555</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185223709-USGS_EROS</id><title
+        type="text">LC80980672013101LGN01</title><updated>2017-02-07T04:29:20.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:36:47.000Z</time:start><time:end>2013-04-11T00:37:17.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980672013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/067/LC80980672013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-10.75047
+        141.7658 -11.11626 143.47209 -9.49536 143.81976 -9.13341 142.12233 -10.75047
+        141.7658</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185218578-USGS_EROS</id><title
+        type="text">LC80980682013101LGN01</title><updated>2017-02-07T04:29:20.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:37:11.000Z</time:start><time:end>2013-04-11T00:37:41.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980682013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/068/LC80980682013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-12.19487
+        141.44375 -12.56181 143.1611 -10.94166 143.51035 -10.57866 141.80318 -12.19487
+        141.44375</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>
+    http_version: 
+  recorded_at: Thu, 27 Apr 2017 13:54:41 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?offset=11&page_size=10&provider=USGS_EROS&short_name=Landsat_8_OLI_TIRS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Cmr-Hits:
+      - '969989'
+      Cmr-Request-Id:
+      - 229b4ebe-0d5d-4abf-9092-af31c71dea9d
+      Cmr-Took:
+      - '180'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Date:
+      - Thu, 27 Apr 2017 13:54:28 GMT
+      Server:
+      - nginx/1.10.3
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '13715'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:41.865Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=11</id><title
+        type="text">ECHO granule metadata</title><entry><id>G185219079-USGS_EROS</id><title
+        type="text">LC80980222013101LGN01</title><updated>2017-02-07T04:25:34.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:18:52.000Z</time:start><time:end>2013-04-11T00:19:22.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980222013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/022/LC80980222013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>53.9466
+        158.60939 53.4684 161.36916 55.04351 162.22121 55.53129 159.35835 53.9466
+        158.60939</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185219869-USGS_EROS</id><title
+        type="text">LC80980232013101LGN01</title><updated>2017-02-07T04:35:42.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:19:16.000Z</time:start><time:end>2013-04-11T00:19:46.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980232013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/023/LC80980232013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>52.53358
+        157.9822 52.06621 160.65773 53.64565 161.46146 54.12139 158.69037 52.53358
+        157.9822</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206382-USGS_EROS</id><title
+        type="text">LC80980242013101LGN01</title><updated>2017-02-07T04:35:42.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:19:40.000Z</time:start><time:end>2013-04-11T00:20:10.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980242013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/024/LC80980242013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>51.11816
+        157.38663 50.66051 159.98468 52.24388 160.74534 52.70881 158.05857 51.11816
+        157.38663</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206392-USGS_EROS</id><title
+        type="text">LC80980632013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:35:11.000Z</time:start><time:end>2013-04-11T00:35:41.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980632013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/063/LC80980632013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-4.9702
+        143.02681 -5.33366 144.70676 -3.71097 145.05114 -3.35104 143.37505 -4.9702
+        143.02681</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185196628-USGS_EROS</id><title
+        type="text">LC80980642013101LGN01</title><updated>2017-02-07T04:26:49.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:35:35.000Z</time:start><time:end>2013-04-11T00:36:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980642013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/064/LC80980642013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-6.41535
+        142.71453 -6.77928 144.39951 -5.15698 144.74425 -4.79665 143.06436 -6.41535
+        142.71453</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206431-USGS_EROS</id><title
+        type="text">LC80980652013101LGN01</title><updated>2017-02-07T04:35:37.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:35:59.000Z</time:start><time:end>2013-04-11T00:36:29.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980652013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/065/LC80980652013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-7.86094
+        142.40051 -8.22533 144.09118 -6.60344 144.43661 -6.24272 142.75227 -7.86094
+        142.40051</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185183067-USGS_EROS</id><title
+        type="text">LC80980662013101LGN01</title><updated>2017-02-07T04:35:37.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:36:23.000Z</time:start><time:end>2013-04-11T00:36:53.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980662013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/066/LC80980662013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-9.3065
+        142.08555 -9.67098 143.78084 -8.04923 144.1273 -7.68852 142.43959 -9.3065
+        142.08555</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185223709-USGS_EROS</id><title
+        type="text">LC80980672013101LGN01</title><updated>2017-02-07T04:29:20.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:36:47.000Z</time:start><time:end>2013-04-11T00:37:17.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980672013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/067/LC80980672013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-10.75047
+        141.7658 -11.11626 143.47209 -9.49536 143.81976 -9.13341 142.12233 -10.75047
+        141.7658</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185218578-USGS_EROS</id><title
+        type="text">LC80980682013101LGN01</title><updated>2017-02-07T04:29:20.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:37:11.000Z</time:start><time:end>2013-04-11T00:37:41.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980682013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/068/LC80980682013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-12.19487
+        141.44375 -12.56181 143.1611 -10.94166 143.51035 -10.57866 141.80318 -12.19487
+        141.44375</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185196660-USGS_EROS</id><title
+        type="text">LC80980692013101LGN01</title><updated>2017-02-08T18:54:40.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:37:35.000Z</time:start><time:end>2013-04-11T00:38:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980692013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/069/LC80980692013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-13.63839
+        141.11948 -14.00635 142.8479 -12.38684 143.19904 -12.02293 141.48214 -13.63839
+        141.11948</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>
+    http_version: 
+  recorded_at: Thu, 27 Apr 2017 13:54:41 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?offset=20&page_size=10&provider=USGS_EROS&short_name=Landsat_8_OLI_TIRS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Cmr-Hits:
+      - '969989'
+      Cmr-Request-Id:
+      - 7122003f-18b8-49c1-8729-95a12b37a1a1
+      Cmr-Took:
+      - '204'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Date:
+      - Thu, 27 Apr 2017 13:54:37 GMT
+      Server:
+      - nginx/1.10.3
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '13816'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:42.183Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=20</id><title
+        type="text">ECHO granule metadata</title><entry><id>G185196660-USGS_EROS</id><title
+        type="text">LC80980692013101LGN01</title><updated>2017-02-08T18:54:40.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:37:35.000Z</time:start><time:end>2013-04-11T00:38:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980692013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/069/LC80980692013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-13.63839
+        141.11948 -14.00635 142.8479 -12.38684 143.19904 -12.02293 141.48214 -13.63839
+        141.11948</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185218987-USGS_EROS</id><title
+        type="text">LC80980702013101LGN01</title><updated>2017-02-07T04:24:27.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:37:59.000Z</time:start><time:end>2013-04-11T00:38:29.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="http://earthexplorer.usgs.gov/order/process?node=EC&amp;dataset_name=LANDSAT_8&amp;ordered=LC80980702013101LGN01"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="http://earthexplorer.usgs.gov/browse/landsat_8/2013/098/070/LC80980702013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-15.08184
+        140.79181 -15.4509 142.53251 -13.83214 142.88592 -13.46721 141.15811 -15.08184
+        140.79181</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185219009-USGS_EROS</id><title
+        type="text">LC80980712013101LGN01</title><updated>2017-02-07T04:24:27.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:38:23.000Z</time:start><time:end>2013-04-11T00:38:53.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="http://earthexplorer.usgs.gov/order/process?node=EC&amp;dataset_name=LANDSAT_8&amp;ordered=LC80980712013101LGN01"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="http://earthexplorer.usgs.gov/browse/landsat_8/2013/098/071/LC80980712013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-16.52463
+        140.46052 -16.89491 142.21468 -15.27684 142.57068 -14.91082 140.83081 -16.52463
+        140.46052</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185210959-USGS_EROS</id><title
+        type="text">LC80980722013101LGN01</title><updated>2017-02-07T04:33:40.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:38:47.000Z</time:start><time:end>2013-04-11T00:39:17.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980722013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/072/LC80980722013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-17.96673
+        140.12519 -18.33836 141.89423 -16.72114 142.25321 -16.35387 140.49992 -17.96673
+        140.12519</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185205979-USGS_EROS</id><title
+        type="text">LC80980732013101LGN01</title><updated>2017-02-07T04:33:41.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:39:11.000Z</time:start><time:end>2013-04-11T00:39:41.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980732013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/073/LC80980732013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-19.40851
+        139.78523 -19.78165 141.57069 -18.16533 141.93302 -17.79668 140.16481 -19.40851
+        139.78523</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185222375-USGS_EROS</id><title
+        type="text">LC80980742013101LGN01</title><updated>2017-02-07T04:28:39.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:39:35.000Z</time:start><time:end>2013-04-11T00:40:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980742013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/074/LC80980742013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-20.84956
+        139.44054 -21.22432 141.24364 -19.6089 141.60974 -19.23876 139.82544 -20.84956
+        139.44054</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206390-USGS_EROS</id><title
+        type="text">LC80980752013101LGN01</title><updated>2017-02-07T04:28:39.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:39:59.000Z</time:start><time:end>2013-04-11T00:40:28.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980752013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/075/LC80980752013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-22.2895
+        139.09063 -22.66602 140.91283 -21.05154 141.28313 -20.67979 139.48136 -22.2895
+        139.09063</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185177674-USGS_EROS</id><title
+        type="text">LC80980762013101LGN01</title><updated>2017-02-07T04:28:39.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:40:23.000Z</time:start><time:end>2013-04-11T00:40:52.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980762013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/076/LC80980762013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-23.72905
+        138.73496 -24.10746 140.57768 -22.49401 140.95261 -22.12051 139.13201 -23.72905
+        138.73496</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185206428-USGS_EROS</id><title
+        type="text">LC80980772013101LGN01</title><updated>2017-02-07T04:33:07.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:40:47.000Z</time:start><time:end>2013-04-11T00:41:16.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980772013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/077/LC80980772013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-25.16742
+        138.37313 -25.54788 140.2379 -23.93547 140.61797 -23.56009 138.77707 -25.16742
+        138.37313</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G185205977-USGS_EROS</id><title
+        type="text">LC80980782013101LGN01</title><updated>2017-02-07T04:33:07.000Z</updated><echo:datasetId>Landsat
+        8 Operational Land Imager (OLI)_Thermal Infared Sensor (TIRS) V1</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>USGS_EROS</echo:dataCenter><time:start>2013-04-11T00:41:11.000Z</time:start><time:end>2013-04-11T00:41:40.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="application/x-gzip"
+        title="Download Link" hreflang="en-US" href="https://earthexplorer.usgs.gov/download/options/4923/LC80980782013101LGN01?node=EC"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://earthexplorer.usgs.gov/browse/landsat_8/2013/098/078/LC80980782013101LGN01.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"
+        hreflang="en-US" href="https://lta.cr.usgs.gov/L8"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-26.60491
+        138.00418 -26.9877 139.8932 -25.37645 140.27893 -24.99892 138.41563 -26.60491
+        138.00418</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>
+    http_version: 
+  recorded_at: Thu, 27 Apr 2017 13:54:42 GMT
+recorded_with: VCR 2.9.2

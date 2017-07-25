@@ -1,0 +1,389 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&offset=12&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Jun 2016 15:56:21 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '31583'
+      Cmr-Took:
+      - '15'
+      Cmr-Request-Id:
+      - eea75332-12f8-4d55-9556-20935c33584e
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '32240'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2016-06-14T15:56:21.469Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A&amp;page_size=10&amp;offset=12</id><title
+        type=\"text\">ECHO dataset metadata</title><entry><id>C1214611011-SCIOPS</id><title
+        type=\"text\">           Computer Oceanographic Atlas of Newfoundland Basin
+        and Labrador Sea         </title><summary type=\"text\">The Computer Atlas
+        of the Newfoundland Basin and Labrador Sea was\n      designed to make simple,
+        fast and reliable access to large volumes of\n      historical and real time
+        oceanographic data. The choice of the Newfoundland\n      Basin and Labrador
+        Sea was motivated by their importance in the entire North\n      Atlantic
+        circulation and water mass formation, the existence of various water\n      masses
+        and sharp fronts, indications of significant temporal and spatial\n      changes
+        in the water mass properties, intense air-sea interaction and dense\n      coverage
+        with oceanographic data of various types.\n      \n               The Atlas
+        operates with different types of oceanographic data:\n      conductivity-temperature-depth
+        (CTD), water bottle, expendable bathythermograph\n      (XBT), current meter,
+        floats, etc. The sources of the data are: - Bedford\n      Institute of Oceanography
+        (BIO) cruises, - World Ocean Circulation Experiment\n      (WOCE) cruises,
+        - Russian SECTIONS program carried by State Oceanographic\n      Institute,
+        and P.P. Shirshov Institute of Oceanology (SOI, PPS, Moscow,\n      Russia),\n
+        \     - Obninsk World Data Center (WDC, Obninsk, Russia), - NOAA National\n
+        \     Oceanographic Data Center (NODC, Washington, USA), - Marine Environmental
+        Data\n      Service (MEDS, Ottawa, Canada).\n      \n               The Atlas
+        integrates the advantages of databases and paper atlases,\n      allowing
+        the user to solve complex tasks (such as, T-S or time series analysis\n      for
+        specified regions, sections or points) in a simple way avoiding complex\n
+        \     queries for data and algorithms. It performs data selection, processing,\n
+        \     analysis and visualization in different oceanographic coordinates. The
+        Atlas\n      locates data from a simple query, produces plots (field, section,
+        etc.), and\n      runs different statistical and oceanographic applications.
+        It offers an\n      optional selection of procedures for objective analysis,
+        interpolation,\n      averaging, smoothing and subsampling of data and results.
+        Scale-independence is\n      one of its features, allowing users to work on
+        different spatial and temporal\n      scales, and adjust the working environment
+        for their own needs and\n      requirements. Users can easily load other data
+        sets, change regions and attach\n      their own procedures.\n      \n               The
+        Atlas has been used for data analysis, preparation of fields to\n      initialize
+        hydrodynamic models and various comparisons of property\n      distributions
+        based on 'real' data and results of modeling.\n      \n      Spatial Data
+        Organization Information -\n      \n          Indirect Spatial Reference:\n
+        \         Direct Spatial Reference:\n      Spatial Reference Information -\n
+        \          Horizontal Coordinate System Definition -\n      \n      Planar
+        -\n      \n          Planar Coordinate Encoding Method:\n          Coordinate
+        Representation:\n           Abscissa Resolution:\n           Ordinate Resolution:\n
+        \         Distance and Bearing Representation:\n           Distance Resolution:\n
+        \          Bearing Resolution:\n           Bearing Units:\n           Bearing
+        Reference Direction:\n           Bearing Reference Meridian:\n          Planar
+        Distance Units:\n      \n         Geodetic Model:\n           Horizontal Datum
+        Name:\n          Ellipsoid Name:\n          Semi-major Axis:\n          Denominator
+        of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Computer Oceanographic Atlas of Newfoundland Basin and Labrador
+        Sea         </echo:datasetId><echo:shortName>DFO_BIO_NB_LS_ATLAS</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/DFO/MR/SB/OSD</echo:organization><time:start>1980-01-01T00:00:00.000Z</time:start><time:end>1995-12-31T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>30
+        -70 70 -15</georss:box><echo:difId>DFO_BIO_NB_LS_ATLAS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214612442-SCIOPS</id><title
+        type=\"text\">           Ecozones, Ecoprovinces, Ecoregions, and Ecodistricts
+        of Canada         </title><summary type=\"text\">In 1991 a collaborative project
+        was undertaken by a number of federal\nagencies in cooperation with provincial
+        and territorial governments, all under\nthe auspices of the Ecological Stratification
+        Working Group, to revise previous\nwork and establish a common ecological
+        framework for Canada. The working group\nfocused on three priority levels
+        of stratification, namely ecozones,\necoregions, and ecodistricts.  The resulting
+        national report \"A National\nEcological Framework for Canada\" was released
+        by the Ecological Stratification\nWorking Group in 1996.   This dataset is
+        the product of that work, as well as\nthe intermediate ecoprovinces framework,
+        and represents the official definition\nof those boundaries for Canada.\n\n
+        \        The national ecological framework provides a consistent, national\nspatial
+        context within which ecosystems at various levels of generalization can\nbe
+        described, monitored, and reported on. The use of such a framework of\nstandard
+        ecological units provides for common communication and reporting\nbetween
+        different jurisdictions and disciplines, and provides a common ground\nto
+        report on the state of the environment and the sustainability of ecosystems\nin
+        Canada.\n\nSpatial Data Organization Information -\n\n    Indirect Spatial
+        Reference:\n    Direct Spatial Reference:\nSpatial Reference Information -\n
+        \    Horizontal Coordinate System Definition -\n\nPlanar -\n\n\n\n\n    Planar
+        Coordinate Encoding Method:\n    Coordinate Representation:\n     Abscissa
+        Resolution:\n     Ordinate Resolution:\n    Distance and Bearing Representation:\n
+        \    Distance Resolution:\n     Bearing Resolution:\n     Bearing Units:\n
+        \    Bearing Reference Direction:\n     Bearing Reference Meridian:\n    Planar
+        Distance Units:\n\n   Geodetic Model:\n     Horizontal Datum Name:\n    Ellipsoid
+        Name:\n    Semi-major Axis:\n    Denominator of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Ecozones, Ecoprovinces, Ecoregions, and Ecodistricts of Canada
+        \        </echo:datasetId><echo:shortName>Canada_AAFC_Eco</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/AGR/ECORC</echo:organization><time:start>1996-01-01T00:00:00.000Z</time:start><time:end>2002-03-25T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>41.5
+        -141 84 -52</georss:box><echo:difId>Canada_AAFC_Eco</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214608131-SCIOPS</id><title
+        type=\"text\">           Forest Health Network Archives - Pest Data for British
+        Columbia, Canada         </title><summary type=\"text\">Aerial detection surveys
+        are intended to detect new activity, to\n      monitor the trend of ongoing
+        activity, to provide general location information,\n      and to subjectively
+        rate levels of defoliation.  Manually mapping such activity\n      has quantitative
+        and locator accuracy limitations and does not maintain the\n      accuracy
+        standards as most data found in GIS databases.\n      \n               Aerial
+        detection pest surveys are generally carried out from fixed\n      wing aircraft
+        where observers manually sketch each infestation site onto\n      1:100000
+        to 1:250000 scale basemaps. The observers sketch infestation sites by\n      drawing
+        polygons around the outer perimeter of the infested area on the map. \n      Ground
+        checks and other sampling methods are carried out to evaluate the\n      subjective
+        ratings.\n      \n               Data acquisition is conducted by Provincial
+        governments and data is\n      passed to the Pacific Forestry Centre for archiveing.
+        New coverages are added\n      as available.\n      \n               To detect
+        and monitor annual, visible vegetation damage primarily\n      caused by insects.\n
+        \     \n      Spatial Data Organization Information -\n      \n          Indirect
+        Spatial Reference:\n          Direct Spatial Reference:\n      Spatial Reference
+        Information -\n           Horizontal Coordinate System Definition -\n      \n
+        \     Planar -\n      \n      \n      \n      \n          Planar Coordinate
+        Encoding Method:\n          Coordinate Representation:\n           Abscissa
+        Resolution:\n           Ordinate Resolution:\n          Distance and Bearing
+        Representation:\n           Distance Resolution:\n           Bearing Resolution:\n
+        \          Bearing Units:\n           Bearing Reference Direction:\n           Bearing
+        Reference Meridian:\n          Planar Distance Units:\n      \n         Geodetic
+        Model:\n           Horizontal Datum Name:\n          Ellipsoid Name:\n          Semi-major
+        Axis:\n          Denominator of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Forest Health Network Archives - Pest Data for British Columbia,
+        Canada         </echo:datasetId><echo:shortName>Canada_PFC_FHNABCPestData</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NRCAN/CFS/PFC</echo:organization><time:start>1909-01-01T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" hreflang=\"en-US\" href=\"http://cfs.nrcan.gc.ca/regions/pfc\"></link><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>48
+        -139 60 -114</georss:box><echo:difId>Canada_PFC_FHNABCPestData</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214610673-SCIOPS</id><title
+        type=\"text\">           Forest Insect and Disease Survey of Canada - Ontario
+        Region Infobase         </title><summary type=\"text\">The dataset includes
+        insect and disease damage - defoliation\n                  histories, incidence
+        of insect and/or disease.  Forest health - drought damage,\n                  regions
+        of decline (mapped), and acid precipitation damage.  Value added\n                  thematic
+        data obtained by field measurements and aerial mapping (manual).\n                  \n
+        \                          This data is applied to accumulate historical information
+        on\n                  occurrence and damage caused by forest insects and disease;
+        accumulate\n                  information on forest health on an annual basis.
+        \ Potential applications:\n                  prediction of insect/disease
+        outbreaks; assessment of impact on forest yield.\n                  \n                  Spatial
+        Data Organization Information -\n                  \n                      Indirect
+        Spatial Reference: Administrative Units\n                      Direct Spatial
+        Reference: Point (Latitude / Longitude and Rectangular Grid)\n                  Spatial
+        Reference Information -\n                  Horizontal Coordinate System Definition
+        -\n                  Planar -\n                  \n                        Map
+        Projection Name: Lambert Conformal Conic\n                  \n                  \n
+        \                 \n                      Planar Coordinate Encoding Method:\n
+        \                     Coordinate Representation:\n                       Abscissa
+        Resolution:\n                       Ordinate Resolution:\n                      Distance
+        and Bearing Representation:\n                       Distance Resolution:\n
+        \                      Bearing Resolution:\n                       Bearing
+        Units:\n                       Bearing Reference Direction:\n                       Bearing
+        Reference Meridian:\n                      Planar Distance Units:\n                  \n
+        \                    Geodetic Model:\n                       Horizontal Datum
+        Name:\n                      Ellipsoid Name:\n                      Semi-major
+        Axis:\n                      Denominator of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Forest Insect and Disease Survey of Canada - Ontario Region Infobase
+        \        </echo:datasetId><echo:shortName>CANEMRCCRSFIDSONT</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NRCAN/CFS/GLFC</echo:organization><time:start>1950-01-01T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>41
+        -95 56 -75</georss:box><echo:difId>CANEMRCCRSFIDSONT</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214608637-SCIOPS</id><title
+        type=\"text\">           Frontier Well Data for Hudson Bay - National Energy
+        Board, Canada         </title><summary type=\"text\">This data set contains
+        information on the location of wells drilled in\nthe Hudson Bay Frontier areas
+        regulated by the National Energy Board for which\nreports and data are no
+        longer privileged. The information is supplied by\nindustry pursuant to the
+        Canada Oil and Gas Operations Act. Associated\ninformation may include well
+        history reports, well logs, petrologic reports,\nvelocity surveys, micropaleontological
+        reports, well test reports, core\nanalysis and so on.\n\n         The information
+        is provided publicly, pursuant to the Canada Petroleum\nResources Act to promote
+        safety of workers, protection of the environment,\nconservation of the hydrocarbon
+        resources and to increase scientific knowledge\nand efficient utilization
+        of hydrocarbon resources. The principle uses are\nexpected to be the planning
+        of hydrocarbon exploration programs and\nproduction operations, and scientific
+        research, particularly geological\nstratigraphy and tectonics.\n\nSpatial
+        Data Organization Information -\n\n    Indirect Spatial Reference:\n    Direct
+        Spatial Reference:\nSpatial Reference Information -\n     Horizontal Coordinate
+        System Definition -\n\nPlanar -\n\n    Planar Coordinate Encoding Method:\n
+        \   Coordinate Representation:\n     Abscissa Resolution:\n     Ordinate Resolution:\n
+        \   Distance and Bearing Representation:\n     Distance Resolution:\n     Bearing
+        Resolution:\n     Bearing Units:\n     Bearing Reference Direction:\n     Bearing
+        Reference Meridian:\n    Planar Distance Units:\n\n   Geodetic Model:\n     Horizontal
+        Datum Name:\n    Ellipsoid Name:\n    Semi-major Axis:\n    Denominator of
+        Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Frontier Well Data for Hudson Bay - National Energy Board, Canada
+        \        </echo:datasetId><echo:shortName>Canada_NEB_FrontWellHudsonBay</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NEB</echo:organization><time:start>1969-08-07T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>52
+        -95 65 -75</georss:box><echo:difId>Canada_NEB_FrontWellHudsonBay</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214608638-SCIOPS</id><title
+        type=\"text\">           Frontier Well Data for North of 60 - National Energy
+        Board, Canada         </title><summary type=\"text\">This data set contains
+        information on the location of wells drilled in\n      the Northern Frontier
+        areas regulated by the National Energy Board for which\n      reports and
+        data are no longer privileged. The information is supplied by\n      industry
+        pursuant to the Canada Oil and Gas Operations Act. Associated\n      information
+        may include well history reports, well logs, petrologic reports,\n      velocity
+        surveys, micropaleontological reports, well test reports, core\n      analysis
+        and so on.\n      \n               The information is provided publicly, pursuant
+        to the Canada Petroleum\n      Resources Act to promote safety of workers,
+        protection of the environment,\n      conservation of the hydrocarbon resources
+        and to increase scientific knowledge\n      and efficient utilization of hydrocarbon
+        resources. The principle uses are\n      expected to be the planning of hydrocarbon
+        exploration programs and\n      production operations, and scientific research,
+        particularly geological\n      stratigraphy and tectonics.\n      \n      Spatial
+        Data Organization Information -\n      \n          Indirect Spatial Reference:\n
+        \         Direct Spatial Reference:\n      Spatial Reference Information -\n
+        \          Horizontal Coordinate System Definition -\n      \n      Planar
+        -\n      \n          Planar Coordinate Encoding Method:\n          Coordinate
+        Representation:\n           Abscissa Resolution:\n           Ordinate Resolution:\n
+        \         Distance and Bearing Representation:\n           Distance Resolution:\n
+        \          Bearing Resolution:\n           Bearing Units:\n           Bearing
+        Reference Direction:\n           Bearing Reference Meridian:\n          Planar
+        Distance Units:\n      \n         Geodetic Model:\n           Horizontal Datum
+        Name:\n          Ellipsoid Name:\n          Semi-major Axis:\n          Denominator
+        of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Frontier Well Data for North of 60 - National Energy Board, Canada
+        \        </echo:datasetId><echo:shortName>Canada_NEB_FrontWellN60</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NEB</echo:organization><time:start>1920-04-01T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>60
+        -141 90 -46</georss:box><echo:difId>Canada_NEB_FrontWellN60</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214608594-SCIOPS</id><title
+        type=\"text\">           Frontier Well Data for Offshore West Coast - National
+        Energy Board, Canada         </title><summary type=\"text\">This data set
+        contains information on the location of wells drilled in\nthe Offshore West
+        Coast Frontier areas regulated by the National Energy Board\nfor which reports
+        and data are no longer privileged. The information is\nsupplied by industry
+        pursuant to the Canada Oil and Gas Operations Act.\nAssociated information
+        may include well history reports, well logs, petrologic\nreports, velocity
+        surveys, micropaleontological reports, well test reports,\ncore analysis and
+        so on.\n\n         The information is provided publicly, pursuant to the Canada
+        Petroleum\nResources Act to promote safety of workers, protection of the environment,\nconservation
+        of the hydrocarbon resources and to increase scientific knowledge\nand efficient
+        utilization of hydrocarbon resources. The principle uses are\nexpected to
+        be the planning of hydrocarbon exploration programs and\nproduction operations,
+        and scientific research, particularly geological\nstratigraphy and tectonics.\n\nSpatial
+        Data Organization Information -\n\n    Indirect Spatial Reference:\n    Direct
+        Spatial Reference:\nSpatial Reference Information -\n     Horizontal Coordinate
+        System Definition -\n\nPlanar -\n\n\n\n\n    Planar Coordinate Encoding Method:\n
+        \   Coordinate Representation:\n     Abscissa Resolution:\n     Ordinate Resolution:\n
+        \   Distance and Bearing Representation:\n     Distance Resolution:\n     Bearing
+        Resolution:\n     Bearing Units:\n     Bearing Reference Direction:\n     Bearing
+        Reference Meridian:\n    Planar Distance Units:\n\n   Geodetic Model:\n     Horizontal
+        Datum Name:\n    Ellipsoid Name:\n    Semi-major Axis:\n    Denominator of
+        Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Frontier Well Data for Offshore West Coast - National Energy Board,
+        Canada         </echo:datasetId><echo:shortName>Canada_NEB_FrontWellOffWCoast</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NEB</echo:organization><time:start>1967-06-11T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>47
+        -135 55 -125</georss:box><echo:difId>Canada_NEB_FrontWellOffWCoast</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214607106-SCIOPS</id><title
+        type=\"text\">           Ground Water Levels at Selected Sites in New Brunswick,
+        Canada         </title><summary type=\"text\">The purpose of this database
+        is to measure fluctuations in groundwater\nlevels at selected sites in New
+        Brunswick. The water level information\nindicates depth below ground level
+        and elevation of water level referenced to\ngeodetic datum.\n\n         Data
+        is available monthly for a 12-year period ending April 1, 1992,\nwhen the
+        program was discontinued due to a budget reduction measure. Data\ncollection
+        is now (2001) being reinstated, with two monitoring stations now\noperating.\n\n
+        \        Thirty-seven monitoring stations in New Brunswick provided water\nlevels
+        measured using chart recorders and data loggers with the data directly\ndownloaded
+        via modems to the office. The baseline stations monitoring the\ngroundwater
+        provided data reflecting natural fluctuations with respect to\nclimate, topography
+        and geology. The water management stations data reflected\nthe pumping activity
+        in municipal wellfields.\n\n         The purpose of this database is to measure
+        fluctuations in groundwater\nlevels at selected sites in New Brunswick.\n\nSpatial
+        Data Organization Information -\n\n    Indirect Spatial Reference:\n    Direct
+        Spatial Reference:\nSpatial Reference Information -\nHorizontal Coordinate
+        System Definition -\nPlanar -\n\n\n\n\n    Planar Coordinate Encoding Method:\n
+        \   Coordinate Representation:\n     Abscissa Resolution:\n     Ordinate Resolution:\n
+        \   Distance and Bearing Representation:\n     Distance Resolution:\n     Bearing
+        Resolution:\n     Bearing Units:\n     Bearing Reference Direction:\n     Bearing
+        Reference Meridian:\n    Planar Distance Units:\n\n   Geodetic Model:\n     Horizontal
+        Datum Name:\n    Ellipsoid Name:\n    Semi-major Axis:\n    Denominator of
+        Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Ground Water Levels at Selected Sites in New Brunswick, Canada
+        \        </echo:datasetId><echo:shortName>CANEMRCCRSGRWATER</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NB/ELG</echo:organization><time:start>1980-01-01T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>45
+        -68 49 -64</georss:box><echo:difId>CANEMRCCRSGRWATER</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214608307-SCIOPS</id><title
+        type=\"text\">           Inter-disciplinary Forest Ecosystem Research (InFER),
+        Newfoundland, Canada         </title><summary type=\"text\">The Inter-disciplinary
+        Forest Ecosystem Research (InFER) project was\nestablished in 1993 to determine
+        the effects of harvesting and silvicultural\npractices on boreal forest ecosystems.
+        \ The inter-disciplinary nature of the\nproject promotes sharing of resources
+        and common environmental data, as well as\ncoordinated documentation of ecosystem
+        parameters.\n\n         The InFER research project is located at Horseshoe
+        Brook which was\nburned in 1998, and Glide Lake which was burned and planted
+        in 1993.  Both\nlocations are found in Western Newfoundland.\n\n         Collaborators
+        in the InFER Project are:\n\n         Natural Resources Canada, Canadian Forest
+        Service, Atlantic Forestry\nCentre\n         University of Helsinki, Helsinki,
+        Finland\n         Finnish Forest Research Institute, Vantaa, Finland\n         Technische
+        Universitat Dresden, Tharandt, Germany\n         Nipissing University, Ontario\n
+        \        Newfoundland Forest Service, Department of Forestry and Agrifoods\n
+        \        Corner Brook Pulp and Paper Company Limited\n         Memorial University
+        of Newfoundland\n\n         The InFER project is part of the Forest Ecosystem
+        Research Network of\nSites (FERNS) and is one of eight sites representing
+        the Boreal Shield Ecozone.\n It should be noted that the InFER project is
+        listed under the title Glide Lake\n(Western Newfoundland) for FERNS.\n\n         This
+        integrated approach to ecosystem research will contribute\nsignificantly to
+        our understanding of forest ecosystems and facilitate the\ncreation of sound
+        forest ecosystem practices that will enhance our efforts in\nrealizing the
+        goal of forest ecosystem sustainability in Canada.\n\nSpatial Data Organization
+        Information -\n\n    Indirect Spatial Reference:\n    Direct Spatial Reference:\nSpatial
+        Reference Information -\n     Horizontal Coordinate System Definition -\n\nPlanar
+        -\n\n\n\n\n    Planar Coordinate Encoding Method:\n    Coordinate Representation:\n
+        \    Abscissa Resolution:\n     Ordinate Resolution:\n    Distance and Bearing
+        Representation:\n     Distance Resolution:\n     Bearing Resolution:\n     Bearing
+        Units:\n     Bearing Reference Direction:\n     Bearing Reference Meridian:\n
+        \   Planar Distance Units:\n\n   Geodetic Model:\n     Horizontal Datum Name:\n
+        \   Ellipsoid Name:\n    Semi-major Axis:\n    Denominator of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          Inter-disciplinary Forest Ecosystem Research (InFER), Newfoundland,
+        Canada         </echo:datasetId><echo:shortName>Canada_CFS_InFER-Nfld</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NRCAN/CFS/AFC</echo:organization><time:start>1993-03-01T00:00:00.000Z</time:start><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>48.8
+        -57.5 49.08 -57.23</georss:box><echo:difId>Canada_CFS_InFER-Nfld</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry><entry><id>C1214607937-SCIOPS</id><title
+        type=\"text\">           LANDSAT 5 Thematic Mapper Imagery from SEIDAM, British
+        Columbia, Canada         </title><summary type=\"text\">The LANDSAT 5 sensor
+        was launched on March 1, 1984. A full Thematic\nMapper (TM)  scene covers
+        about 185 by 174 kilometers in seven channels, with a\nnominal resolution
+        of 30 meters (120 by 120 meters for thermal channel 6).\n\n         The SEIDAM
+        Project, through which the LANDSAT 5 Thematic Mapper\nImagery is channelled,
+        commenced in October 1991 at the Pacific Forestry Centre\nunder the sponsorship
+        of the NASA Applied Information Systems Research Program\n(AISRP).  The objective
+        of SEIDAM is: to create a System of Experts for\nIntelligent Data Management
+        (SEIDAM) which will integrate remote sensing data\nfrom satellites and aircraft
+        with geographic information systems and manage\nlarge archives of remotely
+        sensed data for dynamic selection of data sources\nand sensor characteristics
+        for query-based recognition of forest objects\nappropriate for environmental
+        forest monitoring.\n\nSpatial Data Organization Information -\n\n    Indirect
+        Spatial Reference:\n    Direct Spatial Reference: Raster\nSpatial Reference
+        Information -\n     Horizontal Coordinate System Definition -\n\nPlanar -\n\n\n\n\n
+        \   Planar Coordinate Encoding Method:\n    Coordinate Representation:\n     Abscissa
+        Resolution:\n     Ordinate Resolution:\n    Distance and Bearing Representation:\n
+        \    Distance Resolution:\n     Bearing Resolution:\n     Bearing Units:\n
+        \    Bearing Reference Direction:\n     Bearing Reference Meridian:\n    Planar
+        Distance Units:\n\n   Geodetic Model:\n     Horizontal Datum Name:\n    Ellipsoid
+        Name:\n    Semi-major Axis:\n    Denominator of Flattening Ratio:</summary><updated>2015-12-02T00:00:00.000Z</updated><echo:datasetId>
+        \          LANDSAT 5 Thematic Mapper Imagery from SEIDAM, British Columbia,
+        Canada         </echo:datasetId><echo:shortName>Canada_CFS_LandsatImages</echo:shortName><echo:versionId>Not
+        provided</echo:versionId><echo:originalFormat>DIF</echo:originalFormat><echo:dataCenter>SCIOPS</echo:dataCenter><echo:organization>CA/NRCAN/CFS/PFC</echo:organization><time:start>1984-07-17T00:00:00.000Z</time:start><time:end>1995-07-16T23:59:59.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"\n         GeoConnections
+        Discovery Portal. Canada's IDN Node.\n      \" hreflang=\"en-US\" href=\"http://geodiscover.cgdi.ca/\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>48.4
+        -131.3 55.3 -116.5</georss:box><echo:difId>Canada_CFS_LandsatImages</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules></entry></feed>"
+    http_version: 
+  recorded_at: Tue, 14 Jun 2016 15:56:21 GMT
+recorded_with: VCR 2.9.2

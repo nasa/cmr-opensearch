@@ -1,0 +1,1173 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>none-supplied-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '227'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlMmM1ZDRiYWE5MGZmZGE5NDMzMzMwYjMzZjA5MmMwYzE%3D--302e8edd599743be452bcc5d7814b892283e3f7e;
+        path=/; HttpOnly
+      X-Runtime:
+      - '0.086000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '232'
+      Date:
+      - Fri, 18 Jul 2014 13:34:19 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>DE464D4D-2E6E-A15A-1503-21FF5A09022F</id>
+          <username>guest</username>
+          <client_id>none-supplied-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:34:19 GMT
+- request:
+    method: get
+    uri: https://api.echo.nasa.gov/catalog-rest//echo_catalog/datasets.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '36'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'false'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"f90c3621b78679fcc5a4a7b68eaaf737"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 13f8ea589f0ac08e9a9f1d671e3fe1b4
+      X-Runtime:
+      - '0.433000'
+      Date:
+      - Fri, 18 Jul 2014 13:34:20 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '7352'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:34:20.361Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry>
+            <id>C1000000021-OS_PROV_1</id>
+            <title type="text">Cool Dataset</title>
+            <summary type="text">This is a description of a cool dataset</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:shortName>CoolDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000004-OS_PROV_2</id>
+            <title type="text">DC dataset for open search</title>
+            <summary type="text">DC gran OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>DC dataset for open search</echo:datasetId>
+            <echo:shortName>DCGran1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1940-01-01T00:00:00Z</time:start>
+            <time:end>1956-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000003-OS_PROV_2</id>
+            <title type="text">Dublin Core none dataset</title>
+            <summary type="text">DC none OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core none dataset</echo:datasetId>
+            <echo:shortName>DCNone1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000000-OS_PROV_2</id>
+            <title type="text">Dublin Core range dataset</title>
+            <summary type="text">DC range OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core range dataset</echo:datasetId>
+            <echo:shortName>DCRange1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1951-01-01T00:00:00Z</time:start>
+            <time:end>1952-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000002-OS_PROV_2</id>
+            <title type="text">Dublin Core single dataset</title>
+            <summary type="text">DC single OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core single dataset</echo:datasetId>
+            <echo:shortName>DCSingle1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1955-01-01T22:00:00Z</time:start>
+            <time:end>1955-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_2</id>
+            <title type="text">Dublin Core start dataset</title>
+            <summary type="text">DC start OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core start dataset</echo:datasetId>
+            <echo:shortName>DCStart1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1953-01-01T00:00:00Z</time:start>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000029-OS_PROV_1</id>
+            <title type="text">First dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:shortName>FirstDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000014-OS_PROV_1</id>
+            <title type="text">Granule navigation dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Granule navigation dataset for open search</echo:datasetId>
+            <echo:shortName>NavigationDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_1</id>
+            <title type="text">Instrument Testing dataset number 1</title>
+            <summary type="text">Instrument test 1 - OPENSEARCH</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Instrument Testing dataset number 1</echo:datasetId>
+            <echo:shortName>InstrumentTestingDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000022-OS_PROV_1</id>
+            <title type="text">LastCursor Dataset 1</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>LastCursor Dataset 1</echo:datasetId>
+            <echo:shortName>LastCursorDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:34:20 GMT
+- request:
+    method: get
+    uri: https://api.echo.nasa.gov/catalog-rest//echo_catalog/datasets.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '36'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'false'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"e908586ed9c250bb486d5e48d630ae7c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 985728eacacb081c81628bc6e4a8cd84
+      X-Runtime:
+      - '0.494000'
+      Date:
+      - Fri, 18 Jul 2014 13:34:31 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '7352'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:34:31.680Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry>
+            <id>C1000000021-OS_PROV_1</id>
+            <title type="text">Cool Dataset</title>
+            <summary type="text">This is a description of a cool dataset</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:shortName>CoolDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000004-OS_PROV_2</id>
+            <title type="text">DC dataset for open search</title>
+            <summary type="text">DC gran OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>DC dataset for open search</echo:datasetId>
+            <echo:shortName>DCGran1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1940-01-01T00:00:00Z</time:start>
+            <time:end>1956-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000003-OS_PROV_2</id>
+            <title type="text">Dublin Core none dataset</title>
+            <summary type="text">DC none OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core none dataset</echo:datasetId>
+            <echo:shortName>DCNone1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000000-OS_PROV_2</id>
+            <title type="text">Dublin Core range dataset</title>
+            <summary type="text">DC range OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core range dataset</echo:datasetId>
+            <echo:shortName>DCRange1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1951-01-01T00:00:00Z</time:start>
+            <time:end>1952-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000002-OS_PROV_2</id>
+            <title type="text">Dublin Core single dataset</title>
+            <summary type="text">DC single OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core single dataset</echo:datasetId>
+            <echo:shortName>DCSingle1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1955-01-01T22:00:00Z</time:start>
+            <time:end>1955-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_2</id>
+            <title type="text">Dublin Core start dataset</title>
+            <summary type="text">DC start OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core start dataset</echo:datasetId>
+            <echo:shortName>DCStart1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1953-01-01T00:00:00Z</time:start>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000029-OS_PROV_1</id>
+            <title type="text">First dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:shortName>FirstDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000014-OS_PROV_1</id>
+            <title type="text">Granule navigation dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Granule navigation dataset for open search</echo:datasetId>
+            <echo:shortName>NavigationDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_1</id>
+            <title type="text">Instrument Testing dataset number 1</title>
+            <summary type="text">Instrument test 1 - OPENSEARCH</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Instrument Testing dataset number 1</echo:datasetId>
+            <echo:shortName>InstrumentTestingDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000022-OS_PROV_1</id>
+            <title type="text">LastCursor Dataset 1</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>LastCursor Dataset 1</echo:datasetId>
+            <echo:shortName>LastCursorDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:34:31 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Mar 2015 02:48:29 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '3998'
+      Cmr-Took:
+      - '31'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Content-Length:
+      - '22170'
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2015-03-01T02:48:29.598Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?page_num=1&amp;page_size=10</id><title
+        type=\"text\">ECHO dataset metadata</title><entry><id>C179003030-ORNL_DAAC</id><title
+        type=\"text\">15 Minute Stream Flow Data: USGS (FIFE)</title><summary type=\"text\">USGS
+        15 minute stream flow data for Kings Creek on the Konza Prairie</summary><updated>2008-12-02T00:00:00.000Z</updated><echo:datasetId>15
+        Minute Stream Flow Data: USGS (FIFE)</echo:datasetId><echo:shortName>doi:10.3334/ORNLDAAC/1</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ORNL_DAAC</echo:dataCenter><echo:archiveCenter>ORNL_DAAC</echo:archiveCenter><echo:processingLevelId>3</echo:processingLevelId><time:start>1984-12-25T00:00:00Z</time:start><time:end>1988-03-04T00:00:00Z</time:end><link
+        href=\"http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1\" hreflang=\"en-US\"
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link href=\"http://daac.ornl.gov/FIFE/guides/15_min_strm_flow.html\"
+        hreflang=\"en-US\" title=\"USGS 15 minute stream flow data for Kings Creek
+        on the Konza Prairie (VIEW RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:point>39.1
+        -96.6</georss:point><echo:difId>FIFE_STRM_15M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179001887-SEDAC</id><title
+        type=\"text\">2000 Pilot Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2000 Pilot Environmental Sustainability Index (ESI) is an
+        exploratory effort to construct an index that measures the ability of a nation's
+        economy to achieve sustainable development, with the long term goal of finding
+        a single indicator for environmental sustainability analagous to that of the
+        Gross Domestic Product (GDP). The index covering 56 countries is a composite
+        measure of the current status of a nation's environmental systems, pressures
+        on those systems, human vulnerability to environmental change, national capacity
+        to respond, and contributions to global environmental stewardship. The index
+        was unveiled at the World Economic Forum's annual meeting, January 2000, Davos,
+        Switzerland. The 2000 Pilot ESI is the result of collaboration among the World
+        Economic Forum (WEF), Yale Center for Environmental Law and Policy (YCELP),
+        and the Columbia University Center for International Earth Science Information
+        Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2000
+        Pilot Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2000</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1978-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-pilot-environmental-sustainability-index-2000/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4NK3BZJ\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2000</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C1000000220-SEDAC</id><title
+        type=\"text\">2001 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2001 Environmental Sustainability Index (ESI) utilizes a
+        refined methodology based on the 2000 Pilot ESI effort, to construct an index
+        covering 122 countries that measures the overall progress towards environmental
+        sustainability. The index is a composite measure of the current status of
+        a nation's environmental systems, pressures on those systems, human vulnerability
+        to environmental change, national capacity to respond, and contributions to
+        global environmental stewardship. The refinements included the addition and
+        deletion of indicators, filling gaps in data coverage, new data sets, and
+        the modification of the aggregation scheme. The index was unveiled at the
+        World Economic Forum's annual meeting, January 2001, Davos, Switzerland. The
+        2001 ESI is the result of collaboration among the World Economic Forum (WEF),
+        Yale Center for Environmental Law and Policy (YCELP), and the Columbia University
+        Center for International Earth Science Information Network (CIESIN)</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2001
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2001</echo:shortName><echo:versionId>2.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2001/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2001/maps\"
+        hreflang=\"en-US\" title=\"maps download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4X34VDM\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2001</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179001967-SEDAC</id><title
+        type=\"text\">2002 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2002 Environmental Sustainability Index (ESI) measures overall
+        progress toward environmental sustainability for 142 countries based on environmental
+        systems, stresses, human vulnerability, social and institutional capacity
+        and global stewardship. The addition of a climate change indicator, reduction
+        in number of capacity indicators, and an improved imputation methodology contributed
+        to an improvement from the 2001 ESI. The index was unveiled at the World Economic
+        Forum's annual meeting, January 2002, New York. The 2002 ESI is the result
+        of collaboration among the World Economic Forum (WEF), Yale Center for Environmental
+        Law and Policy (YCELP), and the Columbia University Center for International
+        Earth Science Information Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2002
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2002</echo:shortName><echo:versionId>3.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2002/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H40V89R6\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2002/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2002</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179001889-SEDAC</id><title
+        type=\"text\">2005 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2005 Environmental Sustainability Index (ESI) is a measure
+        of overall progress towards environmental sustainability, developed for 146
+        countries. The index provides a composite profile of national environmental
+        stewardship based on a compilation of 21 indicators derived from 76 underlying
+        datasets. The 2005 version of the ESI represents a significant update and
+        improvement on earlier versions; the country ESI scores or rankings should
+        not be compared to earlier versions because of changes to the methodology
+        and underlying data. The index was unveiled at the World Economic Forum's
+        annual meeting, January 2005, Davos, Switzerland. The 2005 ESI is a joint
+        product of the Yale Center for Environmental Law and Policy (YCELP) and the
+        Columbia University Center for International Earth Science Information Network
+        (CIESIN), in collaboration with the World Economic Forum (WEF) and the Joint
+        Research Centre (JRC), European Commission.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2005
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2005</echo:shortName><echo:versionId>4.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2005/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H40V89R6\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2005/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2005</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179001707-SEDAC</id><title
+        type=\"text\">2008 Environmental Performance Index (EPI)</title><summary type=\"text\">The
+        2008 Environmental Performance Index (EPI) centers on two broad environmental
+        protection objectives: (1) reducing environmental stresses on human \n\nhealth,
+        and (2) promoting ecosystem vitality and sound natural resource management.
+        Derived from a careful review of the environmental literature, these twin
+        goals mirror the priorities \n\nexpressed by policymakers. Environmental health
+        and ecosystem vitality are gauged using 25 indicators tracked in six well-established
+        policy categories: Environmental Health \n\n(Environmental Burden of Disease,
+        Water, and Air Pollution), Air Pollution (effects on ecosystems), Water (effects
+        on ecosystems), Biodiversity and Habitat, Productive Natural Resources \n\n(Forestry,
+        Fisheries, and Agriculture), and Climate Change. The 2008 EPI utilizes a proximity-to-target
+        methodology in which performance on each indicator is rated on a 0 to 100
+        scale \n\n(100 represents at target). By identifying specific targets and
+        measuring how close each country comes to them, the EPI provides a foundation
+        for policy analysis and a context for \n\nevaluating performance. Issue-by-issue
+        and aggregate rankings facilitate cross-country comparisons both globally
+        and within relevant peer groups. The 2008 EPI is the result of \n\ncollaboration
+        among the Yale Center for Environmental Law and Policy (YCELP), Columbia University
+        Center for International Earth Science Information Network (CIESIN), World
+        Economic \n\nForum (WEF), and the Joint Research Centre (JRC), European Commission.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2008
+        Environmental Performance Index (EPI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2008</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1994-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2008/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4HT2M77\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2008/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2008</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179002048-SEDAC</id><title
+        type=\"text\">2008 Natural Resource Management Index (NRMI)</title><summary
+        type=\"text\">The 2008 Natural Resources Management Index (NRMI) is a composite
+        index for 226 countries derived from the average of four proximity-to-target
+        scores from eco-region protection, access to improved sanitation, access to
+        improved water and child mortality indicators. The 2008 NRMI includes data
+        for the NRMI for 2006, 2007 and 2008. The dataset is produced and distributed
+        by the Columbia University Center for International Earth Science Information
+        Network (CIESIN) in collaboration with the Yale Center for Environmental Law
+        and Policy (YCELP).</summary><updated>2009-12-01T00:00:00.000Z</updated><echo:datasetId>2008
+        Natural Resource Management Index (NRMI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_NRMI_2008</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>2004-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/es/data/NRMI_2008_final-1.xls\" hreflang=\"en-US\"
+        title=\"Data in Microsoft Excel (XLS) format\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/es/mcc.html\" hreflang=\"en-US\" title=\"data
+        set homepage (static URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_NRMI_2008</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179002147-SEDAC</id><title
+        type=\"text\">2010 Environmental Performance Index (EPI)</title><summary type=\"text\">The
+        2010 Environmental Performance Index (EPI) ranks 163 countries on environmental
+        performance based on twenty-five indicators grouped within ten core policy
+        categories addressing environmental health, air quality, water resource management,
+        biodiversity and habitat, forestry, fisheries, agriculture, and climate change
+        in the context of two broad objectives: environmental health and ecosystem
+        vitality. The EPI?s proximity-to-target methodology facilitates cross-country
+        comparisons among economic and regional peer groups. It was formally released
+        in Davos, Switzerland, at the annual meeting of the World Economic Forum on
+        January 28, 2010. The 2010 EPI is the result of collaboration between the
+        Yale Center for Environmental Law and Policy (YCELP) and the Columbia University
+        Center for International Earth Science Information Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2010
+        Environmental Performance Index (EPI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2010</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1994-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2010/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4D21VHT\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2010</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C1000000000-SEDAC</id><title
+        type=\"text\">2012 Environmental Performance Index and Pilot Trend Environmental
+        Performance Index</title><summary type=\"text\">The 2012 Environmental Performance
+        Index (EPI) ranks 132 countries on 22 performance indicators in the following
+        10 policy categories:  environmental burden of disease, water (effects on
+        human health), air pollution (effects on human health), air pollution (ecosystem
+        effects), water resources (ecosystem effects), biodiversity and habitat, forestry,
+        fisheries, agriculture and climate change. These categories track performance
+        and progress on two broad policy objectives, environmental health and ecosystem
+        vitality. Each indicator has an associated environmental public health or
+        ecosystem sustainability target. The EPI's proximity-to-target methodology
+        facilitates cross-country comparisons among economic and regional peer groups.\n\nThe
+        Pilot Trend Environmental Performance Index (Trend EPI) ranks countries on
+        the change in their environmental performance over the last decade. As a complement
+        to the EPI, the Trend EPI shows who is improving and who is declining over
+        time. \n\nThe 2012 EPI and Pilot Trend EPI were formally released in Davos,
+        Switzerland, at the annual meeting of the World Economic Forum on January
+        27, 2012. These are the result of collaboration between the Yale Center for
+        Environmental Law and Policy (YCELP) and the Columbia University Center for
+        International Earth Science Information Network (CIESIN). The Interactive
+        Website for the 2012 EPI is at http://epi.yale.edu/.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2012
+        Environmental Performance Index and Pilot Trend Environmental Performance
+        Index</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2012</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>2000-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-pilot-trend-2012/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H48913SG\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-pilot-trend-2012/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2012</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179002914-ORNL_DAAC</id><title
+        type=\"text\">30 Minute Rainfall Data (FIFE)</title><summary type=\"text\">30
+        minute rainfall data for the Konza Prairie</summary><updated>1994-07-24T00:00:00.000Z</updated><echo:datasetId>30
+        Minute Rainfall Data (FIFE)</echo:datasetId><echo:shortName>doi:10.3334/ORNLDAAC/2</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ORNL_DAAC</echo:dataCenter><echo:archiveCenter>ORNL_DAAC</echo:archiveCenter><echo:processingLevelId>3</echo:processingLevelId><time:start>1987-05-29T00:00:00Z</time:start><time:end>1987-10-26T00:00:00Z</time:end><link
+        href=\"http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=2\" hreflang=\"en-US\"
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link href=\"http://daac.ornl.gov/FIFE/guides/30_Min_Rain_Data.html\"
+        hreflang=\"en-US\" title=\"30 minute rainfall data for the Konza Prairie (VIEW
+        RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>39.08
+        -96.6 39.11 -96.55</georss:box><echo:difId>FIFE_RAIN_30M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry></feed>"
+    http_version: 
+  recorded_at: Sun, 01 Mar 2015 02:48:30 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Mar 2015 02:48:39 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '3998'
+      Cmr-Took:
+      - '23'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Content-Length:
+      - '22170'
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2015-03-01T02:48:39.666Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?page_num=1&amp;page_size=10</id><title
+        type=\"text\">ECHO dataset metadata</title><entry><id>C179003030-ORNL_DAAC</id><title
+        type=\"text\">15 Minute Stream Flow Data: USGS (FIFE)</title><summary type=\"text\">USGS
+        15 minute stream flow data for Kings Creek on the Konza Prairie</summary><updated>2008-12-02T00:00:00.000Z</updated><echo:datasetId>15
+        Minute Stream Flow Data: USGS (FIFE)</echo:datasetId><echo:shortName>doi:10.3334/ORNLDAAC/1</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ORNL_DAAC</echo:dataCenter><echo:archiveCenter>ORNL_DAAC</echo:archiveCenter><echo:processingLevelId>3</echo:processingLevelId><time:start>1984-12-25T00:00:00Z</time:start><time:end>1988-03-04T00:00:00Z</time:end><link
+        href=\"http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1\" hreflang=\"en-US\"
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link href=\"http://daac.ornl.gov/FIFE/guides/15_min_strm_flow.html\"
+        hreflang=\"en-US\" title=\"USGS 15 minute stream flow data for Kings Creek
+        on the Konza Prairie (VIEW RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:point>39.1
+        -96.6</georss:point><echo:difId>FIFE_STRM_15M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179001887-SEDAC</id><title
+        type=\"text\">2000 Pilot Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2000 Pilot Environmental Sustainability Index (ESI) is an
+        exploratory effort to construct an index that measures the ability of a nation's
+        economy to achieve sustainable development, with the long term goal of finding
+        a single indicator for environmental sustainability analagous to that of the
+        Gross Domestic Product (GDP). The index covering 56 countries is a composite
+        measure of the current status of a nation's environmental systems, pressures
+        on those systems, human vulnerability to environmental change, national capacity
+        to respond, and contributions to global environmental stewardship. The index
+        was unveiled at the World Economic Forum's annual meeting, January 2000, Davos,
+        Switzerland. The 2000 Pilot ESI is the result of collaboration among the World
+        Economic Forum (WEF), Yale Center for Environmental Law and Policy (YCELP),
+        and the Columbia University Center for International Earth Science Information
+        Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2000
+        Pilot Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2000</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1978-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-pilot-environmental-sustainability-index-2000/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4NK3BZJ\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2000</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C1000000220-SEDAC</id><title
+        type=\"text\">2001 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2001 Environmental Sustainability Index (ESI) utilizes a
+        refined methodology based on the 2000 Pilot ESI effort, to construct an index
+        covering 122 countries that measures the overall progress towards environmental
+        sustainability. The index is a composite measure of the current status of
+        a nation's environmental systems, pressures on those systems, human vulnerability
+        to environmental change, national capacity to respond, and contributions to
+        global environmental stewardship. The refinements included the addition and
+        deletion of indicators, filling gaps in data coverage, new data sets, and
+        the modification of the aggregation scheme. The index was unveiled at the
+        World Economic Forum's annual meeting, January 2001, Davos, Switzerland. The
+        2001 ESI is the result of collaboration among the World Economic Forum (WEF),
+        Yale Center for Environmental Law and Policy (YCELP), and the Columbia University
+        Center for International Earth Science Information Network (CIESIN)</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2001
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2001</echo:shortName><echo:versionId>2.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2001/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2001/maps\"
+        hreflang=\"en-US\" title=\"maps download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4X34VDM\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2001</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179001967-SEDAC</id><title
+        type=\"text\">2002 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2002 Environmental Sustainability Index (ESI) measures overall
+        progress toward environmental sustainability for 142 countries based on environmental
+        systems, stresses, human vulnerability, social and institutional capacity
+        and global stewardship. The addition of a climate change indicator, reduction
+        in number of capacity indicators, and an improved imputation methodology contributed
+        to an improvement from the 2001 ESI. The index was unveiled at the World Economic
+        Forum's annual meeting, January 2002, New York. The 2002 ESI is the result
+        of collaboration among the World Economic Forum (WEF), Yale Center for Environmental
+        Law and Policy (YCELP), and the Columbia University Center for International
+        Earth Science Information Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2002
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2002</echo:shortName><echo:versionId>3.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2002/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H40V89R6\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2002/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2002</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179001889-SEDAC</id><title
+        type=\"text\">2005 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2005 Environmental Sustainability Index (ESI) is a measure
+        of overall progress towards environmental sustainability, developed for 146
+        countries. The index provides a composite profile of national environmental
+        stewardship based on a compilation of 21 indicators derived from 76 underlying
+        datasets. The 2005 version of the ESI represents a significant update and
+        improvement on earlier versions; the country ESI scores or rankings should
+        not be compared to earlier versions because of changes to the methodology
+        and underlying data. The index was unveiled at the World Economic Forum's
+        annual meeting, January 2005, Davos, Switzerland. The 2005 ESI is a joint
+        product of the Yale Center for Environmental Law and Policy (YCELP) and the
+        Columbia University Center for International Earth Science Information Network
+        (CIESIN), in collaboration with the World Economic Forum (WEF) and the Joint
+        Research Centre (JRC), European Commission.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2005
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2005</echo:shortName><echo:versionId>4.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2005/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H40V89R6\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2005/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2005</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179001707-SEDAC</id><title
+        type=\"text\">2008 Environmental Performance Index (EPI)</title><summary type=\"text\">The
+        2008 Environmental Performance Index (EPI) centers on two broad environmental
+        protection objectives: (1) reducing environmental stresses on human \n\nhealth,
+        and (2) promoting ecosystem vitality and sound natural resource management.
+        Derived from a careful review of the environmental literature, these twin
+        goals mirror the priorities \n\nexpressed by policymakers. Environmental health
+        and ecosystem vitality are gauged using 25 indicators tracked in six well-established
+        policy categories: Environmental Health \n\n(Environmental Burden of Disease,
+        Water, and Air Pollution), Air Pollution (effects on ecosystems), Water (effects
+        on ecosystems), Biodiversity and Habitat, Productive Natural Resources \n\n(Forestry,
+        Fisheries, and Agriculture), and Climate Change. The 2008 EPI utilizes a proximity-to-target
+        methodology in which performance on each indicator is rated on a 0 to 100
+        scale \n\n(100 represents at target). By identifying specific targets and
+        measuring how close each country comes to them, the EPI provides a foundation
+        for policy analysis and a context for \n\nevaluating performance. Issue-by-issue
+        and aggregate rankings facilitate cross-country comparisons both globally
+        and within relevant peer groups. The 2008 EPI is the result of \n\ncollaboration
+        among the Yale Center for Environmental Law and Policy (YCELP), Columbia University
+        Center for International Earth Science Information Network (CIESIN), World
+        Economic \n\nForum (WEF), and the Joint Research Centre (JRC), European Commission.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2008
+        Environmental Performance Index (EPI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2008</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1994-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2008/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4HT2M77\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2008/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2008</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179002048-SEDAC</id><title
+        type=\"text\">2008 Natural Resource Management Index (NRMI)</title><summary
+        type=\"text\">The 2008 Natural Resources Management Index (NRMI) is a composite
+        index for 226 countries derived from the average of four proximity-to-target
+        scores from eco-region protection, access to improved sanitation, access to
+        improved water and child mortality indicators. The 2008 NRMI includes data
+        for the NRMI for 2006, 2007 and 2008. The dataset is produced and distributed
+        by the Columbia University Center for International Earth Science Information
+        Network (CIESIN) in collaboration with the Yale Center for Environmental Law
+        and Policy (YCELP).</summary><updated>2009-12-01T00:00:00.000Z</updated><echo:datasetId>2008
+        Natural Resource Management Index (NRMI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_NRMI_2008</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>2004-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/es/data/NRMI_2008_final-1.xls\" hreflang=\"en-US\"
+        title=\"Data in Microsoft Excel (XLS) format\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/es/mcc.html\" hreflang=\"en-US\" title=\"data
+        set homepage (static URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_NRMI_2008</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179002147-SEDAC</id><title
+        type=\"text\">2010 Environmental Performance Index (EPI)</title><summary type=\"text\">The
+        2010 Environmental Performance Index (EPI) ranks 163 countries on environmental
+        performance based on twenty-five indicators grouped within ten core policy
+        categories addressing environmental health, air quality, water resource management,
+        biodiversity and habitat, forestry, fisheries, agriculture, and climate change
+        in the context of two broad objectives: environmental health and ecosystem
+        vitality. The EPI?s proximity-to-target methodology facilitates cross-country
+        comparisons among economic and regional peer groups. It was formally released
+        in Davos, Switzerland, at the annual meeting of the World Economic Forum on
+        January 28, 2010. The 2010 EPI is the result of collaboration between the
+        Yale Center for Environmental Law and Policy (YCELP) and the Columbia University
+        Center for International Earth Science Information Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2010
+        Environmental Performance Index (EPI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2010</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1994-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2010/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4D21VHT\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2010</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C1000000000-SEDAC</id><title
+        type=\"text\">2012 Environmental Performance Index and Pilot Trend Environmental
+        Performance Index</title><summary type=\"text\">The 2012 Environmental Performance
+        Index (EPI) ranks 132 countries on 22 performance indicators in the following
+        10 policy categories:  environmental burden of disease, water (effects on
+        human health), air pollution (effects on human health), air pollution (ecosystem
+        effects), water resources (ecosystem effects), biodiversity and habitat, forestry,
+        fisheries, agriculture and climate change. These categories track performance
+        and progress on two broad policy objectives, environmental health and ecosystem
+        vitality. Each indicator has an associated environmental public health or
+        ecosystem sustainability target. The EPI's proximity-to-target methodology
+        facilitates cross-country comparisons among economic and regional peer groups.\n\nThe
+        Pilot Trend Environmental Performance Index (Trend EPI) ranks countries on
+        the change in their environmental performance over the last decade. As a complement
+        to the EPI, the Trend EPI shows who is improving and who is declining over
+        time. \n\nThe 2012 EPI and Pilot Trend EPI were formally released in Davos,
+        Switzerland, at the annual meeting of the World Economic Forum on January
+        27, 2012. These are the result of collaboration between the Yale Center for
+        Environmental Law and Policy (YCELP) and the Columbia University Center for
+        International Earth Science Information Network (CIESIN). The Interactive
+        Website for the 2012 EPI is at http://epi.yale.edu/.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2012
+        Environmental Performance Index and Pilot Trend Environmental Performance
+        Index</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2012</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>2000-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-pilot-trend-2012/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H48913SG\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-pilot-trend-2012/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2012</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179002914-ORNL_DAAC</id><title
+        type=\"text\">30 Minute Rainfall Data (FIFE)</title><summary type=\"text\">30
+        minute rainfall data for the Konza Prairie</summary><updated>1994-07-24T00:00:00.000Z</updated><echo:datasetId>30
+        Minute Rainfall Data (FIFE)</echo:datasetId><echo:shortName>doi:10.3334/ORNLDAAC/2</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ORNL_DAAC</echo:dataCenter><echo:archiveCenter>ORNL_DAAC</echo:archiveCenter><echo:processingLevelId>3</echo:processingLevelId><time:start>1987-05-29T00:00:00Z</time:start><time:end>1987-10-26T00:00:00Z</time:end><link
+        href=\"http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=2\" hreflang=\"en-US\"
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link href=\"http://daac.ornl.gov/FIFE/guides/30_Min_Rain_Data.html\"
+        hreflang=\"en-US\" title=\"30 minute rainfall data for the Konza Prairie (VIEW
+        RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>39.08
+        -96.6 39.11 -96.55</georss:box><echo:difId>FIFE_RAIN_30M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry></feed>"
+    http_version: 
+  recorded_at: Sun, 01 Mar 2015 02:48:40 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:55:43 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '31696'
+      Cmr-Took:
+      - '14'
+      Cmr-Request-Id:
+      - e8984bd3-de77-44bf-b2c8-86f138452217
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '6057'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        /hF+PHMmcYl+/ZRgt0F/Fvf035pEK/BDdwAA
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:55:43 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=dougopolis&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:55:47 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '37'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":0,"geonames":[]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:55:44 GMT
+recorded_with: VCR 2.9.2

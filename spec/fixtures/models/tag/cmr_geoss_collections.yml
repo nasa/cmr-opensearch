@@ -1,0 +1,295 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=geoss_test_one&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Jan 2017 19:45:48 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '0'
+      Cmr-Took:
+      - '233'
+      Cmr-Request-Id:
+      - 179c05dc-7f66-4350-bf21-a1c09a80ad6f
+      Content-Length:
+      - '763'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+                          <updated>2016-08-30T19:42:44.253Z</updated>
+                          <id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core&page_num=1&page_size=10&tag_key=org.ceos.wgiss.cwic.granules.prod</id>
+                          <title type="text">ECHO dataset metadata</title>
+                          <entry>
+                              <id>C1239566345-EUMETSAT</id>
+                              <title type="text">All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</title>
+                              <summary type="text">This is the first release of the reprocessed SEVIRI All Sky Radiances (ASR) product. The ASR product contains information on mean brightness temperatures (16x16 pixels so around 50km at nadir) from all thermal (e.g. infrared and water vapour) channels. It includes both clear and cloudy sky brightness temperatures. The ASR product also contains the fraction of clear sky and the solar zenith angle. The final ASR product is BUFR encoded 3-hourly at every third quarter of the hour (e.g. 00:45, 01:45 ...).Note that the reprocessing was done using the latest version of the EUMETSAT software (Version 1.5.3, 2013) ingesting  original level 1.5 SEVIRI images and the ECMWF ERA-interim as a  as a forecast input re-analysis data.</summary>
+                              <updated></updated>
+                              <echo:datasetId>All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</echo:datasetId>
+                              <echo:shortName>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100</echo:shortName>
+                              <echo:versionId>2015-06-01</echo:versionId>
+                              <echo:originalFormat>DIF</echo:originalFormat>
+                              <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                              <echo:organization>EUMETSAT</echo:organization>
+                              <time:start>2004-03-01T00:00:00.000Z</time:start>
+                              <time:end>2012-12-31T23:59:59.000Z</time:end>
+                              <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                              <echo:orbitParameters></echo:orbitParameters>
+                              <georss:box>-81 -79 81 79</georss:box>
+                              <echo:difId>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100_2015-06-01</echo:difId>
+                              <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                              <echo:browseFlag>false</echo:browseFlag>
+                              <echo:hasGranules>false</echo:hasGranules>
+                              <echo:tag>
+                                  <echo:tagKey>org.geoss.geoss_data-core</echo:tagKey>
+                              </echo:tag>
+                          </entry>
+                      </feed>
+    http_version: 
+  recorded_at: Mon, 16 Jan 2017 19:45:47 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=geoss_test_two&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Jan 2017 19:45:48 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '0'
+      Cmr-Took:
+      - '233'
+      Cmr-Request-Id:
+      - 179c05dc-7f66-4350-bf21-a1c09a80ad6f
+      Content-Length:
+      - '763'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+                          <updated>2016-08-30T19:42:44.253Z</updated>
+                          <id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core&page_num=1&page_size=10&tag_key=org.ceos.wgiss.cwic.granules.prod</id>
+                          <title type="text">ECHO dataset metadata</title>
+                          <entry>
+                              <id>C1239566345-EUMETSAT</id>
+                              <title type="text">All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</title>
+                              <summary type="text">This is the first release of the reprocessed SEVIRI All Sky Radiances (ASR) product. The ASR product contains information on mean brightness temperatures (16x16 pixels so around 50km at nadir) from all thermal (e.g. infrared and water vapour) channels. It includes both clear and cloudy sky brightness temperatures. The ASR product also contains the fraction of clear sky and the solar zenith angle. The final ASR product is BUFR encoded 3-hourly at every third quarter of the hour (e.g. 00:45, 01:45 ...).Note that the reprocessing was done using the latest version of the EUMETSAT software (Version 1.5.3, 2013) ingesting  original level 1.5 SEVIRI images and the ECMWF ERA-interim as a  as a forecast input re-analysis data.</summary>
+                              <updated></updated>
+                              <echo:datasetId>All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</echo:datasetId>
+                              <echo:shortName>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100</echo:shortName>
+                              <echo:versionId>2015-06-01</echo:versionId>
+                              <echo:originalFormat>DIF</echo:originalFormat>
+                              <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                              <echo:organization>EUMETSAT</echo:organization>
+                              <time:start>2004-03-01T00:00:00.000Z</time:start>
+                              <time:end>2012-12-31T23:59:59.000Z</time:end>
+                              <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                              <echo:orbitParameters></echo:orbitParameters>
+                              <georss:box>-81 -79 81 79</georss:box>
+                              <echo:difId>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100_2015-06-01</echo:difId>
+                              <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                              <echo:browseFlag>false</echo:browseFlag>
+                              <echo:hasGranules>false</echo:hasGranules>
+                          </entry>
+                      </feed>
+    http_version:
+  recorded_at: Mon, 16 Jan 2017 19:45:47 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=geoss_test_three&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Jan 2017 19:45:48 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '0'
+      Cmr-Took:
+      - '233'
+      Cmr-Request-Id:
+      - 179c05dc-7f66-4350-bf21-a1c09a80ad6f
+      Content-Length:
+      - '763'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+                          <updated>2016-08-30T19:42:44.253Z</updated>
+                          <id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core&page_num=1&page_size=10&tag_key=org.ceos.wgiss.cwic.granules.prod</id>
+                          <title type="text">ECHO dataset metadata</title>
+                          <entry>
+                              <id>C1239566345-EUMETSAT</id>
+                              <title type="text">All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</title>
+                              <summary type="text">This is the first release of the reprocessed SEVIRI All Sky Radiances (ASR) product. The ASR product contains information on mean brightness temperatures (16x16 pixels so around 50km at nadir) from all thermal (e.g. infrared and water vapour) channels. It includes both clear and cloudy sky brightness temperatures. The ASR product also contains the fraction of clear sky and the solar zenith angle. The final ASR product is BUFR encoded 3-hourly at every third quarter of the hour (e.g. 00:45, 01:45 ...).Note that the reprocessing was done using the latest version of the EUMETSAT software (Version 1.5.3, 2013) ingesting  original level 1.5 SEVIRI images and the ECMWF ERA-interim as a  as a forecast input re-analysis data.</summary>
+                              <updated></updated>
+                              <echo:datasetId>All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</echo:datasetId>
+                              <echo:shortName>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100</echo:shortName>
+                              <echo:versionId>2015-06-01</echo:versionId>
+                              <echo:originalFormat>DIF</echo:originalFormat>
+                              <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                              <echo:organization>EUMETSAT</echo:organization>
+                              <time:start>2004-03-01T00:00:00.000Z</time:start>
+                              <time:end>2012-12-31T23:59:59.000Z</time:end>
+                              <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                              <echo:orbitParameters></echo:orbitParameters>
+                              <georss:box>-81 -79 81 79</georss:box>
+                              <echo:difId>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100_2015-06-01</echo:difId>
+                              <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                              <echo:browseFlag>false</echo:browseFlag>
+                              <echo:hasGranules>false</echo:hasGranules>
+                              <echo:tag>
+                                  <echo:tagKey>foo</echo:tagKey>
+                              </echo:tag>
+                          </entry>
+                      </feed>
+    http_version:
+  recorded_at: Mon, 16 Jan 2017 19:45:47 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=geoss_test_four&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Jan 2017 19:45:48 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '0'
+      Cmr-Took:
+      - '233'
+      Cmr-Request-Id:
+      - 179c05dc-7f66-4350-bf21-a1c09a80ad6f
+      Content-Length:
+      - '763'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+                          <updated>2016-08-30T19:42:44.253Z</updated>
+                          <id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core&page_num=1&page_size=10&tag_key=org.ceos.wgiss.cwic.granules.prod</id>
+                          <title type="text">ECHO dataset metadata</title>
+                          <entry>
+                              <id>C1239566345-EUMETSAT</id>
+                              <title type="text">All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</title>
+                              <summary type="text">This is the first release of the reprocessed SEVIRI All Sky Radiances (ASR) product. The ASR product contains information on mean brightness temperatures (16x16 pixels so around 50km at nadir) from all thermal (e.g. infrared and water vapour) channels. It includes both clear and cloudy sky brightness temperatures. The ASR product also contains the fraction of clear sky and the solar zenith angle. The final ASR product is BUFR encoded 3-hourly at every third quarter of the hour (e.g. 00:45, 01:45 ...).Note that the reprocessing was done using the latest version of the EUMETSAT software (Version 1.5.3, 2013) ingesting  original level 1.5 SEVIRI images and the ECMWF ERA-interim as a  as a forecast input re-analysis data.</summary>
+                              <updated></updated>
+                              <echo:datasetId>All Sky Radiances - MSG - 0 degree (CF-015 Release 1)</echo:datasetId>
+                              <echo:shortName>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100</echo:shortName>
+                              <echo:versionId>2015-06-01</echo:versionId>
+                              <echo:originalFormat>DIF</echo:originalFormat>
+                              <echo:dataCenter>EUMETSAT</echo:dataCenter>
+                              <echo:organization>EUMETSAT</echo:organization>
+                              <time:start>2004-03-01T00:00:00.000Z</time:start>
+                              <time:end>2012-12-31T23:59:59.000Z</time:end>
+                              <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                              <echo:orbitParameters></echo:orbitParameters>
+                              <georss:box>-81 -79 81 79</georss:box>
+                              <echo:difId>acronym.MSGASRE0100.fileid.EO.EUM.CM.MSG.MSGASRE0100_2015-06-01</echo:difId>
+                              <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                              <echo:browseFlag>false</echo:browseFlag>
+                              <echo:hasGranules>false</echo:hasGranules>
+                              <echo:tag>
+                                <echo:tagKey>org.geoss.geoss_data-core</echo:tagKey>
+                              </echo:tag>
+                              <echo:tag>
+                                  <echo:tagKey>foo</echo:tagKey>
+                              </echo:tag>
+                          </entry>
+                      </feed>
+    http_version:
+  recorded_at: Mon, 16 Jan 2017 19:45:47 GMT
+recorded_with: VCR 2.9.2

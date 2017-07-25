@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?instrument=CZCS&offset=95267&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 28 Sep 2016 19:17:50 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '95268'
+      Cmr-Took:
+      - '4576'
+      Cmr-Request-Id:
+      - 760302ae-3df3-4ac0-b9fa-163b46e1044e
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '2833'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2016-09-28T19:17:54.682Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?page_size=10&amp;offset=95267&amp;instrument=CZCS</id><title
+        type=\"text\">ECHO granule metadata</title><entry><id>G1220417268-OB_DAAC</id><title
+        type=\"text\">C1986173073738.L1A_MLAC</title><updated>2007-05-15T03:13:50.000Z</updated><echo:datasetId>CZCS_L1</echo:datasetId><echo:producerGranuleId>C1986173073738.L1A_MLAC</echo:producerGranuleId><echo:granuleSizeMB>19.582914</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1986-06-22T07:37:38.000Z</time:start><time:end>1986-06-22T07:45:37.000Z</time:end><link
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1986173073738.L1A_MLAC\"></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" type=\"GET
+        DATA\" title=\"OB.DAAC Data Distribution Website for CZCS L1 Data Product\"
+        hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/CZCS/L1/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Description Website (Home Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/cms/data/czcs\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"OB.DAAC
+        CZCS Landing Page (Landing Page)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L1/DATA/1\"><echo:inherited></echo:inherited></link><link
+        inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\" title=\"Ocean
+        Biology Processing Group User Support Forum\n\t\t\t (User Support)\" hreflang=\"en-US\"
+        href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-9.698078
+        49.764778 19.545557 68.756775</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>"
+    http_version: 
+  recorded_at: Wed, 28 Sep 2016 19:17:54 GMT
+recorded_with: VCR 2.9.2

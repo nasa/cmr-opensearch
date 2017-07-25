@@ -1,0 +1,436 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&offset=12&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Jun 2016 15:56:21 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '20'
+      Cmr-Took:
+      - '15'
+      Cmr-Request-Id:
+      - eea75332-12f8-4d55-9556-20935c33584e
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '32240'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+            <updated>2016-06-14T20:18:12.562Z</updated>
+            <id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?instrument=CZCS&offset=12&page_size=10</id>
+            <title type="text">ECHO granule metadata</title>
+            <entry>
+                <id>G1220227289-OB_DAAC</id>
+                <title type="text">C1978303.L3m_DAY_KD490_Kd_490_4km.nc</title>
+                <updated>2015-12-09T12:28:53.000Z</updated>
+                <echo:datasetId>CZCS_L3m_KD</echo:datasetId>
+                <echo:producerGranuleId>C1978303.L3m_DAY_KD490_Kd_490_4km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.873177</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-30T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_KD490_Kd_490_4km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_KD490_Kd_490_4km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Diffuse Attenuation Coefficient for Downwelling Irradiance (KD) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/KD/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220227308-OB_DAAC</id>
+                <title type="text">C1978303.L3m_DAY_KD490_Kd_490_9km.nc</title>
+                <updated>2015-12-09T12:28:53.000Z</updated>
+                <echo:datasetId>CZCS_L3m_KD</echo:datasetId>
+                <echo:producerGranuleId>C1978303.L3m_DAY_KD490_Kd_490_9km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.250804</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-30T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_KD490_Kd_490_9km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_KD490_Kd_490_9km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Diffuse Attenuation Coefficient for Downwelling Irradiance (KD) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/KD/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220235859-OB_DAAC</id>
+                <title type="text">C1978303.L3m_DAY_CHL_chlor_a_4km.nc</title>
+                <updated>2015-12-14T06:54:50.000Z</updated>
+                <echo:datasetId>CZCS_L3m_CHL</echo:datasetId>
+                <echo:producerGranuleId>C1978303.L3m_DAY_CHL_chlor_a_4km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.874156</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-30T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_CHL_chlor_a_4km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_CHL_chlor_a_4km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Chlorophyll (CHL) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/CHL/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220235877-OB_DAAC</id>
+                <title type="text">C1978303.L3m_DAY_CHL_chlor_a_9km.nc</title>
+                <updated>2015-12-14T06:54:50.000Z</updated>
+                <echo:datasetId>CZCS_L3m_CHL</echo:datasetId>
+                <echo:producerGranuleId>C1978303.L3m_DAY_CHL_chlor_a_9km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.251784</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-30T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3m_DAY_CHL_chlor_a_9km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/303/C1978303.L3m_DAY_CHL_chlor_a_9km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Chlorophyll (CHL) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/CHL/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220235903-OB_DAAC</id>
+                <title type="text">C1978303.L3b_DAY_CHL.nc</title>
+                <updated>2015-12-14T06:54:50.000Z</updated>
+                <echo:datasetId>CZCS_L3b_CHL</echo:datasetId>
+                <echo:producerGranuleId>C1978303.L3b_DAY_CHL.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.0953</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-30T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C1978303.L3b_DAY_CHL.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3B Chlorophyll (CHL) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3BIN/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3B/CHL/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220246080-OB_DAAC</id>
+                <title type="text">C19782971978304.L3b_8D_CHL.nc</title>
+                <updated>2015-12-14T07:09:26.000Z</updated>
+                <echo:datasetId>CZCS_L3b_CHL</echo:datasetId>
+                <echo:producerGranuleId>C19782971978304.L3b_8D_CHL.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.095774</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C19782971978304.L3b_8D_CHL.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3B Chlorophyll (CHL) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3BIN/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3B/CHL/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220246129-OB_DAAC</id>
+                <title type="text">C19782971978304.L3m_8D_CHL_chlor_a_9km.nc</title>
+                <updated>2015-12-14T07:09:26.000Z</updated>
+                <echo:datasetId>CZCS_L3m_CHL</echo:datasetId>
+                <echo:producerGranuleId>C19782971978304.L3m_8D_CHL_chlor_a_9km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.251845</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C19782971978304.L3m_8D_CHL_chlor_a_9km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/297/C19782971978304.L3m_8D_CHL_chlor_a_9km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Chlorophyll (CHL) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/CHL/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220246155-OB_DAAC</id>
+                <title type="text">C19782971978304.L3m_8D_CHL_chlor_a_4km.nc</title>
+                <updated>2015-12-14T07:09:26.000Z</updated>
+                <echo:datasetId>CZCS_L3m_CHL</echo:datasetId>
+                <echo:producerGranuleId>C19782971978304.L3m_8D_CHL_chlor_a_4km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.874307</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C19782971978304.L3m_8D_CHL_chlor_a_4km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/297/C19782971978304.L3m_8D_CHL_chlor_a_4km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Chlorophyll (CHL) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/CHL/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220246409-OB_DAAC</id>
+                <title type="text">C19782971978304.L3m_8D_KD490_Kd_490_4km.nc</title>
+                <updated>2015-12-09T01:37:19.000Z</updated>
+                <echo:datasetId>CZCS_L3m_KD</echo:datasetId>
+                <echo:producerGranuleId>C19782971978304.L3m_8D_KD490_Kd_490_4km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.873333</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C19782971978304.L3m_8D_KD490_Kd_490_4km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/297/C19782971978304.L3m_8D_KD490_Kd_490_4km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Diffuse Attenuation Coefficient for Downwelling Irradiance (KD) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/KD/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+            <entry>
+                <id>G1220246665-OB_DAAC</id>
+                <title type="text">C19782971978304.L3m_8D_KD490_Kd_490_9km.nc</title>
+                <updated>2015-12-09T01:37:19.000Z</updated>
+                <echo:datasetId>CZCS_L3m_KD</echo:datasetId>
+                <echo:producerGranuleId>C19782971978304.L3m_8D_KD490_Kd_490_9km.nc</echo:producerGranuleId>
+                <echo:granuleSizeMB>0.250878</echo:granuleSizeMB>
+                <echo:originalFormat>ECHO10</echo:originalFormat>
+                <echo:dataCenter>OB_DAAC</echo:dataCenter>
+                <time:start>1978-10-30T00:00:00.000Z</time:start>
+                <time:end>1978-10-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/C19782971978304.L3m_8D_KD490_Kd_490_9km.nc"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" type="application/x-netcdf" title="(GET DATA : OPENDAP DATA (DODS))" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/1978/297/C19782971978304.L3m_8D_KD490_Kd_490_9km.nc"></link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA" title="OB.DAAC Data Distribution Website for CZCS L3M Diffuse Attenuation Coefficient for Downwelling Irradiance (KD) Product" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" type="GET DATA : OPENDAP DATA (DODS)" title="OPeNDAP Site for CZCS Small Mapped Image (SMI) Product Suite" hreflang="en-US" href="http://oceandata.sci.gsfc.nasa.gov/opendap/CZCS/L3SMI/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group (OBPG) Homepage (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Description Website (Home Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/cms/data/czcs">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="OB.DAAC CZCS Landing Page (Landing Page)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/data/10.5067/NIMBUS-7/CZCS/L3M/KD/2014">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <link inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Ocean Biology Processing Group User Support Forum
+        			 (User Support)" hreflang="en-US" href="http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl
+        			">
+                    <echo:inherited></echo:inherited>
+                </link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:dayNightFlag>DAY</echo:dayNightFlag>
+            </entry>
+        </feed>
+      http_version:
+  recorded_at: Tue, 14 Jun 2016 15:56:21 GMT
+recorded_with: VCR 2.9.2

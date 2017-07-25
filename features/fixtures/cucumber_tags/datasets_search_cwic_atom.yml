@@ -1,0 +1,414 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=GCMDTEST&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 05 Feb 2016 20:03:06 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '37'
+      Cmr-Took:
+      - '58'
+      Cmr-Request-Id:
+      - c476a82d-4c5a-404c-a827-e3deaeafa4f9
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '6268'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: |-
+        <feed
+            xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+            xmlns:georss="http://www.georss.org/georss/10"
+            xmlns="http://www.w3.org/2005/Atom"
+            xmlns:dc="http://purl.org/dc/terms/"
+            xmlns:echo="http://www.echo.nasa.gov/esip"
+            xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"
+            xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2"
+            xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+            <updated>2016-02-05T19:59:56.807Z</updated>
+            <id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?provider=GCMDTEST&amp;include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core&amp;include_has_granules=true</id>
+            <title type="text">CMR dataset metadata</title>
+            <entry>
+                <id>C1200018718-GCMDTEST</id>
+                <title type="text">Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) </title>
+                <summary type="text">The AIRS Level 3 Daily Gridded Product contains standard retrieval means, standard deviations and input counts.  Each file covers a temporal period of 24 hours for either the descending (equatorial crossing North to South @1:30 AM local time) or ascending (equatorial crossing South to North @1:30 PM local time) orbit. The data starts at the international dateline and progresses westward (as do the subsequent orbits of the satellite) so that neighboring gridded cells of data are no more than a swath of time apart (about 90 minutes). The two parts of a scan line crossing the dateline are included in separate L3 files, according to the date, so that data points in a grid box are always coincident in time.  The edge of the AIRS Level 3 gridded cells is at the date line (the 180E/W longitude boundary). When plotted, this produces a map with 0 degrees longitude in the center of the image unless the bins are reordered. This method is preferred because the left (West) side of the image and the right (East) side of the image contain data farthest apart in time. The gridding scheme used by AIRS is the same as used by TOVS Pathfinder to create Level 3 products. The daily Level 3 products have gores between satellite paths where there is no coverage for that day.
+
+        The geophysical parameters have been averaged and binned into 1 x 1 deg grid cells, from -180.0 to +180.0 deg longitude and from -90.0 to +90.0 deg latitude. For each grid map of 4-byte floating-point mean values there is a corresponding 4-byte floating-point map of standard deviation and a 2-byte integer grid map of counts. The counts map provides the user with the number of points per bin that were included in the mean and can be used to generate custom multi-day maps from the daily gridded products.
+
+        The thermodynamic parameters are: Skin Temperature (land and sea surface), Air Temperature at the surface, Profiles of Air Temperature and Water Vapor, Tropopause Characteristics, Column Precipitable Water, Cloud Amount/Frequency, Cloud Height, Cloud Top Pressure, Cloud Top Temperature, Reflectance, Emissivity, Surface Pressure, Cloud Vertical Distribution.
+
+        The trace gases parameters are: Total Amounts and Vertical Profiles of Carbon Monoxide, Methane, and Ozone.
+
+        The actual names of the variables in the data files should be inferred from the Processing File Description document.
+
+        (The Shortname for this product is AIRX3STD).</summary>
+                <updated>2014-12-18T00:00:00.000Z</updated>
+                <echo:datasetId>Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) </echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2002-08-30T00:00:00.000Z</time:start>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+                <echo:tag>
+                  <echo:tagKey>org.ceos.wgiss.cwic.granules.foo</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1200018712-GCMDTEST</id>
+                <title type="text">Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) at GES DISC</title>
+                <summary type="text">The AIRS Level 3 Daily Gridded Product contains standard retrieval means, standard deviations and input counts.  Each file covers a temporal period of 24 hours for either the descending (equatorial crossing North to South @1:30 AM local time) or ascending (equatorial crossing South to North @1:30 PM local time) orbit. The data starts at the international dateline and progresses westward (as do the subsequent orbits of the satellite) so that neighboring gridded cells of data are no more than a swath of time apart (about 90 minutes). The two parts of a scan line crossing the dateline are included in separate L3 files, according to the date, so that data points in a grid box are always coincident in time.  The edge of the AIRS Level 3 gridded cells is at the date line (the 180E/W longitude boundary). When plotted, this produces a map with 0 degrees longitude in the center of the image unless the bins are reordered. This method is preferred because the left (West) side of the image and the right (East) side of the image contain data farthest apart in time. The gridding scheme used by AIRS is the same as used by TOVS Pathfinder to create Level 3 products. The daily Level 3 products have gores between satellite paths where there is no coverage for that day.
+
+        The geophysical parameters have been averaged and binned into 1 x 1 deg grid cells, from -180.0 to +180.0 deg longitude and from -90.0 to +90.0 deg latitude. For each grid map of 4-byte floating-point mean values there is a corresponding 4-byte floating-point map of standard deviation and a 2-byte integer grid map of counts. The counts map provides the user with the number of points per bin that were included in the mean and can be used to generate custom multi-day maps from the daily gridded products.
+
+        The thermodynamic parameters are: Skin Temperature (land and sea surface), Air Temperature at the surface, Profiles of Air Temperature and Water Vapor, Tropopause Characteristics, Column Precipitable Water, Cloud Amount/Frequency, Cloud Height, Cloud Top Pressure, Cloud Top Temperature, Reflectance, Emissivity, Surface Pressure, Cloud Vertical Distribution.
+
+        The trace gases parameters are: Total Amounts and Vertical Profiles of Carbon Monoxide, Methane, and Ozone.
+
+        The actual names of the variables in the data files should be inferred from the Processing File Description document.
+
+        (The Shortname for this product is AIRX3STD).</summary>
+                <updated>2014-12-18T00:00:00.000Z</updated>
+                <echo:datasetId>Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2002-08-30T00:00:00.000Z</time:start>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>bar</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1000008690-GCMDTEST</id>
+                <title type="text">China Dimensions Data Collection: China County-Level Data from Provincial Economic Yearbooks, Keyed to 1:1M GIS Map</title>
+                <summary type="text">China County-Level Data on Provincial Economic Yearbooks, Keyed To 1:1M GIS Map consists of socioeconomic and boundary data for the administrative regions of China for 1990 and 1991. The socioeconomic data includes natural resources, population, employment, investment, wage, public finance, price, people's livelihood, agriculture, industry, energy, production, transportation, telecommunication, construction, trade, tourism, environmental protection, education, science, patents, culture, sports, health care, and social welfare. The boundary data are at a scale of one to one million (1:1M) at the county level. This dataset is produced in collaboration with the University of Washington as part of the China in Time and Space (CITAS) project, University of Michigan Center of China Studies (CCS), and the Center for International Earth Science Information Network (CIESIN).
+
+        The data in ARC/INFO Export (ARCE) and dBase IV (DBF) formats are available from the NASA Socioeconomic Data and Applications Center (SEDAC).</summary>
+                <updated>2015-07-23T00:00:00.000Z</updated>
+                <echo:datasetId>China Dimensions Data Collection: China County-Level Data from Provincial Economic Yearbooks, Keyed to 1:1M GIS Map</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>SEDAC</echo:archiveCenter>
+                <echo:organization>SEDAC</echo:organization>
+                <time:start>1990-01-01T00:00:00.000Z</time:start>
+                <time:end>1990-01-01T00:00:00.000Z</time:end>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>18 73 54 135</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.test</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1200018824-GCMDTEST</id>
+                <title type="text">ETest Earth Radiation Budget Master Archival Tape (MAT) from NIMBUS-7 ERB</title>
+                <summary type="text">Earth Radiation Budget (ERB) instrument consists of three separate elements with a total of 22 sensors: a ten channel solar telescope, 4 fixed wide field of view (WFOV) sensors that view the entire visible disk of the Earth, and an 8 channel (4 telescopes, 2 spectral windows, 0.2 - 4.8 microns and 4.5 - 50 microns) narrow field of view (NFOV) scanner.
+
+        The Master Archival Tape (MAT) contains calibrated, earth-located radiances/irradiances and raw digital counts for all of 22 ERB channels.  It also contains other housekeeping data, such as instrument temperature, satellite ephemeris, and attitude data.  The NFOV scanner failed on June 22, 1980 and its data is available only for the period November 1978 through June 1980.
+
+        The MAT contains 3 day's worth of data and is the primary source for the generation of Level-II and III ERB data products.
+
+        The Nimbus 7 research-and-development satellite served as a stabilized, earth-oriented platform for the testing of advanced systems for sensing and collecting data in the pollution, oceanographic and meteorological disciplines. The polar-orbiting spacecraft consisted of three major structures: (1) a hollow torus-shaped sensor mount, (2) solar paddles, and (3) a control housing unit that was connected to the sensor mount by a tripod truss structure.</summary>
+                <updated>2013-11-13T00:00:00.000Z</updated>
+                <echo:datasetId>ETest Earth Radiation Budget Master Archival Tape (MAT) from NIMBUS-7 ERB</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/LARC/SD/ASDC</echo:archiveCenter>
+                <echo:organization>NASA/LARC/SD/ASDC</echo:organization>
+                <time:start>1978-11-16T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://asdc.nasa.gov"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+            <entry>
+                <id>C1200018823-GCMDTEST</id>
+                <title type="text">ETest Polar Ozone and Aerosol Measurement III</title>
+                <summary type="text">POAM3 data are Polar Ozone and Aerosol Measurement III Version 3.0. The Polar Ozone and Aerosol Measurement (POAM) III instrument measures the vertical distribution of atmospheric ozone, water vapor, nitrogen dioxide, and aerosol extinction. The instrument was developed by the Naval Research Laboratory (NRL). POAM III was launched aboard the French SPOT-4 satellite in March 1998 into a Sun synchronous polar orbit.
+
+        The POAM III instrument was developed by the Naval Research Laboratory (NRL) to measure the vertical distribution of atmospheric ozone, water vapor, nitrogen dioxide, aerosol extinction, and temperature. POAM III measures solar extinction in nine narrow band channels, covering the spectral range from 354 to 1018 nm. Solar extinction by the atmosphere is measured using the solar occultation technique; the sun is observed through the Earth's atmosphere as it rises and sets, as viewed from the satellite.
+
+        POAM III was launched aboard the French SPOT-4 satellite in March 1998 into a Sun synchronous polar orbit. As seen from the satellite, the Sun rises in the north polar region and sets in the south polar region 14.2 times per day. Sunrise measurements are made in a latitude band from 55-71 degrees north while sunsets occur between 63-88 degrees south.
+
+        Each data granule contains one month of data for a particular hemisphere, taken at approximately 101 minute intervals. The latitudinal extent of data for the northern hemisphere is 54.68 to 71.01 and -62.55 to -88.11 for the southern hemisphere. The longitude ranges from 0 to 360. The data consists of profiles of ozone, nitrogen dioxide (NO2), and water vapor concentration, and aerosol extinction at 442 nm and 1018 nm.</summary>
+                <updated>2014-04-07T00:00:00.000Z</updated>
+                <echo:datasetId>ETest Polar Ozone and Aerosol Measurement III</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/LARC/SD/ASDC</echo:archiveCenter>
+                <echo:organization>NASA/LARC/SD/ASDC</echo:organization>
+                <time:start>1998-04-22T00:00:00.000Z</time:start>
+                <time:end>2005-12-05T00:00:00.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="POAM III Data and Information" hreflang="en-US" href="https://eosweb.larc.nasa.gov/project/poam3/poam3_table"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Polar Ozone and Aerosol Measurement" hreflang="en-US" href="http://www.nrl.navy.mil/accomplishments/ocean-environment/polar-ozone/"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:point>50 50</georss:point>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+            <entry>
+                <id>C1200019371-GCMDTEST</id>
+                <title type="text">GLDAS CLM Land Surface Model L4 Monthly 1.0 x 1.0 degree V001 (GLDAS_CLM10_M Test DISC) at GES DISC</title>
+                <summary type="text">This data set contains a series of land surface parameters simulated from the Common Land Model (CLM) V2.0 model in the Global Land Data Assimilation System (GLDAS). The data are in 1.0 degree resolution and range from 1979 to the present. The temporal resolution is monthly.
+
+                                This simulation was forced by combination of NOAA/GDAS atmospheric analysis fields, spatially and temporally disaggregated NOAA Climate Prediction Center Merged Analysis of Precipitation (CMAP) fields, and observation based downward shortwave and longwave radiation fields derived using the method of the Air Force Weather Agency's AGRicultural METeorological modeling system (AGRMET). The simulation was initialized on 1 January 1979 using soil moisture and other state fields from a GLDAS/CLM model climatology for that day of the year.
+
+                                WGRIB or other GRIB reader is required to read the files. The data set applies a user-defined parameter table to indicate the contents and parameter number. The GRIBTAB file (http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt) shows a list of parameters for this data set, along with their Product Definition Section (PDS) IDs and units.
+
+
+                                For more information, please see the README Document at
+                                   ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf</summary>
+                <updated>2015-04-27T00:00:00.000Z</updated>
+                <echo:datasetId>GLDAS CLM Land Surface Model L4 Monthly 1.0 x 1.0 degree V001 (GLDAS_CLM10_M Test DISC) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>1979-01-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Access the data via FTP." hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/GLDAS_CLM10_M/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC." hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Use the Simple Subset Wizard (SSW) to submit subset requests for hundreds of data sets across multiple data centers from a single unified interface." hreflang="en-US" href="http://disc.gsfc.nasa.gov/SSW/#keywords=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Search and retrieve data with Reverb ECHO" hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_GLDAS_CLM10_M_V001"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="The GES-DISC Interactive Online Visualization ANd aNalysis Interface (Giovanni) is a web-based tool that allows users to analyze gridded data interactively online without having to download any data." hreflang="en-US" href="http://gdata1.sci.gsfc.nasa.gov/daac-bin/G3/gui.cgi?instance_id=GLDAS10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="The GrADS Data Server (GDS, formerly known as GrADS-DODS Server) is another form of OPeNDAP that provides subsetting and some analysis services across the internet." hreflang="en-US" href="http://hydro1.sci.gsfc.nasa.gov/dods/GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="The GRIBTAB file contains a list of variables, along with the GRIB Product Definition Section (PDS) ID, variable short name, long names, and unit." hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="The Grid Analysis and Display System (GrADS) data descriptor file contains a complete description of the binary data as well as instructions for GrADS on where to find the data and how to read it." hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/gds/GLDAS_V1/GLDAS_CLM10_M.ctl"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="README document" hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="GLDAS Project Web Site" hreflang="en-US" href="http://ldas.gsfc.nasa.gov/gldas/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="GES DISC Services Cookbook main page" hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/recipes/?q=recipe-cookbook"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-60 -180 90 180</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+            <entry>
+                <id>C1200018513-GCMDTEST</id>
+                <title type="text">GLDAS CLM Land Surface Model L4 Monthly 1.0 x 1.0 degree V001 (GLDAS_CLM10_M) at GES DISC MM</title>
+                <summary type="text">This data set contains a series of land surface parameters simulated from the Common Land Model (CLM) V2.0 model in the Global Land Data Assimilation System (GLDAS). The data are in 1.0 degree resolution and range from 1979 to the present. The temporal resolution is monthly.
+
+                                This simulation was forced by combination of NOAA/GDAS atmospheric analysis fields, spatially and temporally disaggregated NOAA Climate Prediction Center Merged Analysis of Precipitation (CMAP) fields, and observation based downward shortwave and longwave radiation fields derived using the method of the Air Force Weather Agency's AGRicultural METeorological modeling system (AGRMET). The simulation was initialized on 1 January 1979 using soil moisture and other state fields from a GLDAS/CLM model climatology for that day of the year.
+
+                                WGRIB or other GRIB reader is required to read the files. The data set applies a user-defined parameter table to indicate the contents and parameter number. The GRIBTAB file (http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt) shows a list of parameters for this data set, along with their Product Definition Section (PDS) IDs and units.
+
+
+                                For more information, please see the README Document at
+                                   ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf</summary>
+                <updated>2015-06-22T12:55:02.000Z</updated>
+                <echo:datasetId>GLDAS CLM Land Surface Model L4 Monthly 1.0 x 1.0 degree V001 (GLDAS_CLM10_M) at GES DISC MM</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>1979-01-01T12:55:02.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via FTP.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/GLDAS_CLM10_M/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC.
+              " hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Use the Simple Subset Wizard (SSW) to submit subset requests for hundreds of data sets across multiple data centers from a single unified interface.
+              " hreflang="en-US" href="http://disc.gsfc.nasa.gov/SSW/#keywords=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Search and retrieve data with Reverb ECHO
+              " hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_GLDAS_CLM10_M_V001"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GES-DISC Interactive Online Visualization ANd aNalysis Interface (Giovanni) is a web-based tool that allows users to analyze gridded data interactively online without having to download any data.
+              " hreflang="en-US" href="http://gdata1.sci.gsfc.nasa.gov/daac-bin/G3/gui.cgi?instance_id=GLDAS10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GrADS Data Server (GDS, formerly known as GrADS-DODS Server) is another form of OPeNDAP that provides subsetting and some analysis services across the internet.
+              " hreflang="en-US" href="http://hydro1.sci.gsfc.nasa.gov/dods/GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The GRIBTAB file contains a list of variables, along with the GRIB Product Definition Section (PDS) ID, variable short name, long names, and unit.
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The Grid Analysis and Display System (GrADS) data descriptor file contains a complete description of the binary data as well as instructions for GrADS on where to find the data and how to read it.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/gds/GLDAS_V1/GLDAS_CLM10_M.ctl"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 README document
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GLDAS Project Web Site
+              " hreflang="en-US" href="http://ldas.gsfc.nasa.gov/gldas/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GES DISC Services Cookbook main page
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/recipes/?q=recipe-cookbook"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-60 -180 90 180</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+            <entry>
+                <id>C1200018727-GCMDTEST</id>
+                <title type="text">GPM, DPR Level 2A Ka Environment Vtest (GPM_2AKaENV) at GES DISC</title>
+                <summary type="text">The 2AKa algorithm provides precipitation estimates from the Ka radar of the Dual-Frequency Precipitation Radar on the core GPM spacecraft. The product contains two swaths of data corresponding to the scans of the Ka radar. The first swath contains matched scans (MS), which are intended to be co-aligned with the Ku-band instantaneous fields of view (IFOV). The second swath contains the high-sensitivity scans (HS), which are interleaved between the Ku/Ka-MS swaths. Both swaths are narrow and centered within the interior of the Ku swath. This is a single-frequency retrieval of precipitation; no information from the Ku radar is used. The retrievals are performed at each radar range bin along the slant path of the radar IFOV for each swath.
+
+        	This is a single-frequency retrieval that relies on Ka-band data only. While the 2ADPR dual-frequency retrieval should give better overall estimates, that algorithm requires co-aligned Ku-band data. This 2AKa product will be produced independently and would not be impacted by any operational issues with the Ku-band radar. The high sensitivity to smaller hydrometeors should result in precipitation estimates in lighter precipitation then the Ku-only data.
+
+        	ABSTRACT</summary>
+                <updated>2015-01-21T00:00:00.000Z</updated>
+                <echo:datasetId>GPM, DPR Level 2A Ka Environment Vtest (GPM_2AKaENV) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2014-02-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via FTP
+              " hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM/GPM_L2A/GPM_2AKaENV.V03/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC
+              " hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GPM_2AKaENV"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via the OPeNDAP protocol
+              " hreflang="en-US" href="http://gpm1.gesdisc.eosdis.nasa.gov/opendap/GPM_L2A/GPM_2AKaENV.V03/contents.html"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Search and retrieve data with Reverb ECHO
+              " hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GPM_2AKaENV"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GPM Project Home Page
+              " hreflang="en-US" href="http://pmm.gsfc.nasa.gov/GPM"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 README Document
+              " hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2A/doc/README.GPM.pdf"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+            <entry>
+                <id>C1200019372-GCMDTEST</id>
+                <title type="text">GPM, METOP-B, MHS Level 2A Radiometer Profiling V03 (GPM_2AGPROFMETOPBMHS Test DISC) at GES DISC</title>
+                <summary type="text">The 2AGPROF (also known as, GPM GPROF (Level 2)) algorithm retrieves consistent precipitation and related science fields from the following GMI and partner passive microwave sensors: GMI, SSMI (DMSP F15), SSMIS (DMSP F16, F17, F18) AMSR2 (GCOM-W1), TMI MHS (NOAA 18&amp;amp;19, METOP A&amp;amp;B), ATMS (NPP), SAPHIR (MT1) This provides the bulk of the 3-hour coverage achieved by GPM. For each sensor, there are near-realtime (NRT) products, standard products, and climate products. These differ only in the amount of data that are available within 3 hours, 48 hours, and 3 months of collection, as well as the ancillary data used. The NRT product uses GANAL forecast fields. Standard products use the GANAL analysis product, while the climate product uses ECMWF reanalysis in order to allow for consistent data records with earlier missions. These earlier data may be archived separately. The main strength of the product is the large sampling provided. The GPM radiometer algorithms are Bayesian-type algorithms. These algorithms search an a-priori database of potential rain profiles and retrieve a weighted average of these entries based upon the proximity of the observed brightness temperature (Tb) to the simulated Tb corresponding to each rain profile. By using the same a-priori database of rain profiles, with appropriate simulated Tb for each constellation sensor, the Bayesian method is completely parametric and thus well suited for GPM's constellation approach. The a-priori information will be supplied by the combined algorithm supplied by GPM's core satellite as soon after launch as feasible. Databases for V0 of the algorithm had to be constructed from various sources as described in the ATBD. The solution provides a mean rain rate as well as the vertical structure of cloud and precipitation hydrometeors and their uncertainty. ABSTRACT</summary>
+                <updated>2015-01-21T00:00:00.000Z</updated>
+                <echo:datasetId>GPM, METOP-B, MHS Level 2A Radiometer Profiling V03 (GPM_2AGPROFMETOPBMHS Test DISC) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2014-02-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Access the data via FTP" hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2/GPM_2AGPROFMETOPBMHS.V03/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC" hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GPM_2AGPROFMETOPBMHS"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Access the data via the OPeNDAP protocol" hreflang="en-US" href="http://gpm1.gesdisc.eosdis.nasa.gov/opendap/GPM_L2/GPM_2AGPROFMETOPBMHS.V03/contents.html"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Search and retrieve data with Reverb ECHO" hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;amp;spatial_map=satellite&amp;amp;spatial_type=rectangle&amp;amp;keywords=GPM_2AGPROFMETOPBMHS"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="GPM Project Home Page" hreflang="en-US" href="http://pmm.gsfc.nasa.gov/GPM"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="README Document" hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2/doc/README.GPM.pdf"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+            <entry>
+                <id>C1200019373-GCMDTEST</id>
+                <title type="text">GPM, METOP-B, MHS Level 2A Radiometer Profiling V03 (GPM_2AGPROFMETOPBMHS Test DISC2) at GES DISC</title>
+                <summary type="text">The 2AGPROF (also known as, GPM GPROF (Level 2)) algorithm retrieves consistent precipitation and related science fields from the following GMI and partner passive microwave sensors: GMI, SSMI (DMSP F15), SSMIS (DMSP F16, F17, F18) AMSR2 (GCOM-W1), TMI MHS (NOAA 18&amp;amp;19, METOP A&amp;amp;B), ATMS (NPP), SAPHIR (MT1) This provides the bulk of the 3-hour coverage achieved by GPM. For each sensor, there are near-realtime (NRT) products, standard products, and climate products. These differ only in the amount of data that are available within 3 hours, 48 hours, and 3 months of collection, as well as the ancillary data used. The NRT product uses GANAL forecast fields. Standard products use the GANAL analysis product, while the climate product uses ECMWF reanalysis in order to allow for consistent data records with earlier missions. These earlier data may be archived separately. The main strength of the product is the large sampling provided. The GPM radiometer algorithms are Bayesian-type algorithms. These algorithms search an a-priori database of potential rain profiles and retrieve a weighted average of these entries based upon the proximity of the observed brightness temperature (Tb) to the simulated Tb corresponding to each rain profile. By using the same a-priori database of rain profiles, with appropriate simulated Tb for each constellation sensor, the Bayesian method is completely parametric and thus well suited for GPM's constellation approach. The a-priori information will be supplied by the combined algorithm supplied by GPM's core satellite as soon after launch as feasible. Databases for V0 of the algorithm had to be constructed from various sources as described in the ATBD. The solution provides a mean rain rate as well as the vertical structure of cloud and precipitation hydrometeors and their uncertainty. ABSTRACT</summary>
+                <updated>2015-01-21T00:00:00.000Z</updated>
+                <echo:datasetId>GPM, METOP-B, MHS Level 2A Radiometer Profiling V03 (GPM_2AGPROFMETOPBMHS Test DISC2) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2014-02-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Access the data via FTP" hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2/GPM_2AGPROFMETOPBMHS.V03/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC" hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GPM_2AGPROFMETOPBMHS"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Access the data via the OPeNDAP protocol" hreflang="en-US" href="http://gpm1.gesdisc.eosdis.nasa.gov/opendap/GPM_L2/GPM_2AGPROFMETOPBMHS.V03/contents.html"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Search and retrieve data with Reverb ECHO" hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;amp;spatial_map=satellite&amp;amp;spatial_type=rectangle&amp;amp;keywords=GPM_2AGPROFMETOPBMHS"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="GPM Project Home Page" hreflang="en-US" href="http://pmm.gsfc.nasa.gov/GPM"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="README Document" hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2/doc/README.GPM.pdf"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId></echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+            </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 05 Feb 2016 20:03:06 GMT
+recorded_with: VCR 2.9.2

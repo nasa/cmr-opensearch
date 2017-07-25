@@ -1,0 +1,894 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>none-supplied-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '227'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNTgxNWQzZDgzNzNjMDdmZGM0ZjQyNDNhM2ZlMWIwYzM%3D--f2a58aea6fa798cb6dd99c43a9c04180ef3c5583;
+        path=/; HttpOnly
+      X-Runtime:
+      - '0.061000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '232'
+      Date:
+      - Fri, 18 Jul 2014 13:46:18 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>61B0536E-0676-72BA-5552-FABD1CDB4615</id>
+          <username>guest</username>
+          <client_id>none-supplied-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:46:19 GMT
+- request:
+    method: get
+    uri: https://api.echo.nasa.gov/catalog-rest//echo_catalog/granules.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '31'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'false'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"f87c58548788a57273976985a81220e2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fe4ad527bdb8c5be9380f491fc13721f
+      X-Runtime:
+      - '0.652000'
+      Date:
+      - Fri, 18 Jul 2014 13:46:19 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:46:20.020Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10</id>
+          <title type="text">CMR granule metadata</title>
+          <entry>
+            <id>G1065-CWIC_1</id>
+            <title type="text">G1</title>
+            <updated>1971-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Unique dataset xyz</echo:datasetId>
+            <echo:producerGranuleId>G1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>CWIC_1</echo:dataCenter>
+            <time:start>1970-12-31T19:00:00-05:00</time:start>
+            <time:end>1971-12-31T19:00:00-05:00</time:end>
+            <link href="www.example.com/resource.xml" hreflang="en-US" title="Metadata (Granule Guide)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000016-OS_PROV_1</id>
+            <title type="text">CoolGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:producerGranuleId>CoolGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>1970-01-01T22:00:00Z</time:start>
+            <time:end>1970-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000024-OS_PROV_1</id>
+            <title type="text">TemporalTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:producerGranuleId>TemporalTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>2001-01-01T22:00:00Z</time:start>
+            <time:end>2001-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000000-OS_PROV_1</id>
+            <title type="text">TemporalTestingGranule2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:producerGranuleId>TemporalTestingGranule2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>2002-01-01T00:00:00Z</time:start>
+            <time:end>2003-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000002-OS_PROV_1</id>
+            <title type="text">ShortNameTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>ShortName Search Testing 1</echo:datasetId>
+            <echo:producerGranuleId>ShortNameTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000003-OS_PROV_1</id>
+            <title type="text">VersionIdTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Version ID Search Testing 1</echo:datasetId>
+            <echo:producerGranuleId>VersionIdTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000007-OS_PROV_1</id>
+            <title type="text">UrlTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Url Granule Testing 1</echo:datasetId>
+            <echo:producerGranuleId>UrlTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <link href="www.example.com/resource_three.xml" hreflang="en-US" title="This is resource number three (Granule Guide)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+            <link href="http://localhost:8085/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/400x600.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="ftp://e4ftl01.cr.usgs.gov/WORKING/BRWS/Browse.001/2006.09.29/BROWSE.MOD13A3.A2000032.h18v03.005.2006271172912.1.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="https://localhost:8086/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/_BR_Browse.001_27109907_1.BINARY" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>true</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000008-OS_PROV_1</id>
+            <title type="text">UrlTestingGranule2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Url Granule Testing 2</echo:datasetId>
+            <echo:producerGranuleId>UrlTestingGranule2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <link href="www.example.com/resource_three.xml" hreflang="en-US" title="This is resource number three (Granule Guide)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005" hreflang="en-US" title="URL Description 3 (Metadata)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" inherited="true">
+              <echo:inherited/>
+            </link>
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title=" (Data)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" inherited="true">
+              <echo:inherited/>
+            </link>
+            <link href="http://localhost:8085/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/400x600.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="ftp://e4ftl01.cr.usgs.gov/WORKING/BRWS/Browse.001/2006.09.29/BROWSE.MOD13A3.A2000032.h18v03.005.2006271172912.1.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="https://localhost:8086/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/_BR_Browse.001_27109907_1.BINARY" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>true</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000013-OS_PROV_1</id>
+            <title type="text">TraversalGranuleTesting1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Trav Granule Dataset 1</echo:datasetId>
+            <echo:producerGranuleId>TraversalGranuleTesting1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000014-OS_PROV_1</id>
+            <title type="text">TraversalGranuleTesting2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Trav Granule Dataset 1</echo:datasetId>
+            <echo:producerGranuleId>TraversalGranuleTesting2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:46:20 GMT
+- request:
+    method: get
+    uri: https://api.echo.nasa.gov/catalog-rest//echo_catalog/datasets.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '36'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'false'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"22af6c257427e7c03331bfde532e11b7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1979d942b5276eba5c292e25b3f14af7
+      X-Runtime:
+      - '0.188000'
+      Date:
+      - Fri, 18 Jul 2014 13:46:31 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '7352'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:46:31.000Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry>
+            <id>C1000000021-OS_PROV_1</id>
+            <title type="text">Cool Dataset</title>
+            <summary type="text">This is a description of a cool dataset</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:shortName>CoolDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000004-OS_PROV_2</id>
+            <title type="text">DC dataset for open search</title>
+            <summary type="text">DC gran OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>DC dataset for open search</echo:datasetId>
+            <echo:shortName>DCGran1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1940-01-01T00:00:00Z</time:start>
+            <time:end>1956-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000003-OS_PROV_2</id>
+            <title type="text">Dublin Core none dataset</title>
+            <summary type="text">DC none OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core none dataset</echo:datasetId>
+            <echo:shortName>DCNone1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000000-OS_PROV_2</id>
+            <title type="text">Dublin Core range dataset</title>
+            <summary type="text">DC range OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core range dataset</echo:datasetId>
+            <echo:shortName>DCRange1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1951-01-01T00:00:00Z</time:start>
+            <time:end>1952-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000002-OS_PROV_2</id>
+            <title type="text">Dublin Core single dataset</title>
+            <summary type="text">DC single OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core single dataset</echo:datasetId>
+            <echo:shortName>DCSingle1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1955-01-01T22:00:00Z</time:start>
+            <time:end>1955-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_2</id>
+            <title type="text">Dublin Core start dataset</title>
+            <summary type="text">DC start OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core start dataset</echo:datasetId>
+            <echo:shortName>DCStart1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1953-01-01T00:00:00Z</time:start>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000029-OS_PROV_1</id>
+            <title type="text">First dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:shortName>FirstDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000014-OS_PROV_1</id>
+            <title type="text">Granule navigation dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Granule navigation dataset for open search</echo:datasetId>
+            <echo:shortName>NavigationDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_1</id>
+            <title type="text">Instrument Testing dataset number 1</title>
+            <summary type="text">Instrument test 1 - OPENSEARCH</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Instrument Testing dataset number 1</echo:datasetId>
+            <echo:shortName>InstrumentTestingDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000022-OS_PROV_1</id>
+            <title type="text">LastCursor Dataset 1</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>LastCursor Dataset 1</echo:datasetId>
+            <echo:shortName>LastCursorDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:46:31 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Mar 2015 02:51:33 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '165372300'
+      Cmr-Took:
+      - '3302'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Content-Length:
+      - '12076'
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2015-03-01T02:51:37.135Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?page_num=1&amp;page_size=10</id><title
+        type="text">ECHO granule metadata</title><entry><id>G181127451-ASF</id><title
+        type="text">cm1449</title><updated>2008-06-05T19:47:13.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-02T00:00:00Z</time:start><time:end>1990-03-02T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1449" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1449.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>37.578152
+        -118.956772 37.619373 -118.899483 37.679699 -118.969124 37.638515 -119.026566
+        37.578152 -118.956772</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G181886854-ASF</id><title
+        type="text">cm1450</title><updated>2008-06-05T19:47:29.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-02T00:00:00Z</time:start><time:end>1990-03-02T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1450" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1450.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>37.578152
+        -118.956772 37.619373 -118.899483 37.679699 -118.969124 37.638515 -119.026566
+        37.578152 -118.956772</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G180170355-ASF</id><title
+        type="text">cm1692</title><updated>2008-06-05T19:47:25.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1692" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1692.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.513058
+        -97.404442 19.535069 -97.465225 19.459076 -97.496361 19.436943 -97.435555
+        19.513058 -97.404442</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G180170510-ASF</id><title
+        type="text">cm1757</title><updated>2008-06-05T19:47:25.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1757" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1757.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>18.824123
+        -98.624039 18.825695 -98.689018 18.744225 -98.69101 18.742542 -98.625961 18.824123
+        -98.624039</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G180238524-ASF</id><title
+        type="text">cm1634</title><updated>2008-06-05T19:47:23.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1634" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1634.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>18.959213
+        -96.99942 18.960087 -96.934441 19.041553 -96.935532 19.040789 -97.00058 18.959213
+        -96.99942</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G180306239-ASF</id><title
+        type="text">cm1803</title><updated>2008-06-05T19:47:21.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1803" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1803.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.800827
+        -99.665047 19.862141 -99.666443 19.860546 -99.752907 19.799171 -99.751625
+        19.800827 -99.665047</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G180328532-ASF</id><title
+        type="text">cm1826</title><updated>2008-06-05T19:47:27.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1826" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1826.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.799931
+        -99.665047 19.861244 -99.665047 19.861441 -99.751511 19.800068 -99.751625
+        19.799931 -99.665047</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G180441503-ASF</id><title
+        type="text">cm1827</title><updated>2008-06-05T19:47:27.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1827" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1827.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.799931
+        -99.665047 19.861244 -99.665047 19.861441 -99.751511 19.800068 -99.751625
+        19.799931 -99.665047</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G181058987-ASF</id><title
+        type="text">cm1804</title><updated>2008-06-05T19:47:13.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1804" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1804.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.800827
+        -99.665047 19.862141 -99.666443 19.860546 -99.752907 19.799171 -99.751625
+        19.800827 -99.665047</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>G181093279-ASF</id><title
+        type="text">cm1822</title><updated>2008-06-05T19:47:13.000Z</updated><echo:datasetId>AIRSAR_POLSAR_FRAME</echo:datasetId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1990-03-09T00:00:00Z</time:start><time:end>1990-03-09T23:59:59Z</time:end><link
+        href="http://airsar.asf.alaska.edu/data/cm/cm1822" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"></link><link
+        href="http://pstor.aadn.alaska.edu/browse/AIRSAR_POLSAR_FRAME/cm1822.gif"
+        hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="0"></link><link
+        href="https://ursa.asfdaac.alaska.edu/cgi-bin/login/guest/" hreflang="en-US"
+        title="The ASF URSA Ordering Interface" rel="http://esipfed.org/ns/fedsearch/1.1/data#"
+        inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.799866
+        -99.665047 19.861179 -99.665047 19.861506 -99.751503 19.800133 -99.751625
+        19.799866 -99.665047</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry></feed>
+    http_version: 
+  recorded_at: Sun, 01 Mar 2015 02:51:37 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Mar 2015 02:51:41 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '3998'
+      Cmr-Took:
+      - '18'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Content-Length:
+      - '22170'
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
+        xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
+        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
+        xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2015-03-01T02:51:41.704Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?page_num=1&amp;page_size=10</id><title
+        type=\"text\">ECHO dataset metadata</title><entry><id>C179003030-ORNL_DAAC</id><title
+        type=\"text\">15 Minute Stream Flow Data: USGS (FIFE)</title><summary type=\"text\">USGS
+        15 minute stream flow data for Kings Creek on the Konza Prairie</summary><updated>2008-12-02T00:00:00.000Z</updated><echo:datasetId>15
+        Minute Stream Flow Data: USGS (FIFE)</echo:datasetId><echo:shortName>doi:10.3334/ORNLDAAC/1</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ORNL_DAAC</echo:dataCenter><echo:archiveCenter>ORNL_DAAC</echo:archiveCenter><echo:processingLevelId>3</echo:processingLevelId><time:start>1984-12-25T00:00:00Z</time:start><time:end>1988-03-04T00:00:00Z</time:end><link
+        href=\"http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=1\" hreflang=\"en-US\"
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link href=\"http://daac.ornl.gov/FIFE/guides/15_min_strm_flow.html\"
+        hreflang=\"en-US\" title=\"USGS 15 minute stream flow data for Kings Creek
+        on the Konza Prairie (VIEW RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:point>39.1
+        -96.6</georss:point><echo:difId>FIFE_STRM_15M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179001887-SEDAC</id><title
+        type=\"text\">2000 Pilot Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2000 Pilot Environmental Sustainability Index (ESI) is an
+        exploratory effort to construct an index that measures the ability of a nation's
+        economy to achieve sustainable development, with the long term goal of finding
+        a single indicator for environmental sustainability analagous to that of the
+        Gross Domestic Product (GDP). The index covering 56 countries is a composite
+        measure of the current status of a nation's environmental systems, pressures
+        on those systems, human vulnerability to environmental change, national capacity
+        to respond, and contributions to global environmental stewardship. The index
+        was unveiled at the World Economic Forum's annual meeting, January 2000, Davos,
+        Switzerland. The 2000 Pilot ESI is the result of collaboration among the World
+        Economic Forum (WEF), Yale Center for Environmental Law and Policy (YCELP),
+        and the Columbia University Center for International Earth Science Information
+        Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2000
+        Pilot Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2000</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1978-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-pilot-environmental-sustainability-index-2000/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4NK3BZJ\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2000</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C1000000220-SEDAC</id><title
+        type=\"text\">2001 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2001 Environmental Sustainability Index (ESI) utilizes a
+        refined methodology based on the 2000 Pilot ESI effort, to construct an index
+        covering 122 countries that measures the overall progress towards environmental
+        sustainability. The index is a composite measure of the current status of
+        a nation's environmental systems, pressures on those systems, human vulnerability
+        to environmental change, national capacity to respond, and contributions to
+        global environmental stewardship. The refinements included the addition and
+        deletion of indicators, filling gaps in data coverage, new data sets, and
+        the modification of the aggregation scheme. The index was unveiled at the
+        World Economic Forum's annual meeting, January 2001, Davos, Switzerland. The
+        2001 ESI is the result of collaboration among the World Economic Forum (WEF),
+        Yale Center for Environmental Law and Policy (YCELP), and the Columbia University
+        Center for International Earth Science Information Network (CIESIN)</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2001
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2001</echo:shortName><echo:versionId>2.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2001/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2001/maps\"
+        hreflang=\"en-US\" title=\"maps download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4X34VDM\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2001</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179001967-SEDAC</id><title
+        type=\"text\">2002 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2002 Environmental Sustainability Index (ESI) measures overall
+        progress toward environmental sustainability for 142 countries based on environmental
+        systems, stresses, human vulnerability, social and institutional capacity
+        and global stewardship. The addition of a climate change indicator, reduction
+        in number of capacity indicators, and an improved imputation methodology contributed
+        to an improvement from the 2001 ESI. The index was unveiled at the World Economic
+        Forum's annual meeting, January 2002, New York. The 2002 ESI is the result
+        of collaboration among the World Economic Forum (WEF), Yale Center for Environmental
+        Law and Policy (YCELP), and the Columbia University Center for International
+        Earth Science Information Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2002
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2002</echo:shortName><echo:versionId>3.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2002/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H40V89R6\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2002/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2002</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179001889-SEDAC</id><title
+        type=\"text\">2005 Environmental Sustainability Index (ESI)</title><summary
+        type=\"text\">The 2005 Environmental Sustainability Index (ESI) is a measure
+        of overall progress towards environmental sustainability, developed for 146
+        countries. The index provides a composite profile of national environmental
+        stewardship based on a compilation of 21 indicators derived from 76 underlying
+        datasets. The 2005 version of the ESI represents a significant update and
+        improvement on earlier versions; the country ESI scores or rankings should
+        not be compared to earlier versions because of changes to the methodology
+        and underlying data. The index was unveiled at the World Economic Forum's
+        annual meeting, January 2005, Davos, Switzerland. The 2005 ESI is a joint
+        product of the Yale Center for Environmental Law and Policy (YCELP) and the
+        Columbia University Center for International Earth Science Information Network
+        (CIESIN), in collaboration with the World Economic Forum (WEF) and the Joint
+        Research Centre (JRC), European Commission.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2005
+        Environmental Sustainability Index (ESI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_ESI_2005</echo:shortName><echo:versionId>4.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1980-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2005/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H40V89R6\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/esi-environmental-sustainability-index-2005/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_ESI_2005</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179001707-SEDAC</id><title
+        type=\"text\">2008 Environmental Performance Index (EPI)</title><summary type=\"text\">The
+        2008 Environmental Performance Index (EPI) centers on two broad environmental
+        protection objectives: (1) reducing environmental stresses on human \n\nhealth,
+        and (2) promoting ecosystem vitality and sound natural resource management.
+        Derived from a careful review of the environmental literature, these twin
+        goals mirror the priorities \n\nexpressed by policymakers. Environmental health
+        and ecosystem vitality are gauged using 25 indicators tracked in six well-established
+        policy categories: Environmental Health \n\n(Environmental Burden of Disease,
+        Water, and Air Pollution), Air Pollution (effects on ecosystems), Water (effects
+        on ecosystems), Biodiversity and Habitat, Productive Natural Resources \n\n(Forestry,
+        Fisheries, and Agriculture), and Climate Change. The 2008 EPI utilizes a proximity-to-target
+        methodology in which performance on each indicator is rated on a 0 to 100
+        scale \n\n(100 represents at target). By identifying specific targets and
+        measuring how close each country comes to them, the EPI provides a foundation
+        for policy analysis and a context for \n\nevaluating performance. Issue-by-issue
+        and aggregate rankings facilitate cross-country comparisons both globally
+        and within relevant peer groups. The 2008 EPI is the result of \n\ncollaboration
+        among the Yale Center for Environmental Law and Policy (YCELP), Columbia University
+        Center for International Earth Science Information Network (CIESIN), World
+        Economic \n\nForum (WEF), and the Joint Research Centre (JRC), European Commission.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2008
+        Environmental Performance Index (EPI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2008</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1994-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2008/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4HT2M77\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2008/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2008</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179002048-SEDAC</id><title
+        type=\"text\">2008 Natural Resource Management Index (NRMI)</title><summary
+        type=\"text\">The 2008 Natural Resources Management Index (NRMI) is a composite
+        index for 226 countries derived from the average of four proximity-to-target
+        scores from eco-region protection, access to improved sanitation, access to
+        improved water and child mortality indicators. The 2008 NRMI includes data
+        for the NRMI for 2006, 2007 and 2008. The dataset is produced and distributed
+        by the Columbia University Center for International Earth Science Information
+        Network (CIESIN) in collaboration with the Yale Center for Environmental Law
+        and Policy (YCELP).</summary><updated>2009-12-01T00:00:00.000Z</updated><echo:datasetId>2008
+        Natural Resource Management Index (NRMI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_NRMI_2008</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>2004-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/es/data/NRMI_2008_final-1.xls\" hreflang=\"en-US\"
+        title=\"Data in Microsoft Excel (XLS) format\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/es/mcc.html\" hreflang=\"en-US\" title=\"data
+        set homepage (static URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_NRMI_2008</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C179002147-SEDAC</id><title
+        type=\"text\">2010 Environmental Performance Index (EPI)</title><summary type=\"text\">The
+        2010 Environmental Performance Index (EPI) ranks 163 countries on environmental
+        performance based on twenty-five indicators grouped within ten core policy
+        categories addressing environmental health, air quality, water resource management,
+        biodiversity and habitat, forestry, fisheries, agriculture, and climate change
+        in the context of two broad objectives: environmental health and ecosystem
+        vitality. The EPI?s proximity-to-target methodology facilitates cross-country
+        comparisons among economic and regional peer groups. It was formally released
+        in Davos, Switzerland, at the annual meeting of the World Economic Forum on
+        January 28, 2010. The 2010 EPI is the result of collaboration between the
+        Yale Center for Environmental Law and Policy (YCELP) and the Columbia University
+        Center for International Earth Science Information Network (CIESIN).</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2010
+        Environmental Performance Index (EPI)</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2010</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>1994-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-2010/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H4D21VHT\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2010</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C1000000000-SEDAC</id><title
+        type=\"text\">2012 Environmental Performance Index and Pilot Trend Environmental
+        Performance Index</title><summary type=\"text\">The 2012 Environmental Performance
+        Index (EPI) ranks 132 countries on 22 performance indicators in the following
+        10 policy categories:  environmental burden of disease, water (effects on
+        human health), air pollution (effects on human health), air pollution (ecosystem
+        effects), water resources (ecosystem effects), biodiversity and habitat, forestry,
+        fisheries, agriculture and climate change. These categories track performance
+        and progress on two broad policy objectives, environmental health and ecosystem
+        vitality. Each indicator has an associated environmental public health or
+        ecosystem sustainability target. The EPI's proximity-to-target methodology
+        facilitates cross-country comparisons among economic and regional peer groups.\n\nThe
+        Pilot Trend Environmental Performance Index (Trend EPI) ranks countries on
+        the change in their environmental performance over the last decade. As a complement
+        to the EPI, the Trend EPI shows who is improving and who is declining over
+        time. \n\nThe 2012 EPI and Pilot Trend EPI were formally released in Davos,
+        Switzerland, at the annual meeting of the World Economic Forum on January
+        27, 2012. These are the result of collaboration between the Yale Center for
+        Environmental Law and Policy (YCELP) and the Columbia University Center for
+        International Earth Science Information Network (CIESIN). The Interactive
+        Website for the 2012 EPI is at http://epi.yale.edu/.</summary><updated>2014-05-13T00:00:00.000Z</updated><echo:datasetId>2012
+        Environmental Performance Index and Pilot Trend Environmental Performance
+        Index</echo:datasetId><echo:shortName>CIESIN_SEDAC_EPI_2012</echo:shortName><echo:versionId>1.0</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>SEDAC</echo:dataCenter><echo:archiveCenter>SEDAC</echo:archiveCenter><echo:processingLevelId>Level
+        2</echo:processingLevelId><time:start>2000-01-01T00:00:00Z</time:start><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-pilot-trend-2012/data-download\"
+        hreflang=\"en-US\" title=\"data download page\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link
+        href=\"http://dx.doi.org/10.7927/H48913SG\" hreflang=\"en-US\" title=\"data
+        set DOI and homepage (DOI URL)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><link
+        href=\"http://sedac.ciesin.columbia.edu/data/set/epi-environmental-performance-index-pilot-trend-2012/maps\"
+        hreflang=\"en-US\" rel=\"http://esipfed.org/ns/fedsearch/1.1/browse#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-55
+        -180 90 180</georss:box><echo:difId>CIESIN_SEDAC_EPI_2012</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry><entry><id>C179002914-ORNL_DAAC</id><title
+        type=\"text\">30 Minute Rainfall Data (FIFE)</title><summary type=\"text\">30
+        minute rainfall data for the Konza Prairie</summary><updated>1994-07-24T00:00:00.000Z</updated><echo:datasetId>30
+        Minute Rainfall Data (FIFE)</echo:datasetId><echo:shortName>doi:10.3334/ORNLDAAC/2</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ORNL_DAAC</echo:dataCenter><echo:archiveCenter>ORNL_DAAC</echo:archiveCenter><echo:processingLevelId>3</echo:processingLevelId><time:start>1987-05-29T00:00:00Z</time:start><time:end>1987-10-26T00:00:00Z</time:end><link
+        href=\"http://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=2\" hreflang=\"en-US\"
+        rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"></link><link href=\"http://daac.ornl.gov/FIFE/guides/30_Min_Rain_Data.html\"
+        hreflang=\"en-US\" title=\"30 minute rainfall data for the Konza Prairie (VIEW
+        RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>39.08
+        -96.6 39.11 -96.55</georss:box><echo:difId>FIFE_RAIN_30M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry></feed>"
+    http_version: 
+  recorded_at: Sun, 01 Mar 2015 02:51:42 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=dougopolis&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:56:04 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '37'
+      Age:
+      - '0'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":0,"geonames":[]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:56:01 GMT
+recorded_with: VCR 2.9.2

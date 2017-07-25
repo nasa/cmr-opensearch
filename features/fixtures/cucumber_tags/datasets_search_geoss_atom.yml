@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=GEOS_TEST&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 05 Feb 2016 20:03:06 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '37'
+      Cmr-Took:
+      - '58'
+      Cmr-Request-Id:
+      - c476a82d-4c5a-404c-a827-e3deaeafa4f9
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '6268'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: |-
+        <feed
+            xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+            xmlns:georss="http://www.georss.org/georss/10"
+            xmlns="http://www.w3.org/2005/Atom"
+            xmlns:dc="http://purl.org/dc/terms/"
+            xmlns:echo="http://www.echo.nasa.gov/esip"
+            xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"
+            xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2"
+            xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+            <updated>2016-02-05T19:59:56.807Z</updated>
+            <id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?provider=GEOS_TEST&amp;include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&amp;include_has_granules=true</id>
+            <title type="text">CMR dataset metadata</title>
+            <entry>
+                <id>C1200018718-GCMDTEST</id>
+                <title type="text">Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) </title>
+                <summary type="text">The AIRS Level 3 Daily Gridded Product contains standard retrieval means, standard deviations and input counts.  Each file covers a temporal period of 24 hours for either the descending (equatorial crossing North to South @1:30 AM local time) or ascending (equatorial crossing South to North @1:30 PM local time) orbit. The data starts at the international dateline and progresses westward (as do the subsequent orbits of the satellite) so that neighboring gridded cells of data are no more than a swath of time apart (about 90 minutes). The two parts of a scan line crossing the dateline are included in separate L3 files, according to the date, so that data points in a grid box are always coincident in time.  The edge of the AIRS Level 3 gridded cells is at the date line (the 180E/W longitude boundary). When plotted, this produces a map with 0 degrees longitude in the center of the image unless the bins are reordered. This method is preferred because the left (West) side of the image and the right (East) side of the image contain data farthest apart in time. The gridding scheme used by AIRS is the same as used by TOVS Pathfinder to create Level 3 products. The daily Level 3 products have gores between satellite paths where there is no coverage for that day.
+
+        The geophysical parameters have been averaged and binned into 1 x 1 deg grid cells, from -180.0 to +180.0 deg longitude and from -90.0 to +90.0 deg latitude. For each grid map of 4-byte floating-point mean values there is a corresponding 4-byte floating-point map of standard deviation and a 2-byte integer grid map of counts. The counts map provides the user with the number of points per bin that were included in the mean and can be used to generate custom multi-day maps from the daily gridded products.
+
+        The thermodynamic parameters are: Skin Temperature (land and sea surface), Air Temperature at the surface, Profiles of Air Temperature and Water Vapor, Tropopause Characteristics, Column Precipitable Water, Cloud Amount/Frequency, Cloud Height, Cloud Top Pressure, Cloud Top Temperature, Reflectance, Emissivity, Surface Pressure, Cloud Vertical Distribution.
+
+        The trace gases parameters are: Total Amounts and Vertical Profiles of Carbon Monoxide, Methane, and Ozone.
+
+        The actual names of the variables in the data files should be inferred from the Processing File Description document.
+
+        (The Shortname for this product is AIRX3STD).</summary>
+                <updated>2014-12-18T00:00:00.000Z</updated>
+                <echo:datasetId>Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) </echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2002-08-30T00:00:00.000Z</time:start>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.geoss.geoss_data-core</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>C1200018712-GCMDTEST</id>
+                <title type="text">Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) at GES DISC</title>
+                <summary type="text">The AIRS Level 3 Daily Gridded Product contains standard retrieval means, standard deviations and input counts.  Each file covers a temporal period of 24 hours for either the descending (equatorial crossing North to South @1:30 AM local time) or ascending (equatorial crossing South to North @1:30 PM local time) orbit. The data starts at the international dateline and progresses westward (as do the subsequent orbits of the satellite) so that neighboring gridded cells of data are no more than a swath of time apart (about 90 minutes). The two parts of a scan line crossing the dateline are included in separate L3 files, according to the date, so that data points in a grid box are always coincident in time.  The edge of the AIRS Level 3 gridded cells is at the date line (the 180E/W longitude boundary). When plotted, this produces a map with 0 degrees longitude in the center of the image unless the bins are reordered. This method is preferred because the left (West) side of the image and the right (East) side of the image contain data farthest apart in time. The gridding scheme used by AIRS is the same as used by TOVS Pathfinder to create Level 3 products. The daily Level 3 products have gores between satellite paths where there is no coverage for that day.
+
+        The geophysical parameters have been averaged and binned into 1 x 1 deg grid cells, from -180.0 to +180.0 deg longitude and from -90.0 to +90.0 deg latitude. For each grid map of 4-byte floating-point mean values there is a corresponding 4-byte floating-point map of standard deviation and a 2-byte integer grid map of counts. The counts map provides the user with the number of points per bin that were included in the mean and can be used to generate custom multi-day maps from the daily gridded products.
+
+        The thermodynamic parameters are: Skin Temperature (land and sea surface), Air Temperature at the surface, Profiles of Air Temperature and Water Vapor, Tropopause Characteristics, Column Precipitable Water, Cloud Amount/Frequency, Cloud Height, Cloud Top Pressure, Cloud Top Temperature, Reflectance, Emissivity, Surface Pressure, Cloud Vertical Distribution.
+
+        The trace gases parameters are: Total Amounts and Vertical Profiles of Carbon Monoxide, Methane, and Ozone.
+
+        The actual names of the variables in the data files should be inferred from the Processing File Description document.
+
+        (The Shortname for this product is AIRX3STD).</summary>
+                <updated>2014-12-18T00:00:00.000Z</updated>
+                <echo:datasetId>Aqua AIRS Level 3 Daily Standard Physical Retrieval (AIRS+AMSU) V007 (AIRX3STD) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2002-08-30T00:00:00.000Z</time:start>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>bar</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 05 Feb 2016 20:03:06 GMT
+recorded_with: VCR 2.9.2

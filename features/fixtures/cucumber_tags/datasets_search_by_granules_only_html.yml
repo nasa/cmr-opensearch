@@ -1,0 +1,252 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?has_granules=true&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Mar 2016 15:15:17 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '2'
+      Cmr-Took:
+      - '20'
+      Cmr-Request-Id:
+      - efde6da5-d7c7-4859-aadd-8a416dbeae9e
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '12067'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+                        <updated>2014-07-18T13:11:05.277Z</updated>
+                        <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/collections.atom?keyword=First+dataset+for+open+search&amp;page_num=1&amp;page_size=10</id>
+                        <title type="text">CMR dataset metadata</title>
+                        <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                          <id>C1000000029-OS_PROV_1</id>
+                          <title type="text">First dataset for open search</title>
+                          <summary type="text">This is a description</summary>
+                          <updated>1999-12-31T19:00:00-05:00</updated>
+                          <echo:datasetId>First dataset for open search</echo:datasetId>
+                          <echo:shortName>FirstDataset</echo:shortName>
+                          <echo:versionId>1</echo:versionId>
+                          <echo:originalFormat>ECHO10</echo:originalFormat>
+                          <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+                          <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+                          <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                          <echo:browseFlag>false</echo:browseFlag>
+                          <echo:hasGranules>true</echo:hasGranules>
+                          <relevance:score>0.7</relevance:score>
+                        </entry>
+                        <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                          <id>C1000000029-OS_PROV_2</id>
+                          <title type="text">Second dataset for open search</title>
+                          <summary type="text">This is a description</summary>
+                          <updated>1999-12-31T19:00:00-05:00</updated>
+                          <echo:datasetId>Second dataset for open search</echo:datasetId>
+                          <echo:shortName>SecondDataset</echo:shortName>
+                          <echo:versionId>1</echo:versionId>
+                          <echo:originalFormat>ECHO10</echo:originalFormat>
+                          <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+                          <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+                          <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                          <echo:browseFlag>false</echo:browseFlag>
+                          <echo:hasGranules>true</echo:hasGranules>
+                          <relevance:score>0.7</relevance:score>
+                        </entry>
+                      </feed>
+  http_version:
+  recorded_at: Wed, 09 Mar 2016 15:15:17 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?has_granules=false&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Mar 2016 15:15:22 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '1'
+      Cmr-Took:
+      - '28'
+      Cmr-Request-Id:
+      - 03f24740-5a23-4888-8ad4-17fe1a3002f2
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '22226'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+                        <updated>2014-07-18T13:11:05.277Z</updated>
+                        <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/collections.atom?keyword=First+dataset+for+open+search&amp;page_num=1&amp;page_size=10</id>
+                        <title type="text">CMR dataset metadata</title>
+                        <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                          <id>C1000000029-OS_PROV_1</id>
+                          <title type="text">First dataset for open search</title>
+                          <summary type="text">This is a description</summary>
+                          <updated>1999-12-31T19:00:00-05:00</updated>
+                          <echo:datasetId>First dataset for open search</echo:datasetId>
+                          <echo:shortName>FirstDataset</echo:shortName>
+                          <echo:versionId>1</echo:versionId>
+                          <echo:originalFormat>ECHO10</echo:originalFormat>
+                          <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+                          <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+                          <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                          <echo:browseFlag>false</echo:browseFlag>
+                          <echo:hasGranules>true</echo:hasGranules>
+                          <relevance:score>0.7</relevance:score>
+                        </entry>
+                      </feed>
+  http_version:
+  recorded_at: Wed, 09 Mar 2016 15:15:22 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Mar 2016 15:15:22 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '3'
+      Cmr-Took:
+      - '28'
+      Cmr-Request-Id:
+      - 03f24740-5a23-4888-8ad4-17fe1a3002f2
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '22226'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+                      <?xml version="1.0" encoding="UTF-8"?>
+                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+                        <updated>2014-07-18T13:11:05.277Z</updated>
+                        <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/collections.atom?keyword=First+dataset+for+open+search&amp;page_num=1&amp;page_size=10</id>
+                        <title type="text">CMR dataset metadata</title>
+                        <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                          <id>C1000000029-OS_PROV_1</id>
+                          <title type="text">First dataset for open search</title>
+                          <summary type="text">This is a description</summary>
+                          <updated>1999-12-31T19:00:00-05:00</updated>
+                          <echo:datasetId>First dataset for open search</echo:datasetId>
+                          <echo:shortName>FirstDataset</echo:shortName>
+                          <echo:versionId>1</echo:versionId>
+                          <echo:originalFormat>ECHO10</echo:originalFormat>
+                          <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+                          <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+                          <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                          <echo:browseFlag>false</echo:browseFlag>
+                          <echo:hasGranules>true</echo:hasGranules>
+                          <relevance:score>0.7</relevance:score>
+                        </entry>
+                        <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                          <id>C1000000029-OS_PROV_2</id>
+                          <title type="text">Second dataset for open search</title>
+                          <summary type="text">This is a description</summary>
+                          <updated>1999-12-31T19:00:00-05:00</updated>
+                          <echo:datasetId>Second dataset for open search</echo:datasetId>
+                          <echo:shortName>SecondDataset</echo:shortName>
+                          <echo:versionId>1</echo:versionId>
+                          <echo:originalFormat>ECHO10</echo:originalFormat>
+                          <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+                          <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+                          <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                          <echo:browseFlag>false</echo:browseFlag>
+                          <echo:hasGranules>true</echo:hasGranules>
+                          <relevance:score>0.7</relevance:score>
+                        </entry>
+                        <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                          <id>C1000000029-OS_PROV_3</id>
+                          <title type="text">Third dataset for open search</title>
+                          <summary type="text">This is a description</summary>
+                          <updated>1999-12-31T19:00:00-05:00</updated>
+                          <echo:datasetId>Third dataset for open search</echo:datasetId>
+                          <echo:shortName>ThirdDataset</echo:shortName>
+                          <echo:versionId>1</echo:versionId>
+                          <echo:originalFormat>ECHO10</echo:originalFormat>
+                          <echo:dataCenter>OS_PROV_3</echo:dataCenter>
+                          <echo:archiveCenter>OS_PROV3</echo:archiveCenter>
+                          <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                          <echo:browseFlag>false</echo:browseFlag>
+                          <echo:hasGranules>true</echo:hasGranules>
+                          <relevance:score>0.7</relevance:score>
+                        </entry>
+                      </feed>
+  http_version:
+  recorded_at: Wed, 09 Mar 2016 15:15:22 GMT
+recorded_with: VCR 2.9.2

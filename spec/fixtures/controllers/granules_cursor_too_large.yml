@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>foo-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '217'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlZmJiOWRhZGE1NjBiMTgzZjVmYjdhNTYzZDk3ZDNiY2Y%3D--bf3a25c093a037c8475ab46063c08ee69546ac7a; path=/; HttpOnly
+      X-Runtime:
+      - '0.115000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 13 May 2015 20:27:55 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAE2OTQ6CMBhE95yiYV9asFhJSomKnEDXhNBPbISWUCAeX/w3
+        s5q8l8mI7Na1aIbBaWtSPwyoj8DUVmnTpP7pWOCNn0lPjPYKRnoICa3kNmH8
+        kBQcxwktcL7LKWYrynESxWwf8jWNWC7IIj78ycFgqg5kM4EbBfn2B6xbDWYs
+        F/VsLbY9GAfVUF+wglmQH/0MlbovK6UGcE7S4JnX4j/wBHnfvQPWK3GE3gAA
+        AA==
+    http_version:
+  recorded_at: Wed, 13 May 2015 20:27:56 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?dataset_id=MODIS/Terra%2BAqua%20Leaf%20Area%20Index/FPAR%208-Day%20L4%20Global%201km%20SIN%20Grid%20V005&page_num=174558594&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 13 May 2015 20:27:56 GMT
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/xml;charset=ISO-8859-1
+      Content-Length:
+      - '155'
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><errors><error>The paging depth (page_num * page_size) of [1745585940] exceeds the limit of 1000000.</error></errors>
+    http_version:
+  recorded_at: Wed, 13 May 2015 20:27:56 GMT
+recorded_with: VCR 2.9.2

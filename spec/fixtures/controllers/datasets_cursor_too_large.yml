@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>foo-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '217'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlYmE4MWVlOTgzYzdhZjQ4MGI1NmM2MGJkOTQ1YjFiYjk%3D--45f1bb43679f14624532db1603e78cba4bd675d8;
+        path=/; HttpOnly
+      X-Runtime:
+      - '0.194000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 14 May 2015 23:06:18 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAE2OywqDMBRE935FyD7GR0sNxIhg8wXtWsTc2lBNJFHp51f7
+        ZlbDOQzDi/vQowWc19bkOA4jjMC0VmnT5fh8kiTDhQj4ZG9gRIAQ10qkZbxj
+        ZSpJEicVOUaMEVZljEi538sokZlkB05XcfNnD840A4huBj9x+u0bbHsNZqpX
+        9WItsSMYD41rr0TBwumPfoZqPdaNUg68F1H4zGvxHwScvu8+ALqGhMfeAAAA
+    http_version: 
+  recorded_at: Thu, 14 May 2015 23:06:20 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=174558594&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 02 Feb 2016 17:41:55 GMT
+      Content-Type:
+      - application/xml; charset=ISO-8859-1
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '155'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><errors><error>The paging depth
+        (page_num * page_size) of [1745585940] exceeds the limit of 1000000.</error></errors>
+    http_version: 
+  recorded_at: Tue, 02 Feb 2016 17:41:55 GMT
+recorded_with: VCR 2.9.2
