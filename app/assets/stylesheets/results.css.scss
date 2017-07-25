@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+p.cc-meta-detail, div.cc-meta {
+  span.value {
+    color: rgb(50, 50, 50);
+  }
+  span.label {
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+  }
+
+  div.group-meta {
+    padding-left: 1em;
+  }
+  div.spacer {
+    padding-bottom: 1em;
+  }
+
+  .granule-search {
+    float:right;
+    margin-bottom:1em;
+    margin-right:1em
+  }
+}
+
+button.granule-search {
+  float: right;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+div.thumb-container {
+  ul.optional-links {
+    background-color: inherit;
+    li {
+      background-color: inherit;
+      font-weight: normal;
+    }
+  }
+}
+
+.temporal-input {
+  position: relative;
+  font-family: sans-serif;
+}
+
+section#results {
+  height: 40em;
+  font-weight: 200;
+  overflow: scroll;
+  background-color: white;
+  ul.results {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    padding-left: 0em;
+    list-style-type: none;
+    li.result {
+      background-color: rgb(236, 240, 241);
+
+      padding-left: 1em;
+      padding-top: 1em;
+      margin-top: 0em;
+      margin-bottom: 0em;
+      &.alt {
+        background-color: rgb(149, 165, 166);
+      }
+    }
+  }
+}
+
+.content-capsule {
+  h3 {
+    margin-left: 0em;
+  }
+  border-bottom-width: 0px;
+  li {
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    text-align: left;
+    font-size: 1em;
+    background-color: inherit;
+    font-weight: normal;
+  }
+  p.cc-meta-detail {
+    margin-left: 0em;
+  }
+}
+
+#time_start_picker {
+  position: relative;
+}
+
+#time_end_picker {
+  position: relative;
+}

@@ -1,0 +1,317 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>noGranUplink-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '226'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNWJiMGQxN2IyNjhmNTMzMmI2NjE4MmJlNzZjYzIzNWE%3D--b8bfd469b4f862ccec7dea652d1ccd5aaf7f1319; path=/; HttpOnly
+      X-Runtime:
+      - '0.048000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 21 Nov 2015 13:17:53 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAE2OywqDMBRE936FuI9GTW0XMUJt7Q/UtYi52KDeSKLSz6/2
+        zayGcxiGZ/ehdxcwVmlMvdCnngvYaKmwTb3yWpCDlwmHT7oDFI7rciUFjY6M
+        spCRcMdywpJ9QqJ9TEmcJ+coLuhp5TxYxc2fLRisBxDtDHbiwbdvsOkV4FSt
+        KuqLqbEce4Ud0SOghdo0NyJh4cFP+yxWaqxqKQ1YK6j/zGv6Hzg8eP9+AJxg
+        tQ7nAAAA
+    http_version:
+  recorded_at: Sat, 21 Nov 2015 13:17:54 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OB_DAAC&temporal=2005-01-01T00:00:01Z,2005-01-01T23:59:59Z
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - echo-token-here
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Nov 2015 13:17:55 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Allow-Origin:
+      - '*'
+      Cmr-Hits:
+      - '5081'
+      Cmr-Took:
+      - '610'
+      Content-Length:
+      - '23203'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"\
+        \ xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"\
+        \ xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"\
+        \ xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"\
+        http://www.opengis.net/gml\" esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"\
+        ><updated>2015-11-21T13:17:55.763Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?provider=OB_DAAC&amp;page_num=1&amp;page_size=10&amp;temporal=2005-01-01T00%3A00%3A01Z%2C2005-01-01T23%3A59%3A59Z</id><title\
+        \ type=\"text\">ECHO granule metadata</title><entry><id>G1212736213-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3b_MC_KD490.nc</title><updated>2015-10-01T08:33:05.000Z</updated><echo:datasetId>SeaWiFS_L3b_KD</echo:datasetId><echo:producerGranuleId>S19972442010273.L3b_MC_KD490.nc</echo:producerGranuleId><echo:granuleSizeMB>49.755882</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3b_MC_KD490.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3B Downwelling Diffuse Attenuation Coefficient (KD) Product\" hreflang=\"\
+        en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3BIN/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3B/KD/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736231-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3m_MC_POC_poc_9km.nc</title><updated>2015-10-01T08:34:15.000Z</updated><echo:datasetId>SeaWiFS_L3m_POC</echo:datasetId><echo:producerGranuleId>S19972442010273.L3m_MC_POC_poc_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>13.490849</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3m_MC_POC_poc_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3M Particulate Organic Carbon (POC) Product\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3SMI/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3M/POC/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736233-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3m_MC_KD490_Kd_490_9km.nc</title><updated>2015-10-01T08:33:05.000Z</updated><echo:datasetId>SeaWiFS_L3m_KD</echo:datasetId><echo:producerGranuleId>S19972442010273.L3m_MC_KD490_Kd_490_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>12.722693</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3m_MC_KD490_Kd_490_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3M Downwelling Diffuse Attenuation Coefficient (KD) Product\" hreflang=\"\
+        en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3SMI/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3M/KD/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736256-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3b_MC_CHL.nc</title><updated>2015-10-01T08:34:39.000Z</updated><echo:datasetId>SeaWiFS_L3b_CHL</echo:datasetId><echo:producerGranuleId>S19972442010273.L3b_MC_CHL.nc</echo:producerGranuleId><echo:granuleSizeMB>75.49147</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3b_MC_CHL.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3B Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3BIN/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3B/CHL/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736267-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3m_MC_PAR_par_9km.nc</title><updated>2015-10-01T08:33:35.000Z</updated><echo:datasetId>SeaWiFS_L3m_PAR</echo:datasetId><echo:producerGranuleId>S19972442010273.L3m_MC_PAR_par_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>13.525928</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3m_MC_PAR_par_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3M Photosynthetically Available Radiation (PAR) Product\" hreflang=\"en-US\"\
+        \ href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3SMI/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3M/PAR/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736271-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3b_MC_PAR.nc</title><updated>2015-10-01T08:33:34.000Z</updated><echo:datasetId>SeaWiFS_L3b_PAR</echo:datasetId><echo:producerGranuleId>S19972442010273.L3b_MC_PAR.nc</echo:producerGranuleId><echo:granuleSizeMB>49.744534</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3b_MC_PAR.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3B Photosynthetically Available Radiation (PAR) Product\" hreflang=\"en-US\"\
+        \ href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3BIN/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3B/PAR/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736272-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3m_MC_CHL_chl_ocx_9km.nc</title><updated>2015-10-01T08:34:39.000Z</updated><echo:datasetId>SeaWiFS_L3m_CHL</echo:datasetId><echo:producerGranuleId>S19972442010273.L3m_MC_CHL_chl_ocx_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>13.568133</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3m_MC_CHL_chl_ocx_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3M/CHL/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736273-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3m_MC_CHL_chlor_a_9km.nc</title><updated>2015-10-01T08:34:39.000Z</updated><echo:datasetId>SeaWiFS_L3m_CHL</echo:datasetId><echo:producerGranuleId>S19972442010273.L3m_MC_CHL_chlor_a_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>13.474594</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3m_MC_CHL_chlor_a_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3M Chlorophyll (CHL) Product\" hreflang=\"en-US\" href=\"http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3SMI/\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3M/CHL/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736399-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3b_MC_PIC.nc</title><updated>2015-10-01T08:32:42.000Z</updated><echo:datasetId>SeaWiFS_L3b_PIC</echo:datasetId><echo:producerGranuleId>S19972442010273.L3b_MC_PIC.nc</echo:producerGranuleId><echo:granuleSizeMB>50.65006</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3b_MC_PIC.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3B Particulate Inorganic Carbon (PIC) Product\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3BIN/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3B/PIC/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry><entry><id>G1212736415-OB_DAAC</id><title\
+        \ type=\"text\">S19972442010273.L3m_MC_RRS_Rrs_510_9km.nc</title><updated>2015-10-01T08:37:19.000Z</updated><echo:datasetId>SeaWiFS_L3m_RRS</echo:datasetId><echo:producerGranuleId>S19972442010273.L3m_MC_RRS_Rrs_510_9km.nc</echo:producerGranuleId><echo:granuleSizeMB>9.056278</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>OB_DAAC</echo:dataCenter><time:start>1997-09-04T00:00:00.000Z</time:start><time:end>2010-09-30T23:59:59.000Z</time:end><link\
+        \ rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S19972442010273.L3m_MC_RRS_Rrs_510_9km.nc\"\
+        ></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/data#\"\
+        \ type=\"GET DATA\" title=\"OB.DAAC Data Distribution Website for SeaWiFS\
+        \ L3M Remote-Sensing Reflectance (RRS) Product\" hreflang=\"en-US\" href=\"\
+        http://oceandata.sci.gsfc.nasa.gov/SeaWiFS/L3SMI/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group (OBPG) Homepage (Home Page)\" hreflang=\"\
+        en-US\" href=\"http://oceancolor.gsfc.nasa.gov/\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Description Website (Home Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/cms/data/seawifs\"><echo:inherited></echo:inherited></link><link\
+        \ inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"OB.DAAC SeaWiFS Landing Page (Landing Page)\" hreflang=\"en-US\"\
+        \ href=\"http://oceancolor.gsfc.nasa.gov/data/10.5067/ORBVIEW-2/SeaWiFS/L3M/RRS/2014\"\
+        ><echo:inherited></echo:inherited></link><link inherited=\"true\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"\
+        \ title=\"Ocean Biology Processing Group User Support Forum\n\t\t\t (User\
+        \ Support)\" hreflang=\"en-US\" href=\"http://oceancolor.gsfc.nasa.gov/forum/oceancolor/forum_show.pl\n\
+        \t\t\t\"><echo:inherited></echo:inherited></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><georss:box>-90\
+        \ -180 90 180</georss:box><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag></entry></feed>"
+    http_version:
+  recorded_at: Sat, 21 Nov 2015 13:17:56 GMT
+recorded_with: VCR 2.9.2

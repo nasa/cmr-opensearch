@@ -1,0 +1,344 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>foo-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '217'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlYzdlNGRhZWRjZjE1YTlhMjU1Y2U5ODhmZDJmMTZlNmU%3D--f9653b7d870695e750a31e8827088af5e335a476;
+        path=/; HttpOnly
+      X-Runtime:
+      - '0.116000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '222'
+      Date:
+      - Fri, 18 Jul 2014 13:45:05 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>0DE1A8CA-13D4-BCC6-8396-E058E023C943</id>
+          <username>guest</username>
+          <client_id>foo-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:45:06 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=-3.21187,54.95389
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'true'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"ad9ae3ee96158cc214a6559b1410f115"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3ae22c580fdb9ed3e42d0aff9f66c9e5
+      X-Runtime:
+      - '0.497000'
+      Date:
+      - Fri, 18 Jul 2014 13:45:07 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1353'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:45:08.112Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10&amp;point=-3.21187%2C54.95389</id>
+          <title type="text">CMR granule metadata</title>
+          <entry>
+            <id>G1000000009-OS_PROV_1</id>
+            <title type="text">BownessOnSolwayGranule</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Searcb by place name dataset 1</echo:datasetId>
+            <echo:producerGranuleId>BownessOnSolwayGranule</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <georss:box>50.0 -10.0 60.0 1.0</georss:box>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:45:08 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=Bowness-on-Solway&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:54:16 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '366'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
+        Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
+        place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:54:13 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=Bowness-on-Solway&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:54:17 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '366'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
+        Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
+        place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:54:14 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=Bowness-on-Solway&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:54:18 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '366'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
+        Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
+        place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:54:14 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=dougopolis&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:54:19 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '37'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":0,"geonames":[]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:54:15 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=dougopolis&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:54:19 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '37'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":0,"geonames":[]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:54:16 GMT
+recorded_with: VCR 2.9.2

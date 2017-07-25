@@ -1,0 +1,22 @@
+<section class="navigation">
+  <% controller = parent ? 'granules' : 'collections' %>
+  <ul class="pagination">
+
+    <% unless previous_page(cursor) == 0 or number_of_hits == 0 %>
+        <li>
+          <%= link_to({controller: controller, action: 'index', cursor: (cursor.to_i - 1), numberOfResults: number_of_results, keyword: model.keyword, instrument: model.instrument,
+                       satellite: model.satellite, startTime: model.start_time, endTime: model.end_time, spatial_type: spatial_type, boundingBox: model.boundingBox, geometry: model.geometry, placeName: model.placeName, shortName: model.short_name, versionId: model.version_id, dataCenter: model.data_center, dataset_id: model.dataset_id}, {id: "#{position}_previous"}) do %>
+              <i class="fa fa-chevron-circle-left"></i>
+          <% end %>
+        </li>
+    <% end %>
+    <% unless stop_hit(cursor, length, number_of_results, number_of_hits) >= number_of_hits %>
+        <li>
+          <%= link_to({controller: controller, action: 'index', cursor: (cursor.to_i + 1), numberOfResults: number_of_results, keyword: model.keyword, instrument: model.instrument,
+                       satellite: model.satellite, startTime: model.start_time, endTime: model.end_time, spatial_type: spatial_type, boundingBox: model.boundingBox, geometry: model.geometry, placeName: model.placeName, shortName: model.short_name, versionId: model.version_id, dataCenter: model.data_center, dataset_id: model.dataset_id}, {id: "#{position}_next"}) do %>
+              <i class="fa fa-chevron-circle-right"></i>
+          <% end %>
+        </li>
+    <% end %>
+  </ul>
+</section>

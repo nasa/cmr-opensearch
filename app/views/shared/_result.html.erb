@@ -1,0 +1,45 @@
+<div class="content-capsule">
+  <div class="cc-content">
+    <h3><%= resource.title %></h3>
+    <!-- find the link of type via that is from cmr -->
+    <% unless resource.canononical_link.nil? %>
+        <a class="content-link" href="<%= resource.canononical_link.href %>" itemprop='url'><%= resource.canononical_link.href %></a>
+    <% end %>
+    <div class="cc-meta">
+      <% unless resource.description.nil? %>
+          <span class='label'>Description: </span>
+          <p class="content-description"><%= resource.description %></p>
+      <% end %>
+      <span class='label'>Links: </span>
+      <ul class="optional-links">
+        <% resource.links.each do |link| %>
+            <li><%= truncate_link(link) %></li>
+        <% end %>
+      </ul>
+      <span class='label'>Temporal Extent: </span>
+      <time class='value temporal-extent' itemprop="temporal" datetime="<%= resource.temporal_extent %>"><%= render_temporal_extent(resource.temporal_extent) %></time>
+      <span class='label'>Spatial Extent: </span><span class="value spatial-extent"><%= render_spatial_extent(resource.bounding_box, resource.polygon, resource.line, resource.point) %></span>
+      <meta itemprop="spatial" content="<%= resource.mbr %>"/>
+      <div class="spacer"></div>
+      <p class="cc-meta-detail">
+        <span itemprop='provider' class="badge badge data_center"><%= resource.uid.gsub("#{ENV['opensearch_url']}/concept.atom?uid=", '').split('-').last %></span>
+        <% if resource_type == 'collection' %>
+            <span class='label'>Short Name: </span><span class='value short_name' itemprop='alternateName'> <%= resource.short_name %></span>
+            <span class='label'>Version ID: </span><span class='value version_id' itemprop='version'> <%= resource.version_id %></span>
+        <% end %>
+        <span class='label'>Unique ID: </span><span class='value uid'><%= resource.uid.gsub("#{ENV['opensearch_url']}/#{resource_type}s.atom?uid=", '') %></span>
+      </p>
+      <div style="clear: both;"></div>
+          <% if resource.has_granules == true %>
+            <%= link_to :controller => 'granules', :clientId => 'our_html_ui', :keyword => @collection.keyword, :instrument => @collection.instrument, :satellite => @collection.satellite, :shortName => resource.short_name, :versionId => resource.version_id, :dataCenter => resource.data_center, :startTime => @collection.start_time, :endTime => @collection.end_time, :spatial_type => @spatial_type, :boundingBox => @collection.bounding_box, :geometry => @collection.geometry, :placeName => @collection.place_name, :dataset_id => resource.title, :collection_cursor => @cursor, :collection_number_of_results => @number_of_results do %>
+                <button type="button" alt='Search "<%= resource.title %>"' class="granule-search btn btn-green">Search
+                  this collection...
+                </button>
+            <% end %>
+          <% elsif resource_type == 'collection' %>
+          <div class='granule-search'>This collection does not contain any granules</div>
+          <% end %>
+      </div>
+  </div>
+</div>
+<div style="clear: both;"></div>

@@ -1,0 +1,190 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>foo-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '217'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlYTU0MmQ2NjRhNGUzMWViODM1NmI2ZTdkNWU0OGZlZDU%3D--d651b6a2ad57b5eb3117df4321afbb21ef5aa0ba; path=/; HttpOnly
+      X-Runtime:
+      - '0.163000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '222'
+      Date:
+      - Fri, 18 Jul 2014 13:45:03 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>72B65D88-39E5-D77D-A52E-ED3CDFEAD955</id>
+          <username>guest</username>
+          <client_id>foo-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:45:04 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?dataset_id=Cool%20Dataset&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"8fc1a422e1ece63bf290f7977d47453f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7f1d2d350c78ff0f7c131ba455bd2177
+      X-Runtime:
+      - '0.632000'
+      Date:
+      - Fri, 18 Jul 2014 13:45:04 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1360'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:45:04.741Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?dataset_id=Cool+Dataset&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">CMR granule metadata</title>
+          <entry>
+            <id>G1000000016-OS_PROV_1</id>
+            <title type="text">CoolGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:producerGranuleId>CoolGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>1970-01-01T22:00:00Z</time:start>
+            <time:end>1970-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:45:04 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?dataset_id=Uncool%20Dataset&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '0'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"6976ebaa57190369ec0794d71fe6eb9e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4cc139e7e66e1dea3298e7df90f94504
+      X-Runtime:
+      - '0.123000'
+      Date:
+      - Fri, 18 Jul 2014 13:45:05 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '688'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:45:05.560Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?dataset_id=Uncool+Dataset&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">CMR granule metadata</title>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:45:05 GMT
+recorded_with: VCR 2.9.2

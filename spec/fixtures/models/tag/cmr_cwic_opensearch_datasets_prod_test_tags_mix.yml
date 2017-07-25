@@ -1,0 +1,479 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=GCMDTEST&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 05 Feb 2016 20:03:06 GMT
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Cmr-Hits:
+      - '37'
+      Cmr-Took:
+      - '58'
+      Cmr-Request-Id:
+      - c476a82d-4c5a-404c-a827-e3deaeafa4f9
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '6268'
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+            <updated>2016-02-06T14:21:43.946Z</updated>
+            <id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core&amp;keyword=GCMDTEST&amp;page_num=1&amp;page_size=10</id>
+            <title type="text">ECHO dataset metadata</title>
+            <entry>
+                <id>1-GCMD_PROD</id>
+                <title type="text">China Dimensions Data Collection: China County-Level Data from Provincial Economic Yearbooks, Keyed to 1:1M GIS Map</title>
+                <summary type="text">China County-Level Data on Provincial Economic Yearbooks, Keyed To 1:1M GIS Map consists of socioeconomic and boundary data for the administrative regions of China for 1990 and 1991. The socioeconomic data includes natural resources, population, employment, investment, wage, public finance, price, people's livelihood, agriculture, industry, energy, production, transportation, telecommunication, construction, trade, tourism, environmental protection, education, science, patents, culture, sports, health care, and social welfare. The boundary data are at a scale of one to one million (1:1M) at the county level. This dataset is produced in collaboration with the University of Washington as part of the China in Time and Space (CITAS) project, University of Michigan Center of China Studies (CCS), and the Center for International Earth Science Information Network (CIESIN).
+
+        The data in ARC/INFO Export (ARCE) and dBase IV (DBF) formats are available from the NASA Socioeconomic Data and Applications Center (SEDAC).</summary>
+                <updated>2015-07-23T00:00:00.000Z</updated>
+                <echo:datasetId>China Dimensions Data Collection: China County-Level Data from Provincial Economic Yearbooks, Keyed to 1:1M GIS Map</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>SEDAC</echo:archiveCenter>
+                <echo:organization>SEDAC</echo:organization>
+                <time:start>1990-01-01T00:00:00.000Z</time:start>
+                <time:end>1990-01-01T00:00:00.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Data download page." hreflang="en-US" href="http://sedac.ciesin.columbia.edu/data/set/cddc-china-provincial-economic-yearbooks/data-download"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record." hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=CIESIN_SEDAC_CD_CTY_ECON_YRBK"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>18 73 54 135</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>2-GCMD_TEST</id>
+                <title type="text">SMEX03 Ancillary Soil Characteristics Data, Alabama</title>
+                <summary type="text">The SMEX03 Ancillary Soil Characteristics data set contains data for the regional study areas of Alabama, Georgia, and Oklahoma, USA as part of the 2003 Soil Moisture Experiment (SMEX03). The original data were extracted from a multi-layer soil characteristics database for the conterminous United States and generated using Environmental Systems Research Institute (ESRI) ArcMap software for each regional study area. Parameters for this data set include available water capacity, bulk density, permeability, porosity, rock fragment class, rock fragment volume, percent sand, percent clay, and texture class. The temporal coverage is approximate, as these data are representative of the conditions present in each regional study area during the general timeline of the SMEX03 campaign. The total volume for these data sets is approximately 2.8 gigabytes. Data are provided in ASCII text files and are available via FTP.
+
+              These data were collected as part of a validation study for the Advanced Microwave Scanning Radiometer - Earth Observing System (AMSR-E). AMSR-E is a mission instrument launched aboard NASA's Aqua Satellite on 04 May 2002. AMSR-E validation studies linked to SMEX are designed to evaluate the accuracy of AMSR-E soil moisture data. Specific validation objectives include assessing and refining soil moisture algorithm performance; verifying soil moisture estimation accuracy; investigating the effects of vegetation, surface temperature, topography, and soil texture on soil moisture accuracy; and determining the regions that are useful for AMSR-E soil moisture measurements.</summary>
+                <updated>2013-11-12T12:00:00.000Z</updated>
+                <echo:datasetId>SMEX03 Ancillary Soil Characteristics Data, Alabama</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NSIDC</echo:archiveCenter>
+                <echo:organization>NSIDC</echo:organization>
+                <time:start>2003-06-01T01:00:00.000Z</time:start>
+                <time:end>2003-07-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Data Access" hreflang="en-US" href="http://nsidc.org/data/NSIDC-0339.html"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>34.66 -87.77 35.19 -87.08</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.test</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>3-GCMD_OPENSEARCH</id>
+                <title type="text">MERRA-2 inst1_2d_lfo_Nx: 2d,1-Hourly,Instantaneous,Single-Level,Assimilation,Land Surface Forcings V5.12.4 (M2I1NXLFO) at GES DISC</title>
+                <summary type="text">The Modern-Era Retrospective analysis for Research and Applications version 2 (MERRA-2) is a NASA atmospheric reanalysis for the satellite era using the Goddard Earth Observing System Model, Version 5 (GEOS-5) with its Atmospheric Data Assimilation System (ADAS), version 5.12.4. The MERRA project focuses on historical climate analyses for a broad range of weather and climate time scales and places the NASA EOS suite of observations in a climate context.
+
+        	MERRA-2 was initiated as an intermediate project between the aging MERRA data and the next generation of Earth system analysis envisioned for the future coupled reanalysis. Without a substantial investment to update MERRA's data assimilation routines, the system lacked the capability to analyze the latest observations. In addition, numerous advances to the GEOS5 system had been implemented since freezing the MERRA system in 2008. Therefore, a new full reanalysis integration was undertaken. MERRA-2 covers the period 1980-present, continuing as an ongoing climate analysis as resources allow.</summary>
+                <updated>2015-05-14T00:00:00.000Z</updated>
+                <echo:datasetId>MERRA-2 inst1_2d_lfo_Nx: 2d,1-Hourly,Instantaneous,Single-Level,Assimilation,Land Surface Forcings V5.12.4 (M2I1NXLFO) at GES DISC</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>1980-01-01T00:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Daily Product direct FTP access." hreflang="en-US" href="ftp://goldsmr4.sci.gsfc.nasa.gov/data/s4pa/MERRA2/M2I1NXLFO.5.12.4/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Use the Simple Subset Wizard (SSW) to submit subset requests for hundreds of data sets across multiple data centers from a single unified interface." hreflang="en-US" href="http://disc.gsfc.nasa.gov/SSW/#keywords=M2I1NXLFO 5.12.4"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="The GES-DISC Interactive Online Visualization ANd aNalysis Interface (Giovanni) is a web-based tool that allows users to analyze gridded data interactively online without having to download any data. Through Giovanni, users are invited to discover and explore our data using sophisticated analyses and visualizations." hreflang="en-US" href="http://giovanni.gsfc.nasa.gov/giovanni/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and ordering of earth science data at NASA GES DISC." hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=M2I1NXLFO"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Search and retrieve data with Reverb ECHO" hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;amp;spatial_map=satellite&amp;amp;spatial_type=rectangle&amp;amp;keywords=GES_DISC_M2I1NXLFO_V5.12.4"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="The GrADS Data Server (GDS, formerly known as GrADS-DODS Server) is another form of OPeNDAP that provides subsetting and even some analysis services across the internet." hreflang="en-US" href="http://goldsmr4.sci.gsfc.nasa.gov/dods/M2I1NXLFO.info"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="Access the data via the OPeNDAP protocol" hreflang="en-US" href="http://goldsmr4.sci.gsfc.nasa.gov/opendap/MERRA2/M2I1NXLFO.5.12.4/contents.html"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="The GMAO home page" hreflang="en-US" href="http://gmao.gsfc.nasa.gov/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="The GES DISC Modeling and Assimilation Data and Information Services Center." hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/MDISC/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="The GMAO File Specification Document" hreflang="en-US" href="https://gmao.gsfc.nasa.gov/products/documents/MERRA_File_Specification.pdf"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-89.375 -179.375 89.375 179.375</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>opensearch.granule.osdd</echo:tagKey>
+                    <echo:data>"http://cwictest.wgiss.ceos.org/opensearch/datasets/C1239566345-EUMETSAT/osdd.xml?clientId=rspec13"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>4-GCMD_PROD</id>
+                <title type="text">SMEX03 Ancillary Soil Characteristics Data, Alabama GCMD_TEST_0031</title>
+                <summary type="text">The SMEX03 Ancillary Soil Characteristics data set contains data for the regional study areas of Alabama, Georgia, and Oklahoma, USA as part of the 2003 Soil Moisture Experiment (SMEX03). The original data were extracted from a multi-layer soil characteristics database for the conterminous United States and generated using Environmental Systems Research Institute (ESRI) ArcMap software for each regional study area. Parameters for this data set include available water capacity, bulk density, permeability, porosity, rock fragment class, rock fragment volume, percent sand, percent clay, and texture class. The temporal coverage is approximate, as these data are representative of the conditions present in each regional study area during the general timeline of the SMEX03 campaign. The total volume for these data sets is approximately 2.8 gigabytes. Data are provided in ASCII text files and are available via FTP.
+
+              These data were collected as part of a validation study for the Advanced Microwave Scanning Radiometer - Earth Observing System (AMSR-E). AMSR-E is a mission instrument launched aboard NASA's Aqua Satellite on 04 May 2002. AMSR-E validation studies linked to SMEX are designed to evaluate the accuracy of AMSR-E soil moisture data. Specific validation objectives include assessing and refining soil moisture algorithm performance; verifying soil moisture estimation accuracy; investigating the effects of vegetation, surface temperature, topography, and soil texture on soil moisture accuracy; and determining the regions that are useful for AMSR-E soil moisture measurements.</summary>
+                <updated>2013-11-12T12:00:00.000Z</updated>
+                <echo:datasetId>SMEX03 Ancillary Soil Characteristics Data, Alabama GCMD_TEST_0031</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NSIDC</echo:archiveCenter>
+                <echo:organization>NSIDC</echo:organization>
+                <time:start>2003-06-01T01:00:00.000Z</time:start>
+                <time:end>2003-07-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Data Access" hreflang="en-US" href="http://nsidc.org/data/NSIDC-0339.html"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>34.66 -87.77 35.19 -87.08</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>5-GCMD_TEST</id>
+                <title type="text">SMEX03 Ancillary Soil Characteristics Data, Alabama GCMD_TEST_0032</title>
+                <summary type="text">The SMEX03 Ancillary Soil Characteristics data set contains data for the regional study areas of Alabama, Georgia, and Oklahoma, USA as part of the 2003 Soil Moisture Experiment (SMEX03). The original data were extracted from a multi-layer soil characteristics database for the conterminous United States and generated using Environmental Systems Research Institute (ESRI) ArcMap software for each regional study area. Parameters for this data set include available water capacity, bulk density, permeability, porosity, rock fragment class, rock fragment volume, percent sand, percent clay, and texture class. The temporal coverage is approximate, as these data are representative of the conditions present in each regional study area during the general timeline of the SMEX03 campaign. The total volume for these data sets is approximately 2.8 gigabytes. Data are provided in ASCII text files and are available via FTP.
+
+              These data were collected as part of a validation study for the Advanced Microwave Scanning Radiometer - Earth Observing System (AMSR-E). AMSR-E is a mission instrument launched aboard NASA's Aqua Satellite on 04 May 2002. AMSR-E validation studies linked to SMEX are designed to evaluate the accuracy of AMSR-E soil moisture data. Specific validation objectives include assessing and refining soil moisture algorithm performance; verifying soil moisture estimation accuracy; investigating the effects of vegetation, surface temperature, topography, and soil texture on soil moisture accuracy; and determining the regions that are useful for AMSR-E soil moisture measurements.</summary>
+                <updated>2013-11-12T12:00:00.000Z</updated>
+                <echo:datasetId>SMEX03 Ancillary Soil Characteristics Data, Alabama GCMD_TEST_0032</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NSIDC</echo:archiveCenter>
+                <echo:organization>NSIDC</echo:organization>
+                <time:start>2003-06-01T01:00:00.000Z</time:start>
+                <time:end>2003-07-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Data Access" hreflang="en-US" href="http://nsidc.org/data/NSIDC-0339.html"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>34.66 -87.77 35.19 -87.08</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.test</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>6-GCMD_OPENSEARCH</id>
+                <title type="text">SMEX03 Ancillary Soil Characteristics Data, Alabama GCMD_TEST_0033</title>
+                <summary type="text">The SMEX03 Ancillary Soil Characteristics data set contains data for the regional study areas of Alabama, Georgia, and Oklahoma, USA as part of the 2003 Soil Moisture Experiment (SMEX03). The original data were extracted from a multi-layer soil characteristics database for the conterminous United States and generated using Environmental Systems Research Institute (ESRI) ArcMap software for each regional study area. Parameters for this data set include available water capacity, bulk density, permeability, porosity, rock fragment class, rock fragment volume, percent sand, percent clay, and texture class. The temporal coverage is approximate, as these data are representative of the conditions present in each regional study area during the general timeline of the SMEX03 campaign. The total volume for these data sets is approximately 2.8 gigabytes. Data are provided in ASCII text files and are available via FTP.
+
+              These data were collected as part of a validation study for the Advanced Microwave Scanning Radiometer - Earth Observing System (AMSR-E). AMSR-E is a mission instrument launched aboard NASA's Aqua Satellite on 04 May 2002. AMSR-E validation studies linked to SMEX are designed to evaluate the accuracy of AMSR-E soil moisture data. Specific validation objectives include assessing and refining soil moisture algorithm performance; verifying soil moisture estimation accuracy; investigating the effects of vegetation, surface temperature, topography, and soil texture on soil moisture accuracy; and determining the regions that are useful for AMSR-E soil moisture measurements.</summary>
+                <updated>2013-11-12T12:00:00.000Z</updated>
+                <echo:datasetId>SMEX03 Ancillary Soil Characteristics Data, Alabama GCMD_TEST_0033</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NSIDC</echo:archiveCenter>
+                <echo:organization>NSIDC</echo:organization>
+                <time:start>2003-06-01T01:00:00.000Z</time:start>
+                <time:end>2003-07-31T23:59:59.000Z</time:end>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="Data Access" hreflang="en-US" href="http://nsidc.org/data/NSIDC-0339.html"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>34.66 -87.77 35.19 -87.08</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                  <echo:tagKey>opensearch.granule.osdd</echo:tagKey>
+                  <echo:data>"http://cwictest.wgiss.ceos.org/opensearch/datasets/C1239566345-EUMETSAT/osdd.xml?clientId=rspec13"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>7-GCMD_PROD</id>
+                <title type="text">GLDAS CLM Land Surface Model L4 Monthly 1.0 x 1.0 degree V001 (GLDAS_CLM10_M) at GES DISC MM</title>
+                <summary type="text">This data set contains a series of land surface parameters simulated from the Common Land Model (CLM) V2.0 model in the Global Land Data Assimilation System (GLDAS). The data are in 1.0 degree resolution and range from 1979 to the present. The temporal resolution is monthly.
+
+                                This simulation was forced by combination of NOAA/GDAS atmospheric analysis fields, spatially and temporally disaggregated NOAA Climate Prediction Center Merged Analysis of Precipitation (CMAP) fields, and observation based downward shortwave and longwave radiation fields derived using the method of the Air Force Weather Agency's AGRicultural METeorological modeling system (AGRMET). The simulation was initialized on 1 January 1979 using soil moisture and other state fields from a GLDAS/CLM model climatology for that day of the year.
+
+                                WGRIB or other GRIB reader is required to read the files. The data set applies a user-defined parameter table to indicate the contents and parameter number. The GRIBTAB file (http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt) shows a list of parameters for this data set, along with their Product Definition Section (PDS) IDs and units.
+
+
+                                For more information, please see the README Document at
+                                   ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf</summary>
+                <updated>2015-06-22T12:55:02.000Z</updated>
+                <echo:datasetId>GLDAS CLM Land Surface Model L4 Monthly 1.0 x 1.0 degree V001 (GLDAS_CLM10_M) at GES DISC MM</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>1979-01-01T12:55:02.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via FTP.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/GLDAS_CLM10_M/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC.
+              " hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Use the Simple Subset Wizard (SSW) to submit subset requests for hundreds of data sets across multiple data centers from a single unified interface.
+              " hreflang="en-US" href="http://disc.gsfc.nasa.gov/SSW/#keywords=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Search and retrieve data with Reverb ECHO
+              " hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_GLDAS_CLM10_M_V001"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GES-DISC Interactive Online Visualization ANd aNalysis Interface (Giovanni) is a web-based tool that allows users to analyze gridded data interactively online without having to download any data.
+              " hreflang="en-US" href="http://gdata1.sci.gsfc.nasa.gov/daac-bin/G3/gui.cgi?instance_id=GLDAS10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GrADS Data Server (GDS, formerly known as GrADS-DODS Server) is another form of OPeNDAP that provides subsetting and some analysis services across the internet.
+              " hreflang="en-US" href="http://hydro1.sci.gsfc.nasa.gov/dods/GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The GRIBTAB file contains a list of variables, along with the GRIB Product Definition Section (PDS) ID, variable short name, long names, and unit.
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The Grid Analysis and Display System (GrADS) data descriptor file contains a complete description of the binary data as well as instructions for GrADS on where to find the data and how to read it.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/gds/GLDAS_V1/GLDAS_CLM10_M.ctl"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 README document
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GLDAS Project Web Site
+              " hreflang="en-US" href="http://ldas.gsfc.nasa.gov/gldas/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GES DISC Services Cookbook main page
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/recipes/?q=recipe-cookbook"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-60 -180 90 180</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>8-GCMD_TEST</id>
+                <title type="text">GPM, METOP-B, MHS Level 2A Radiometer Profiling V03 (GPM_2AGPROFMETOPBMHS) at GES DISC MM</title>
+                <summary type="text">The 2AGPROF (also known as, GPM GPROF (Level 2)) algorithm retrieves consistent precipitation and related science fields from the following GMI and partner passive microwave sensors: GMI, SSMI (DMSP F15), SSMIS (DMSP F16, F17, F18) AMSR2 (GCOM-W1), TMI MHS (NOAA 18&amp;amp;19, METOP A&amp;amp;B), ATMS (NPP), SAPHIR (MT1) This provides the bulk of the 3-hour coverage achieved by GPM. For each sensor, there are near-realtime (NRT) products, standard products, and climate products. These differ only in the amount of data that are available within 3 hours, 48 hours, and 3 months of collection, as well as the ancillary data used. The NRT product uses GANAL forecast fields. Standard products use the GANAL analysis product, while the climate product uses ECMWF reanalysis in order to allow for consistent data records with earlier missions. These earlier data may be archived separately. The main strength of the product is the large sampling provided. The GPM radiometer algorithms are Bayesian-type algorithms. These algorithms search an a-priori database of potential rain profiles and retrieve a weighted average of these entries based upon the proximity of the observed brightness temperature (Tb) to the simulated Tb corresponding to each rain profile. By using the same a-priori database of rain profiles, with appropriate simulated Tb for each constellation sensor, the Bayesian method is completely parametric and thus well suited for GPM's constellation approach. The a-priori information will be supplied by the combined algorithm supplied by GPM's core satellite as soon after launch as feasible. Databases for V0 of the algorithm had to be constructed from various sources as described in the ATBD. The solution provides a mean rain rate as well as the vertical structure of cloud and precipitation hydrometeors and their uncertainty. ABSTRACT</summary>
+                <updated>2015-06-23T12:55:02.000Z</updated>
+                <echo:datasetId>GPM, METOP-B, MHS Level 2A Radiometer Profiling V03 (GPM_2AGPROFMETOPBMHS) at GES DISC MM</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>2014-02-01T12:55:02.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via FTP
+              " hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2/GPM_2AGPROFMETOPBMHS.V03/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC
+              " hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GPM_2AGPROFMETOPBMHS"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via the OPeNDAP protocol
+              " hreflang="en-US" href="http://gpm1.gesdisc.eosdis.nasa.gov/opendap/GPM_L2/GPM_2AGPROFMETOPBMHS.V03/contents.html"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Search and retrieve data with Reverb ECHO
+              " hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;amp;spatial_map=satellite&amp;amp;spatial_type=rectangle&amp;amp;keywords=GPM_2AGPROFMETOPBMHS"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GPM Project Home Page
+              " hreflang="en-US" href="http://pmm.gsfc.nasa.gov/GPM"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 README Document
+              " hreflang="en-US" href="ftp://gpm1.gesdisc.eosdis.nasa.gov/data/s4pa/GPM_L2/doc/README.GPM.pdf"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-90 -180 90 180</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.test</echo:tagKey>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>9-GCMD_OPENSEARCH</id>
+                <title type="text">Instrument_NotProvided_notset</title>
+                <summary type="text">This data set contains a series of land surface parameters simulated from the Common Land Model (CLM) V2.0 model in the Global Land Data Assimilation System (GLDAS). The data are in 1.0 degree resolution and range from 1979 to the present. The temporal resolution is monthly.
+
+                                This simulation was forced by combination of NOAA/GDAS atmospheric analysis fields, spatially and temporally disaggregated NOAA Climate Prediction Center Merged Analysis of Precipitation (CMAP) fields, and observation based downward shortwave and longwave radiation fields derived using the method of the Air Force Weather Agency's AGRicultural METeorological modeling system (AGRMET). The simulation was initialized on 1 January 1979 using soil moisture and other state fields from a GLDAS/CLM model climatology for that day of the year.
+
+                                WGRIB or other GRIB reader is required to read the files. The data set applies a user-defined parameter table to indicate the contents and parameter number. The GRIBTAB file (http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt) shows a list of parameters for this data set, along with their Product Definition Section (PDS) IDs and units.
+
+
+                                For more information, please see the README Document at
+                                   ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf</summary>
+                <updated>2015-04-27T00:00:00.000Z</updated>
+                <echo:datasetId>Instrument_NotProvided_notset</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>1979-01-01T12:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via FTP.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/GLDAS_CLM10_M/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC.
+              " hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Use the Simple Subset Wizard (SSW) to submit subset requests for hundreds of data sets across multiple data centers from a single unified interface.
+              " hreflang="en-US" href="http://disc.gsfc.nasa.gov/SSW/#keywords=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Search and retrieve data with Reverb ECHO
+              " hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_GLDAS_CLM10_M_V001"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GES-DISC Interactive Online Visualization ANd aNalysis Interface (Giovanni) is a web-based tool that allows users to analyze gridded data interactively online without having to download any data.
+              " hreflang="en-US" href="http://gdata1.sci.gsfc.nasa.gov/daac-bin/G3/gui.cgi?instance_id=GLDAS10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GrADS Data Server (GDS, formerly known as GrADS-DODS Server) is another form of OPeNDAP that provides subsetting and some analysis services across the internet.
+              " hreflang="en-US" href="http://hydro1.sci.gsfc.nasa.gov/dods/GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The GRIBTAB file contains a list of variables, along with the GRIB Product Definition Section (PDS) ID, variable short name, long names, and unit.
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The Grid Analysis and Display System (GrADS) data descriptor file contains a complete description of the binary data as well as instructions for GrADS on where to find the data and how to read it.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/gds/GLDAS_V1/GLDAS_CLM10_M.ctl"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 README document
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GLDAS Project Web Site
+              " hreflang="en-US" href="http://ldas.gsfc.nasa.gov/gldas/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GES DISC Services Cookbook main page
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/recipes/?q=recipe-cookbook"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-60 -180 90 180</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                  <echo:tagKey>opensearch.granule.osdd</echo:tagKey>
+                  <echo:data>"http://cwictest.wgiss.ceos.org/opensearch/datasets/C1239566345-EUMETSAT/osdd.xml?clientId=rspec13"</echo:data>
+                </echo:tag>
+            </entry>
+            <entry>
+                <id>10-GCMD_PROD</id>
+                <title type="text">Platform_NotProvided_notset</title>
+                <summary type="text">This data set contains a series of land surface parameters simulated from the Common Land Model (CLM) V2.0 model in the Global Land Data Assimilation System (GLDAS). The data are in 1.0 degree resolution and range from 1979 to the present. The temporal resolution is monthly.
+
+                                This simulation was forced by combination of NOAA/GDAS atmospheric analysis fields, spatially and temporally disaggregated NOAA Climate Prediction Center Merged Analysis of Precipitation (CMAP) fields, and observation based downward shortwave and longwave radiation fields derived using the method of the Air Force Weather Agency's AGRicultural METeorological modeling system (AGRMET). The simulation was initialized on 1 January 1979 using soil moisture and other state fields from a GLDAS/CLM model climatology for that day of the year.
+
+                                WGRIB or other GRIB reader is required to read the files. The data set applies a user-defined parameter table to indicate the contents and parameter number. The GRIBTAB file (http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt) shows a list of parameters for this data set, along with their Product Definition Section (PDS) IDs and units.
+
+
+                                For more information, please see the README Document at
+                                   ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf</summary>
+                <updated>2015-04-27T00:00:00.000Z</updated>
+                <echo:datasetId>Platform_NotProvided_notset</echo:datasetId>
+                <echo:shortName></echo:shortName>
+                <echo:versionId></echo:versionId>
+                <echo:originalFormat></echo:originalFormat>
+                <echo:dataCenter>GCMDTEST</echo:dataCenter>
+                <echo:archiveCenter>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:archiveCenter>
+                <echo:organization>NASA/GSFC/SED/ESD/GCDC/GEOSDISC</echo:organization>
+                <time:start>1979-01-01T12:00:00.000Z</time:start>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Access the data via FTP.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/GLDAS_CLM10_M/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Mirador (from Spanish, a place providing a wide view) is a Google-based data archive search interface that allows searching, browsing, and retrieving of Earth science data at NASA GES DISC.
+              " hreflang="en-US" href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Use the Simple Subset Wizard (SSW) to submit subset requests for hundreds of data sets across multiple data centers from a single unified interface.
+              " hreflang="en-US" href="http://disc.gsfc.nasa.gov/SSW/#keywords=GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 Search and retrieve data with Reverb ECHO
+              " hreflang="en-US" href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_GLDAS_CLM10_M_V001"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GES-DISC Interactive Online Visualization ANd aNalysis Interface (Giovanni) is a web-based tool that allows users to analyze gridded data interactively online without having to download any data.
+              " hreflang="en-US" href="http://gdata1.sci.gsfc.nasa.gov/daac-bin/G3/gui.cgi?instance_id=GLDAS10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/data#" title="
+                 The GrADS Data Server (GDS, formerly known as GrADS-DODS Server) is another form of OPeNDAP that provides subsetting and some analysis services across the internet.
+              " hreflang="en-US" href="http://hydro1.sci.gsfc.nasa.gov/dods/GLDAS_CLM10_M"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The GRIBTAB file contains a list of variables, along with the GRIB Product Definition Section (PDS) ID, variable short name, long names, and unit.
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/hydrology/grib_tabs/gribtab_GLDAS_CLM.txt"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 The Grid Analysis and Display System (GrADS) data descriptor file contains a complete description of the binary data as well as instructions for GrADS on where to find the data and how to read it.
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/gds/GLDAS_V1/GLDAS_CLM10_M.ctl"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 README document
+              " hreflang="en-US" href="ftp://hydro1.sci.gsfc.nasa.gov/data/s4pa/GLDAS_V1/README.GLDAS.pdf"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GLDAS Project Web Site
+              " hreflang="en-US" href="http://ldas.gsfc.nasa.gov/gldas/"></link>
+                <link rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" title="
+                 GES DISC Services Cookbook main page
+              " hreflang="en-US" href="http://disc.sci.gsfc.nasa.gov/recipes/?q=recipe-cookbook"></link>
+                <echo:coordinateSystem>CARTESIAN</echo:coordinateSystem>
+                <echo:orbitParameters></echo:orbitParameters>
+                <georss:box>-60 -180 90 180</georss:box>
+                <echo:difId>foo</echo:difId>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>false</echo:browseFlag>
+                <echo:hasGranules>false</echo:hasGranules>
+                <relevance:score>0.5</relevance:score>
+                <echo:tag>
+                    <echo:tagKey>org.ceos.wgiss.cwic.granules.prod</echo:tagKey>
+                </echo:tag>
+            </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 05 Feb 2016 20:03:06 GMT
+recorded_with: VCR 2.9.2

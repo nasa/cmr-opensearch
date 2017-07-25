@@ -1,0 +1,11 @@
+language: ruby
+cache:
+  bundler: true
+sudo: false
+script:
+  - export RAILS_ENV=test
+  - bundle exec rspec
+  - bundle exec cucumber
+branches:
+  only: # Only build master. Pull requests to master also get built.
+    - master

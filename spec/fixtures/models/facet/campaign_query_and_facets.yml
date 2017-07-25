@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>none-supplied-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '227'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlZjQ1MjUyMTgxZDZmZDI3MzZjZjliZmVkM2E2ODU2Nzk%3D--c9856887e027b9df62bee925aa28030bbe328e3f; path=/; HttpOnly
+      X-Runtime:
+      - '0.057000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sun, 01 Mar 2015 14:29:37 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAE2OTQqDMBSE954iuI9JNbQVYsSinqBdi5iHDdUXMSo9frX/
+        zGpmPoaR6b3vyAKjMxYTfxdwnwA2VhtsE/9yLunRT5UnJ3sDVB4h0mhV5pkQ
+        oYhoHOaCRll2oPxUFpQfxT4uIpHHYSbZCm787GDEugfVzuAmyb5+K5vOAE7V
+        iqJFoG4ehjXR1A6ADuqxuVINi2Q/7jNZmaGqtR7BOcWDp17b/4Un2fv4A2C5
+        J4joAAAA
+    http_version:
+  recorded_at: Sun, 01 Mar 2015 14:29:37 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?campaign=CERES&include_facets=true&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Token:
+      - FDA44243-92D4-3AA7-0BFE-08469E34D92A
+      User-Agent:
+      - Ruby
+      Client-Id:
+      - cmr-open-search
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Mar 2015 14:29:39 GMT
+      Access-Control-Allow-Origin:
+      - '*'
+      Cmr-Hits:
+      - '80'
+      Cmr-Took:
+      - '45'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Content-Length:
+      - '13850'
+      Server:
+      - Jetty(7.x.y-SNAPSHOT)
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2015-03-01T14:29:39.473Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?campaign=CERES&amp;include_facets=true&amp;page_num=1&amp;page_size=10</id><title type="text">ECHO dataset metadata</title><entry><id>C5769450-LARC_ASDC</id><title type="text">CER-NEWS_CCCM_Aqua-FM3-MODIS-CAL-CS_RelB1</title><summary type="text">CERES-MODIS-CALIPSO-CloudSat CCCM data set is an integrated product in HDF.</summary><updated>2013-02-06T00:00:00.000Z</updated><echo:datasetId>CER-NEWS_CCCM_Aqua-FM3-MODIS-CAL-CS_RelB1</echo:datasetId><echo:shortName>CER-NEWS_CCCM_Aqua-FM3-MODIS-CAL-CS_RelB1</echo:shortName><echo:versionId>RelB1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>2</echo:processingLevelId><time:start>2006-07-01T00:00:00Z</time:start><time:end>2011-04-30T23:59:59Z</time:end><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_NEWS.pdf" hreflang="en-US" title="(OnlineResourceType)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_NEWS_RelB.pdf" hreflang="en-US" title="(Dataset Quality Summary)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 180</georss:box><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C4254857-LARC_ASDC</id><title type="text">CER_BDS_Aqua-FM3_Edition1-CV</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2015-02-10T00:00:00.000Z</updated><echo:datasetId>CER_BDS_Aqua-FM3_Edition1-CV</echo:datasetId><echo:shortName>CER_BDS_Aqua-FM3_Edition1-CV</echo:shortName><echo:versionId>1-CV</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2002-06-18T00:00:00Z</time:start><time:end>2015-02-02T23:59:59Z</time:end><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_BDS_Aqua_Edition1.pdf" hreflang="en-US" title="(Collection Quality Summary)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 180</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C6036198-LARC_ASDC</id><title type="text">CER_BDS_Aqua-FM3_Edition3</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2015-01-26T00:00:00.000Z</updated><echo:datasetId>CER_BDS_Aqua-FM3_Edition3</echo:datasetId><echo:shortName>CER_BDS_Aqua-FM3_Edition3</echo:shortName><echo:versionId>3</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2002-06-18T00:00:00Z</time:start><time:end>2014-10-31T23:59:59Z</time:end><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_BDS_Aqua_Edition3.pdf" hreflang="en-US" title="(Collection Quality Summary)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 180</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C7460992-LARC_ASDC</id><title type="text">CER_BDS_Aqua-FM3_Edition4</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2014-11-21T00:00:00.000Z</updated><echo:datasetId>CER_BDS_Aqua-FM3_Edition4</echo:datasetId><echo:shortName>CER_BDS_Aqua-FM3_Edition4</echo:shortName><echo:versionId>Edition4</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2002-06-18T00:00:00Z</time:start><time:end>2013-12-31T23:59:59Z</time:end><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 179.5</georss:box><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C4254863-LARC_ASDC</id><title type="text">CER_BDS_Aqua-FM4_Edition1-CV</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2011-06-14T09:55:00.000Z</updated><echo:datasetId>CER_BDS_Aqua-FM4_Edition1-CV</echo:datasetId><echo:shortName>CER_BDS_Aqua-FM4_Edition1-CV</echo:shortName><echo:versionId>1-CV</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2002-06-18T00:00:00Z</time:start><time:end>2005-03-30T23:59:59Z</time:end><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_BDS_Aqua_Edition1.pdf" hreflang="en-US" title="(Dataset Quality Summary)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 180</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C6042456-LARC_ASDC</id><title type="text">CER_BDS_Aqua-FM4_Edition3</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2010-09-15T15:21:00.000Z</updated><echo:datasetId>CER_BDS_Aqua-FM4_Edition3</echo:datasetId><echo:shortName>CER_BDS_Aqua-FM4_Edition3</echo:shortName><echo:versionId>3</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2002-06-18T00:00:00Z</time:start><time:end>2005-03-29T23:59:59Z</time:end><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_BDS_Aqua_Edition3.pdf" hreflang="en-US" title="(Dataset Quality Summary)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 180</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C7460993-LARC_ASDC</id><title type="text">CER_BDS_Aqua-FM4_Edition4</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2013-12-23T00:00:00.000Z</updated><echo:datasetId>CER_BDS_Aqua-FM4_Edition4</echo:datasetId><echo:shortName>CER_BDS_Aqua-FM4_Edition4</echo:shortName><echo:versionId>Edition4</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2002-06-18T00:00:00Z</time:start><time:end>2005-03-29T23:59:59Z</time:end><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 179.5</georss:box><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C7599890-LARC_ASDC</id><title type="text">CER_BDS_NPP-FM5_Edition1</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2014-10-02T00:00:00.000Z</updated><echo:datasetId>CER_BDS_NPP-FM5_Edition1</echo:datasetId><echo:shortName>CER_BDS_NPP-FM5_Edition1</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2012-01-27T00:00:00Z</time:start><time:end>2014-03-31T23:59:59Z</time:end><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 179.5</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C7604529-LARC_ASDC</id><title type="text">CER_BDS_NPP-FM5_Edition1-CV</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2015-02-10T00:00:00.000Z</updated><echo:datasetId>CER_BDS_NPP-FM5_Edition1-CV</echo:datasetId><echo:shortName>CER_BDS_NPP-FM5_Edition1-CV</echo:shortName><echo:versionId>1</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2012-01-26T00:00:00Z</time:start><time:end>2015-02-02T23:59:59Z</time:end><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 179.5</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><entry><id>C4254866-LARC_ASDC</id><title type="text">CER_BDS_Terra-FM1_Edition1-CV</title><summary type="text">CERES BiDirectional Scans (BDS) data in HDF.</summary><updated>2015-02-10T00:00:00.000Z</updated><echo:datasetId>CER_BDS_Terra-FM1_Edition1-CV</echo:datasetId><echo:shortName>CER_BDS_Terra-FM1_Edition1-CV</echo:shortName><echo:versionId>1-CV</echo:versionId><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LARC_ASDC</echo:dataCenter><echo:archiveCenter>Atmospheric Science Data Center</echo:archiveCenter><echo:processingLevelId>1B</echo:processingLevelId><time:start>2000-02-25T00:00:00Z</time:start><time:end>2015-02-02T23:59:59Z</time:end><link href="http://eosweb.larc.nasa.gov/sites/default/files/project/ceres/quality_summaries/CER_BDS_Terra_Edition1.pdf" hreflang="en-US" title="(Collection Quality Summary)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-90 -180 90 180</georss:box><echo:difId>CERES_BDS</echo:difId><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry><echo:facets><echo:facet field="archive_center"><echo:value count="80">Atmospheric Science Data Center</echo:value></echo:facet><echo:facet field="project"><echo:value count="80">CERES</echo:value></echo:facet><echo:facet field="platform"><echo:value count="39">TERRA</echo:value><echo:value count="32">AQUA</echo:value><echo:value count="7">TRMM</echo:value><echo:value count="6">NPP</echo:value><echo:value count="1">CALIPSO</echo:value><echo:value count="1">CLOUDSAT</echo:value><echo:value count="1">GEOSTATIONARY SATELLITES</echo:value></echo:facet><echo:facet field="instrument"><echo:value count="66">CERES SCANNER</echo:value><echo:value count="17">CERES-FM1</echo:value><echo:value count="15">CERES-FM3</echo:value><echo:value count="10">CERES-FM2</echo:value><echo:value count="10">CERES-FM4</echo:value><echo:value count="7">CERES-PFM</echo:value><echo:value count="6">CERES-FM5</echo:value><echo:value count="1">CLOUD PROFILING RADAR</echo:value><echo:value count="1">IMAGER</echo:value><echo:value count="1">LIDAR</echo:value><echo:value count="1">MODIS</echo:value></echo:facet><echo:facet field="sensor"><echo:value count="66">CERES SCANNER</echo:value><echo:value count="17">CERES-FM1</echo:value><echo:value count="15">CERES-FM3</echo:value><echo:value count="10">CERES-FM2</echo:value><echo:value count="10">CERES-FM4</echo:value><echo:value count="7">CERES-PFM</echo:value><echo:value count="6">CERES-FM5</echo:value><echo:value count="1">CLOUD PROFILING RADAR</echo:value><echo:value count="1">IMAGER</echo:value><echo:value count="1">LIDAR</echo:value><echo:value count="1">MODIS</echo:value></echo:facet><echo:facet field="two_d_coordinate_system_name"></echo:facet><echo:facet field="processing_level_id"><echo:value count="34">3</echo:value><echo:value count="29">2</echo:value><echo:value count="15">1B</echo:value><echo:value count="2">4</echo:value></echo:facet><echo:facet field="category"></echo:facet><echo:facet field="topic"></echo:facet><echo:facet field="term"></echo:facet><echo:facet field="variable_level_1"></echo:facet><echo:facet field="variable_level_2"></echo:facet><echo:facet field="variable_level_3"></echo:facet><echo:facet field="detailed_variable"></echo:facet></echo:facets></feed>
+    http_version:
+  recorded_at: Sun, 01 Mar 2015 14:29:39 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,354 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>foo-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '217'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNzU4ZDFkZjI0ZjA4ZWJlYmY4MzczM2Y0MDk2MTQ2NGI%3D--688266cf7b37f0150a1838d79f6ef24840e3a7ce; path=/; HttpOnly
+      X-Runtime:
+      - '0.148000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '222'
+      Date:
+      - Fri, 18 Jul 2014 13:20:22 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>818B51A3-EF92-534B-A17C-BD8F311BC69C</id>
+          <username>guest</username>
+          <client_id>foo-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:20:22 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=Dublin%20Core%20range%20dataset&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"3f9a5960d91c1532830d921909aaa81a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5888a2bd895e20a5c6118726edfdecfb
+      X-Runtime:
+      - '0.664000'
+      Date:
+      - Fri, 18 Jul 2014 13:20:22 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1722'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:20:23.270Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Dublin+Core+range+dataset&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+            <id>C1000000000-OS_PROV_2</id>
+            <title type="text">Dublin Core range dataset</title>
+            <summary type="text">DC range OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core range dataset</echo:datasetId>
+            <echo:shortName>DCRange1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1951-01-01T00:00:00Z</time:start>
+            <time:end>1952-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <relevance:score>0.7</relevance:score>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:20:23 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=Dublin%20Core%20start%20dataset&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7e33d14d7b8cf328a9be3367d0b44260"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b1d88b54f8d2618394a9d37987e57043
+      X-Runtime:
+      - '0.586000'
+      Date:
+      - Fri, 18 Jul 2014 13:24:06 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1676'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:24:06.027Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Dublin+Core+start+dataset&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+            <id>C1000000001-OS_PROV_2</id>
+            <title type="text">Dublin Core start dataset</title>
+            <summary type="text">DC start OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core start dataset</echo:datasetId>
+            <echo:shortName>DCStart1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1953-01-01T00:00:00Z</time:start>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <relevance:score>0.7</relevance:score>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:24:06 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=Dublin%20Core%20single%20dataset&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"9831012be282fce2cefc8558769ecaf2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8e623443ef1594d4b7d9f4087841d336
+      X-Runtime:
+      - '0.648000'
+      Date:
+      - Fri, 18 Jul 2014 13:24:06 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1727'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:24:06.959Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Dublin+Core+single+dataset&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+            <id>C1000000002-OS_PROV_2</id>
+            <title type="text">Dublin Core single dataset</title>
+            <summary type="text">DC single OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core single dataset</echo:datasetId>
+            <echo:shortName>DCSingle1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1955-01-01T22:00:00Z</time:start>
+            <time:end>1955-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <relevance:score>0.7</relevance:score>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:24:07 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=Dublin%20Core%20none%20dataset&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"f4b8bb8eb8e4a6c90077cf6b28c53787"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a4bc7ca55cbda5229fcabab580ceabf4
+      X-Runtime:
+      - '0.319000'
+      Date:
+      - Fri, 18 Jul 2014 13:24:07 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1621'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:24:07.593Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Dublin+Core+none+dataset&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+            <id>C1000000003-OS_PROV_2</id>
+            <title type="text">Dublin Core none dataset</title>
+            <summary type="text">DC none OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core none dataset</echo:datasetId>
+            <echo:shortName>DCNone1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <relevance:score>0.7</relevance:score>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:24:07 GMT
+recorded_with: VCR 2.9.2

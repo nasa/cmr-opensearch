@@ -1,0 +1,96 @@
+<aside class="sidebar-container">
+  <p>
+    CMR provides a search interface based on the <a class="ext" target="_blank" href='http://www.opensearch.org/Home'>OpenSearch</a> concept in
+    general and the ESIP (Earth Science Information
+    Partners) <a class="ext" target="_blank" href='http://wiki.esipfed.org/index.php/Federated_Search'>federated search</a> concept in particular.
+    Usage details and sample CMR OpenSearch invocations are available in the <%= link_to "CMR OpenSearch documentation page", home_docs_path %>.
+  </p>
+
+  <div class="extended-content">
+    <p>
+      From the <a class="ext" target="_blank" href='http://www.opensearch.org/Specifications/OpenSearch/1.1'>Open Search draft specification</a>,
+
+    <blockquote>OpenSearch is a collection of simple formats for the sharing of search results.
+      You can use Open Search formats to help people discover and use your search engine and to syndicate search results
+      across the web.
+    </blockquote>
+    </p>
+    <p>
+      Open Search uses Open Search Descriptor Documents (OSDDs) to describe the web interface of a search engine.
+      We use <a class="ext" target="_blank" href='http://www.opensearch.org/Specifications/OpenSearch/1.1'>Open Search 1.1</a> to provide OSDDs at
+      the
+      collection and granule level for searching the CMR inventory.
+    </p>
+
+    <p>
+      As a convenience, we provide atom and html views of our holdings. All collection and granule resources can be viewed
+      using the .atom or .html extension.
+    </p>
+  </div>
+  <span class="toggle-extended-content"><a title="Expand section for more content" href="#"><i class="fa fa-chevron-circle-down"></i></a></span>
+</aside>
+
+<h2>Collections</h2>
+<p>Our collections search end point can be determined by generating an OSDD here, <span class="required">&bull;</span> denotes a required field</p>
+<% unless flash[:error].blank? or @type == 'granules' %>
+    <div class="error">
+      Unable to process request : <%= flash[:error] %>
+    </div>
+<% end %>
+<%= form_tag("#{Rails.configuration.relative_url_root}/collections/descriptor_document.xml", :method => 'get', :class => 'collections', :id => 'datasets-osdd-form') do %>
+    <p class="form-parameter">
+      <%= label_tag 'clientId', 'Client ID: ' %>&nbsp&nbsp&nbsp&nbsp&nbsp
+      <span class="required">&bull;&nbsp</span>
+      <%= text_field_tag :clientId, nil, :placeholder => 'e.g. my-app', :class => 'default', :size => 124, :id => 'collection-client-id' %>
+      <%= submit_tag 'Generate', class: 'btn btn-default btn-round', id: 'collection-osdd-create' %>
+    </p>
+
+<% end %>
+
+<div style="clear: both;"></div>
+<p class='required-field-note collections'>
+  Or you can search directly&nbsp
+  <%= link_to :controller => 'collections', :action => 'index' do %>
+      <button type="button" class="btn btn-green">Search for collections</button>
+  <% end %>
+</p>
+<div style="clear: both;"></div>
+<h2>Granules</h2>
+<p>Our granules search end point can be determined by generating an OSDD here, <span class="required">&bull;</span> denotes a required field</p>
+<%= form_tag("#{Rails.configuration.relative_url_root}/granules/descriptor_document.xml", :method => 'get', :class => 'granules', :id => 'granules-osdd-form') do %>
+    <p class="form-parameter">
+      <%= label_tag 'clientId', 'Client ID: ' %>
+      <span class="required">&bull;&nbsp</span>
+      <%= text_field_tag :clientId, nil, :placeholder => 'e.g. my-app', :size => 124, :id => 'granule-client-id' %>
+    </p>
+
+    <p class="form-parameter">
+      <%= label_tag 'shortName', 'Short Name: ' %>
+      <span class="required">&bull;&nbsp</span>
+      <%= text_field_tag :shortName, nil, :placeholder => 'e.g. MOD02QKM', :size => 124 %>
+    </p>
+
+    <p class="form-parameter">
+      <%= label_tag 'versionId', 'Version ID: ' %>
+      <span class="required">&bull;&nbsp</span>
+      <%= text_field_tag :versionId, nil, :placeholder => 'e.g. 5', :size => 124 %>
+    </p>
+
+    <p class="form-parameter">
+      <%= label_tag 'dataCenter', 'Data Center: ' %>
+      <span class="required">&bull;&nbsp</span>
+      <%= text_field_tag :dataCenter, nil, :placeholder => 'e.g. LAADS', :size => 124 %>
+      <%= submit_tag 'Generate', class: 'btn btn-default btn-round', id: 'granule-osdd-create' %>
+    </p>
+<% end %>
+<div style="clear: both;"></div>
+<p class='required-field-note granules'>
+  Or you can search directly&nbsp
+  <%= link_to :controller => 'granules', :action => 'index' do %>
+      <button type="button" class="btn btn-green">Search for granules</button>
+  <% end %>
+</p>
+<div style="clear: both;"></div>
+
+
+

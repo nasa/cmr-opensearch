@@ -1,0 +1,424 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>none-supplied-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '227'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNjA0ZGQxNmFkNWI2YTRlZjMzNmNiMTI2NjQwNjQ5NTI%3D--ef398e8a0fde1323b154ffd4e17c25eb7abf62f1;
+        path=/; HttpOnly
+      X-Runtime:
+      - '0.155000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '232'
+      Date:
+      - Fri, 18 Jul 2014 13:33:56 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>5C0FAC2D-AFC5-395E-06BF-D99609A00E29</id>
+          <username>guest</username>
+          <client_id>none-supplied-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:33:56 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '36'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'false'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7fd10a54311a9734a25f314f2081b00e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2e60262670de667fd1fb4ea33824e239
+      X-Runtime:
+      - '0.265000'
+      Date:
+      - Fri, 18 Jul 2014 13:33:56 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '7352'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:33:56.835Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry>
+            <id>C1000000021-OS_PROV_1</id>
+            <title type="text">Cool Dataset</title>
+            <summary type="text">This is a description of a cool dataset</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:shortName>CoolDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000004-OS_PROV_2</id>
+            <title type="text">DC dataset for open search</title>
+            <summary type="text">DC gran OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>DC dataset for open search</echo:datasetId>
+            <echo:shortName>DCGran1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1940-01-01T00:00:00Z</time:start>
+            <time:end>1956-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000003-OS_PROV_2</id>
+            <title type="text">Dublin Core none dataset</title>
+            <summary type="text">DC none OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core none dataset</echo:datasetId>
+            <echo:shortName>DCNone1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000000-OS_PROV_2</id>
+            <title type="text">Dublin Core range dataset</title>
+            <summary type="text">DC range OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core range dataset</echo:datasetId>
+            <echo:shortName>DCRange1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1951-01-01T00:00:00Z</time:start>
+            <time:end>1952-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000002-OS_PROV_2</id>
+            <title type="text">Dublin Core single dataset</title>
+            <summary type="text">DC single OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core single dataset</echo:datasetId>
+            <echo:shortName>DCSingle1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1955-01-01T22:00:00Z</time:start>
+            <time:end>1955-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_2</id>
+            <title type="text">Dublin Core start dataset</title>
+            <summary type="text">DC start OPENSEARCHDC</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Dublin Core start dataset</echo:datasetId>
+            <echo:shortName>DCStart1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_2</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV2</echo:archiveCenter>
+            <time:start>1953-01-01T00:00:00Z</time:start>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000029-OS_PROV_1</id>
+            <title type="text">First dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:shortName>FirstDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000014-OS_PROV_1</id>
+            <title type="text">Granule navigation dataset for open search</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Granule navigation dataset for open search</echo:datasetId>
+            <echo:shortName>NavigationDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000001-OS_PROV_1</id>
+            <title type="text">Instrument Testing dataset number 1</title>
+            <summary type="text">Instrument test 1 - OPENSEARCH</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Instrument Testing dataset number 1</echo:datasetId>
+            <echo:shortName>InstrumentTestingDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+          <entry>
+            <id>C1000000022-OS_PROV_1</id>
+            <title type="text">LastCursor Dataset 1</title>
+            <summary type="text">This is a description</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>LastCursor Dataset 1</echo:datasetId>
+            <echo:shortName>LastCursorDataset1</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:33:56 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&point=-3.21187,54.95389
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'true'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"1f5ada6ed21f9b304704a4a8c048ba28"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 54857069f63140ee30e9d8630a41e780
+      X-Runtime:
+      - '1.530000'
+      Date:
+      - Fri, 18 Jul 2014 13:33:59 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1407'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:34:00.174Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10&amp;point=-3.21187%2C54.95389</id>
+          <title type="text">CMR dataset metadata</title>
+          <entry>
+            <id>C1000000013-OS_PROV_1</id>
+            <title type="text">Searcb by place name dataset 1</title>
+            <summary type="text">Searcb by place name dataset - OPENSEARCH</summary>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Searcb by place name dataset 1</echo:datasetId>
+            <echo:shortName>BownessOnSolwayDataset</echo:shortName>
+            <echo:versionId>1</echo:versionId>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:archiveCenter>OS_PROV1</echo:archiveCenter>
+            <georss:box>50.0 -10.0 60.0 1.0</georss:box>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+          </entry>
+        </feed>
+    http_version: 
+  recorded_at: Fri, 18 Jul 2014 13:34:00 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=Bowness-on-Solway&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:52:42 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '366'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
+        Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
+        place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:52:39 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?maxRows=1&q=Bowness-on-Solway&username=echo_reverb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.geonames.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 14:52:43 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '366'
+      Age:
+      - '1'
+      Via:
+      - 1.1 epxo13-02a.eno.ecs.nasa.gov
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
+        Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
+        place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 14:52:40 GMT
+recorded_with: VCR 2.9.2

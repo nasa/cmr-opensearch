@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>foo-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '217'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNGRmMTA4Y2U5YjJjMjU5YjI2YjI4NDA2NjM5NTU0NDM%3D--c0c17f33fed4f1c4590ccf06c61d4195d88e168f; path=/; HttpOnly
+      X-Runtime:
+      - '0.093000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '222'
+      Date:
+      - Fri, 18 Jul 2014 13:20:26 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>FDC12C98-533C-F4AA-4169-B40C957117D9</id>
+          <username>guest</username>
+          <client_id>foo-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:20:26 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,2 @@
+module GranulesHelper
+end

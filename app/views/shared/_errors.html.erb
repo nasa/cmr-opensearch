@@ -1,0 +1,10 @@
+<% if errors.any? %>
+    <div class="error_explanation">
+      <h2 class="title"><%= pluralize(errors.count, "error") %> prohibited this search from being executed:</h2>
+      <ul>
+        <% errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

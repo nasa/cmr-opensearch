@@ -1,0 +1,417 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.echo.nasa.gov/echo-rest//tokens
+    body:
+      encoding: US-ASCII
+      string: |-
+        <token>
+                  <username>guest</username>
+                  <password>guest@echo.nasa.gov</password>
+                  <client_id>none-supplied-opensearch-dev</client_id>
+                  <user_ip_address>0.0.0.0</user_ip_address>
+                </token>
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '227'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Location:
+      - https://api.echo.nasa.gov/echo-rest/tokens/echo-token-here?clientId=unknown
+      Cache-Control:
+      - no-cache
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _EchoRestRails_session=BAh7BiIPc2Vzc2lvbl9pZCIlNzczZTQxMGJiYTUyNmMyNTVlODgwODRkOWQ4MjkyYzI%3D--9e70c7eaef7012906a62747a9df6a5cae35819d1; path=/; HttpOnly
+      X-Runtime:
+      - '0.067000'
+      Content-Type:
+      - application/xml;charset=utf-8
+      Content-Length:
+      - '232'
+      Date:
+      - Fri, 18 Jul 2014 13:46:15 GMT
+    body:
+      encoding: US-ASCII
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <token>
+          <id>FA1F484B-C41D-2F50-B567-03CE11DEEB6E</id>
+          <username>guest</username>
+          <client_id>none-supplied-opensearch-dev</client_id>
+          <user_ip_address>0.0.0.0</user_ip_address>
+        </token>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:46:16 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - echo-token-here
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '31'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'false'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7bc4bd10a23fdea12f0dbdbd8b0d98ae"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 87ee047de79616c800965a8db14d387b
+      X-Runtime:
+      - '0.642000'
+      Date:
+      - Fri, 18 Jul 2014 13:46:16 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:46:16.514Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10</id>
+          <title type="text">ECHO granule metadata</title>
+          <entry>
+            <id>G1065-CWIC_1</id>
+            <title type="text">G1</title>
+            <updated>1971-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Unique dataset xyz</echo:datasetId>
+            <echo:producerGranuleId>G1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>CWIC_1</echo:dataCenter>
+            <time:start>1970-12-31T19:00:00-05:00</time:start>
+            <time:end>1971-12-31T19:00:00-05:00</time:end>
+            <link href="www.example.com/resource.xml" hreflang="en-US" title="Metadata (Granule Guide)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000016-OS_PROV_1</id>
+            <title type="text">CoolGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Cool Dataset</echo:datasetId>
+            <echo:producerGranuleId>CoolGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>1970-01-01T22:00:00Z</time:start>
+            <time:end>1970-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000024-OS_PROV_1</id>
+            <title type="text">TemporalTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:producerGranuleId>TemporalTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>2001-01-01T22:00:00Z</time:start>
+            <time:end>2001-01-01T22:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000000-OS_PROV_1</id>
+            <title type="text">TemporalTestingGranule2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>First dataset for open search</echo:datasetId>
+            <echo:producerGranuleId>TemporalTestingGranule2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <time:start>2002-01-01T00:00:00Z</time:start>
+            <time:end>2003-12-01T00:00:00Z</time:end>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000002-OS_PROV_1</id>
+            <title type="text">ShortNameTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>ShortName Search Testing 1</echo:datasetId>
+            <echo:producerGranuleId>ShortNameTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000003-OS_PROV_1</id>
+            <title type="text">VersionIdTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Version ID Search Testing 1</echo:datasetId>
+            <echo:producerGranuleId>VersionIdTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000007-OS_PROV_1</id>
+            <title type="text">UrlTestingGranule1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Url Granule Testing 1</echo:datasetId>
+            <echo:producerGranuleId>UrlTestingGranule1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <link href="www.example.com/resource_three.xml" hreflang="en-US" title="This is resource number three (Granule Guide)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+            <link href="http://localhost:8085/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/400x600.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="ftp://e4ftl01.cr.usgs.gov/WORKING/BRWS/Browse.001/2006.09.29/BROWSE.MOD13A3.A2000032.h18v03.005.2006271172912.1.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="https://localhost:8086/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/_BR_Browse.001_27109907_1.BINARY" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>true</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000008-OS_PROV_1</id>
+            <title type="text">UrlTestingGranule2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Url Granule Testing 2</echo:datasetId>
+            <echo:producerGranuleId>UrlTestingGranule2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <link href="www.example.com/resource_three.xml" hreflang="en-US" title="This is resource number three (Granule Guide)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005" hreflang="en-US" title="URL Description 3 (Metadata)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" inherited="true">
+              <echo:inherited/>
+            </link>
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title=" (Data)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" inherited="true">
+              <echo:inherited/>
+            </link>
+            <link href="http://localhost:8085/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/400x600.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="ftp://e4ftl01.cr.usgs.gov/WORKING/BRWS/Browse.001/2006.09.29/BROWSE.MOD13A3.A2000032.h18v03.005.2006271172912.1.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="https://localhost:8086/800x1000.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="http://localhost:8085/_BR_Browse.001_27109907_1.BINARY" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>true</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000013-OS_PROV_1</id>
+            <title type="text">TraversalGranuleTesting1</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Trav Granule Dataset 1</echo:datasetId>
+            <echo:producerGranuleId>TraversalGranuleTesting1</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+          <entry>
+            <id>G1000000014-OS_PROV_1</id>
+            <title type="text">TraversalGranuleTesting2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Trav Granule Dataset 1</echo:datasetId>
+            <echo:producerGranuleId>TraversalGranuleTesting2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:46:16 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?bounding_box=-5,-5,5,5&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'true'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7fee72df8baa25eadc8a1af470761d8c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ab6160d5aba4bee6778b740e8d4230ce
+      X-Runtime:
+      - '0.853000'
+      Date:
+      - Fri, 18 Jul 2014 13:46:17 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1360'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:46:17.948Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10&amp;bounding_box=-5%2C-5%2C5%2C5</id>
+          <title type="text">ECHO granule metadata</title>
+          <entry>
+            <id>G1000000001-OS_PROV_1</id>
+            <title type="text">SpatialTestingGranule2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Spatial Testing dataset number 2</echo:datasetId>
+            <echo:producerGranuleId>SpatialTestingGranule2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <georss:box>-10.0 -10.0 10.0 10.0</georss:box>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:46:18 GMT
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?echo_granule_id=G1000000001-OS_PROV_1&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Echo-Token:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      CMR-Hits:
+      - '1'
+      Echo-Hits-Estimated:
+      - 'false'
+      Echo-Cursor-At-End:
+      - 'true'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"0e4d9230c2fabdbbf2e9530f5e3690b5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6b3e3df0b7e760db92534486693afd7d
+      X-Runtime:
+      - '0.631000'
+      Date:
+      - Fri, 18 Jul 2014 13:46:18 GMT
+      X-Rack-Cache:
+      - miss
+      Content-Type:
+      - application/atom+xml;charset=utf-8
+      Content-Length:
+      - '1369'
+    body:
+      encoding: US-ASCII
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+          <updated>2014-07-18T13:46:19.133Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?echo_granule_id=G1000000001-OS_PROV_1&amp;page_num=1&amp;page_size=10</id>
+          <title type="text">ECHO granule metadata</title>
+          <entry>
+            <id>G1000000001-OS_PROV_1</id>
+            <title type="text">SpatialTestingGranule2</title>
+            <updated>1999-12-31T19:00:00-05:00</updated>
+            <echo:datasetId>Spatial Testing dataset number 2</echo:datasetId>
+            <echo:producerGranuleId>SpatialTestingGranule2</echo:producerGranuleId>
+            <echo:granuleSizeMB>14.0262</echo:granuleSizeMB>
+            <echo:originalFormat>ECHO10</echo:originalFormat>
+            <echo:dataCenter>OS_PROV_1</echo:dataCenter>
+            <georss:box>-10.0 -10.0 10.0 10.0</georss:box>
+            <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
+            <echo:browseFlag>false</echo:browseFlag>
+            <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
+          </entry>
+        </feed>
+    http_version:
+  recorded_at: Fri, 18 Jul 2014 13:46:19 GMT
+recorded_with: VCR 2.9.2
