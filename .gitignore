@@ -16,6 +16,7 @@
 
 /bin
 /vendor/bundle
+/vendor/cache
 .idea
 config/application.yml
 fixtures.cache
