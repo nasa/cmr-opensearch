@@ -1,15 +1,5 @@
 require File.expand_path('../boot', __FILE__)
 
-#require 'rails/all'
-# Rather than including all of rails we explicitly require them leaving out activerecord. Since the CSW does not
-# require a database
-#require "action_controller/railtie"
-#require "action_mailer/railtie"
-#require "active_resource/railtie"
-#require "active_support/railtie"
-#require "active_support/dependencies"
-#require "rails/test_unit/railtie"
-
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
