@@ -49,6 +49,17 @@ Install all the gem dependencies:
 
     bundle install    
 
+In some cases, depending on your operating system type and/or version, the above command will fail while trying to install 
+the libv8 and therubyracer gems.  While there might be lots of causes for the errors and lots of
+solutions to fix the errors, we found that on some versions of OS X, you can overcome the problem by trying to use the existing
+operating system version of the libv8 library, rather than trying to build a new one during the normal gem install.
+We found the following workarounds to the _**bundle install**_ failures due to libv8:
+
+    gem uninstall libv8
+    gem install therubyracer
+    gem install libv8 -v 3.16.14.13 -- --with-system-v8
+    bundle install   
+
 ### Set up the required environment
 The application requires the environment variables below to be set in order to run the web application:  
 
