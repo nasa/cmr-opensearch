@@ -27,8 +27,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-gem 'nokogiri', '~> 1.8.0'
+gem 'nokogiri', '1.8.1'
+#gem 'nokogiri', '~> 1.8.0'
 
 gem 'rest-client', '~> 1.8.0'
 

@@ -68,6 +68,7 @@ GEM
     et-orbi (1.0.1)
       tzinfo
     execjs (2.0.2)
+    ffi (1.9.3)
     ffi (1.9.3-java)
     georuby (2.2.1)
     gherkin (2.12.2)
@@ -91,13 +92,13 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.3.0)
     multi_json (1.12.1)
     multi_test (0.0.3)
     netrc (0.10.3)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
-    nokogiri (1.8.0-java)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.1-java)
     polyglot (0.3.5)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -220,7 +221,7 @@ DEPENDENCIES
   execjs
   georuby
   jquery-rails
-  nokogiri (~> 1.8.0)
+  nokogiri (= 1.8.1)
   pry-rails
   rack-test
   rails (= 3.2.22.4)
@@ -237,3 +238,9 @@ DEPENDENCIES
   unicorn
   vcr
   webmock
+
+RUBY VERSION
+   ruby 2.1.2p95
+
+BUNDLED WITH
+   1.15.3
