@@ -26,9 +26,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
-gem 'nokogiri', '~> 1.8.0'
+gem 'jquery-rails', '~> 3.1.3'
+gem 'nokogiri', '1.8.1'
 
 gem 'rest-client', '~> 1.8.0'
 
@@ -39,7 +38,6 @@ gem 'georuby'
 group :production, :sit, :uat do
   # to compensate for the CMR static tagging functionality
   gem 'rufus-scheduler'
-
   gem 'rails_12factor'
 end
 
