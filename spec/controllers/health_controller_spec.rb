@@ -6,16 +6,16 @@ describe HealthController do
     it 'returns good status' do
       VCR.use_cassette 'models/health/cmr_good', :decode_compressed_response => true, :record => :once do
         get 'index', :format => :json
-        response.code.to_s.should match('200')
-        response.body.should eq('{"cmr-search":{"ok?":true}}')
+        expect(response.status).to eq(200)
+        expect(response.body).to eq('{"cmr-search":{"ok?":true}}')
       end
     end
 
     it 'returns bad status' do
       VCR.use_cassette 'models/health/cmr_bad', :decode_compressed_response => true, :record => :once do
         get 'index', :format => :json
-        response.code.to_s.should match('503')
-        response.body.should eq('{"cmr-search":{"ok?":false}}')
+        expect(response.status).to eq(503)
+        expect(response.body).to eq('{"cmr-search":{"ok?":false}}')
       end
     end
 
