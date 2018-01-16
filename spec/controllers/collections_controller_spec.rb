@@ -4,13 +4,13 @@ describe CollectionsController do
     context 'with valid attributes' do
       it 'renders a descriptor document' do
         get :descriptor_document, :format => :xml, :clientId => 'foo'
-        response.should render_template('descriptor_document')
+        expect(response).to render_template("descriptor_document")
       end
     end
     context 'with invalid attributes' do
       it 'renders an error' do
         get :descriptor_document, :format => :xml, :client_id => '###'
-        response.code.to_s.should match("400")
+        expect(response.status).to eq(400)
       end
     end
   end
@@ -18,13 +18,13 @@ describe CollectionsController do
     context 'with valid attributes' do
       it 'renders a descriptor document' do
         get :descriptor_document, :format => :xml, :clientId => 'foo'
-        response.should render_template('descriptor_document')
+        expect(response).to render_template("descriptor_document")
       end
     end
     context 'with invalid attributes' do
       it 'renders an error' do
         get :descriptor_document, :format => :xml, :client_id => '###'
-        response.code.to_s.should match('400')
+        expect(response.status).to eq(400)
       end
     end
   end
