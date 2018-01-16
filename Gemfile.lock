@@ -150,10 +150,10 @@ GEM
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
     rgeo (0.3.20)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
+    rspec-activemodel-mocks (1.0.3)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      rspec-mocks (>= 2.99, < 4.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -236,8 +236,8 @@ DEPENDENCIES
   rails_12factor
   rest-client (~> 1.8.0)
   rgeo
-  rspec (~> 3.7.0)
-  rspec-rails (~> 3.7.1)
+  rspec-activemodel-mocks
+  rspec-rails
   rspec_junit_formatter
   rufus-scheduler
   sass-rails (~> 3.2.3)
@@ -251,4 +251,4 @@ RUBY VERSION
    ruby 2.1.2p95
 
 BUNDLED WITH
-   1.15.3
+   1.16.1
