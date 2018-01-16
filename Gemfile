@@ -46,8 +46,8 @@ group :development do
 end
 
 group :test, :development do
-  gem 'rspec-rails', '~> 3.7.1'
-  gem 'rspec', '~> 3.7.0' , :require => false
+  gem 'rspec-rails'
+  gem 'rspec-activemodel-mocks'
   gem 'rspec_junit_formatter'
 end
 
