@@ -70,8 +70,8 @@ GEM
     et-orbi (1.0.1)
       tzinfo
     execjs (2.7.0)
-    ffi (1.9.3)
-    ffi (1.9.3-java)
+    ffi (1.9.18)
+    ffi (1.9.18-java)
     georuby (2.2.1)
     gherkin (2.12.2)
       multi_json (~> 1.3)
@@ -235,7 +235,7 @@ DEPENDENCIES
   cucumber-rails
   execjs
   georuby
-  jquery-rails (~> 3.1.3)
+  jquery-rails
   nokogiri (= 1.8.1)
   pry-rails
   rack-test
@@ -247,7 +247,8 @@ DEPENDENCIES
   rspec-rails
   rspec_junit_formatter
   rufus-scheduler
-  sass-rails (~> 3.2.3)
+  sass
+  sass-rails
   therubyracer
   uglifier (>= 1.0.3)
   unicorn
