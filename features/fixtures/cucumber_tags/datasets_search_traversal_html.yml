@@ -875,7 +875,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:11 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -1089,7 +1089,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:12 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=1
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=1&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -1162,7 +1162,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:13 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=2&page_size=1
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=2&page_size=1&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''

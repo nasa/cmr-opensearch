@@ -275,7 +275,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:46:13 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=-3.21187,54.95389
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=-3.21187,54.95389&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''

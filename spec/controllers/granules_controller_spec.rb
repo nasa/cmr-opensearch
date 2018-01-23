@@ -26,4 +26,20 @@ describe GranulesController do
       end
     end
   end
+
+  describe "GET granules" do
+    context "without specifying the collection short name or concept ID" do
+      it 'is possible to execute an OpenSearch granule GET query without specifying the required search form parameters' do
+        VCR.use_cassette 'controllers/granules_api_search_without_form_params', :record => :once, :decode_compressed_response => true do
+          get :index, :format => :atom, :clientId => 'foo'
+          assert_equal "200", response.code
+          # verify that response has 10 entries
+          response_doc = Nokogiri::XML(response.body)
+          num_feed_entries = response_doc.xpath('//atom:feed/atom:entry', 'atom' => 'http://www.w3.org/2005/Atom').size
+          expect(num_feed_entries).to eq(10)
+        end
+      end
+    end
+  end
+
 end

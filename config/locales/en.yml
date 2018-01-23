@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activemodel:
+    attributes:
+      granule:
+        parentIdentifier: "Collection concept ID"
+        uid: "Unique ID"
+        shortName: "Short name"

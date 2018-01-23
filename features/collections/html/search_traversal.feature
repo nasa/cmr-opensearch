@@ -75,6 +75,7 @@ Feature: Retrieve collections in html format and be able to navigate to and from
       | input           | value |
       | cursor          | 1     |
       | numberOfResults | 1     |
+      | shortName       | SampleShortName |
     And I navigate forward
     Then I should see the following inputs:
           | input           | value |

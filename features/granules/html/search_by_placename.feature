@@ -9,6 +9,7 @@ Feature: Retrieve granules in html format
       | input        | value             |
       | spatial_type | Place Name        |
       | placeName    | Bowness-on-Solway |
+      | shortName    | SampleShortName   |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                  |

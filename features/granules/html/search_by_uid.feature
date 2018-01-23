@@ -8,6 +8,7 @@ Feature: Retrieve granules in atom format
     Given I have executed a html granule search with the following parameters:
       | input       | value     |
       | boundingBox | -5,-5,5,5 |
+      | shortName | SampleShortName |
     Then I should see 1 granule result
     And I execute a html granule search using the unique id associated with result number 1
     Then I should see 1 granule result
