@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Cmr-Hits:
+      - '352054902'
+      Cmr-Request-Id:
+      - 6caa2a21-8f94-4d5f-b374-774e6e5ca9be
+      Cmr-Took:
+      - '1670'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Date:
+      - Sat, 20 Jan 2018 17:40:55 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '14197'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2018-01-20T17:40:54.994Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?page_num=1&amp;page_size=10</id><title
+        type="text">ECHO granule metadata</title><entry><id>G1001055217-ASF</id><title
+        type="text">SS_00107_STD_F0373-GEOTIFF</title><updated>2013-08-27T10:39:22.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_GEOTIFF</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0373</echo:producerGranuleId><echo:granuleSizeMB>262.27</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:00.000Z</time:start><time:end>1978-07-04T12:06:15.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/GEOTIFF/SS/SS_00107_STD_F0373_tif.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0373_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>18.3807
+        -111.2851 18.7734 -110.3003 19.6319 -110.6602 19.238 -111.6512 18.3807 -111.2851</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1206546785-ASF</id><title
+        type="text">SS_00107_STD_F0373-L1</title><updated>2013-08-27T10:39:14.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_HDF5</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0373</echo:producerGranuleId><echo:granuleSizeMB>315.16</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:00.000Z</time:start><time:end>1978-07-04T12:06:15.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/L1/SS/SS_00107_STD_F0373_h5.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0373_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>18.3807
+        -111.2851 18.7734 -110.3003 19.6319 -110.6602 19.238 -111.6512 18.3807 -111.2851</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1000957348-ASF</id><title
+        type="text">SS_00107_STD_F0387-GEOTIFF</title><updated>2013-08-27T10:57:39.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_GEOTIFF</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0387</echo:producerGranuleId><echo:granuleSizeMB>260.9</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:12.000Z</time:start><time:end>1978-07-04T12:06:27.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/GEOTIFF/SS/SS_00107_STD_F0387_tif.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0387_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.5987
+        -110.64 20.4567 -111.0021 20.0945 -112.0083 19.2376 -111.6396 19.5987 -110.64</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1206537015-ASF</id><title
+        type="text">SS_00107_STD_F0387-L1</title><updated>2013-08-27T10:57:35.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_HDF5</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0387</echo:producerGranuleId><echo:granuleSizeMB>325.47</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:12.000Z</time:start><time:end>1978-07-04T12:06:27.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/L1/SS/SS_00107_STD_F0387_h5.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0387_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.5987
+        -110.64 20.4567 -111.0021 20.0945 -112.0083 19.2376 -111.6396 19.5987 -110.64</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1000832968-ASF</id><title
+        type="text">SS_00107_STD_F0401-GEOTIFF</title><updated>2013-08-27T10:46:10.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_GEOTIFF</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0401</echo:producerGranuleId><echo:granuleSizeMB>260.93</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:24.000Z</time:start><time:end>1978-07-04T12:06:39.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/GEOTIFF/SS/SS_00107_STD_F0401_tif.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0401_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>20.3373
+        -110.9508 21.195 -111.3151 20.8377 -112.33 19.9813 -111.9587 20.3373 -110.9508</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1206547835-ASF</id><title
+        type="text">SS_00107_STD_F0401-L1</title><updated>2013-08-27T10:46:01.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_HDF5</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0401</echo:producerGranuleId><echo:granuleSizeMB>317.58</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:24.000Z</time:start><time:end>1978-07-04T12:06:39.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/L1/SS/SS_00107_STD_F0401_h5.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0401_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>20.3373
+        -110.9508 21.195 -111.3151 20.8377 -112.33 19.9813 -111.9587 20.3373 -110.9508</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1001044599-ASF</id><title
+        type="text">SS_00107_STD_F0416-GEOTIFF</title><updated>2013-08-27T10:32:38.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_GEOTIFF</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0416</echo:producerGranuleId><echo:granuleSizeMB>261.74</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:37.000Z</time:start><time:end>1978-07-04T12:06:53.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/GEOTIFF/SS/SS_00107_STD_F0416_tif.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0416_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>20.5591
+        -112.218 20.9356 -111.2108 21.7929 -111.577 21.4151 -112.5914 20.5591 -112.218</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1206514821-ASF</id><title
+        type="text">SS_00107_STD_F0416-L1</title><updated>2013-08-27T10:32:30.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_HDF5</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0416</echo:producerGranuleId><echo:granuleSizeMB>312.65</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:37.000Z</time:start><time:end>1978-07-04T12:06:53.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/L1/SS/SS_00107_STD_F0416_h5.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0416_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>20.5591
+        -112.218 20.9356 -111.2108 21.7929 -111.577 21.4151 -112.5914 20.5591 -112.218</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1001132644-ASF</id><title
+        type="text">SS_00107_STD_F0430-GEOTIFF</title><updated>2013-08-27T10:35:57.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_GEOTIFF</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0430</echo:producerGranuleId><echo:granuleSizeMB>262.34</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:50.000Z</time:start><time:end>1978-07-04T12:07:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/GEOTIFF/SS/SS_00107_STD_F0430_tif.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0430_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>21.2371
+        -112.5157 21.6616 -111.5191 22.5184 -111.8877 22.0926 -112.8916 21.2371 -112.5157</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry><entry><id>G1206528631-ASF</id><title
+        type="text">SS_00107_STD_F0430-L1</title><updated>2013-08-27T10:35:53.000Z</updated><echo:datasetId>SEASAT_SAR_LEVEL1_HDF5</echo:datasetId><echo:producerGranuleId>SS_00107_STD_F0430</echo:producerGranuleId><echo:granuleSizeMB>332.48</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>ASF</echo:dataCenter><time:start>1978-07-04T12:06:50.000Z</time:start><time:end>1978-07-04T12:07:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="https://datapool.asf.alaska.edu/L1/SS/SS_00107_STD_F0430_h5.zip"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" hreflang="en-US" href="https://datapool.asf.alaska.edu/BROWSE/SS/SS_00107_STD_F0430_BROWSE.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://vertex.daac.asf.alaska.edu/"><echo:inherited></echo:inherited></link><echo:orbitCalSpatialDomain
+        orbitNumber="107"></echo:orbitCalSpatialDomain><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>21.2371
+        -112.5157 21.6616 -111.5191 22.5184 -111.8877 22.0926 -112.8916 21.2371 -112.5157</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag></entry></feed>
+    http_version: 
+  recorded_at: Sat, 20 Jan 2018 17:40:54 GMT
+recorded_with: VCR 2.9.2

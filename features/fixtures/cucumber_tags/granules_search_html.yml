@@ -488,7 +488,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:33 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?bounding_box=-5,-5,5,5&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?bounding_box=-5,-5,5,5&page_num=1&page_size=10&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -559,7 +559,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:36 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?bounding_box=30,30,40,40&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?bounding_box=30,30,40,40&page_num=1&page_size=10&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -616,7 +616,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:38 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=-5.0,-5.0
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=-5.0,-5.0&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -687,7 +687,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:40 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=30.0,30.0
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&point=30.0,30.0&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -744,7 +744,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:42 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?line=-5.0,-5.0,4.0,4.0&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?line=-5.0,-5.0,4.0,4.0&page_num=1&page_size=10&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -815,7 +815,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:44 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?line=30.0,30.0,35.0,35.0&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?line=30.0,30.0,35.0,35.0&page_num=1&page_size=10&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -872,7 +872,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:46 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&polygon=1.0,1.0,1.0,3.0,-1.0,2.0,1.0,1.0
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&polygon=1.0,1.0,1.0,3.0,-1.0,2.0,1.0,1.0&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -943,7 +943,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:47 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&polygon=30.0,10.0,40.0,40.0,20.0,40.0,10.0,20.0,30.0,10.0
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&polygon=30.0,10.0,40.0,40.0,20.0,40.0,10.0,20.0,30.0,10.0&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -1000,7 +1000,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:50 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&temporal=2001-01-01T22:00:00Z,2001-01-01T23:00:00Z
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&short_name=SampleShortName&temporal=2001-01-01T22:00:00Z,2001-01-01T23:00:00Z
     body:
       encoding: US-ASCII
       string: ''
@@ -1072,7 +1072,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:51 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&temporal=1999-01-01T22:00:00Z,1999-02-01T23:00:00Z
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&temporal=1999-01-01T22:00:00Z,1999-02-01T23:00:00Z&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -1129,7 +1129,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:53 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&temporal=2001-01-01T22:00:00Z,2001-05-01T23:00:00Z
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&short_name=SampleShortName&temporal=2001-01-01T22:00:00Z,2001-05-01T23:00:00Z
     body:
       encoding: US-ASCII
       string: ''
@@ -1201,7 +1201,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:54 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&temporal=2000-01-01T22:00:00Z,2012-05-01T23:00:00Z
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&short_name=SampleShortName&temporal=2000-01-01T22:00:00Z,2012-05-01T23:00:00Z
     body:
       encoding: US-ASCII
       string: ''
@@ -1415,7 +1415,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:45:59 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&version=99
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&short_name=SampleShortName&version=99
     body:
       encoding: US-ASCII
       string: ''
@@ -1485,7 +1485,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:46:00 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&version=101
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&version=101&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
