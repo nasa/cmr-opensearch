@@ -25,6 +25,8 @@ class GranulesController < ApplicationController
   end
 
   # GET all granules.[atom|html]
+  # the commit = Search parameter indicates a form submission
+  # on a form submission we do not allow searches without the collection shortname or conceptid
   def index
     @time = Benchmark.realtime do
       extract_params
@@ -36,6 +38,12 @@ class GranulesController < ApplicationController
         granules = nil
         query_params = extract_query_params params
         @granule = Granule.new(query_params)
+        if(params[:commit] == 'Search')
+          # validate form submission and avoid resource intensive searches
+          @granule.invokedFromSearchForm = true
+        else
+          @granule.invokedFromSearchForm = false
+        end
         if @granule.valid?
           granules = @granule.find(query_params, request.original_url)
 
@@ -55,7 +63,7 @@ class GranulesController < ApplicationController
           text = ''
           if @granule.valid? && !granules.nil?
             text = granules.to_xml(:indent => 2)
-            render :text => text
+             render :text => text
           else
             if @granule.errors.count > 0
               text = @granule.errors.to_xml(:indent => 2)

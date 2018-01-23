@@ -14,7 +14,9 @@ Feature: Retrieve granules in html format
   Scenario: Search for granules with no constraints
     Given I am on the open search granule search page
     And I click on "Search"
-    Then I should see 10 granule results
+    Then I should see 0 granule results
+    And I should see 3 error messages
+    And I should see "A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier"
     And I should see the hidden input "clientId" with a value of "our_html_ui"
 
   Scenario: Search for granule using spatial bounding box
@@ -22,6 +24,7 @@ Feature: Retrieve granules in html format
       | input        | value        |
       | spatial_type | Bounding box |
       | boundingBox  | -5,-5,5,5    |
+      | shortName    | SampleShortName |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                  |
@@ -32,6 +35,7 @@ Feature: Retrieve granules in html format
       | input        | value        |
       | spatial_type | Bounding box |
       | boundingBox  | 30,30,40,40  |
+      | shortName    | SampleShortName |
     And I should see 0 granule results
 
   Scenario: Search for granule using spatial point
@@ -39,6 +43,7 @@ Feature: Retrieve granules in html format
       | input        | value         |
       | spatial_type | Geometry      |
       | geometry     | POINT (-5 -5) |
+      | shortName    | SampleShortName |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                  |
@@ -49,6 +54,7 @@ Feature: Retrieve granules in html format
       | input        | value         |
       | spatial_type | Geometry      |
       | geometry     | POINT (30 30) |
+      | shortName    | SampleShortName |
     And I should see 0 granule results
 
   Scenario: Search for granule using spatial line
@@ -56,6 +62,7 @@ Feature: Retrieve granules in html format
       | input        | value                   |
       | spatial_type | Geometry                |
       | geometry     | LINESTRING (-5 -5, 4 4) |
+      | shortName    | SampleShortName |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                  |
@@ -66,6 +73,7 @@ Feature: Retrieve granules in html format
       | input        | value                     |
       | spatial_type | Geometry                  |
       | geometry     | LINESTRING (30 30, 35 35) |
+      | shortName    | SampleShortName |
     And I should see 0 granule results
 
   Scenario: Search for granule using spatial polygon
@@ -73,6 +81,7 @@ Feature: Retrieve granules in html format
       | input        | value                           |
       | spatial_type | Geometry                        |
       | geometry     | POLYGON ((1 1, -1 2, 1 3, 1 1)) |
+      | shortName    | SampleShortName |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                  |
@@ -83,6 +92,7 @@ Feature: Retrieve granules in html format
       | input        | value                                         |
       | spatial_type | Geometry                                      |
       | geometry     | POLYGON ((30 10, 10 20, 20 40, 40 40, 30 10)) |
+      | shortName    | SampleShortName |
     Then I should see 0 granule results
 
   Scenario: Search for granule using temporal constraints (constraint engulfs extent)
@@ -90,7 +100,8 @@ Feature: Retrieve granules in html format
       | input      | value                |
       | startTime  | 2001-01-01T22:00:00Z |
       | endTime    | 2001-01-01T23:00:00Z |
-      | dataCenter | OS_PROV_1             |
+      | dataCenter | OS_PROV_1            |
+      | shortName  | SampleShortName |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                   |
@@ -102,6 +113,7 @@ Feature: Retrieve granules in html format
       | startTime  | 1999-01-01T22:00:00Z |
       | endTime    | 1999-02-01T23:00:00Z |
       | dataCenter | OS_PROV_1            |
+      | shortName  | SampleShortName      |
     Then I should see 0 granule results
 
   Scenario: Search for granule using temporal constraints (constraint overlaps extent)
@@ -110,6 +122,7 @@ Feature: Retrieve granules in html format
       | startTime  | 2001-01-01T22:00:00Z |
       | endTime    | 2001-05-01T23:00:00Z |
       | dataCenter | OS_PROV_1            |
+      | shortName  | SampleShortName      |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                   |
@@ -121,6 +134,7 @@ Feature: Retrieve granules in html format
       | startTime  | 2000-01-01T22:00:00Z |
       | endTime    | 2012-05-01T23:00:00Z |
       | dataCenter | OS_PROV_1            |
+      | shortName  | SampleShortName      |
     Then I should see 2 granule results
 
   Scenario: Search for granule using short name
@@ -140,8 +154,9 @@ Feature: Retrieve granules in html format
 
   Scenario: Search for granule using version id
     Given I have executed a html granule search with the following parameters:
-      | input     | value |
-      | versionId | 99    |
+      | input     | value                |
+      | shortName | SampleShortName      |
+      | versionId | 99                   |
     Then I should see 1 granule result
     And granule result 1 should have a the following echo characteristics,
       | characteristic | value                    |
@@ -151,6 +166,7 @@ Feature: Retrieve granules in html format
     Given I have executed a html granule search with the following parameters:
       | input     | value |
       | versionId | 101   |
+      | shortName  | SampleShortName      |
     Then I should see 0 granule results
 
   Scenario: Search for granule using paging

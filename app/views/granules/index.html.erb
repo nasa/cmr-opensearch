@@ -10,12 +10,13 @@
 </div>
 <h2 class="title">Granule Search</h2>
 <section id="search-form">
+  <p>Granule searches require at least the Collection Concept ID or Short Name or Unique ID fields.</p>
+  <%= render :partial => 'shared/errors', :locals => {:errors => @granule.errors}, :class => 'granules' %>
   <%= form_tag("#{Rails.configuration.relative_url_root}/granules", :method => 'get', :class => 'granules') do %>
       <%= hidden_field_tag(:clientId, @client_id) %>
       <%= hidden_field_tag(:keyword, @granule.keyword) %>
       <%= hidden_field_tag(:instrument, @granule.instrument) %>
       <%= hidden_field_tag(:satellite, @granule.satellite) %>
-      <%= render :partial => 'shared/errors', :locals => {:errors => @granule.errors}, :class => 'granules' %>
       <p class="form-parameter">
         <%= label_tag 'parentIdentifier', 'Collection concept ID: ' %>
         <%= text_field_tag :parentIdentifier, @granule.parent_identifier, :placeholder => 'e.g. C90758174-LAADS', :size => 124 %>

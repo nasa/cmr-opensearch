@@ -1,7 +1,12 @@
 class Granule < Metadata
 
+  # this is the collection conceptId
   attr_accessor :parentIdentifier
   alias :parent_identifier :parentIdentifier
+  # this indicates whether or not the granule search is the result of a the search form submission
+  attr_accessor :invokedFromSearchForm
+
+  validate :form_submission_required_params
 
   def find(params, url)
     cmr_params = to_cmr_granule_params(params)
@@ -61,16 +66,16 @@ class Granule < Metadata
         end
 
         last_link = doc.root.children.last if last_link.nil?
-          guid = id_node.content
-          id_node.content = "#{ENV['opensearch_url']}/granules.atom?uid=#{guid}"
-          add_cmr_metadata_link(doc, last_link, node, guid)
-          add_dc_identifier(doc, guid, node)
-          add_dc_temporal_extent(doc, node, start_time, end_time) unless start_time.nil? and end_time.nil?
-          # Add non-atom element array
-          non_atom.each do |element|
-            node.add_child(element)
-          end
-          node.add_child(mbr) unless mbr.nil?
+        guid = id_node.content
+        id_node.content = "#{ENV['opensearch_url']}/granules.atom?uid=#{guid}"
+        add_cmr_metadata_link(doc, last_link, node, guid)
+        add_dc_identifier(doc, guid, node)
+        add_dc_temporal_extent(doc, node, start_time, end_time) unless start_time.nil? and end_time.nil?
+        # Add non-atom element array
+        non_atom.each do |element|
+          node.add_child(element)
+        end
+        node.add_child(mbr) unless mbr.nil?
       end
     end
     doc.xpath('//echo:onlineAccessFlag', 'echo' => 'http://www.echo.nasa.gov/esip').remove
@@ -147,6 +152,21 @@ class Granule < Metadata
     cmr_params = to_cmr_params(params)
     cmr_granule_params.merge! cmr_params
     cmr_granule_params
+  end
+
+  def form_submission_required_params
+    if invokedFromSearchForm && uid.blank? && parentIdentifier.blank? && shortName.blank?
+      if shortName.blank?
+        errors.add(:shortName, ": A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier")
+      end
+      if parentIdentifier.blank?
+        errors.add(:parentIdentifier, ": A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier")
+      end
+      if uid.blank?
+        errors.add(:uid, ": A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier")
+      end
+
+    end
   end
 
   private
