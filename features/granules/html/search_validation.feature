@@ -10,7 +10,7 @@ Feature: Retrieve granules in html format
       | spatial_type | Bounding box |
       | boundingBox  | foo          |
     Then I should see 0 granule results
-    And I should see  4 error messages
+    And I should see 4 error messages
     And I should see "Boundingbox foo is not a valid boundingBox"
     And I should see "A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier"
     And I should see "4 errors prohibited this search from being executed:"

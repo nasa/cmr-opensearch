@@ -8,7 +8,7 @@ Feature: Retrieve granules in html format
     Given I am on the open search home page
     And I search for granules
     Then I should see the granule search form
-    And I should see the granule results
+    #And I should see the granule results
     And I should see a link to the CMR OpenSearch release documentation
 
   Scenario: Search for granules with no constraints
@@ -16,7 +16,9 @@ Feature: Retrieve granules in html format
     And I click on "Search"
     Then I should see 0 granule results
     And I should see 3 error messages
-    And I should see "A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier"
+    And I should see "Short name : A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier"
+    And I should see "Collection concept ID : A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier"
+    And I should see "Unique ID : A granule search requires the Collection ConceptID or the Collection ShortName or the Granule Unique Identifier"
     And I should see the hidden input "clientId" with a value of "our_html_ui"
 
   Scenario: Search for granule using spatial bounding box
