@@ -1,5 +1,5 @@
-<%= javascript_include_tag params[:controller] %>
-<%= stylesheet_link_tag params[:controller] %>
+<%= javascript_include_tag controller_name %>
+<%= stylesheet_link_tag controller_name %>
 <div class="breadcrumb">
   <ol>
     <li><a href='<%= Rails.configuration.relative_url_root %>'>Home</a></li>
@@ -12,7 +12,7 @@
 <section id="search-form">
   <p>Granule searches require at least the Collection Concept ID or Short Name or Unique ID fields.</p>
   <%= render :partial => 'shared/errors', :locals => {:errors => @granule.errors}, :class => 'granules' %>
-  <%= form_tag("#{Rails.configuration.relative_url_root}/granules", :method => 'get', :class => 'granules') do %>
+  <%= form_tag("#{Rails.configuration.relative_url_root}/granules", :method => 'get', :class => 'granules', :id => 'granules-search-form') do %>
       <%= hidden_field_tag(:clientId, @client_id) %>
       <%= hidden_field_tag(:keyword, @granule.keyword) %>
       <%= hidden_field_tag(:instrument, @granule.instrument) %>
