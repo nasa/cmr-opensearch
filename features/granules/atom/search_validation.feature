@@ -53,6 +53,6 @@ Feature: Retrieve granules in atom format
     Given I have executed a granule search with the following parameters:
       | clientId | foo |
       | foo      | bar |
-    Then I should see a valid error response
-    And I should see 1 error
-    And I should see the error "Foo is not a valid search constraint"
+    Then I should see a valid granule atom response
+    And I should see 10 results
+
