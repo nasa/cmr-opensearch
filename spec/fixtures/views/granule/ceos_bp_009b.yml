@@ -1,0 +1,215 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&short_name=AST_L1B
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Client-Id:
+      - cmr-open-search
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id
+      Cmr-Hits:
+      - '3172006'
+      Cmr-Request-Id:
+      - 71426db8-46c9-4b02-95f7-1dac0dc0d7d2
+      Cmr-Took:
+      - '347'
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Date:
+      - Mon, 05 Feb 2018 20:43:52 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding, User-Agent
+      Content-Length:
+      - '22089'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2018-02-05T20:43:47.690Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=AST_L1B&amp;page_num=1&amp;page_size=10</id><title
+        type="text">ECHO granule metadata</title><entry><id>G1299920448-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2006227720</title><updated>2016-11-24T14:22:51.061Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03042000203404_03232002054831.hdf</echo:producerGranuleId><echo:granuleSizeMB>5.88895</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-04T20:34:04.000Z</time:start><time:end>2000-03-04T20:34:04.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2007.08.16/Browse_00103042000203404_20070816110134_26404.1.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-77.6227
+        169.9078 -78.0163 171.9493 -77.5948 173.696 -77.214 171.6693 -77.6227 169.9078</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>100.0</echo:cloudCover></entry><entry><id>G1319490823-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2006227722</title><updated>2016-10-30T14:47:29.002Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03042000203413_03232002054833.hdf</echo:producerGranuleId><echo:granuleSizeMB>5.88939</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-04T20:34:13.000Z</time:start><time:end>2000-03-04T20:34:13.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2007.08.16/Browse_00103042000203413_20070816110135_26408.1.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-78.0047
+        168.1075 -78.4112 170.1569 -78.0002 172.019 -77.6071 169.9779 -78.0047 168.1075</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>100.0</echo:cloudCover></entry><entry><id>G1326389293-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2006227710</title><updated>2016-10-30T13:36:23.018Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03052000133923_03232002055711.hdf</echo:producerGranuleId><echo:granuleSizeMB>36.7627</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-05T13:39:23.000Z</time:start><time:end>2000-03-05T13:39:23.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2007.08.16/Browse_00103052000133923_20070816110134_26405.1.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2007.08.16/Browse_00103052000133923_20070816110134_26405.2.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>33.4872
+        131.5951 33.3936 130.9384 32.8394 131.0908 32.9324 131.7434 33.4872 131.5951</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>NIGHT</echo:dayNightFlag><echo:cloudCover>67.0</echo:cloudCover></entry><entry><id>G1326522885-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2006227715</title><updated>2016-11-24T14:22:51.124Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03052000133932_03232002055715.hdf</echo:producerGranuleId><echo:granuleSizeMB>36.7726</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-05T13:39:32.000Z</time:start><time:end>2000-03-05T13:39:32.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2007.08.16/Browse_00103052000133932_20070816110124_26274.1.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2007.08.16/Browse_00103052000133932_20070816110124_26274.2.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>34.0186
+        131.4517 33.9244 130.791 33.3703 130.9448 33.4639 131.6013 34.0186 131.4517</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>NIGHT</echo:dayNightFlag><echo:cloudCover>69.0</echo:cloudCover></entry><entry><id>G1327299296-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2009609248</title><updated>2016-12-14T11:33:55.440Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03062000003005_12202002162123.hdf</echo:producerGranuleId><echo:granuleSizeMB>116.31</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-06T00:30:05.000Z</time:start><time:end>2000-03-06T00:30:05.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003005_20080215152034_8089.1.VNIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003005_20080215152034_8089.2.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003005_20080215152034_8089.3.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-61.5733
+        137.636 -61.7447 138.7815 -61.2115 139.1569 -61.043 138.0291 -61.5733 137.636</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>100.0</echo:cloudCover></entry><entry><id>G1326330104-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2009609249</title><updated>2016-11-25T14:50:35.009Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03062000003013_12202002162140.hdf</echo:producerGranuleId><echo:granuleSizeMB>116.31</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-06T00:30:13.000Z</time:start><time:end>2000-03-06T00:30:13.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003013_20080215151944_7501.1.VNIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003013_20080215151944_7501.2.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003013_20080215151944_7501.3.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-62.082
+        137.2465 -62.2563 138.4096 -61.7239 138.7964 -61.5526 137.6516 -62.082 137.2465</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>100.0</echo:cloudCover></entry><entry><id>G1327214546-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2009609250</title><updated>2016-10-30T14:47:29.117Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03062000003022_12202002162159.hdf</echo:producerGranuleId><echo:granuleSizeMB>116.309</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-06T00:30:22.000Z</time:start><time:end>2000-03-06T00:30:22.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003022_20080215151954_7602.1.VNIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003022_20080215151954_7602.2.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003022_20080215151954_7602.3.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-62.5897
+        136.845 -62.767 138.0262 -62.2356 138.4248 -62.0615 137.2625 -62.5897 136.845</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>100.0</echo:cloudCover></entry><entry><id>G1326024645-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2009609263</title><updated>2016-11-24T14:22:51.145Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03062000003031_12202002162217.hdf</echo:producerGranuleId><echo:granuleSizeMB>116.319</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-06T00:30:31.000Z</time:start><time:end>2000-03-06T00:30:31.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003031_20080215151544_5382.1.VNIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003031_20080215151544_5382.2.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003031_20080215151544_5382.3.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-63.0964
+        136.4309 -63.2768 137.6307 -62.7463 138.042 -62.5691 136.8616 -63.0964 136.4309</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>100.0</echo:cloudCover></entry><entry><id>G1326545375-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2009609288</title><updated>2016-11-25T14:45:49.009Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03062000003040_12202002162234.hdf</echo:producerGranuleId><echo:granuleSizeMB>116.31</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-06T00:30:40.000Z</time:start><time:end>2000-03-06T00:30:40.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003040_20080215151954_7607.1.VNIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003040_20080215151954_7607.2.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003040_20080215151954_7607.3.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-63.602
+        136.0033 -63.7857 137.2222 -63.2562 137.6469 -63.0759 136.4479 -63.602 136.0033</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>93.0</echo:cloudCover></entry><entry><id>G1324031022-LPDAAC_ECS</id><title
+        type="text">SC:AST_L1B.003:2009609299</title><updated>2015-11-02T10:17:43.181Z</updated><echo:datasetId>ASTER
+        L1B Registered Radiance at the Sensor V003</echo:datasetId><echo:producerGranuleId>AST_L1A#003_03062000003049_12202002162252.hdf</echo:producerGranuleId><echo:granuleSizeMB>116.322</echo:granuleSizeMB><echo:originalFormat>ECHO10</echo:originalFormat><echo:dataCenter>LPDAAC_ECS</echo:dataCenter><time:start>2000-03-06T00:30:49.000Z</time:start><time:end>2000-03-06T00:30:49.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003049_20080215143620_20917.1.VNIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003049_20080215143620_20917.2.SWIR.jpg"></link><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/browse#" type="image/jpeg" hreflang="en-US"
+        href="http://e4ftl01.cr.usgs.gov//WORKING/BRWS/Browse.001/2008.02.16/Browse_00103062000003049_20080215143620_20917.3.TIR.jpg"></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://dx.doi.org/10.5067/ASTER/AST_L1B.003"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="https://lpdaac.usgs.gov"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" hreflang="en-US"
+        href="http://asterweb.jpl.nasa.gov/"><echo:inherited></echo:inherited></link><link
+        inherited="true" rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US"
+        href="https://search.earthdata.nasa.gov/search?q=AST_L1B+V003"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>-64.1063
+        135.5616 -64.2934 136.8004 -63.765 137.2391 -63.5815 136.0209 -64.1063 135.5616</georss:polygon><echo:onlineAccessFlag>false</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag><echo:dayNightFlag>DAY</echo:dayNightFlag><echo:cloudCover>91.0</echo:cloudCover></entry></feed>
+    http_version: 
+  recorded_at: Mon, 05 Feb 2018 20:43:48 GMT
+recorded_with: VCR 2.9.2

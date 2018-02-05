@@ -13,11 +13,10 @@ describe CollectionsController do
         expect(response.status).to eq(400)
       end
     end
-  end
-  describe 'GET descriptor_document facets' do
-    context 'with valid attributes' do
+    context 'with valid and invalid query parameters' do
       it 'renders a descriptor document' do
-        get :descriptor_document, :format => :xml, :clientId => 'foo'
+        get :descriptor_document, :format => :xml, :clientId => 'foo', :invalid_query_parameter => 'invalid_query_parameter_value'
+        expect(response.status).to eq(200)
         expect(response).to render_template("descriptor_document")
       end
     end
@@ -28,6 +27,29 @@ describe CollectionsController do
       end
     end
   end
+
+  describe 'GET descriptor_document facets' do
+    context 'with valid attributes' do
+      it 'renders the facet-enabled descriptor document' do
+        get :descriptor_document_facets, :format => :xml, :clientId => 'foo'
+        expect(response).to render_template("descriptor_document_facets")
+      end
+    end
+    context 'with invalid attributes' do
+      it 'renders an error' do
+        get :descriptor_document_facets, :format => :xml, :client_id => '###'
+        expect(response.status).to eq(400)
+      end
+    end
+    context 'with valid and invalid query parameters' do
+      it 'renders the facet-enabled descriptor document' do
+        get :descriptor_document_facets, :format => :xml, :clientId => 'foo', :invalid_query_parameter => 'invalid_query_parameter_value'
+        expect(response.status).to eq(200)
+        expect(response).to render_template("descriptor_document_facets")
+      end
+    end
+  end
+
   describe 'GET RestClient error' do
     context 'with larger than allowed cursor value' do
       it 'is possible to execute an OpenSearch dataset query with a larger than allowed cursor and NOT get an internal server error' do
