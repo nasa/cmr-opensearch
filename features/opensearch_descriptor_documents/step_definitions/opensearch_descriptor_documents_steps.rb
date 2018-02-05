@@ -43,7 +43,7 @@ Then /^I should see a collection open search descriptor document for client id "
                     xmlns:atom="http://www.w3.org/2005/Atom" >
                   	<os:ShortName>CMR Collections</os:ShortName>
                   	<os:Description>NASA CMR Collection search using geo, time and parameter extensions</os:Description>
-                  	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection</os:Tags>
+                  	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection pageOffset=1 indexOffset=0</os:Tags>
                   	<os:Contact>#{ENV['contact']}</os:Contact>
                   	<os:Url type="application/atom+xml" rel="collection"
                   	  params:method="GET"
@@ -143,7 +143,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
       xmlns:atom="http://www.w3.org/2005/Atom" >
     	<os:ShortName>CMR Granules</os:ShortName>
     	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-    	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule</os:Tags>
+    	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
     	<os:Contact>#{ENV['contact']}</os:Contact>
     	<os:Url type="application/atom+xml" rel="results"
     	  params:method="GET"
@@ -216,7 +216,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
         xmlns:atom="http://www.w3.org/2005/Atom" >
       	<os:ShortName>CMR Granules</os:ShortName>
       	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-      	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule</os:Tags>
+      	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
       	<os:Contact>#{ENV['contact']}</os:Contact>
       	<os:Url type="application/atom+xml" rel="results"
       	  params:method="GET"
@@ -289,7 +289,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
           xmlns:atom="http://www.w3.org/2005/Atom">
         	<os:ShortName>CMR Granules</os:ShortName>
         	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-        	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule</os:Tags>
+        	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
         	<os:Contact>#{ENV['contact']}</os:Contact>
         	<os:Url type="application/atom+xml" rel="results"
         	  params:method="GET"
@@ -362,7 +362,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
             xmlns:atom="http://www.w3.org/2005/Atom" >
           	<os:ShortName>CMR Granules</os:ShortName>
           	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-          	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule</os:Tags>
+          	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
           	<os:Contact>#{ENV['contact']}</os:Contact>
           	<os:Url type="application/atom+xml" rel="results"
           	  params:method="GET"

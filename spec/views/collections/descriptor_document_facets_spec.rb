@@ -29,7 +29,7 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
                   xmlns:sru="http://docs.oasis-open.org/ns/search-ws/facetedResults" >
                 	<os:ShortName>CMR Collections</os:ShortName>
                 	<os:Description>NASA CMR Collection search using geo, time and parameter extensions with facet support</os:Description>
-                	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection facets</os:Tags>
+                	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection facets pageOffset=1 indexOffset=0</os:Tags>
                 	<os:Contact>#{ENV['contact']}</os:Contact>
                 	<os:Url type="application/atom+xml" rel="collection"
                 	  params:method="GET"
