@@ -13,6 +13,13 @@ describe GranulesController do
         expect(response.status).to eq(400)
       end
     end
+    context 'with valid and invalid query parameters' do
+      it 'renders a descriptor document' do
+        get :descriptor_document, :format => :xml, :clientId => 'foo', :invalid_query_parameter => 'invalid_query_parameter_value'
+        expect(response.status).to eq(200)
+        expect(response).to render_template("descriptor_document")
+      end
+    end
   end
 
   describe "GET RestClient error" do

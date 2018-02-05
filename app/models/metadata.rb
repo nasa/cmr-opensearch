@@ -62,7 +62,9 @@ class Metadata
       if %w(placeName clientId keyword instrument satellite sensor processingLevel campaign startTime endTime boundingBox geometry placeName numberOfResults cursor offset shortName versionId dataCenter dataset_id uid hasGranules isCwic isGeoss isEosdis parentIdentifier provider).include? name.to_s
         send("#{name}=", value)
       else
-        @invalid_param_errors.store(name.to_s, 'is not a valid search constraint')
+        # discard invalid query parameter per CEOS-BP-009B
+        attributes.delete(name);
+        Rails.logger.info("Discarded unsupported query parameter #{name}=#{value} per CEOS Best Practices 009B")
       end
     end
   end

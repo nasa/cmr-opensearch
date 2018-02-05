@@ -130,11 +130,11 @@ describe Metadata do
 
   end
   describe 'failing on invalid parameters' do
-    it 'should reject the parameter foo' do
+    it 'should remove the invalid parameter foo from the model' do
       params = {:foo => 'bar'}
       granule = Metadata.new(params)
-      expect(granule.valid?).to eq(false)
-      expect(granule.errors[:foo]).to eq(['is not a valid search constraint'])
+      expect(granule.valid?).to eq(true)
+      expect(granule.errors[:foo]).to eq([])
     end
     it 'expects to fail validations on non alphanumeric clientID' do
       params = {:clientId => '%&*@*'}

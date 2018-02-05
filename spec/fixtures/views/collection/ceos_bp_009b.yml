@@ -27,13 +27,13 @@ http_interactions:
       Cmr-Hits:
       - '33354'
       Cmr-Request-Id:
-      - d5a1f27b-cc84-41e7-b7fc-0ec9e8c7cccd
+      - 731ecec7-cd87-4313-a42e-48a960f7e97c
       Cmr-Took:
       - '10'
       Content-Type:
       - application/atom+xml; charset=utf-8
       Date:
-      - Mon, 05 Feb 2018 21:51:53 GMT
+      - Mon, 05 Feb 2018 20:20:21 GMT
       Server:
       - nginx
       Strict-Transport-Security:
@@ -50,8 +50,8 @@ http_interactions:
         xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
         xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"http://www.echo.nasa.gov/esip\"
         xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
-        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2018-02-05T21:51:41.459Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis+&amp;page_num=1&amp;page_size=10</id><title
-        type=\"text\">CMR collection metadata</title><entry><id>C1214621811-SCIOPS</id><title
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2018-02-05T20:19:57.364Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis+&amp;page_num=1&amp;page_size=10</id><title
+        type=\"text\">ECHO dataset metadata</title><entry><id>C1214621811-SCIOPS</id><title
         type=\"text\">(SCI) The Bowen Island GeoLibrary (Data Collection)</title><summary
         type=\"text\">The Bowen Island GeoLibrary is a collection of map, text and
         image-based\n      information that reflects what we currently know about
@@ -329,5 +329,5 @@ http_interactions:
         href=\"http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=ASAC_2357\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-69
         75 -67 78</georss:box><echo:difId>ASAC_2357</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules><echo:hasVariables>false</echo:hasVariables><echo:hasFormats>false</echo:hasFormats><echo:hasTransforms>false</echo:hasTransforms><echo:hasSpatialSubsetting>false</echo:hasSpatialSubsetting></entry></feed>"
     http_version: 
-  recorded_at: Mon, 05 Feb 2018 21:51:41 GMT
+  recorded_at: Mon, 05 Feb 2018 20:19:57 GMT
 recorded_with: VCR 2.9.2
