@@ -65,3 +65,4 @@ end
 
 Capybara.app_host = host
 
+

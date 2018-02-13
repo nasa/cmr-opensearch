@@ -4,7 +4,7 @@ class ClientId
   extend ActiveModel::Naming
 
   attr_accessor :clientId
-  validates :clientId, :format => {:with => /^[a-zA-Z0-9_\-]+$/,
+  validates :clientId, :format => {:with => /\A[a-zA-Z0-9_\-]+\z/,
                                 :message => "is invalid, it must be an alpha-numeric string"}, :allow_blank => false
 
   def initialize(attributes = {})

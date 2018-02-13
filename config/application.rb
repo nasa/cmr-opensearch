@@ -8,20 +8,9 @@ require "sprockets/railtie"
 require "active_support/railtie"
 require "active_support/dependencies"
 
-if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
-end
 
-# If you have a Gemfile, require the gems listed there, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(:default)
-Bundler.require(Rails.env) unless Rails.env.test?
+Bundler.require(*Rails.groups)
 
-$LOAD_PATH << "lib"
-$LOAD_PATH << "../echo-common-ruby/lib"
 
 # if there is a yml file locally, load all keyword value pairs in the environment
 ENV.update YAML.load_file('config/application.yml')[Rails.env] rescue {}
@@ -70,9 +59,6 @@ module EchoOpensearch
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-    # Disable Rails's static asset server (Apache or nginx will already do this)
-    config.serve_static_assets = false
 
     # Compress JavaScripts and CSS
     config.assets.compress = true
