@@ -10,9 +10,6 @@ describe 'faceted search behavior', :type => :controller  do
   it 'returns CWIC OSDD links for both PROD and TEST CWIC datasets when the request header is present' do
     VCR.use_cassette 'models/tag/cmr_cwic_datasets_prod_test_tags_mix', :decode_compressed_response => true , :record => :once do
       header 'Cwic-User', 'test'
-      #headers = {'Cwic-User' => 'test'}
-      #params = {'keyword' => 'GCMDTEST', 'clientid' => 'rspec12'}
-      #get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12', params, headers
       get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12'
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
