@@ -9,7 +9,8 @@ describe 'various provider granule OpenSearch API search behavior'  do
 
   it 'returns CWIC OSDD links for both PROD and TEST CWIC datasets when the CWIC request header is present and and Provider Specific links when collection is appropriately tagged' do
     VCR.use_cassette 'models/tag/cmr_cwic_opensearch_datasets_prod_test_tags_mix', :decode_compressed_response => true , :record => :once do
-      get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12', nil, {'Cwic-User' => 'test'}
+      header 'Cwic-User', 'test'
+      get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12'
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
       # Do we have 10 entries
