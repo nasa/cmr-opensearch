@@ -3,11 +3,11 @@ Given /^I am on the open search home page$/ do
 end
 
 Then /^(?:|I )should see "([^\"]*)"?$/ do |content|
-  assert page.has_content?(content)
+  expect(page.has_content?(content)).to be true
 end
 
 Then /^I should not see "([^"]*)"$/ do |content|
-  assert !page.has_content?(content)
+  expect(page.has_content?(content)).to be false
 end
 
 Then /^I should see the title "(.*?)"$/ do |title_text|

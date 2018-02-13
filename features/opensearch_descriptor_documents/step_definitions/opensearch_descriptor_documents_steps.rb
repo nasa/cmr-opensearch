@@ -125,7 +125,7 @@ Then /^I should see a collection open search descriptor document for client id "
                   </os:OpenSearchDescription>
   eos
 
-  assert_equal page.body.gsub(/\s+/, ""), expected.gsub(/\s+/, "")
+  expect(page.body.gsub(/\s+/, "")).to eq(expected.gsub(/\s+/, ""))
 end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)"$/ do |client_id|
@@ -198,7 +198,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
     </os:OpenSearchDescription>
   eos
 
-  assert_equal page.body.gsub(/\s+/, ""), expected.gsub(/\s+/, "")
+  expect(page.body.gsub(/\s+/, "")).to eq(expected.gsub(/\s+/, ""))
 end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)" and short name "([^"]*)"$/ do |client_id, short_name|
@@ -271,7 +271,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
       </os:OpenSearchDescription>
   eos
 
-  assert_equal page.body.gsub(/\s+/, ""), expected.gsub(/\s+/, "")
+  expect(page.body.gsub(/\s+/, "")).to eq(expected.gsub(/\s+/, ""))
 end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)" short name "(.*?)" and version id "([^"]*)"$/ do |client_id, short_name, version_id|
@@ -344,7 +344,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
         </os:OpenSearchDescription>
   eos
 
-  assert_equal page.body.gsub(/\s+/, ""), expected.gsub(/\s+/, "")
+  expect(page.body.gsub(/\s+/, "")).to eq(expected.gsub(/\s+/, ""))
 end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)" short name "([^"]*)" version id "([^"]*)" and data center "([^"]*)"$/ do |client_id, short_name, version_id, data_center|
@@ -417,11 +417,11 @@ Then /^I should see a granule open search descriptor document for client id "([^
           </os:OpenSearchDescription>
   eos
 
-  assert_equal page.body.gsub(/\s+/, ""), expected.gsub(/\s+/, "")
+  expect(page.body.gsub(/\s+/, "")).to eq(expected.gsub(/\s+/, ""))
 end
 
 Then /^I should see the error message "([^"]*)"$/ do |error|
-  assert page.has_content?(error)
+  expect(page.has_content?(error)).to be true
 end
 
 
@@ -439,13 +439,13 @@ end
 And(/^I should see an attribution of "(.*?)"$/) do |text|
   document = Nokogiri::XML(page.body)
   attribution_element = document.root.xpath('//os:Attribution', 'os' => 'http://a9.com/-/spec/opensearch/1.1/').first
-  assert attribution_element
-  assert text, attribution_element.content
+  expect(attribution_element).not_to be_nil
+  expect(text).to eq(attribution_element.content)
 end
 
 And(/^I should see a syndication right of "(.*?)"$/) do |text|
   document = Nokogiri::XML(page.body)
   syndication_element = document.root.xpath('//os:SyndicationRight', 'os' => 'http://a9.com/-/spec/opensearch/1.1/').first
-  assert  syndication_element
-  assert text, syndication_element.content
+  expect(syndication_element).not_to be_nil
+  expect(text).to eq(syndication_element.content)
 end

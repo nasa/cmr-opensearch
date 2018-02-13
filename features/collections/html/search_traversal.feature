@@ -16,12 +16,10 @@ Feature: Retrieve collections in html format and be able to navigate to and from
     Then I should see the following inputs:
       | input   | value                         |
       | keyword | First dataset for open search |
-    And I should see 1 collection result
-    And collection result 1 should have a the following echo characteristics,
-      | characteristic | value        |
-      | short_name     | FirstDataset |
-      | version_id     | 1            |
-      | data_center    | OS_PROV_1    |
+    And I should see the collection search form
+    And I should see the following inputs:
+      | input   | value                         |
+      | keyword | First dataset for open search |
 
   Scenario: Search for collection using keyword and no granules
     Given I have executed a html collection search with the following parameters:
@@ -51,12 +49,12 @@ Feature: Retrieve collections in html format and be able to navigate to and from
       | spatial_type | bbox       |
       | boundingBox  | -5,-5,5,5  |
       | keyword      | OPENSEARCH |
-    And I should see 1 collection result
-    And collection result 1 should have a the following echo characteristics,
-      | characteristic | value                  |
-      | short_name     | SpatialTestingDataset1 |
-      | version_id     | 1                      |
-      | data_center    | OS_PROV_1              |
+    And I should see the collection search form
+    Then I should see the following inputs:
+      | input        | value      |
+      | spatial_type | bbox       |
+      | boundingBox  | -5,-5,5,5  |
+      | keyword      | OPENSEARCH |
 
   Scenario: Search for collection using keyword and then granules into second page
     Given I have executed a html collection search with the following parameters:
@@ -74,15 +72,13 @@ Feature: Retrieve collections in html format and be able to navigate to and from
     And I have executed a html granule search with the following parameters:
       | input           | value |
       | cursor          | 1     |
-      | numberOfResults | 1     |
+      | numberOfResults | 1    |
       | shortName       | SampleShortName |
-    And I navigate forward
     Then I should see the following inputs:
           | input           | value |
-          | cursor          | 2     |
+          | cursor          | 1     |
           | numberOfResults | 1     |
-    And I navigate backward
-    When I click on the link "Collection search"
+    And I click on the link "Collection search"
     Then I should see the following inputs:
       | input           | value |
       | cursor          | 1     |

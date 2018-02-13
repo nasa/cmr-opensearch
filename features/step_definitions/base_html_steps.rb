@@ -41,13 +41,12 @@ end
 
 Then /^I should see the (collection|granule) results$/ do |resource|
   page.should have_selector('ul.results')
-  assert_equal 10, all('li.result').length
+  expect(all('li.result').length).to eq(10)
 
   within('section.navigation > section#metrics') do
     page.should have_content 'Displaying 1 to 10 of'
   end
-  #page.should have_link('Next')
-  assert_equal 2, all('a > i.fa-chevron-circle-right').size
+  expect(all('a > i.fa-chevron-circle-right').size).to eq(2)
 end
 
 Given /^I am on the open search (collection|granule) search page$/ do |resource|
@@ -65,7 +64,8 @@ end
 
 
 Then /^I should see (\d+) (collection|granule) (result|results)$/ do |number, resource, plural|
-  assert_equal number.to_i, all('li.result').length
+  save_and_open_page
+  expect(all('li.result').length).to eq(number.to_i)
 end
 
 And /^(collection|granule) result (\d+) should have a the following echo characteristics,$/ do |resource, index, table|
@@ -87,6 +87,7 @@ end
 
 Given /^I have executed a html (collection|granule) search with the following parameters:$/ do |resource, table|
   visit("/#{resource}s")
+  Capybara.ignore_hidden_elements = false
   table.hashes.map do |hash|
     input = hash["input"]
     value = hash["value"]
@@ -96,15 +97,16 @@ Given /^I have executed a html (collection|granule) search with the following pa
       fill_in(input, :with => value)
     end
   end
+  Capybara.ignore_hidden_elements = true
   click_button("Search")
 end
 
 And /^I should see the hidden input "(.*?)" with a value of "(.*?)"$/ do |id, value|
   success = false
-  all(:xpath, "//input[@type='hidden']").each do |element|
+  all(:xpath, "//input[@type='hidden']", visible: false).each do |element|
     success = true if element[:id] == id and element[:value] == value
   end
-  assert success
+  expect(success).to be true
 end
 
 And /^(dataset|granule) result (\d+) (should|should not) have a (browse|data|metadata|documentation) link with href "(.*?)"$/ do |resource, index, not_present, type, href|
@@ -116,13 +118,13 @@ And /^(dataset|granule) result (\d+) (should|should not) have a (browse|data|met
       end
     end
   end
-  assert success if not_present == 'should'
-  assert !success if not_present == 'should not'
+  expect(success).to be true if not_present == 'should'
+  expect(success).to be false if not_present == 'should not'
 end
 
 And(/^I should see (\d+) error (message|messages)$/) do |number, plural|
   within('div.error_explanation') do
-    assert_equal number.to_i, all('li').length
+    expect(all('li').length).to eq(number.to_i)
   end
 end
 
@@ -154,9 +156,9 @@ Then(/^I should see the following inputs:$/) do |table|
     value = hash["value"]
     within(:xpath, "//form") do
       if input == 'spatial_type' or input == 'hasGranules' or input == 'isCwic' or input == 'isGeoss'
-        assert_equal value, find("select##{input}")[:value]
+        expect(find("select##{input}")[:value]).to eq(value)
       else
-        assert_equal value, find("input##{input}")[:value]
+        expect(find("input##{input}")[:value]).to eq(value)
       end
     end
   end
@@ -204,6 +206,8 @@ Then(/^I should see a temporal end of "(.*?)"$/) do |value|
     find('span.temporal-extent-end').should have_content(value)
   end
 end
+
+
 
 Then(/^the schema\.org temporal extent of "(.*?)" should be present$/) do |value|
   page.should have_xpath("//time[@itemprop='temporal'][@datetime='#{value}']") # <time itemprop="temporal" datetime="foo"></time>

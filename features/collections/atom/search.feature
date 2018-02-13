@@ -97,7 +97,7 @@ Feature: Retrieve datasets in atom format
     And I should see 1 result
     And result 1 should have a the following echo characteristics,
       | shortName                 | versionId | datasetId                          | dataCenter |
-      | InstrumentTestingDataset1 | 1         | Intrument Testing dataset number 1 | OS_PROV_1  |
+      | InstrumentTestingDataset1 | 1         | Instrument Testing dataset number 1 | OS_PROV_1  |
     And result 1 should have a description of "Instrument test 1 - OPENSEARCH"
     And result 1 should not have a link to a granule search
     And result 1 should not have a link to a granule open search descriptor document
@@ -118,7 +118,7 @@ Feature: Retrieve datasets in atom format
     And I should see 1 result
     And result 1 should have a the following echo characteristics,
       | shortName                 | versionId | datasetId                          | dataCenter |
-      | InstrumentTestingDataset1 | 1         | Intrument Testing dataset number 1 | OS_PROV_1  |
+      | InstrumentTestingDataset1 | 1         | Instrument Testing dataset number 1 | OS_PROV_1  |
     And result 1 should have a description of "Instrument test 1 - OPENSEARCH"
     And result 1 should not have a link to a granule search
     And result 1 should not have a link to a granule open search descriptor document
@@ -138,7 +138,7 @@ Feature: Retrieve datasets in atom format
     Then I should see a valid collection atom response
     And I should see 2 results
     And I should see a total number of results value of 3
-    And I should see a cursor value of 1
+    And I should see a startIndex value of 1
     And I should see a results per page value of 2
     And I have executed a collection search with the following parameters:
       | clientId | numberOfResults | cursor | keyword           |
@@ -146,7 +146,7 @@ Feature: Retrieve datasets in atom format
     Then I should see a valid collection atom response
     And I should see 1 result
     And I should see a total number of results value of 3
-    And I should see a cursor value of 2
+    And I should see a startIndex value of 3
     And I should see a results per page value of 2
 
   Scenario: Search for collection results in the correct rendering of data access URLS.

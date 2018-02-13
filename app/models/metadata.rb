@@ -45,7 +45,7 @@ class Metadata
   validates :cursor, :numericality => {:only_integer => true, :greater_than => 0}, :allow_blank => true
   validates :offset, :numericality => {:only_integer => true, :greater_than_or_equal_to => 0}, :allow_blank => true
 
-  validates :clientId, :format => {:with => /^[a-zA-Z0-9_\-]+$/,
+  validates :clientId, :format => {:with => /\A[a-zA-Z0-9_\-]+\z/,
                                    :message => 'is invalid, it must be an alpha-numeric string of length greater than or equal to 1, and may contain underscore (_) or dash (-) characters.'}, :allow_blank => true
 
   validate :temporal_must_be_rfc3339
