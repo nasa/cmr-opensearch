@@ -1167,7 +1167,7 @@ http_interactions:
       - 1.1 epxo13-02a.eno.ecs.nasa.gov
     body:
       encoding: UTF-8
-      string: '{"totalResultsCount":0,"geonames":[]}'
+      string: "{\"totalResultsCount\":0,\"geonames\":[]}"
     http_version: 
   recorded_at: Thu, 04 Feb 2016 14:55:44 GMT
 recorded_with: VCR 2.9.2

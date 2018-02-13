@@ -25,7 +25,7 @@ describe 'ESIP Best Practices up link from granule search result set'  do
       feed_root_links = feed.xpath('//atom:feed/atom:link', 'atom' => 'http://www.w3.org/2005/Atom')
       feed_root_links.each do |link|
         rel = link['rel']
-        assert_not_equal 'up', rel
+        expect(rel).not_to equal('up')
       end
     end
   end
@@ -38,7 +38,7 @@ describe 'ESIP Best Practices up link from granule search result set'  do
       feed_root_links = feed.xpath('//atom:feed/atom:link', 'atom' => 'http://www.w3.org/2005/Atom')
       feed_root_links.each do |link|
         rel = link['rel']
-        assert_not_equal 'up', rel
+        expect(rel).not_to equal('up')
       end
     end
   end

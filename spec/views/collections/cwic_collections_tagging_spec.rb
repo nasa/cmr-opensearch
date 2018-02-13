@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'faceted search behavior'  do
+describe 'faceted search behavior', :type => :controller  do
   include Rack::Test::Methods
 
   def app
@@ -9,7 +9,11 @@ describe 'faceted search behavior'  do
 
   it 'returns CWIC OSDD links for both PROD and TEST CWIC datasets when the request header is present' do
     VCR.use_cassette 'models/tag/cmr_cwic_datasets_prod_test_tags_mix', :decode_compressed_response => true , :record => :once do
-      get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12', nil, {'Cwic-User' => 'test'}
+      header 'Cwic-User', 'test'
+      #headers = {'Cwic-User' => 'test'}
+      #params = {'keyword' => 'GCMDTEST', 'clientid' => 'rspec12'}
+      #get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12', params, headers
+      get '/datasets.atom?keyword=GCMDTEST&clientId=rspec12'
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
       # Do we have 10 entries
@@ -22,7 +26,7 @@ describe 'faceted search behavior'  do
         expect(entry_id.include?((index+1).to_s)).to be true
         entry_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         # all entries will have the CWIC OSDD link since the header is present
-        expect(!entry_link.nil?).to be true
+        expect(entry_link.nil?).to be false
         entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text
         # even entries are test entries, odd entries are prod entries
         if((index+1)%2 == 0)

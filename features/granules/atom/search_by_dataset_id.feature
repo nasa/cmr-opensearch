@@ -11,8 +11,7 @@ Feature: Retrieve granules in atom format
     Then I should see a valid granule atom response
     And I should see 1 result
     And result 1 should have a the following echo characteristics,
-      | datasetId       | producerGranuleId |
-      | cool_dataset_id | CoolGranule1      |
+      | datasetId       | cool_dataset_id |
 
   Scenario: Search for granule using invalid dataset id
     Given I have executed a granule search with the following parameters:

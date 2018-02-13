@@ -71,7 +71,7 @@ class Facet
     facet_limit = params[:facet_limit]
     if !facet_limit.blank?
       case facet_limit.to_i
-        when Fixnum
+        when Integer
           case facet_limit
             when '0'
               Rails.logger.info "Facet processing not requested due to faceLimit value: #{facet_limit}"

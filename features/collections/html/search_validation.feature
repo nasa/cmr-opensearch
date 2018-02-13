@@ -80,13 +80,4 @@ Feature: Retrieve collections in html format
     And I should see "Numberofresults is not a number"
     And I should see "2 errors prohibited this search from being executed:"
 
-  Scenario: Search for collection using placename
-    Given I have executed a html collection search with the following parameters:
-      | input        | value      |
-      | spatial_type | Place Name |
-      | placeName    | dougopolis |
-    Then I should see 0 collection results
-    And I should see 1 error message
-    And I should see "Placename dougopolis cannot be located"
-    And I should see "1 error prohibited this search from being executed:"
 
