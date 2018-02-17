@@ -94,8 +94,6 @@ class Collection < Metadata
           short_name = entry_node.content if entry_node.name == 'shortName'
           version_id = entry_node.content if entry_node.name == 'versionId'
           data_center = entry_node.content if entry_node.name == 'dataCenter'
-          archive_center = entry_node.content if entry_node.name == 'archiveCenter'
-          organization = entry_node.content if entry_node.name == 'organization'
           dif_id = entry_node.content if entry_node.name == 'difId'
           guid = entry_node.content if entry_node.name == 'id'
           entry_node.content = "#{ENV['opensearch_url']}/collections.atom?uid=#{guid}" if entry_node.name == 'id'
@@ -250,7 +248,6 @@ class Collection < Metadata
     entry.children.each do |node|
       description = node.content if node.name == 'summary'
     end
-
     summary += "<p><b>Description</b></p><p>#{description}</p>" unless description.nil?
     summary_element = add_common_summary(doc, entry, summary)
     entry.add_child(summary_element)
@@ -299,7 +296,6 @@ class Collection < Metadata
   def add_geoss(doc, node)
     geoss_node = Nokogiri::XML::Node.new 'echo:is_geoss', doc
     geoss_node.content = 'true'
-
     node.add_child(geoss_node)
     node
   end
@@ -307,7 +303,6 @@ class Collection < Metadata
   def add_ceos(doc, node)
     ceos_node = Nokogiri::XML::Node.new 'echo:is_ceos', doc
     ceos_node.content = 'true'
-
     node.add_child(ceos_node)
     node
   end
@@ -315,7 +310,6 @@ class Collection < Metadata
   def add_eosdis(doc, node)
     eosdis_node = Nokogiri::XML::Node.new 'echo:is_eosdis', doc
     eosdis_node.content = 'true'
-
     node.add_child(eosdis_node)
     node
   end
