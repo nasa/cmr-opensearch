@@ -67,12 +67,7 @@ EchoOpensearch::Application.configure do
         LARC_ASDC
         LAADS
   ]
-
-  config.ceos_collections = %w[
-      ceos_shortname_4
-      ceos_shortname_5
-      ceos_shortname_5
-  ]
+  # config.ceos_agencies = []
 
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
