@@ -53,6 +53,7 @@ class CollectionsController < ApplicationController
       @has_granules_type = params[:hasGranules] || nil
       @is_cwic_type = params[:isCwic] || nil
       @is_geoss_type = params[:isGeoss] || nil
+      @is_ceos_type = params[:isCeos] || nil
       @is_eosdis_type = params[:isEosdis] || nil
       @collection_models = []
       @number_of_hits = 0

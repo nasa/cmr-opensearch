@@ -122,6 +122,19 @@ module EchoOpensearch
         OBPG
   ]
 
+  config.ceos_agencies = [
+      '{
+          "name": "CNES",
+          "archive_centers": ["FR/CNES", "FR/CNES/POSTEL"],
+          "data_centers": ["FR/CNES", "FR/CNES/POSTEL"]
+      }',
+      '{
+          "name": "ISRO",
+          "archive_centers": ["IN/ISRO/NDC", "IN/ISRO/MOSDAC", "IN/ISRO/NRSC-BHUVAN"],
+          "data_centers": ["IN/ISRO/NDC", "IN/ISRO/MOSDAC", "IN/ISRO/NRSC-BHUVAN"]
+      }'
+  ]
+
     ## additional default configuration parameters use to run tests or a basic local run with no scheduled tagging
     ## capabilities
     def self.update_env(name, value)
