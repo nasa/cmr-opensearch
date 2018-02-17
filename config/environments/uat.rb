@@ -74,6 +74,12 @@ EchoOpensearch::Application.configure do
         OMINRT
   ]
 
+  config.ceos_collections = %w[
+      ceos_shortname_7
+      ceos_shortname_8
+      ceos_shortname_9
+  ]
+
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
 

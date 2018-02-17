@@ -11,8 +11,8 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
     stub_client_id.clientId = 'foo'
     assign(:client_id_model, stub_client_id)
     render
-    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo")
-    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/collections.html?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo")
+    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isCeos={echo:isCeos?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo")
+    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/collections.html?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isCeos={echo:isCeos?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo")
   end
 
   it 'conforms with draft 2 of the open search parameter extension' do
@@ -33,7 +33,7 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
                 	<os:Contact>#{ENV['contact']}</os:Contact>
                 	<os:Url type="application/atom+xml" rel="collection"
                 	  params:method="GET"
-                		template="#{ENV['opensearch_url']}/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo">
+                		template="#{ENV['opensearch_url']}/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isCeos={echo:isCeos?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo">
                     <params:Parameter name="keyword" uiDisplay="Search terms" value="{os:searchTerms}" title="Inventory with terms expressed by these search terms" minimum="0">
 	                    <atom:link rel="profile" href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html" title="This parameter follows the elastic search free text search implementations" />
 	                  </params:Parameter>
@@ -63,6 +63,9 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
 	                  <params:Parameter name="isGeoss" uiDisplay="GEOSS collection" value="{echo:isGeoss}" title="Inventory related to GEOSS">
 	    	               <params:Option value="true" label="Yes"/>
 	                  </params:Parameter>
+	                  <params:Parameter name="isCeos" uiDisplay="CEOS collection" value="{echo:isCeos}" title="Inventory related to CEOS">
+	                    <params:Option value="true" label="Yes"/>
+	                  </params:Parameter>
 	                  <params:Parameter name="isEosdis" uiDisplay="EOSDIS collection" value="{echo:isEosdis}" title="Inventory related to EOSDIS">
 	                    <params:Option value="true" label="Yes"/>
 	                  </params:Parameter>
@@ -71,7 +74,7 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
                   </os:Url>
                 	<os:Url type="text/html" rel="collection"
                 	  params:method="GET"
-                		template="#{ENV['opensearch_url']}/collections.html?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo">
+                		template="#{ENV['opensearch_url']}/collections.html?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;campaign={echo:campaign?}&amp;processingLevel={echo:processing_level?}&amp;sensor={echo:sensor?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;facetLimit={sru:facetLimit?}&amp;hasGranules={echo:hasGranules?}&amp;isCwic={echo:isCwic?}&amp;isGeoss={echo:isGeoss?}&amp;isCeos={echo:isCeos?}&amp;isEosdis={echo:isEosdis?}&amp;provider={echo:provider?}&amp;clientId=foo">
                     <params:Parameter name="keyword" uiDisplay="Search terms" value="{os:searchTerms}" title="Inventory with terms expressed by these search terms" minimum="0">
 	                    <atom:link rel="profile" href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html" title="This parameter follows the elastic search free text search implementations" />
 	                  </params:Parameter>
@@ -100,6 +103,9 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
 	                  </params:Parameter>
 	                  <params:Parameter name="isGeoss" uiDisplay="GEOSS collection" value="{echo:isGeoss}" title="Inventory related to GEOSS">
 	    	               <params:Option value="true" label="Yes"/>
+	                  </params:Parameter>
+	                  <params:Parameter name="isCeos" uiDisplay="CEOS collection" value="{echo:isCeos}" title="Inventory related to CEOS">
+	                    <params:Option value="true" label="Yes"/>
 	                  </params:Parameter>
 	                  <params:Parameter name="isEosdis" uiDisplay="EOSDIS collection" value="{echo:isEosdis}" title="Inventory related to EOSDIS">
 	                    <params:Option value="true" label="Yes"/>
