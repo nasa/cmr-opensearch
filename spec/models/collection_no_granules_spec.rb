@@ -20,7 +20,6 @@ describe Collection do
                   <echo:shortName>AIRVBRAD</echo:shortName>
                   <echo:versionId>005</echo:versionId>
                   <echo:dataCenter>GSFCS4PA</echo:dataCenter>
-                  <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
                   <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
@@ -43,7 +42,6 @@ describe Collection do
                   <echo:shortName>AIRVBRAD</echo:shortName>
                   <echo:versionId>006</echo:versionId>
                   <echo:dataCenter>GSFCS4PA</echo:dataCenter>
-                  <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
                   <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
@@ -66,7 +64,6 @@ describe Collection do
                   <echo:shortName>AIRVBRAD</echo:shortName>
                   <echo:versionId>007</echo:versionId>
                   <echo:dataCenter>GSFCS4PA</echo:dataCenter>
-                  <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
                   <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
@@ -89,7 +86,6 @@ describe Collection do
                   <echo:shortName>AIRVBRAD</echo:shortName>
                   <echo:versionId>008</echo:versionId>
                   <echo:dataCenter>GSFCS4PA</echo:dataCenter>
-                  <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
                   <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>

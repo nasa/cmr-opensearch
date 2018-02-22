@@ -12,7 +12,18 @@ class Collection < Metadata
       query_url = "#{ENV['catalog_rest_endpoint']}collections.atom"
       Rails.logger.info "RestClient call to CMR endpoint: #{query_url}?#{cmr_params.to_query}"
       #puts "RestClient call to CMR endpoint: #{query_url}?#{cmr_params.to_query}"
+      #begin
       response = RestClient::Request.execute :method => :get, :url => query_url, :verify_ssl => OpenSSL::SSL::VERIFY_NONE, :headers => {:client_id => CLIENT_ID, :params => cmr_params}
+
+      #rescue RestClient::ExceptionWithResponse => e
+      #  e.response
+      #rescue RestClient::RequestFailed => e
+      ##  puts e.inspect
+      #rescue Exception => e
+      #  puts e.inspect
+      #else
+      #  puts 'other'
+      #end
     end
     Rails.logger.info "CMR collection search took #{(time.to_f * 1000).round(0)} ms"
 
@@ -64,6 +75,7 @@ class Collection < Metadata
         short_name = nil
         version_id = nil
         data_center = nil
+        archive_center = nil
         dif_id = nil
         guid = nil
         start_time = nil
@@ -94,6 +106,7 @@ class Collection < Metadata
           short_name = entry_node.content if entry_node.name == 'shortName'
           version_id = entry_node.content if entry_node.name == 'versionId'
           data_center = entry_node.content if entry_node.name == 'dataCenter'
+          archive_center = entry_node.content if entry_node.name == 'archiveCenter'
           dif_id = entry_node.content if entry_node.name == 'difId'
           guid = entry_node.content if entry_node.name == 'id'
           entry_node.content = "#{ENV['opensearch_url']}/collections.atom?uid=#{guid}" if entry_node.name == 'id'
@@ -146,7 +159,6 @@ class Collection < Metadata
     doc.xpath('//foo:difId', 'foo' => 'http://www.echo.nasa.gov/esip').remove
     doc.xpath('//foo:onlineAccessFlag', 'foo' => 'http://www.echo.nasa.gov/esip').remove
     doc.xpath('//foo:browseFlag', 'foo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//foo:archiveCenter', 'foo' => 'http://www.echo.nasa.gov/esip').remove
     doc.xpath('//time:start', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     doc.xpath('//time:end', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     doc.xpath('//foo:originalFormat', 'foo' => 'http://www.echo.nasa.gov/esip').remove
@@ -216,10 +228,19 @@ class Collection < Metadata
     is_ceos = false
     data_center = entry_node.at_xpath('echo:dataCenter', 'echo' => 'http://www.echo.nasa.gov/esip')
     archive_center = entry_node.at_xpath('echo:archiveCenter', 'echo' => 'http://www.echo.nasa.gov/esip')
+    organizations = entry_node.xpath('echo:organization', 'echo' => 'http://www.echo.nasa.gov/esip')
     if (cmr_params != nil)
-      if ((!data_center.nil? && cmr_params[:data_center] != nil && cmr_params[:data_center].include?(data_center.text)) ||
-          (!archive_center.nil? && cmr_params[:archive_center] != nil && cmr_params[:archive_center].include?(archive_center.text)))
+      if ((!data_center.nil? && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center],data_center.text)) ||
+          (!archive_center.nil? && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center], archive_center.text)))
         is_ceos = true
+      end
+      if !is_ceos && organizations.size >= 1
+        organizations.each do |organization|
+          if (!organization.text.blank?  && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center], organization.text))
+            is_ceos = true
+            break
+          end
+        end
       end
     end
     is_ceos
@@ -312,5 +333,16 @@ class Collection < Metadata
     eosdis_node.content = 'true'
     node.add_child(eosdis_node)
     node
+  end
+
+  def ceos_configured_collection?(ceos_collections_array_with_wildcard, collection)
+    ret_val = false
+    ceos_collections_array_with_wildcard.each do |ceos_configured_collection|
+      if collection.match(ceos_configured_collection)
+        ret_val = true
+        break
+      end
+    end
+    ret_val
   end
 end
