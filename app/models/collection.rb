@@ -11,19 +11,7 @@ class Collection < Metadata
     time = Benchmark.realtime do
       query_url = "#{ENV['catalog_rest_endpoint']}collections.atom"
       Rails.logger.info "RestClient call to CMR endpoint: #{query_url}?#{cmr_params.to_query}"
-      #puts "RestClient call to CMR endpoint: #{query_url}?#{cmr_params.to_query}"
-      #begin
       response = RestClient::Request.execute :method => :get, :url => query_url, :verify_ssl => OpenSSL::SSL::VERIFY_NONE, :headers => {:client_id => CLIENT_ID, :params => cmr_params}
-
-      #rescue RestClient::ExceptionWithResponse => e
-      #  e.response
-      #rescue RestClient::RequestFailed => e
-      ##  puts e.inspect
-      #rescue Exception => e
-      #  puts e.inspect
-      #else
-      #  puts 'other'
-      #end
     end
     Rails.logger.info "CMR collection search took #{(time.to_f * 1000).round(0)} ms"
 
