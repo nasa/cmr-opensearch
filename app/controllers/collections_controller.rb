@@ -53,6 +53,7 @@ class CollectionsController < ApplicationController
       @has_granules_type = params[:hasGranules] || nil
       @is_cwic_type = params[:isCwic] || nil
       @is_geoss_type = params[:isGeoss] || nil
+      @is_ceos_type = params[:isCeos] || nil
       @is_eosdis_type = params[:isEosdis] || nil
       @collection_models = []
       @number_of_hits = 0
@@ -82,7 +83,7 @@ class CollectionsController < ApplicationController
           end
         end
       rescue => e
-        Rails.logger.error "Client ID '#{params[:clientId]}' granule search error: " + e.inspect
+        Rails.logger.error "Client ID '#{params[:clientId]}' collection search error: " + e.inspect
       end
 
       respond_to do |format|
@@ -98,7 +99,7 @@ class CollectionsController < ApplicationController
               text = @collection.errors.to_xml(:indent => 2)
               render :text => text, :status => :bad_request and return
             else
-              puts "Error: #{e}"
+              Rails.logger.error "Collection search exception: #{e}"
               if (!e.nil? && !e.response.code.nil?)
                 # need separate rendering for exceptions since they cannot be added to ActiveModel errors modified hash
                 render :text => e.response, :status => e.response.code and return

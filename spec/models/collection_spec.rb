@@ -82,6 +82,7 @@ describe Collection do
             <echo:shortName>AIRVBRAD</echo:shortName>
             <echo:versionId>005</echo:versionId>
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+            <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
             <georss:box>56.5414925833731 160.605005 57.2230163579929 161.89263</georss:box>
           </entry>
@@ -173,6 +174,7 @@ describe Collection do
             <echo:shortName>AIRVBRAD</echo:shortName>
             <echo:versionId>005</echo:versionId>
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+            <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             <georss:line>45.256 -110.45 46.46 -109.48 43.84 -109.86</georss:line>
             <georss:box>43.84 -110.45 46.46 -109.48</georss:box>
           </entry>
@@ -266,6 +268,7 @@ describe Collection do
             <echo:shortName>AIRVBRAD</echo:shortName>
             <echo:versionId>005</echo:versionId>
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+            <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             <georss:point>39.1 -96.6</georss:point>
             <georss:box>39.1 -96.6 39.1 -96.6</georss:box>
           </entry>
@@ -357,6 +360,7 @@ describe Collection do
             <echo:shortName>AIRVBRAD</echo:shortName>
             <echo:versionId>005</echo:versionId>
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+            <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             <georss:box>-1.36302971839905 -169.459686279297 22.4800090789795 -148.560791015625</georss:box>
           </entry>
         </feed>
@@ -467,6 +471,7 @@ describe Collection do
       <echo:shortName>AIRVBRAD</echo:shortName>
       <echo:versionId>005</echo:versionId>
       <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+      <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
       </entry>
   </feed>
       eos
@@ -556,6 +561,7 @@ describe Collection do
     <echo:shortName>AIRVBRAD</echo:shortName>
     <echo:versionId>005</echo:versionId>
     <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+    <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
   </entry>
 </feed>
       eos
@@ -644,7 +650,8 @@ describe Collection do
         <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
         <echo:shortName>AIRVBRAD</echo:shortName>
         <echo:versionId>005</echo:versionId>
-        <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+        <echo:dataCenter>GSFCS4PA</echo:dataCenter>\
+        <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
         </entry>
     </feed>
       eos
@@ -733,6 +740,7 @@ describe Collection do
             <echo:shortName>AIRVBRAD</echo:shortName>
             <echo:versionId>005</echo:versionId>
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+            <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             </entry>
         </feed>
       eos
@@ -811,6 +819,7 @@ describe Collection do
                 <echo:shortName>MOD02QKM</echo:shortName>
                 <echo:versionId>5</echo:versionId>
                 <echo:dataCenter>LAADS</echo:dataCenter>
+                <echo:archiveCenter>LAADS</echo:archiveCenter>
                 <echo:processingLevelId>1B</echo:processingLevelId>
                 <georss:box>-90.0 -180.0 90.0 180.0</georss:box>
               </entry>
@@ -904,6 +913,7 @@ describe Collection do
                     <echo:shortName>AIRVBRAD</echo:shortName>
                     <echo:versionId>005</echo:versionId>
                     <echo:dataCenter>GSFCS4PA</echo:dataCenter>
+                    <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                     <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
                     <georss:box>56.5414925833731 160.605005 57.2230163579929 161.89263</georss:box>
                     </entry>

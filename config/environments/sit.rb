@@ -67,6 +67,7 @@ EchoOpensearch::Application.configure do
         LARC_ASDC
         LAADS
   ]
+  # config.ceos_agencies = []
 
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
