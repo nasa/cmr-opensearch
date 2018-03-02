@@ -122,6 +122,85 @@ module EchoOpensearch
         OBPG
   ]
 
+  config.ceos_agencies = [
+      '{
+          "name": "CNES",
+          "data_centers": ["FR/CNES*"]
+      }',
+      '{
+        "name": "CREDAS",
+        "data_centers": ["AR/CREDAS"]
+      }',
+      '{
+        "name": "CSIRO",
+        "data_centers": ["AU/CSIRO/*"]
+      }',
+      '{
+        "name": "DLR",
+        "data_centers": ["DE/DLR/*"]
+      }',
+      '{
+        "name": "EUMETSAT",
+        "data_centers": ["EUMETSAT", "EUMETSAT/OSISAF"]
+      }',
+      '{
+        "name": "ESA",
+        "data_centers": ["ESA/*"]
+      }',
+      '{
+        "name": "GISTDA",
+        "data_centers": ["TH/MSTE/GISTDA"]
+      }',
+      '{
+          "name": "ISRO",
+          "data_centers": ["IN/ISRO/*"]
+      }',
+      '{
+          "name": "INPE",
+          "data_centers": ["BR/INPE/*"]
+      }',
+      '{
+          "name": "KARI",
+          "data_centers": ["KR/KARI"]
+      }',
+      '{
+          "name": "JAXA",
+          "data_centers": ["JP/JAXA/*"]
+      }',
+      '{
+          "name": "NOAA",
+          "data_centers": ["DOC/NOAA/*"]
+      }',
+      '{
+          "name": "NRSCC",
+          "data_centers": ["CN/MST/NRSCC"]
+      }',
+      '{
+          "name": "NSMC/CMA",
+          "data_centers": ["CN/FENGYUN"]
+      }',
+      '{
+          "name": "NASC",
+          "data_centers": ["UA/NASC"]
+      }',
+      '{
+          "name": "ROSHYDROMET",
+          "data_centers": ["RU/ROSHYDROMET/FERHRI"]
+      }',
+      '{
+          "name": "ROSKOSMOS",
+          "data_centers": ["RU/NTs OMZ"]
+      }',
+      '{
+          "name": "SANSA",
+          "data_centers": ["ZA/SANSA/HERMANUS"]
+      }',
+      '{
+          "name": "USGS",
+          "data_centers": ["DOI/USGS/*"]
+      }'
+  ]
+
     ## additional default configuration parameters use to run tests or a basic local run with no scheduled tagging
     ## capabilities
     def self.update_env(name, value)

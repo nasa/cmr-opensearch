@@ -1,7 +1,7 @@
 class Collection < Metadata
 
   attr_accessor :cmr_params
-  attr_accessor :hasGranules, :isCwic, :isGeoss, :isEosdis
+  attr_accessor :hasGranules, :isCwic, :isGeoss, :isEosdis, :isCeos
 
   def find(params, url, for_atom = true, cwic_testing = false)
     collections = []
@@ -11,7 +11,6 @@ class Collection < Metadata
     time = Benchmark.realtime do
       query_url = "#{ENV['catalog_rest_endpoint']}collections.atom"
       Rails.logger.info "RestClient call to CMR endpoint: #{query_url}?#{cmr_params.to_query}"
-      #puts "RestClient call to CMR endpoint: #{query_url}?#{cmr_params.to_query}"
       response = RestClient::Request.execute :method => :get, :url => query_url, :verify_ssl => OpenSSL::SSL::VERIFY_NONE, :headers => {:client_id => CLIENT_ID, :params => cmr_params}
     end
     Rails.logger.info "CMR collection search took #{(time.to_f * 1000).round(0)} ms"
@@ -64,6 +63,7 @@ class Collection < Metadata
         short_name = nil
         version_id = nil
         data_center = nil
+        archive_center = nil
         dif_id = nil
         guid = nil
         start_time = nil
@@ -76,6 +76,8 @@ class Collection < Metadata
         provider_osdd_link = nil
         is_geoss = false
         is_eosdis = false
+        # mark the collection as CEOS if needed
+        is_ceos = ceos_collection?(node)
         non_atom = []
         node.children.each do |entry_node|
 
@@ -92,6 +94,7 @@ class Collection < Metadata
           short_name = entry_node.content if entry_node.name == 'shortName'
           version_id = entry_node.content if entry_node.name == 'versionId'
           data_center = entry_node.content if entry_node.name == 'dataCenter'
+          archive_center = entry_node.content if entry_node.name == 'archiveCenter'
           dif_id = entry_node.content if entry_node.name == 'difId'
           guid = entry_node.content if entry_node.name == 'id'
           entry_node.content = "#{ENV['opensearch_url']}/collections.atom?uid=#{guid}" if entry_node.name == 'id'
@@ -102,7 +105,6 @@ class Collection < Metadata
           # if node is not an ATOM node then remove it and put it into the array
           non_atom << entry_node.remove if !entry_node.namespace.nil? and entry_node.namespace.href != 'http://www.w3.org/2005/Atom' or entry_node.name.include? 'georss:'
           has_granules = true if entry_node.name == 'hasGranules' && entry_node.content == 'true'
-
           if entry_node.name == 'tag'
             create_cwic_osdd_link = cwic_collection?(entry_node, cwic_testing) unless create_cwic_osdd_link == true
             provider_osdd_link = provider_granule_osdd_collection_link(entry_node)
@@ -135,6 +137,7 @@ class Collection < Metadata
           node.add_child(element)
         end
         add_geoss(doc, node) if is_geoss
+        add_ceos(doc, node) if is_ceos
         add_eosdis(doc, node) if is_eosdis
         node.add_child(mbr) unless mbr.nil?
       end
@@ -144,7 +147,6 @@ class Collection < Metadata
     doc.xpath('//foo:difId', 'foo' => 'http://www.echo.nasa.gov/esip').remove
     doc.xpath('//foo:onlineAccessFlag', 'foo' => 'http://www.echo.nasa.gov/esip').remove
     doc.xpath('//foo:browseFlag', 'foo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//foo:archiveCenter', 'foo' => 'http://www.echo.nasa.gov/esip').remove
     doc.xpath('//time:start', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     doc.xpath('//time:end', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     doc.xpath('//foo:originalFormat', 'foo' => 'http://www.echo.nasa.gov/esip').remove
@@ -207,6 +209,31 @@ class Collection < Metadata
     is_geoss
   end
 
+  # a CEOS collection exists and results in a creation of a echo:is_ceos element with value 'true' if the collection
+  # belongs to a CEOS data center or a CEOS achive center. The CEOS data centers or archive centers lists are maintained
+  # in the CMR OpenSearch environment specific application configuration.
+  def ceos_collection?(entry_node)
+    is_ceos = false
+    data_center = entry_node.at_xpath('echo:dataCenter', 'echo' => 'http://www.echo.nasa.gov/esip')
+    archive_center = entry_node.at_xpath('echo:archiveCenter', 'echo' => 'http://www.echo.nasa.gov/esip')
+    organizations = entry_node.xpath('echo:organization', 'echo' => 'http://www.echo.nasa.gov/esip')
+    if (cmr_params != nil)
+      if ((!data_center.nil? && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center],data_center.text)) ||
+          (!archive_center.nil? && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center], archive_center.text)))
+        is_ceos = true
+      end
+      if !is_ceos && organizations.size >= 1
+        organizations.each do |organization|
+          if (!organization.text.blank?  && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center], organization.text))
+            is_ceos = true
+            break
+          end
+        end
+      end
+    end
+    is_ceos
+  end
+
   # an EOSDIS collection exists and results in a creation of a echo:is_esdis element with value 'true' if the collection
   # is tagged with the appropriate namespace (TBD / configurable)
   def eosdis_collection?(entry_node)
@@ -224,13 +251,12 @@ class Collection < Metadata
   end
 
   # There is a reason we don't simplify this by using xpath. It is really slow over large result sets. Slow enough to generate user complaints.
-  def add_collection_summary(data_center, doc, entry, short_name, version_id, description=nil)
+  def add_collection_summary(data_center, doc, entry, short_name, version_id, description = nil)
     summary = "<p><b>Short Name: </b>#{short_name} <b>Version ID: </b>#{version_id} <b>Data Center: </b>#{data_center}</p>"
     description = nil
     entry.children.each do |node|
       description = node.content if node.name == 'summary'
     end
-
     summary += "<p><b>Description</b></p><p>#{description}</p>" unless description.nil?
     summary_element = add_common_summary(doc, entry, summary)
     entry.add_child(summary_element)
@@ -267,23 +293,44 @@ class Collection < Metadata
     cmr_collection_params[:tag_key] = tag_keys unless tag_keys.blank?
 
     cmr_params = to_cmr_params(params)
+    if params[:isCeos] && params[:isCeos] == 'true'
+      ceoss_agencies_collections_cmr_params = CeosAgency.create_all_ceos_agencies_cmr_query_string(Rails.configuration.ceos_agencies)
+      cmr_params.merge! ceoss_agencies_collections_cmr_params
+    end
+
     cmr_collection_params.merge! cmr_params
     cmr_collection_params
   end
 
   def add_geoss(doc, node)
-      geoss_node = Nokogiri::XML::Node.new 'echo:is_geoss', doc
-      geoss_node.content = 'true'
+    geoss_node = Nokogiri::XML::Node.new 'echo:is_geoss', doc
+    geoss_node.content = 'true'
+    node.add_child(geoss_node)
+    node
+  end
 
-      node.add_child(geoss_node)
-      node
+  def add_ceos(doc, node)
+    ceos_node = Nokogiri::XML::Node.new 'echo:is_ceos', doc
+    ceos_node.content = 'true'
+    node.add_child(ceos_node)
+    node
   end
 
   def add_eosdis(doc, node)
     eosdis_node = Nokogiri::XML::Node.new 'echo:is_eosdis', doc
     eosdis_node.content = 'true'
-
     node.add_child(eosdis_node)
     node
+  end
+
+  def ceos_configured_collection?(ceos_collections_array_with_wildcard, collection)
+    ret_val = false
+    ceos_collections_array_with_wildcard.each do |ceos_configured_collection|
+      if collection.match(ceos_configured_collection)
+        ret_val = true
+        break
+      end
+    end
+    ret_val
   end
 end
