@@ -198,6 +198,10 @@ module EchoOpensearch
       '{
           "name": "USGS",
           "data_centers": ["DOI/USGS/*"]
+      }',
+      '{
+          "name": "NASA",
+          "data_centers": ["NASA/*", "ASF", "LP_DAAC", "MSFC", "ORNL_DAAC"]
       }'
   ]
 
