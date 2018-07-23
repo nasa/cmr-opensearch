@@ -126,7 +126,7 @@ GEM
     multi_json (1.13.1)
     multi_test (0.1.2)
     netrc (0.11.0)
-    nokogiri (1.8.2)
+    nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -262,7 +262,7 @@ DEPENDENCIES
   execjs (~> 2.7.0)
   georuby (~> 2.5.2)
   jquery-rails (~> 4.3.1)
-  nokogiri (>= 1.8.2)
+  nokogiri (>= 1.8.3)
   pry-rails
   rack-test
   rails (= 4.2.10)
