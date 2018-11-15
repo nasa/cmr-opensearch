@@ -65,7 +65,7 @@ GEM
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.3)
+    crass (1.0.4)
     cucumber (3.1.0)
       builder (>= 2.1.2)
       cucumber-core (~> 3.1.0)
@@ -111,7 +111,7 @@ GEM
       thor (>= 0.14, < 2.0)
     kgio (2.11.2)
     libv8 (3.16.14.19)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -134,7 +134,7 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     public_suffix (3.0.1)
-    rack (1.6.10)
+    rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.10)
@@ -262,8 +262,10 @@ DEPENDENCIES
   execjs (~> 2.7.0)
   georuby (~> 2.5.2)
   jquery-rails (~> 4.3.1)
+  loofah (>= 2.2.3)
   nokogiri (>= 1.8.5)
   pry-rails
+  rack (~> 1.6.11)
   rack-test
   rails (= 4.2.10)
   rails_12factor
