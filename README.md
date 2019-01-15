@@ -38,7 +38,7 @@ See public/licenses.txt
 ### Initial setup
 Once the repository is cloned locally and Ruby 2.1.2 is installed, you must install the dependencies.
 If you don't have the [bundler](http://bundler.io/) gem already installed, execute the command below in the project root directory:
-   
+
     gem install bundler   
 
 or if you wish to install the bundler without documentation:
@@ -127,8 +127,8 @@ that the application needs in order to run.  A sample _config/application.yml_ f
     current: &current
         opensearch_url: http://localhost:3000/
         catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
-        echo_rest_endpoint: https://api.echo.nasa.gov/echo-rest/
-        contact: echodev@echo.nasa.gov
+        echo_rest_endpoint: https://cmr.earthdata.nasa.gov/legacy-services/rest/
+        contact: support@earthdata.nasa.gov
         mode: dev
         public_catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
         release_page: https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information

@@ -1,7 +1,7 @@
 current: &current
   opensearch_url: http://localhost:3000
   catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
-  echo_rest_endpoint: https://api.echo.nasa.gov/echo-rest/
+  echo_rest_endpoint: https://cmr.earthdata.nasa.gov/legacy-services/rest/
   contact: @MAIL_SENDER@
   mode: @MODE@
   public_catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/

@@ -18,6 +18,6 @@ class Token
   end
 
   def self.delete(token_id)
-    RestClient.delete "https://api.echo.nasa.gov/echo-rest/tokens/#{token_id}", {:echo_token => token_id}
+    RestClient.delete "https://cmr.earthdata.nasa.gov/legacy-services/rest/tokens/#{token_id}", {:echo_token => token_id}
   end
 end
