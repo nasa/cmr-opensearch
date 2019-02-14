@@ -45,7 +45,7 @@ class Granule < Metadata
           elsif sub_node.name == 'link'
             # resolve the ambiguous CMR #data ( OpenSearch enclosure) links which in some cases result in more than one
             # enclosure link but only one valid link for the actual data retrieval
-            if sub_node['rel'].end_with?('/data#') && sub_node.at_xpath('echo:inherited', 'echo' => 'http://www.echo.nasa.gov/esip')
+            if sub_node['rel'].end_with?('/data#') && sub_node.at_xpath('echo:inherited', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
               # the 'GET DATA' link should bot be there in the first place, it is inherited from the collection and does
               # not allow direct access to the granule data file
               sub_node.remove
@@ -78,9 +78,9 @@ class Granule < Metadata
         node.add_child(mbr) unless mbr.nil?
       end
     end
-    doc.xpath('//echo:onlineAccessFlag', 'echo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//echo:browseFlag', 'echo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//echo:dayNightFlag', 'echo' => 'http://www.echo.nasa.gov/esip').remove
+    doc.xpath('//echo:onlineAccessFlag', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
+    doc.xpath('//echo:browseFlag', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
+    doc.xpath('//echo:dayNightFlag', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
     doc.xpath('//time:start', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     doc.xpath('//time:end', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     opensearch_doc = Nokogiri::XML(doc.to_xml) do |config|
@@ -175,7 +175,7 @@ class Granule < Metadata
   def add_esipbp_uplink(doc, subtitle_node, url)
     up_link = nil
     dataset_ids_hash = Hash.new
-    echo_datasetid_nodes = doc.xpath('//echo:datasetId', 'echo' => 'http://www.echo.nasa.gov/esip')
+    echo_datasetid_nodes = doc.xpath('//echo:datasetId', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
     # can only add the up link per ESIP BP spec if ALL the granules in the result have the same datasetId
     echo_datasetid_nodes.each do |echo_datasetid_node|
       dataset_ids_hash[echo_datasetid_node.text] = nil

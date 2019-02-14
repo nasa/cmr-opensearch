@@ -48,7 +48,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
         esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:41.235Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=0</id><title
         type="text">ECHO granule metadata</title><entry><id>G185201166-USGS_EROS</id><title
@@ -192,7 +192,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
         esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:41.554Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=10</id><title
         type="text">ECHO granule metadata</title><entry><id>G185223643-USGS_EROS</id><title
@@ -336,7 +336,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
         esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:41.865Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=11</id><title
         type="text">ECHO granule metadata</title><entry><id>G185219079-USGS_EROS</id><title
@@ -480,7 +480,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="http://www.echo.nasa.gov/esip"
+        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
         esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-04-27T13:54:42.183Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?short_name=Landsat_8_OLI_TIRS&amp;provider=USGS_EROS&amp;page_size=10&amp;offset=20</id><title
         type="text">ECHO granule metadata</title><entry><id>G185196660-USGS_EROS</id><title

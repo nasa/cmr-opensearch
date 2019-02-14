@@ -44,11 +44,11 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:11:05.277Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/collections.atom?keyword=First+dataset+for+open+search&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR collection metadata</title>
-          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
             <id>C1000000029-OS_PROV_1</id>
             <title type="text">First dataset for open search</title>
             <summary type="text">This is a description</summary>
@@ -64,7 +64,7 @@ http_interactions:
             <echo:hasGranules>true</echo:hasGranules>
             <relevance:score>0.7</relevance:score>
           </entry>
-          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+          <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
             <id>C1000000029-OS_PROV_1</id>
             <title type="text">First dataset for open search</title>
             <summary type="text">This is a description</summary>
@@ -127,11 +127,11 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
               <?xml version="1.0" encoding="UTF-8"?>
-              <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+              <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
                 <updated>2014-07-18T13:11:05.277Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/collections.atom?keyword=First+dataset+for+open+search&amp;page_num=1&amp;page_size=10</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
                   <id>C1000000029-OS_PROV_1</id>
                   <title type="text">First dataset for open search</title>
                   <summary type="text">This is a description</summary>
@@ -147,7 +147,7 @@ http_interactions:
                   <echo:hasGranules>true</echo:hasGranules>
                   <relevance:score>0.7</relevance:score>
                 </entry>
-                <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
                   <id>C1000000029-OS_PROV_1</id>
                   <title type="text">First dataset for open search</title>
                   <summary type="text">This is a description</summary>
@@ -163,7 +163,7 @@ http_interactions:
                   <echo:hasGranules>true</echo:hasGranules>
                   <relevance:score>0.7</relevance:score>
                 </entry>
-                <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+                <entry xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
                   <id>C1000000029-OS_PROV_1</id>
                   <title type="text">First dataset for open search</title>
                   <summary type="text">This is a description</summary>

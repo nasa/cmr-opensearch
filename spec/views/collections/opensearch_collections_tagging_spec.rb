@@ -25,7 +25,7 @@ describe 'various provider granule OpenSearch API search behavior'  do
         entry_cwic_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_provider_specific_link = entry.at_xpath('os:link[@title = \'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_cmr_link = entry.at_xpath('os:link[@title = \'Custom CMR Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
-        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text
+        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
 
         # TEST entries
         if([2,5,8].include?(index+1))
@@ -73,7 +73,7 @@ describe 'various provider granule OpenSearch API search behavior'  do
         entry_cwic_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_provider_specific_link = entry.at_xpath('os:link[@title = \'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_cmr_link = entry.at_xpath('os:link[@title = \'Custom CMR Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
-        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text
+        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         # TEST entries
         if([2,5,8].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
