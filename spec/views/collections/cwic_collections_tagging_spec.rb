@@ -24,7 +24,7 @@ describe 'faceted search behavior', :type => :controller  do
         entry_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         # all entries will have the CWIC OSDD link since the header is present
         expect(entry_link.nil?).to be false
-        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text
+        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         # even entries are test entries, odd entries are prod entries
         if((index+1)%2 == 0)
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
@@ -53,7 +53,7 @@ describe 'faceted search behavior', :type => :controller  do
         expect(entry_id.include?((index+1).to_s)).to be true
         entry_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
 
-        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text
+        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         # even entries are test entries, odd entries are prod entries
         if((index+1)%2 == 0)
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
@@ -87,7 +87,7 @@ describe 'faceted search behavior', :type => :controller  do
         get_dif_link = entry.at_xpath('os:link[@rel = \'enclosure\']', 'os' => 'http://www.w3.org/2005/Atom')
         # CWIC OSDD link uses the concept-id
         entry_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
-        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text
+        entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         expect(entry_tag_value).to include('org.ceos.wgiss.cwic.granules.')
         expect(entry_link['href']).to include(expected_concept_ids[index])
         # concept-id used in the cwic entry link is different from the dif-id

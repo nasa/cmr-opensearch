@@ -12,10 +12,8 @@ describe 'faceted search behavior'  do
       get '/datasets.atom?facetLimit=-1'
       assert last_response.ok?
       feed = Nokogiri::XML(last_response.body)
-
       # Do we have a faceted result section?
       assert_equal 1, feed.xpath('os:feed/fs:facetedResults', 'os' => 'http://www.w3.org/2005/Atom', 'fs' => 'http://docs.oasis-open.org/ns/search-ws/facetedResults').size
-
       # Do we have 5 facets
       # We ONLY check for all 5 facets in this spec example
       facets = feed.xpath('//fs:facet', 'fs' => 'http://docs.oasis-open.org/ns/search-ws/facetedResults')

@@ -12,7 +12,7 @@ describe Collection do
                 <updated>2013-02-13T19:57:44.080Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465571-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -34,7 +34,7 @@ describe Collection do
                   <echo:browseFlag>false</echo:browseFlag>
                   <echo:hasGranules>true</echo:hasGranules>
                 </entry>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465572-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V006</title>
@@ -56,7 +56,7 @@ describe Collection do
                   <echo:browseFlag>false</echo:browseFlag>
                   <echo:hasGranules>false</echo:hasGranules>
                 </entry>
-               <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+               <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465573-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V007</title>
@@ -78,7 +78,7 @@ describe Collection do
                   <echo:browseFlag>false</echo:browseFlag>
                   <echo:hasGranules>foo</echo:hasGranules>
                 </entry>
-               <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+               <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465574-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V008</title>
@@ -102,7 +102,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
@@ -120,7 +120,7 @@ describe Collection do
           <os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
             <author>
@@ -149,7 +149,7 @@ describe Collection do
             <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
             <georss:box>56.5414925833731 160.605005 57.2230163579929 161.89263</georss:box>
           </entry>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465572-GSFCS4PA</id>
             <author>
@@ -176,7 +176,7 @@ describe Collection do
             <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
             <georss:box>56.5414925833731 160.605005 57.2230163579929 161.89263</georss:box>
           </entry>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465573-GSFCS4PA</id>
             <author>
@@ -203,7 +203,7 @@ describe Collection do
             <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
             <georss:box>56.5414925833731 160.605005 57.2230163579929 161.89263</georss:box>
           </entry>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465574-GSFCS4PA</id>
             <author>

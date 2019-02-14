@@ -31,7 +31,7 @@ class Facet
   end
 
   def self.process_facet_search(collections, facet_params)
-    cmr_facets = collections.xpath('//echo:facets', 'echo' => 'http://www.echo.nasa.gov/esip')
+    cmr_facets = collections.xpath('//echo:facets', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
     opensearch_facets, facet_count = to_opensearch_facets(cmr_facets)
     # for now we only support the facetLimit
     if (facet_params[:facet_limit].to_i > 0)
