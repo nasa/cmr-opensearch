@@ -12,7 +12,7 @@ describe Granule do
                 <updated>2013-02-14T15:51:38.801Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_num=1&amp;page_size=1</id>
                 <title type="text">CMR granule metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <id>G92789465-LAADS</id>
                   <title>LAADS:4847654</title>
                   <updated>2013-02-14T15:51:38.801Z</updated>
@@ -31,7 +31,7 @@ describe Granule do
               </feed>
       eos
       open_search_response_str = <<-eos
-                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
                   <updated>2013-02-14T15:51:38.801Z</updated>
                   <id>#{ENV['opensearch_url']}/granules.atom</id>
                   <author>
@@ -49,7 +49,7 @@ describe Granule do
                   <os:totalResults>1</os:totalResults>
                   <os:itemsPerPage>10</os:itemsPerPage>
                   <os:startIndex>1</os:startIndex>
-                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                     <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                     <title type="text">LAADS:4847654</title>
                     <updated>2013-02-14T15:51:38.801Z</updated>
@@ -84,7 +84,7 @@ describe Granule do
                       <updated>2013-02-14T15:51:38.801Z</updated>
                       <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_num=1&amp;page_size=1</id>
                       <title type="text">CMR granule metadata</title>
-                      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                         <id>G92789465-LAADS</id>
                         <title>LAADS:4847654</title>
                         <updated>2013-02-14T15:51:38.801Z</updated>
@@ -103,7 +103,7 @@ describe Granule do
                     </feed>
       eos
       open_search_response_str = <<-eos
-                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
                         <updated>2013-02-14T15:51:38.801Z</updated>
                         <id>#{ENV['opensearch_url']}/granules.atom</id>
                         <author>
@@ -121,7 +121,7 @@ describe Granule do
                         <os:totalResults>1</os:totalResults>
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
-                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                           <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
@@ -157,7 +157,7 @@ describe Granule do
                       <updated>2013-02-14T15:51:38.801Z</updated>
                       <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_num=1&amp;page_size=1</id>
                       <title type="text">CMR granule metadata</title>
-                      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                         <id>G92789465-LAADS</id>
                         <title>LAADS:4847654</title>
                         <updated>2013-02-14T15:51:38.801Z</updated>
@@ -176,7 +176,7 @@ describe Granule do
                     </feed>
       eos
       open_search_response_str = <<-eos
-                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
                         <updated>2013-02-14T15:51:38.801Z</updated>
                         <id>#{ENV['opensearch_url']}/granules.atom</id>
                         <author>
@@ -194,7 +194,7 @@ describe Granule do
                         <os:totalResults>1</os:totalResults>
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
-                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                           <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
@@ -227,7 +227,7 @@ describe Granule do
                       <updated>2013-02-14T15:51:38.801Z</updated>
                       <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_num=1&amp;page_size=1</id>
                       <title type="text">CMR granule metadata</title>
-                      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                         <id>G92789465-LAADS</id>
                         <title>LAADS:4847654</title>
                         <updated>2013-02-14T15:51:38.801Z</updated>
@@ -246,7 +246,7 @@ describe Granule do
                     </feed>
       eos
       open_search_response_str = <<-eos
-                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+                      <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
                         <updated>2013-02-14T15:51:38.801Z</updated>
                         <id>#{ENV['opensearch_url']}/granules.atom</id>
                         <author>
@@ -264,7 +264,7 @@ describe Granule do
                         <os:totalResults>1</os:totalResults>
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
-                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                           <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
@@ -331,7 +331,7 @@ describe Granule do
           <updated>2013-02-14T15:51:38.801Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_num=1&amp;page_size=1</id>
           <title type="text">CMR granule metadata</title>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <id>G92789465-LAADS</id>
             <title>LAADS:4847654</title>
             <updated>2013-02-14T15:51:38.801Z</updated>
@@ -350,7 +350,7 @@ describe Granule do
         </feed>
       eos
       open_search_response_str = <<-eos
-          <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+          <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
             <updated>2013-02-14T15:51:38.801Z</updated>
             <id>#{ENV['opensearch_url']}/granules.atom</id>
             <author>
@@ -368,7 +368,7 @@ describe Granule do
             <os:totalResults>1</os:totalResults>
             <os:itemsPerPage>10</os:itemsPerPage>
             <os:startIndex>1</os:startIndex>
-            <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+            <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
               <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
               <title type="text">LAADS:4847654</title>
               <updated>2013-02-14T15:51:38.801Z</updated>
@@ -401,7 +401,7 @@ describe Granule do
               <updated>2013-03-21T19:15:52.658Z</updated>
               <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_size=1</id>
               <title type="text">CMR granule metadata</title>
-              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                 <id>G92789465-LAADS</id>
                 <title type="text">LAADS:4847654</title>
                 <updated>2010-02-02T03:56:37.983Z</updated>
@@ -422,7 +422,7 @@ describe Granule do
 
       eos
       open_search_response_str = <<-eos
-            <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+            <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
               <updated>2013-03-21T19:15:52.658Z</updated>
               <id>#{ENV['opensearch_url']}/granules.atom</id>
               <author>
@@ -440,7 +440,7 @@ describe Granule do
               <os:totalResults>1</os:totalResults>
               <os:itemsPerPage>10</os:itemsPerPage>
               <os:startIndex>1</os:startIndex>
-              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                 <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                 <title type="text">LAADS:4847654</title>
                 <updated>2010-02-02T03:56:37.983Z</updated>
@@ -474,7 +474,7 @@ describe Granule do
                   <updated>2013-03-21T19:15:52.658Z</updated>
                   <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_size=1</id>
                   <title type="text">CMR granule metadata</title>
-                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                     <id>G92789465-LAADS</id>
                     <title type="text">LAADS:4847654</title>
                     <updated>2010-02-02T03:56:37.983Z</updated>
@@ -495,7 +495,7 @@ describe Granule do
 
           eos
           open_search_response_str = <<-eos
-                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
                   <updated>2013-03-21T19:15:52.658Z</updated>
                   <id>#{ENV['opensearch_url']}/granules.atom</id>
                   <author>
@@ -513,7 +513,7 @@ describe Granule do
                   <os:totalResults>1</os:totalResults>
                   <os:itemsPerPage>10</os:itemsPerPage>
                   <os:startIndex>1</os:startIndex>
-                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                     <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                     <title type="text">LAADS:4847654</title>
                     <updated>2010-02-02T03:56:37.983Z</updated>

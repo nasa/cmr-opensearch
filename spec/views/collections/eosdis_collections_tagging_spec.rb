@@ -13,7 +13,7 @@ describe 'eosdis search behavior' do
       get '/datasets.atom?keyword=esdis_test_one&clientId=geoss_test_two', nil, {'Cwic-User' => 'test'}
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
-      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text).to eq('true')
+      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text).to eq('true')
     end
 
   end
@@ -23,7 +23,7 @@ describe 'eosdis search behavior' do
       get '/datasets.atom?keyword=esdis_test_two&clientId=geoss_test_two', nil, {'Cwic-User' => 'test'}
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
-      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip')).to eq(nil)
+      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')).to eq(nil)
     end
   end
 
@@ -32,7 +32,7 @@ describe 'eosdis search behavior' do
       get '/datasets.atom?keyword=esdis_test_three&clientId=geoss_test_three', nil, {'Cwic-User' => 'test'}
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
-      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip')).to eq(nil)
+      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')).to eq(nil)
     end
   end
 
@@ -41,7 +41,7 @@ describe 'eosdis search behavior' do
       get '/datasets.atom?keyword=esdis_test_four&clientId=geoss_test_four', nil, {'Cwic-User' => 'test'}
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
-      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').text).to eq('true')
+      expect(feed.at_xpath('os:feed/os:entry/echo:is_eosdis', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text).to eq('true')
     end
   end
 end

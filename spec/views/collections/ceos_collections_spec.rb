@@ -17,7 +17,7 @@ describe 'CEOS collections searches', :type => :controller  do
       expect(entries.size).to eq(10)
       # response entries are all CEOS collections
       entries.each_with_index do |entry, index|
-        entry_is_ceos = entry.at_xpath('echo:is_ceos', 'echo' => 'http://www.echo.nasa.gov/esip').text
+        entry_is_ceos = entry.at_xpath('echo:is_ceos', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         expect(entry_is_ceos).to eq('true')
       end
     end

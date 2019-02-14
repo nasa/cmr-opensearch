@@ -50,7 +50,7 @@ end
 And /^result (\d+) should have a the following echo characteristics,$/ do |index, table|
   table.hashes.each do |hash|
     hash.each do |key, value|
-      expect(@response_doc.xpath("/atom:feed/atom:entry/echo:#{key}", "atom" => 'http://www.w3.org/2005/Atom', "echo" => 'http://www.echo.nasa.gov/esip').first.content).to eq(value)
+      expect(@response_doc.xpath("/atom:feed/atom:entry/echo:#{key}", "atom" => 'http://www.w3.org/2005/Atom', "echo" => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').first.content).to eq(value)
     end
   end
 end
@@ -278,7 +278,7 @@ Then(/^result (\d+) should have a link href of '(.*?)' for the granule open sear
 end
 
 Then(/^result (\d+) (should|should not) have a geoss tag$/) do |index, should|
-  geoss = @response_doc.xpath("/atom:feed/atom:entry[#{index.to_i}]/echo:is_geoss", 'atom' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip').first
+  geoss = @response_doc.xpath("/atom:feed/atom:entry[#{index.to_i}]/echo:is_geoss", 'atom' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').first
   if should == 'should'
     expect(geoss).to be
     expect(geoss.content).to eq('true')

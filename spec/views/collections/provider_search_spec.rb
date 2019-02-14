@@ -16,7 +16,7 @@ describe 'provider search behavior' do
       get '/datasets.atom?provider=larc&clientId=larc1', nil, {'Cwic-User' => 'test'}
       expect(last_response.ok?).to be true
       feed = Nokogiri::XML(last_response.body)
-      results = feed.xpath('os:feed/os:entry/echo:dataCenter', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'http://www.echo.nasa.gov/esip')
+      results = feed.xpath('os:feed/os:entry/echo:dataCenter', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
       results.each do |result|
         expect(result.text).to eq 'LARC'
       end

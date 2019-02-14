@@ -18,7 +18,7 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
   it 'conforms with draft 2 of the open search parameter extension' do
     osdd_response_str = <<-eos
                 <os:OpenSearchDescription xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
-                	xmlns:echo="http://www.echo.nasa.gov/esip"
+                	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
                 	xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
                 	xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
                 	xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" esipdiscovery:version="1.2"

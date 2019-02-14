@@ -12,7 +12,7 @@ describe Collection do
                 <updated>2013-02-13T19:57:44.080Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465571-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -38,7 +38,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
@@ -56,7 +56,7 @@ describe Collection do
           <os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
             <author>
@@ -106,7 +106,7 @@ describe Collection do
                 <updated>2013-02-13T19:57:44.080Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465571-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -132,7 +132,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
@@ -149,7 +149,7 @@ describe Collection do
           <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
             <author>
@@ -199,7 +199,7 @@ describe Collection do
                 <updated>2013-02-13T19:57:44.080Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465571-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -225,7 +225,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
@@ -243,7 +243,7 @@ describe Collection do
           <os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
             <author>
@@ -291,7 +291,7 @@ describe Collection do
                 <updated>2013-02-13T19:57:44.080Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465571-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -317,7 +317,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
@@ -334,7 +334,7 @@ describe Collection do
           <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
 
@@ -403,7 +403,7 @@ describe Collection do
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
           <title type="text">CMR collection metadata</title>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>C190465571-GSFCS4PA</id>
             <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -428,7 +428,7 @@ describe Collection do
         </feed>
       eos
       open_search_response_str = <<-eos
-  <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+  <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
     <updated>2013-02-13T19:57:44.080Z</updated>
     <id>#{ENV['opensearch_url']}/collections.atom</id>
     <author>
@@ -445,7 +445,7 @@ describe Collection do
     <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
     <os:itemsPerPage>10</os:itemsPerPage>
     <os:startIndex>1</os:startIndex>
-    <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+    <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
       <updated>2013-02-13T19:57:44.080Z</updated>
       <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
 
@@ -494,7 +494,7 @@ describe Collection do
         <updated>2013-02-13T19:57:44.080Z</updated>
         <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
         <title type="text">CMR collection metadata</title>
-        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>C190465571-GSFCS4PA</id>
           <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -519,7 +519,7 @@ describe Collection do
       </feed>
       eos
       open_search_response_str = <<-eos
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
   <updated>2013-02-13T19:57:44.080Z</updated>
   <id>#{ENV['opensearch_url']}/collections.atom</id>
   <author>
@@ -536,7 +536,7 @@ describe Collection do
   <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
   <os:itemsPerPage>10</os:itemsPerPage>
   <os:startIndex>1</os:startIndex>
-  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
     <updated>2013-02-13T19:57:44.080Z</updated>
     <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
     <author>
@@ -582,7 +582,7 @@ describe Collection do
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
             <title type="text">CMR collection metadata</title>
-            <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+            <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
               <updated>2013-02-13T19:57:44.080Z</updated>
               <id>C190465571-GSFCS4PA</id>
               <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -608,7 +608,7 @@ describe Collection do
           </feed>
       eos
       open_search_response_str = <<-eos
-    <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+    <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
       <updated>2013-02-13T19:57:44.080Z</updated>
       <id>#{ENV['opensearch_url']}/collections.atom</id>
       <author>
@@ -625,7 +625,7 @@ describe Collection do
       <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
       <os:itemsPerPage>10</os:itemsPerPage>
       <os:startIndex>1</os:startIndex>
-      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+      <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
         <updated>2013-02-13T19:57:44.080Z</updated>
         <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
         <author>
@@ -671,7 +671,7 @@ describe Collection do
                 <updated>2013-02-13T19:57:44.080Z</updated>
                 <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                 <title type="text">CMR collection metadata</title>
-                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>C190465571-GSFCS4PA</id>
                   <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -697,7 +697,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
@@ -714,7 +714,7 @@ describe Collection do
           <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request"/><os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
-          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
             <updated>2013-02-13T19:57:44.080Z</updated>
             <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
             <author>
@@ -760,7 +760,7 @@ describe Collection do
                     <updated>2013-03-21T16:43:56.190Z</updated>
                     <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=MOD02QKM&amp;page_size=10</id>
                     <title type="text">CMR collection metadata</title>
-                    <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                    <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                       <id>C90758174-LAADS</id>
                       <title type="text">MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</title>
                       <summary type="text">This Level 1B collection contains calibrated and geolocated radiances at-aperture for MODIS spectral bands 1 and 2 at 250m resolution.</summary>
@@ -782,7 +782,7 @@ describe Collection do
                   </feed>
       eos
       open_search_response_str = <<-eos
-            <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+            <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
               <updated>2013-03-21T16:43:56.190Z</updated>
               <id>#{ENV['opensearch_url']}/collections.atom</id>
               <author>
@@ -799,7 +799,7 @@ describe Collection do
               <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="MOD02QKM"/><os:totalResults>1</os:totalResults>
               <os:itemsPerPage>10</os:itemsPerPage>
               <os:startIndex>1</os:startIndex>
-              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                 <id>#{ENV['opensearch_url']}/collections.atom?uid=C90758174-LAADS</id>
                 <author>
                   <name>CMR</name>
@@ -843,7 +843,7 @@ describe Collection do
                         <updated>2013-02-13T19:57:44.080Z</updated>
                         <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=AIRVBRAD&amp;page_size=1</id>
                         <title type="text">CMR collection metadata</title>
-                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                        <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                           <updated>2013-02-13T19:57:44.080Z</updated>
                           <id>C190465571-GSFCS4PA</id>
                           <title>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
@@ -869,7 +869,7 @@ describe Collection do
                       </feed>
       eos
       open_search_response_str = <<-eos
-                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
                   <updated>2013-02-13T19:57:44.080Z</updated>
                   <id>#{ENV['opensearch_url']}/collections.atom</id>
                   <author>
@@ -888,7 +888,7 @@ describe Collection do
                   <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>18</os:totalResults>
                   <os:itemsPerPage>5</os:itemsPerPage>
                   <os:startIndex>6</os:startIndex>
-                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="http://www.echo.nasa.gov/esip" xmlns:gml="http://www.opengis.net/gml">
+                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
                     <updated>2013-02-13T19:57:44.080Z</updated>
                     <id>#{ENV['opensearch_url']}/collections.atom?uid=C190465571-GSFCS4PA</id>
                     <author>

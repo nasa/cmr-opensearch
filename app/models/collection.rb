@@ -144,13 +144,13 @@ class Collection < Metadata
     end
 
     # Remove all difId, onlineAccessFlag and browseFlag
-    doc.xpath('//foo:difId', 'foo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//foo:onlineAccessFlag', 'foo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//foo:browseFlag', 'foo' => 'http://www.echo.nasa.gov/esip').remove
+    doc.xpath('//foo:difId', 'foo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
+    doc.xpath('//foo:onlineAccessFlag', 'foo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
+    doc.xpath('//foo:browseFlag', 'foo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
     doc.xpath('//time:start', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
     doc.xpath('//time:end', 'time' => 'http://a9.com/-/opensearch/extensions/time/1.0/').remove
-    doc.xpath('//foo:originalFormat', 'foo' => 'http://www.echo.nasa.gov/esip').remove
-    doc.xpath('//foo:hasGranules', 'foo' => 'http://www.echo.nasa.gov/esip').remove if for_atom == true
+    doc.xpath('//foo:originalFormat', 'foo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove
+    doc.xpath('//foo:hasGranules', 'foo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').remove if for_atom == true
     raw_string = doc.to_xml
     opensearch_doc = Nokogiri::XML(raw_string) do |config|
       config.default_xml.noblanks
@@ -181,8 +181,8 @@ class Collection < Metadata
   def provider_granule_osdd_collection_link(entry_node)
     granule_specific_osdd = nil
     if entry_node.name == 'tag'
-      tag_key = entry_node.at_xpath('echo:tagKey', 'echo' => 'http://www.echo.nasa.gov/esip')
-      tag_data = entry_node.at_xpath('echo:data', 'echo' => 'http://www.echo.nasa.gov/esip')
+      tag_key = entry_node.at_xpath('echo:tagKey', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
+      tag_data = entry_node.at_xpath('echo:data', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
       if (tag_key != nil) && (tag_key.text == Rails.configuration.granule_osdd_tag)
         if tag_data != nil
           # sample node is: <echo:data>"http://cwictest.wgiss.ceos.org/opensearch/datasets/C1239566345-EUMETSAT/osdd.xml?clientId=rspec13"</echo:data>
@@ -214,9 +214,9 @@ class Collection < Metadata
   # in the CMR OpenSearch environment specific application configuration.
   def ceos_collection?(entry_node)
     is_ceos = false
-    data_center = entry_node.at_xpath('echo:dataCenter', 'echo' => 'http://www.echo.nasa.gov/esip')
-    archive_center = entry_node.at_xpath('echo:archiveCenter', 'echo' => 'http://www.echo.nasa.gov/esip')
-    organizations = entry_node.xpath('echo:organization', 'echo' => 'http://www.echo.nasa.gov/esip')
+    data_center = entry_node.at_xpath('echo:dataCenter', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
+    archive_center = entry_node.at_xpath('echo:archiveCenter', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
+    organizations = entry_node.xpath('echo:organization', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
     if (cmr_params != nil)
       if ((!data_center.nil? && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center],data_center.text)) ||
           (!archive_center.nil? && cmr_params[:data_center] != nil && ceos_configured_collection?(cmr_params[:data_center], archive_center.text)))

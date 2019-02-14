@@ -206,7 +206,7 @@ class Metadata
     doc.root.add_namespace 'dc', 'http://purl.org/dc/terms/'
     doc.root.add_namespace 'georss', 'http://www.georss.org/georss'
     doc.root.add_namespace 'time', 'http://a9.com/-/opensearch/extensions/time/1.0/'
-    doc.root.add_namespace 'echo', 'http://www.echo.nasa.gov/esip'
+    doc.root.add_namespace 'echo', 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom'
     doc.root.add_namespace 'gml', 'http://www.opengis.net/gml'
     doc.root['esipdiscovery:version'] = '1.2'
 
@@ -407,7 +407,7 @@ class Metadata
     query_node = Nokogiri::XML::Node.new "os:Query", doc
     query_node.add_namespace 'geo', 'http://a9.com/-/opensearch/extensions/geo/1.0/'
     query_node.add_namespace 'time', 'http://a9.com/-/opensearch/extensions/time/1.0/'
-    query_node.add_namespace 'echo', 'http://www.echo.nasa.gov/esip'
+    query_node.add_namespace 'echo', 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom'
     node.add_next_sibling(query_node)
     query_node[:role] = 'request'
     query_node['os:searchTerms'] = params[:keyword] unless params[:keyword].nil?
