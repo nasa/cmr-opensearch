@@ -100,7 +100,6 @@ Feature: Retrieve collections in html format
       | keyword      | OPENSEARCH                      |
     Then I should see 1 collection result
     And I should see a spatial extent of "-10.0 -10.0 10.0 10.0"
-    And the schema.org spatial extent of "-10.0 -10.0 10.0 10.0" should be present
     And collection result 1 should have a the following echo characteristics,
       | characteristic | value                  |
       | short_name     | SpatialTestingDataset1 |
@@ -144,7 +143,6 @@ Feature: Retrieve collections in html format
       | keyword   | OPENSEARCH           |
     Then I should see 1 collection result
     And I should see a temporal start of "2001-01-01T22:00:00Z"
-    And the schema.org temporal extent of "2001-01-01T22:00:00Z" should be present
     And collection result 1 should have a the following echo characteristics,
       | characteristic | value                   |
       | short_name     | TemporalTestingDataset1 |
@@ -160,7 +158,6 @@ Feature: Retrieve collections in html format
       Then I should see 1 collection result
       And I should see a temporal start of "2002-01-01T00:00:00Z"
       And I should see a temporal end of "2003-12-01T00:00:00Z"
-      And the schema.org temporal extent of "2002-01-01T00:00:00Z/2003-12-01T00:00:00Z" should be present
       And collection result 1 should have a the following echo characteristics,
         | characteristic | value                   |
         | short_name     | TemporalTestingDataset2 |
