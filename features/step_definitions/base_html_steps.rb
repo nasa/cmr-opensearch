@@ -191,10 +191,6 @@ Then(/^I should see a spatial extent of "(.*?)"$/) do |value|
   end
 end
 
-Then(/^the schema\.org spatial extent of "(.*?)" should be present$/) do |value|
-  page.should have_xpath("//meta[@itemprop='spatial'][@content='#{value}']") # <meta itemprop="spatial" content="foo" />    title[@lang='en']
-end
-
 When(/^I should see a temporal start of "(.*?)"$/) do |value|
   within('time.temporal-extent') do
     find('span.temporal-extent-start').should have_content(value)
@@ -205,12 +201,6 @@ Then(/^I should see a temporal end of "(.*?)"$/) do |value|
   within('time.temporal-extent') do
     find('span.temporal-extent-end').should have_content(value)
   end
-end
-
-
-
-Then(/^the schema\.org temporal extent of "(.*?)" should be present$/) do |value|
-  page.should have_xpath("//time[@itemprop='temporal'][@datetime='#{value}']") # <time itemprop="temporal" datetime="foo"></time>
 end
 
 Then(/^I (should|should not) see a granule search link within (collection|granule) (\d+)$/) do |should, concept, index|

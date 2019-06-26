@@ -111,9 +111,9 @@
              :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @collection_models.length, :number_of_hits => @number_of_hits, :parent => false, :model => @collection, :spatial_type => @spatial_type, :position => 'top'} %>
 </section>
 <section id="results">
-  <ul class="results" itemscope itemtype='http://schema.org/DataCatalog'>
+  <ul class="results">
     <% @collection_models.each do |collection| %>
-        <li class="result resource<%= cycle('', ' alt') %>" itemscope itemtype='http://schema.org/Dataset'>
+        <li class="result resource<%= cycle('', ' alt') %>">
           <%= render :partial => 'shared/result', :locals => {:resource => collection, :resource_type => 'collection'} %>
         </li>
     <% end %>

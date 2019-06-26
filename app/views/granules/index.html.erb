@@ -82,7 +82,7 @@
   <section id="results">
     <ul class='results'>
       <% @granule_models.each do |granule| %>
-          <li class="result resource<%= cycle('', ' alt') %>" itemscope itemtype='http://schema.org/Dataset'>
+          <li class="result resource<%= cycle('', ' alt') %>">
             <%= render :partial => 'shared/result', :locals => {:resource => granule, :resource_type => 'granule'} %>
           </li>
       <% end %>
