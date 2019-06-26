@@ -3,7 +3,7 @@
     <h3><%= resource.title %></h3>
     <!-- find the link of type via that is from cmr -->
     <% unless resource.canononical_link.nil? %>
-        <a class="content-link" href="<%= resource.canononical_link.href %>" itemprop='url'><%= resource.canononical_link.href %></a>
+        <a class="content-link" href="<%= resource.canononical_link.href %>"><%= resource.canononical_link.href %></a>
     <% end %>
     <div class="cc-meta">
       <% unless resource.description.nil? %>
@@ -17,15 +17,14 @@
         <% end %>
       </ul>
       <span class='label'>Temporal Extent: </span>
-      <time class='value temporal-extent' itemprop="temporal" datetime="<%= resource.temporal_extent %>"><%= render_temporal_extent(resource.temporal_extent) %></time>
+      <time class='value temporal-extent' datetime="<%= resource.temporal_extent %>"><%= render_temporal_extent(resource.temporal_extent) %></time>
       <span class='label'>Spatial Extent: </span><span class="value spatial-extent"><%= render_spatial_extent(resource.bounding_box, resource.polygon, resource.line, resource.point) %></span>
-      <meta itemprop="spatial" content="<%= resource.mbr %>"/>
       <div class="spacer"></div>
       <p class="cc-meta-detail">
-        <span itemprop='provider' class="badge badge data_center"><%= resource.uid.gsub("#{ENV['opensearch_url']}/concept.atom?uid=", '').split('-').last %></span>
+        <span class="badge badge data_center"><%= resource.uid.gsub("#{ENV['opensearch_url']}/concept.atom?uid=", '').split('-').last %></span>
         <% if resource_type == 'collection' %>
-            <span class='label'>Short Name: </span><span class='value short_name' itemprop='alternateName'> <%= resource.short_name %></span>
-            <span class='label'>Version ID: </span><span class='value version_id' itemprop='version'> <%= resource.version_id %></span>
+            <span class='label'>Short Name: </span><span class='value short_name'> <%= resource.short_name %></span>
+            <span class='label'>Version ID: </span><span class='value version_id'> <%= resource.version_id %></span>
         <% end %>
         <span class='label'>Unique ID: </span><span class='value uid'><%= resource.uid.gsub("#{ENV['opensearch_url']}/#{resource_type}s.atom?uid=", '') %></span>
       </p>
