@@ -32,11 +32,11 @@ See public/licenses.txt
 
 ## Installation
 
-* Ruby 2.1.2
+* Ruby 2.5.3
 * A Ruby version manager such as [RVM](http://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv) is strongly recommended.
 
 ### Initial setup
-Once the repository is cloned locally and Ruby 2.1.2 is installed, you must install the dependencies.
+Once the repository is cloned locally and Ruby 2.5.3 is installed, you must install the dependencies.
 If you don't have the [bundler](http://bundler.io/) gem already installed, execute the command below in the project root directory:
    
     gem install bundler   
