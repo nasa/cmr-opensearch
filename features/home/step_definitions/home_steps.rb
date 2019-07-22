@@ -25,7 +25,7 @@ end
 
 And(/^I should see the current version of CMR/) do
   within('footer') do
-     page.should have_link("Release: #{Rails.configuration.version.strip}", 'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
+     page.should have_link("Release: #{Rails.configuration.version.strip}", :href=>'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
    end
 end
 
@@ -36,7 +36,7 @@ end
 
 And(/^I should see a link to the CMR OpenSearch release documentation$/) do
   within('footer') do
-     page.should have_link("#{Rails.configuration.version.strip}", 'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
+     page.should have_link("#{Rails.configuration.version.strip}", :href=>'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
    end
 end
 

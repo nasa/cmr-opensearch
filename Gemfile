@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").chomp.split('-')[1] { |f| "ruby '#{f}'"}
 
-gem 'rails', '4.2.11'
-gem 'activeresource', '~> 4.1.0'
+gem 'rails', '4.2.11.1'
+gem 'activeresource'
 gem 'responders', '~> 2.0'
 gem 'unicorn'
-gem 'jquery-rails', '~> 4.3.1'
-gem 'nokogiri', '>= 1.8.5'
+gem 'jquery-rails'#, '~> 4.3.1'
+gem 'nokogiri', '>= 1.10.3'
 gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
 gem 'georuby', '~> 2.5.2'
