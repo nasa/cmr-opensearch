@@ -7,12 +7,13 @@ gem 'activeresource'
 gem 'responders', '~> 2.0'
 gem 'unicorn'
 gem 'jquery-rails'#, '~> 4.3.1'
-gem 'nokogiri', '>= 1.10.3'
+gem 'nokogiri', '>= 1.8.5'
 gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
 gem 'georuby', '~> 2.5.2'
 gem 'loofah', '>= 2.2.3'
 gem 'rack', '~> 1.6.11'
+gem 'ffi', '1.9.24'
 
 # Gems used only for assets and not required
 # in production environments by default.
