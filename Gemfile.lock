@@ -96,7 +96,7 @@ GEM
     et-orbi (1.2.1)
       tzinfo
     execjs (2.7.0)
-    ffi (1.11.1)
+    ffi (1.9.24)
     fugit (1.2.1)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.1)
@@ -266,6 +266,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2.2)
   cucumber-rails
   execjs (~> 2.7.0)
+  ffi (= 1.9.24)
   georuby (~> 2.5.2)
   jquery-rails (~> 4.3.1)
   loofah (>= 2.2.3)
