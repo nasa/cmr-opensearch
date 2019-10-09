@@ -1,0 +1,7 @@
+git*
+log/*
+tmp/*
+Dockerfile
+README.rdoc
+README.md
+CONTRIBUTING.md

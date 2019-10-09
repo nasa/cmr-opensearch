@@ -31,7 +31,7 @@ end
 
 And(/^I should see information regarding CMR OpenSearch release documentation$/) do
   assert page.has_content?('Release documentation can be found here')
-  page.should have_link('here', 'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
+  page.should have_link('here', :href=>'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
 end
 
 And(/^I should see a link to the CMR OpenSearch release documentation$/) do
