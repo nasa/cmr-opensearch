@@ -12,7 +12,7 @@ gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
 gem 'georuby', '~> 2.5.2'
 gem 'loofah', '>= 2.3.1'
-gem 'rack', '~> 1.6.11'
+gem 'rack', '~> 1.6.12'
 gem 'ffi', '1.9.24'
 
 # Gems used only for assets and not required
