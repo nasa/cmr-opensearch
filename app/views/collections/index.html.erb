@@ -99,6 +99,11 @@
       <p class="form-parameter">
         <%= label_tag 'isGeoss', 'GEOSS collection?: ' %>
         <%= select_tag 'isGeoss', options_from_collection_for_select(true_only_types, 'id', 'name', @is_geoss_type) %>
+      </p>
+
+      <p class="form-parameter">
+        <%= label_tag 'isFedeo', 'FedEO collection?: ' %>
+        <%= select_tag 'isFedeo', options_from_collection_for_select(true_only_types, 'id', 'name', @is_fedeo_type) %>
         <%= submit_tag 'Search', class: 'btn btn-default btn-round' %>
       </p>
 
