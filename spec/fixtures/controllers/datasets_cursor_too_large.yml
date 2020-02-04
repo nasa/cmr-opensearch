@@ -62,7 +62,7 @@ http_interactions:
   recorded_at: Thu, 14 May 2015 23:06:20 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=174558594&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=174558594&page_size=10
     body:
       encoding: US-ASCII
       string: ''

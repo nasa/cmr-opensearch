@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&provider=larc
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10&provider=larc
     body:
       encoding: US-ASCII
       string: ''
@@ -50,7 +50,7 @@ http_interactions:
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
         xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
-        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-05-29T17:41:39.932Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?provider=larc&amp;include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis+&amp;page_num=1&amp;page_size=10</id><title
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2017-05-29T17:41:39.932Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?provider=larc&amp;include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis%2Cint.esa.fedeo+&amp;page_num=1&amp;page_size=10</id><title
         type="text">ECHO dataset metadata</title><entry><id>C179031504-LARC</id><title
         type="text">ACRIM III Level 2 Daily Mean Data V001</title><summary type="text">Active
         Cavity Radiometer Irradiance Monitor (ACRIM) III Level 2 Daily Mean Data product
