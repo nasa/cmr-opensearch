@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=GEOS_TEST&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=GEOS_TEST&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -51,7 +51,7 @@ http_interactions:
             xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2"
             xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
             <updated>2016-02-05T19:59:56.807Z</updated>
-            <id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?provider=GEOS_TEST&amp;include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&amp;include_has_granules=true</id>
+            <id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?provider=GEOS_TEST&amp;include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&amp;include_has_granules=true</id>
             <title type="text">CMR dataset metadata</title>
             <entry>
                 <id>C1200018718-GCMDTEST</id>

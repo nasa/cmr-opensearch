@@ -60,7 +60,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:02 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -274,7 +274,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:03 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=First%20dataset%20for%20open%20search&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=First%20dataset%20for%20open%20search&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -347,7 +347,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:04 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=no_granules&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=no_granules&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -420,7 +420,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:04 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&provider=OS_PROV_1&short_name=FirstDataset&version=1
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?page_num=1&page_size=10&provider=OS_PROV_1&short_name=FirstDataset&version=1
     body:
       encoding: US-ASCII
       string: ''
@@ -526,7 +526,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:05 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=First%20dataset%20for%20open%20search&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=First%20dataset%20for%20open%20search&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -599,7 +599,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:06 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?bounding_box=-5,-5,5,5&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?bounding_box=-5,-5,5,5&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -672,7 +672,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:08 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&bounding_box=-5,-5,5,5&page_num=1&page_size=10&provider=OS_PROV_1&short_name=SpatialTestingDataset1&version=1
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?bounding_box=-5,-5,5,5&page_num=1&page_size=10&provider=OS_PROV_1&short_name=SpatialTestingDataset1&version=1
     body:
       encoding: US-ASCII
       string: ''
@@ -729,7 +729,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:08 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?bounding_box=-5,-5,5,5&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?bounding_box=-5,-5,5,5&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -802,7 +802,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:09 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=First%20dataset%20for%20open%20search&page_num=1&page_size=3
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=First%20dataset%20for%20open%20search&page_num=1&page_size=3
     body:
       encoding: US-ASCII
       string: ''
@@ -875,7 +875,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:11 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&short_name=SampleShortName
+    uri: https://cmr.earthdata.nasa.gov/search/granules.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10&short_name=SampleShortName
     body:
       encoding: US-ASCII
       string: ''
@@ -1234,7 +1234,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:14 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=3
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=3
     body:
       encoding: US-ASCII
       string: ''
@@ -1338,7 +1338,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:34:15 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=Granule%20navigation&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=Granule%20navigation&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''

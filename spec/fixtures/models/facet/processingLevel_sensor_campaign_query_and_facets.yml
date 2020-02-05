@@ -62,7 +62,7 @@ http_interactions:
   recorded_at: Sun, 01 Mar 2015 14:34:14 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?campaign=ESIP&include_facets=true&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10&processing_level=3&sensor=ANALYSIS
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?campaign=ESIP&include_facets=true&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10&processing_level=3&sensor=ANALYSIS
     body:
       encoding: US-ASCII
       string: ''
