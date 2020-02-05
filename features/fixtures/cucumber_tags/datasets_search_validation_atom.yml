@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -50,7 +50,7 @@ http_interactions:
         xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
         xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
         xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
-        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2018-02-05T21:51:41.459Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis+&amp;page_num=1&amp;page_size=10</id><title
+        esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2018-02-05T21:51:41.459Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis%2Cint.esa.fedeo+&amp;page_num=1&amp;page_size=10</id><title
         type=\"text\">CMR collection metadata</title><entry><id>C1214621811-SCIOPS</id><title
         type=\"text\">(SCI) The Bowen Island GeoLibrary (Data Collection)</title><summary
         type=\"text\">The Bowen Island GeoLibrary is a collection of map, text and
