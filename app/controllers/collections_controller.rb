@@ -55,6 +55,7 @@ class CollectionsController < ApplicationController
       @is_geoss_type = params[:isGeoss] || nil
       @is_ceos_type = params[:isCeos] || nil
       @is_eosdis_type = params[:isEosdis] || nil
+      @is_fedeo_type = params[:isFedeo] || nil
       @collection_models = []
       @number_of_hits = 0
       @collection = nil

@@ -1,7 +1,7 @@
 class Collection < Metadata
 
   attr_accessor :cmr_params
-  attr_accessor :hasGranules, :isCwic, :isGeoss, :isEosdis, :isCeos
+  attr_accessor :hasGranules, :isCwic, :isGeoss, :isEosdis, :isCeos, :isFedeo
 
   def find(params, url, for_atom = true, cwic_testing = false)
     collections = []
@@ -76,6 +76,7 @@ class Collection < Metadata
         provider_osdd_link = nil
         is_geoss = false
         is_eosdis = false
+        is_fedeo = false
         # mark the collection as CEOS if needed
         is_ceos = ceos_collection?(node)
         non_atom = []
@@ -110,6 +111,7 @@ class Collection < Metadata
             provider_osdd_link = provider_granule_osdd_collection_link(entry_node)
             is_geoss = geoss_collection?(entry_node) unless is_geoss == true
             is_eosdis = eosdis_collection?(entry_node) unless is_eosdis == true
+            is_fedeo = fedeo_collection?(entry_node) unless is_fedeo == true
           end
         end
 
@@ -139,6 +141,7 @@ class Collection < Metadata
         add_geoss(doc, node) if is_geoss
         add_ceos(doc, node) if is_ceos
         add_eosdis(doc, node) if is_eosdis
+        add_fedeo(doc, node) if is_fedeo
         node.add_child(mbr) unless mbr.nil?
       end
     end
@@ -250,6 +253,22 @@ class Collection < Metadata
     is_eosdis
   end
 
+  # a FedEO collection exists and results in a creation of a echo:is_fedeo element with value 'true' if the collection
+  # is tagged with the appropriate namespace 'int.esa.fedeo'
+  def fedeo_collection?(entry_node)
+    is_fedeo = false
+    if entry_node.name == 'tag'
+      value = ''
+      entry_node.children.each do |tag_node|
+        value = tag_node.content if tag_node.name == 'tagKey'
+      end
+      if (value == Rails.configuration.fedeo_tag)
+        is_fedeo = true
+      end
+    end
+    is_fedeo
+  end
+
   # There is a reason we don't simplify this by using xpath. It is really slow over large result sets. Slow enough to generate user complaints.
   def add_collection_summary(data_center, doc, entry, short_name, version_id, description = nil)
     summary = "<p><b>Short Name: </b>#{short_name} <b>Version ID: </b>#{version_id} <b>Data Center: </b>#{data_center}</p>"
@@ -275,7 +294,7 @@ class Collection < Metadata
 
     # We need this additional information to determine whether to create a granule level OSDD or not
     cmr_collection_params[:include_has_granules] = true
-    cmr_collection_params[:include_tags] = "#{Rails.configuration.cwic_tag},#{Rails.configuration.granule_osdd_tag},#{Rails.configuration.geoss_data_core_tag},#{Rails.configuration.eosdis_tag} "
+    cmr_collection_params[:include_tags] = "#{Rails.configuration.cwic_tag},#{Rails.configuration.granule_osdd_tag},#{Rails.configuration.geoss_data_core_tag},#{Rails.configuration.eosdis_tag},#{Rails.configuration.fedeo_tag}"
     tag_keys = ''
     # only match CWIC collections if search parameter is present
     tag_keys = 'org.ceos.wgiss.cwic.granules.prod' if params[:isCwic] && params[:isCwic] == 'true'
@@ -288,6 +307,11 @@ class Collection < Metadata
     if params[:isEosdis] && params[:isEosdis] == 'true'
       tag_keys.concat(',') unless tag_keys.blank?
       tag_keys.concat(Rails.configuration.eosdis_tag)
+    end
+    # only match FedEO collections if search parameter is present
+    if params[:isFedeo] && params[:isFedeo] == 'true'
+      tag_keys.concat(',') unless tag_keys.blank?
+      tag_keys.concat(Rails.configuration.fedeo_tag)
     end
 
     cmr_collection_params[:tag_key] = tag_keys unless tag_keys.blank?
@@ -322,6 +346,14 @@ class Collection < Metadata
     node.add_child(eosdis_node)
     node
   end
+
+  def add_fedeo(doc, node)
+    fedeo_node = Nokogiri::XML::Node.new 'echo:is_fedeo', doc
+    fedeo_node.content = 'true'
+    node.add_child(fedeo_node)
+    node
+  end
+
 
   def ceos_configured_collection?(ceos_collections_array_with_wildcard, collection)
     ret_val = false

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&offset=12&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&offset=12&page_size=10
     body:
       encoding: US-ASCII
       string: ''

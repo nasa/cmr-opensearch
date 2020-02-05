@@ -59,7 +59,7 @@ class Metadata
   def initialize(attributes = {})
     @invalid_param_errors = {}
     attributes.each do |name, value|
-      if %w(placeName clientId keyword instrument satellite sensor processingLevel campaign startTime endTime boundingBox geometry placeName numberOfResults cursor offset shortName versionId dataCenter dataset_id uid hasGranules isCwic isGeoss isCeos isEosdis parentIdentifier provider).include? name.to_s
+      if %w(placeName clientId keyword instrument satellite sensor processingLevel campaign startTime endTime boundingBox geometry placeName numberOfResults cursor offset shortName versionId dataCenter dataset_id uid hasGranules isCwic isGeoss isCeos isEosdis isFedeo parentIdentifier provider).include? name.to_s
         send("#{name}=", value)
       else
         # discard invalid query parameter per CEOS-BP-009B

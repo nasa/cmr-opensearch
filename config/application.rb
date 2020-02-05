@@ -97,6 +97,9 @@ module EchoOpensearch
     config.eosdis_tag = 'gov.nasa.eosdis'
     config.eosdis_descriptive_keyword = 'NASA Earth Science Data and Information System'
 
+    config.fedeo_tag = 'int.esa.fedeo'
+    config.fedeo_descriptive_keyword = 'Federated Earth Observation missions access'
+
     config.eosdis_providers = %w[
         NSIDCV0
         ORNL_DAAC
