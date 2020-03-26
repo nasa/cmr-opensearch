@@ -51,6 +51,7 @@ EchoOpensearch::Application.configure do
   # the endpoint used to generate CWIC granule OSDD links for the desired dataset
   # CWIC has a single test environment
   config.cwic_granules_osdd_endpoint = 'http://cwictest.wgiss.ceos.org/'
+  config.relative_url_root = '/opensearch'
 
 
   # 12-factor
@@ -75,4 +76,3 @@ EchoOpensearch::Application.configure do
   puts 'This is a sit deployment'
 
 end
-

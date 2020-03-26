@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").chomp.split('-')[1] { |f| "ruby '#{f}'"}
 
-gem 'rails', '4.2.11.1'
-gem 'activeresource', '~> 4.1.0'
+gem 'rails', '5.2.4.2'
+gem 'activeresource'
 gem 'responders', '~> 2.0'
 gem 'unicorn'
 gem 'jquery-rails', '~> 4.3.1'
@@ -12,8 +12,9 @@ gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
 gem 'georuby', '~> 2.5.2'
 gem 'loofah', '>= 2.3.1'
-gem 'rack', '~> 1.6.12'
+gem 'rack', '~> 2.0'
 gem 'ffi', '1.9.24'
+gem 'rails-controller-testing'
 
 # Gems used only for assets and not required
 # in production environments by default.
