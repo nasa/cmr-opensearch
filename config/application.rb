@@ -64,7 +64,7 @@ module EchoOpensearch
     config.assets.compress = true
     config.assets.precompile = ['*.js', '*.css', '*.css.erb', '*.png', '*.jpg', '*.jpeg', '*.gif']
     config.assets.prefix = '/assets'
-    config.relative_url_root = '/opensearch'
+    # config.relative_url_root = '/opensearch'
     config.assets.initialize_on_precompile = false
 
     def self.load_version

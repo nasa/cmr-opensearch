@@ -74,19 +74,19 @@ class GranulesController < ApplicationController
             text = ''
             if @granule.valid? && !granules.nil?
               text = granules.to_xml(:indent => 2)
-              render :text => text
+              render :plain => text
             else
               if @granule.errors.count > 0
                 text = @granule.errors.to_xml(:indent => 2)
                 if (text.include?("is not supported"))
-                  render :text => text, :status => :not_implemented
+                  render :plain => text, :status => :not_implemented
                 else
-                  render :text => text, :status => :bad_request and return
+                  render :plain => text, :status => :bad_request and return
                 end
               else
                 if (!e.nil? && !e.response.code.nil?)
                   # need separate rendering for exceptions since they cannot be added to ActiveModel errors modified hash
-                  render :text => e.response, :status => e.response.code and return
+                  render :plain => e.response, :status => e.response.code and return
                 end
               end
             end
@@ -121,7 +121,7 @@ class GranulesController < ApplicationController
   # step 2: search for granules ONLY in the collection of interest indentified in step 1
   def two_step_search
     ret_val = true
-    if params.size == 2 && params['action'] == 'index' && params['controller'] == 'granules'
+		if params.values.size == 2 && params['action'] == 'index' && params['controller'] == 'granules'
       ret_val = false
     end
     return ret_val
