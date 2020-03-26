@@ -6,7 +6,6 @@ describe 'collections searches compliance with CEOS Best Practices version 1.2' 
   def app
     Rails.application
   end
-
   it 'unsupported query parameters are dropped from the request per CEOS-BP-009B' do
     VCR.use_cassette 'views/collection/ceos_bp_009b', :decode_compressed_response => true, :record => :once do
       get '/collections.atom?shortName=AST_L1B&spatial_type=bbox&unsupported_query_parameter=testvalue'

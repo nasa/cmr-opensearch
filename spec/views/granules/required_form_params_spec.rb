@@ -5,6 +5,7 @@ describe 'granule search form test'  do
 
   it 'does not allow granule searches with empty UniqueID and ShortName and CollectionID' do
     VCR.use_cassette 'views/granule/allRequiredFormParamsEmpty', :record => :once, :decode_compressed_response => true do
+			puts granules_path
       visit granules_path
       click_button('Search')
       expect(page).to have_content("3 errors prohibited this search from being executed:")

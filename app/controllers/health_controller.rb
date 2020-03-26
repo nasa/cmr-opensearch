@@ -6,7 +6,7 @@ class HealthController < ApplicationController
     response = "{\"cmr-search\":{\"ok?\":#{health.ok?}}}"
     respond_to do |format|
       format.json do
-        render :text => response, :status => health.ok? ? :ok : :service_unavailable
+        render :plain => response, :status => health.ok? ? :ok : :service_unavailable
       end
     end
   end
