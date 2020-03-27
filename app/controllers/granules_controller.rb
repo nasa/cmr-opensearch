@@ -121,7 +121,7 @@ class GranulesController < ApplicationController
   # step 2: search for granules ONLY in the collection of interest indentified in step 1
   def two_step_search
     ret_val = true
-		if params.values.size == 2 && params['action'] == 'index' && params['controller'] == 'granules'
+    if params.values.size == 2 && params['action'] == 'index' && params['controller'] == 'granules'
       ret_val = false
     end
     return ret_val
