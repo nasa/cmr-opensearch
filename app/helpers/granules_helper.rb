@@ -4,7 +4,7 @@ module GranulesHelper
   end
 
   def parse_cwic_mapping_by_concept_id(concept_id)
-    cwic_mapping_doc_loc = "/Users/dpzamora/lab/cmr/cmr-opensearch/cwic-mapping.xml"
+    cwic_mapping_doc_loc = "cwic-mapping.xml"
     cwic_mapping_doc =  File.open(cwic_mapping_doc_loc) { |f| Nokogiri::XML(f) }
     provider = cwic_mapping_doc.xpath("/mappingList/catalog/dataSet[@conceptId=\"#{concept_id}\"]/../@id").text
     mapping_hash = Hash.new
