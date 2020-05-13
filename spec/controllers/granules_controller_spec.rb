@@ -21,6 +21,18 @@ describe GranulesController do
       end
     end
   end
+  context "with valid collection concept id" do
+    it "renders a descriptor document" do
+      get :descriptor_document, :format => :xml, :params => { :clientId => 'foo', :collectionConceptId => 'C1214599108-SCIOPS' }
+      expect(response).to render_template("granules/ccmeo.xml.erb")
+    end
+  end
+  context "with invalid collection concept id" do
+    it "renders an error" do
+      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'invalid' }
+      expect(response.status).to eq(400)
+    end
+  end
 
   describe "GET RestClient error" do
     context "with larger than allowed cursor value" do

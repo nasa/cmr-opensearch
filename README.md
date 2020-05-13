@@ -151,7 +151,7 @@ that the application needs in order to run.  A sample _config/application.yml_ f
 ### Run the automated [Rspec](http://rspec.info/) and [cucumber](https://github.com/cucumber/cucumber-rails) tests
 Execute the commands below in the project root directory:
 
-    rspec
+		bundle exec rspec
     bundle exec cucumber
 
 All tests should pass in less than 2 minutes.
