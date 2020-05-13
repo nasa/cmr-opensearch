@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/">
+   <ShortName>Radarsat Imagery</ShortName>
+   <Description>Search for Raw Scenes of Radarsat-1 and Radarsat-2 Imagery; Contact : Natural Resources Canada, Canada Centre For Mapping And Earth Observation(CCMEO), 560 Rochester St., Ottawa, Ontario, Canada, email : bsa@ccrs.nrcan.gc.ca</Description>
+   <Image height="64" width="64" type="image/png">http://www.powerhousemuseum.com/collection/database/opensearch/phmlogo.png</Image>
+   <Image height="16" width="16" type="image/gif">http://www.nrcan.gc.ca/sites/all/themes/nrcan/images/sig-eng.gif</Image>
+   <Tags>Radarsat-1 Radarsat-2 Satellite Scenes Remote Sensing</Tags>
+   <Contact>bsa@ccrs.nrcan.gc.ca</Contact>
+<!-- with reference to the Url element below, the startIndex and count parameters are mutually exclusive from the startPage parameter - the startPage parameter cannot be used with the startIndex and count parameters -->
+   <Url type="text/html" template="http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=<%= @dataset_id %>&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}"/>
+   <Url type="application/atom+xml" template="http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=<%= @dataset_id %>&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}&amp;format=atom"/>
+   <LongName>Metadata and browse imagery are obtained from a search of the CEOCat-NEODF catalogues at CCMEO, Natural Resources Canada</LongName>
+<!-- the following 2 examples apply to searching for Radarsat-1 raw scenes -->
+   <Query role="example" searchTerms="Radarsat-1" time:start="2008-06-01T23:06:24Z" time:end="2008-06-08T23:03:03Z" geo:box="-82,43,-74,46" startPage="1" format="atom"/>
+   <Query role="example" searchTerms="CWIC_REG_Radarsat-1" time:start="2008-06-01T23:06:24Z" time:end="2008-06-08T23:03:03Z" geo:box="-82,43,-74,46" startPage="1" format="atom"/>
+<!-- the following 2 examples apply to searching for Radarsat-2 raw scenes -->
+   <Query role="example" searchTerms="Radarsat-2" time:start="2008-06-01T23:06:24Z" time:end="2008-08-08T23:03:03Z" geo:box="-82,43,-74,46" startPage="1" format="atom"/>
+   <Query role="example" searchTerms="CWIC_REG" time:start="2008-06-01T23:06:24Z" time:end="2008-08-08T23:03:03Z" geo:box="-82,43,-74,46" startPage="1" format="atom"/>
+   <Query role="example" searchTerms="Radarsat-2" geo:box="-82,43,-74,46" startIndex="1" count="10" format="atom"/>
+   <Query role="example" searchTerms="Radarsat-2" geo:id="imageid_159095_sceneid_2_recfac_GATN_acqdate_2011-10-10T12_22_43.305" format="atom"/>
+   <Developer>Natural Resources Canada</Developer>
+   <Attribution>
+     Obtained from CCMEO Earth Observation Catalogue
+   </Attribution>
+   <SyndicationRight>open</SyndicationRight>
+   <AdultContent>false</AdultContent>
+   <Language>en-us</Language>
+   <OutputEncoding>UTF-8</OutputEncoding>
+   <InputEncoding>UTF-8</InputEncoding>
+ </OpenSearchDescription>
