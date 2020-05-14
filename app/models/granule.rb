@@ -67,7 +67,7 @@ class Granule < Metadata
 
         last_link = doc.root.children.last if last_link.nil?
         guid = id_node.content
-        id_node.content = "#{ENV['opensearch_url']}/granules.atom?uid=#{guid}"
+        id_node.content = "#{ENV['opensearch_url']}/opensearch/granules.atom?uid=#{guid}"
         add_cmr_metadata_link(doc, last_link, node, guid)
         add_dc_identifier(doc, guid, node)
         add_dc_temporal_extent(doc, node, start_time, end_time) unless start_time.nil? and end_time.nil?

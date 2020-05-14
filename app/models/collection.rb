@@ -121,13 +121,13 @@ class Collection < Metadata
           add_link_as_child(doc, node, href, 'text/html', 'enclosure', short_name)
         end
 
-        if !provider_osdd_link.nil?
-          add_link_as_child(doc, node, "#{provider_osdd_link}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], 'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document')
-        elsif create_cwic_osdd_link && !id.blank?
-          add_link_as_child(doc, node, "#{Rails.configuration.cwic_granules_osdd_endpoint}opensearch/datasets/#{id}/osdd.xml?clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], 'CWIC Granule Open Search Descriptor Document')
-        elsif has_granules == true
-          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules.atom?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/atom+xml', NEW_REL_MAPPING[:search], 'Search for granules')
-          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], 'Custom CMR Granule Open Search Descriptor Document')
+        unless !create_cwic_osdd_link && !has_granules
+          link_title = "CWIC Granule Open Search Descriptor Document"
+          if !create_cwic_osdd_link
+            link_title = "Custom CMR Granule Open Search Descriptor Document"
+            add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules.atom?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/atom+xml', NEW_REL_MAPPING[:search], 'Search for granules')
+          end
+          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=#{id}&clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
         end
 
         add_link_as_child(doc, node, "#{ENV['public_catalog_rest_endpoint']}concepts/#{guid}.xml", 'application/xml', 'via', 'Product metadata')
