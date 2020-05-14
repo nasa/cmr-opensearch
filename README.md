@@ -125,7 +125,7 @@ a local _config/application.yml_ file is an effective way to populate the enviro
 that the application needs in order to run.  A sample _config/application.yml_ file is below:
 
     current: &current
-        opensearch_url: http://localhost:3000/
+        opensearch_url: http://localhost:3000/opensearch
         catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
         echo_rest_endpoint: https://api.echo.nasa.gov/echo-rest/
         contact: echodev@echo.nasa.gov

@@ -2,7 +2,7 @@
 <OpenSearchDescription xmlns='http://a9.com/-/spec/opensearch/1.1/'    xmlns:params ='http://a9.com/-/spec/opensearch/extensions/parameters/1.0/'    xmlns:geo='http://a9.com/-/opensearch/extensions/geo/1.0/'    xmlns:time='http://a9.com/-/opensearch/extensions/time/1.0/'>
 <ShortName>NRSC OpenSearch</ShortName>
 <Description>NRSC OpenSearch Services for IRS Data</Description>
-<Url type='application/atom+xml' template='https://uops.nrsc.gov.in/MetaSearch/irsSearch?&amp;datasetId=<%= @dataset_id %>&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}'>
+<Url type='application/atom+xml' template='https://uops.nrsc.gov.in/MetaSearch/irsSearch?datasetId=<%= @dataset_id %>&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}'>
 <params:Parameter name='datasetId' value='{geo:name}' title='Standard Products of all IRS Satellite' minimum='1' />
 <params:Parameter name='geoBox' value='{geo:box}' title='inventory which has a spatial extent overlapping this bounding box' minimum='0'/>
 <params:Parameter name='timeStart' value='{time:start}' minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' title='inventory which has a temporal extent containing this start time' minimum='0' />

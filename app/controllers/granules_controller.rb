@@ -17,10 +17,10 @@ class GranulesController < ApplicationController
       if @collection_concept_id.present?
         mapping_hash = parse_cwic_mapping_by_concept_id(@collection_concept_id)
         if mapping_hash['erb_file'].present?
-          @dataset_id = mapping_hash['dataset_id']
-          @geo_box = mapping_hash['geo_box'].include?("unknown") ? '{geo:box}' :  mapping_hash['geo_box']
-          @begin = mapping_hash['begin'] == "unknown" ? '1970-01-01T00:00:00Z' :  mapping_hash['begin']
-          @end = mapping_hash['end'] == "unknown" ? '2030-01-01T00:00:00Z' :  mapping_hash['end']
+          @dataset_id = URI.encode mapping_hash['dataset_id']
+          @geo_box = mapping_hash['geo_box'].include?("unknown") ? '{geo:box}' : mapping_hash['geo_box']
+          @begin = mapping_hash['begin'] == "unknown" ? '1970-01-01T00:00:00Z' : mapping_hash['begin']
+          @end = mapping_hash['end'] == "unknown" ? '2030-01-01T00:00:00Z' : mapping_hash['end']
           render mapping_hash['erb_file']
         else
           error_msg = "Unable to find mapping for collectionConceptId #{@collection_concept_id}"
