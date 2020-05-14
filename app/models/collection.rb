@@ -73,7 +73,6 @@ class Collection < Metadata
         mbr = nil
         has_granules = false
         create_cwic_osdd_link = false
-        provider_osdd_link = nil
         is_geoss = false
         is_eosdis = false
         is_fedeo = false
@@ -108,7 +107,6 @@ class Collection < Metadata
           has_granules = true if entry_node.name == 'hasGranules' && entry_node.content == 'true'
           if entry_node.name == 'tag'
             create_cwic_osdd_link = cwic_collection?(entry_node, cwic_testing) unless create_cwic_osdd_link == true
-            provider_osdd_link = provider_granule_osdd_collection_link(entry_node)
             is_geoss = geoss_collection?(entry_node) unless is_geoss == true
             is_eosdis = eosdis_collection?(entry_node) unless is_eosdis == true
             is_fedeo = fedeo_collection?(entry_node) unless is_fedeo == true
