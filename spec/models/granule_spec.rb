@@ -50,7 +50,7 @@ describe Granule do
                   <os:itemsPerPage>10</os:itemsPerPage>
                   <os:startIndex>1</os:startIndex>
                   <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                    <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+                    <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                     <title type="text">LAADS:4847654</title>
                     <updated>2013-02-14T15:51:38.801Z</updated>
                     <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
@@ -122,7 +122,7 @@ describe Granule do
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
                         <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                          <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+                          <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
                           <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
@@ -195,7 +195,7 @@ describe Granule do
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
                         <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                          <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+                          <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
                           <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
@@ -265,7 +265,7 @@ describe Granule do
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
                         <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                          <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+                          <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
                           <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
@@ -369,7 +369,7 @@ describe Granule do
             <os:itemsPerPage>10</os:itemsPerPage>
             <os:startIndex>1</os:startIndex>
             <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-              <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+              <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
               <title type="text">LAADS:4847654</title>
               <updated>2013-02-14T15:51:38.801Z</updated>
               <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
@@ -441,7 +441,7 @@ describe Granule do
               <os:itemsPerPage>10</os:itemsPerPage>
               <os:startIndex>1</os:startIndex>
               <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+                <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                 <title type="text">LAADS:4847654</title>
                 <updated>2010-02-02T03:56:37.983Z</updated>
                 <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
@@ -514,7 +514,7 @@ describe Granule do
                   <os:itemsPerPage>10</os:itemsPerPage>
                   <os:startIndex>1</os:startIndex>
                   <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                    <id>#{ENV['opensearch_url']}/opensearch/granules.atom?uid=G92789465-LAADS</id>
+                    <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                     <title type="text">LAADS:4847654</title>
                     <updated>2010-02-02T03:56:37.983Z</updated>
                     <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
