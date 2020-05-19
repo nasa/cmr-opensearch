@@ -160,7 +160,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
     	<os:Url type="application/atom+xml" rel="results"
     	  params:method="GET"
     		template="#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName={echo:shortName?}&amp;versionId={echo:versionId?}&amp;dataCenter={echo:dataCenter?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
-	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -175,12 +175,12 @@ Then /^I should see a granule open search descriptor document for client id "([^
 	  	                <params:Parameter name="offset" uiDisplay="Start index" value="{os:startIndex}" title="0-based offset used to skip the specified number of results in the search result set" minimum="0"/>
 	  	                <params:Parameter name="uid" uiDisplay="Unique identifier identifier" value="{geo:uid}" title="Inventory associated with this unique ID" minimum="0"/>
 	  	                <params:Parameter name="parentIdentifier" uiDisplay="CMR Collection concept identifier" value="{eo:parentIdentifier}" title="Inventory associated with a dataset expressed as a CMR concept ID" minimum="0"/>
-                      <params:Parameter name="clientId" uiDisplay="Client identifier" value="{referrer:source}" title="Client identifier to be used for metrics" minimum="0"/>       
+                      <params:Parameter name="clientId" uiDisplay="Client identifier" value="{referrer:source}" title="Client identifier to be used for metrics" minimum="0"/>
       </os:Url>
       <os:Url type="text/html" rel="results"
     	  params:method="GET"
     		template="#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName={echo:shortName?}&amp;versionId={echo:versionId?}&amp;dataCenter={echo:dataCenter?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
- 	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+ 	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -233,7 +233,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
       	<os:Url type="application/atom+xml" rel="results"
       	  params:method="GET"
       		template="#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=#{short_name}&amp;versionId={echo:versionId?}&amp;dataCenter={echo:dataCenter?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
-	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -253,7 +253,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
         <os:Url type="text/html" rel="results"
       	  params:method="GET"
       		template="#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=#{short_name}&amp;versionId={echo:versionId?}&amp;dataCenter={echo:dataCenter?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
- 	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+ 	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -306,7 +306,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
         	<os:Url type="application/atom+xml" rel="results"
         	  params:method="GET"
         		template="#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=#{short_name}&amp;versionId=#{version_id}&amp;dataCenter={echo:dataCenter?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
- 	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+ 	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -326,7 +326,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
           <os:Url type="text/html" rel="results"
         	  params:method="GET"
         		template="#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=#{short_name}&amp;versionId=#{version_id}&amp;dataCenter={echo:dataCenter?}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
-        	            <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+        	            <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -341,7 +341,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
 	  	                <params:Parameter name="offset" uiDisplay="Start index" value="{os:startIndex}" title="0-based offset used to skip the specified number of results in the search result set" minimum="0"/>
 	  	                <params:Parameter name="uid" uiDisplay="Unique identifier identifier" value="{geo:uid}" title="Inventory associated with this unique ID" minimum="0"/>
 	  	                <params:Parameter name="parentIdentifier" uiDisplay="CMR Collection concept identifier" value="{eo:parentIdentifier}" title="Inventory associated with a dataset expressed as a CMR concept ID" minimum="0"/>
-                      <params:Parameter name="clientId" uiDisplay="Client identifier" value="{referrer:source}" title="Client identifier to be used for metrics" minimum="0"/> 
+                      <params:Parameter name="clientId" uiDisplay="Client identifier" value="{referrer:source}" title="Client identifier to be used for metrics" minimum="0"/>
           </os:Url>
         	<os:Query role="example"
         		echo:shortName="MOD02QKM"
@@ -379,7 +379,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
           	<os:Url type="application/atom+xml" rel="results"
           	  params:method="GET"
           		template="#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=#{short_name}&amp;versionId=#{version_id}&amp;dataCenter=#{data_center}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
-	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -399,7 +399,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
             <os:Url type="text/html" rel="results"
         	    params:method="GET"
         		  template="#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=#{short_name}&amp;versionId=#{version_id}&amp;dataCenter=#{data_center}&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=#{client_id}">
-	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
@@ -441,7 +441,7 @@ And(/^I perform a dataset search using the open search descriptor template$/) do
   # Extract the template attribute from the url element corresponding to ATOM
   document = Nokogiri::XML(page.body)
   url_element = document.root.xpath('//os:Url[@type="application/atom+xml"]', 'os' => 'http://a9.com/-/spec/opensearch/1.1/').first
-  datasets_url = url_element[:template].split('/')[3].split('?')[0]
+  datasets_url = url_element[:template].split('/')[4].split('?')[0]
 
   visit("/#{datasets_url}")
   response = page.body
