@@ -76,6 +76,8 @@ Rails.application.configure do
   #config.active_record.dump_schema_after_migration = false
   config.relative_url_root = '/opensearch'
 
+  config.cache_store = :memory_store, { size: 64.megabytes }
+
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
   #config.log_level = :trace

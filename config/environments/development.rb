@@ -37,6 +37,8 @@ EchoOpensearch::Application.configure do
   config.application_url = 'http://localhost:3000'
   config.relative_url_root = ''
 
+  config.cache_store = :memory_store, { size: 64.megabytes }
+
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
 
