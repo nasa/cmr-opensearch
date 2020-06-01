@@ -50,6 +50,8 @@ EchoOpensearch::Application.configure do
 
   config.relative_url_root = '/opensearch'
 
+  config.cache_store = :memory_store, { size: 64.megabytes }
+  
   config.eosdis_providers = %w[
         SEDAC
         NSIDC_TS1
