@@ -6,11 +6,9 @@ module GranulesHelper
   def parse_cwic_mapping_by_concept_id(concept_id)
     cwic_mapping_doc_loc = "cwic-mapping.xml"
     if Rails.cache.read("cwic_mapping").nil?
-      puts "HERE1"
       cwic_mapping_doc =  File.open(cwic_mapping_doc_loc) { |f| Nokogiri::XML(f) }
       Rails.cache.write("cwic_mapping", cwic_mapping_doc.serialize, expires_in: 24.hours)
     else
-      puts "HERE2"
       cwic_mapping_doc = Nokogiri::XML(Rails.cache.read("cwic_mapping"))
     end
     provider = cwic_mapping_doc.xpath("/mappingList/catalog/dataSet[@conceptId=\"#{concept_id}\"]/../@id").text
