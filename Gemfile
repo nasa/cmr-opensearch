@@ -15,7 +15,6 @@ gem 'loofah', '>= 2.3.1'
 gem 'rack', '~> 2.0'
 gem 'ffi', '1.9.24'
 gem 'rails-controller-testing'
-gem 'redis'
 
 # Gems used only for assets and not required
 # in production environments by default.
