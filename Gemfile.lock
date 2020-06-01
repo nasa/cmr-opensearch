@@ -66,7 +66,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
-    coderay (1.1.2)
+    coderay (1.1.3)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -108,9 +108,9 @@ GEM
       tzinfo
     execjs (2.7.0)
     ffi (1.9.24)
-    fugit (1.3.5)
+    fugit (1.3.6)
       et-orbi (~> 1.1, >= 1.1.8)
-      raabro (~> 1.1)
+      raabro (~> 1.3)
     georuby (2.5.2)
     gherkin (5.1.0)
     globalid (0.4.2)
@@ -195,7 +195,6 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.1.4)
     ref (2.0.0)
     regexp_parser (1.7.0)
     responders (2.4.1)
@@ -266,7 +265,7 @@ GEM
     unicorn (5.5.5)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    vcr (5.1.0)
+    vcr (6.0.0)
     webmock (3.8.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -298,7 +297,6 @@ DEPENDENCIES
   rails (= 5.2.4.3)
   rails-controller-testing
   rails_12factor
-  redis
   responders (~> 2.0)
   rest-client (~> 2.0.2)
   rgeo (~> 1.0.0)
