@@ -50,6 +50,8 @@ EchoOpensearch::Application.configure do
 
   config.relative_url_root = '/opensearch'
 
+  config.cache_store = :memory_store, { size: 64.megabytes }
+
   # 12-factor
   config.assets.initialize_on_precompile = false
 
