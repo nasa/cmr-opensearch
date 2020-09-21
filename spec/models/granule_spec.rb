@@ -774,5 +774,52 @@ describe Granule do
         expect(granule.errors[:boundingBox]).to eq(['### is not a valid boundingBox'])
       end
     end
+
+    describe "point and radius" do
+      it "is possible to supply a valid point radius" do
+        params = {:lat => '56', :lon => '120', :radius => '10000'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(true)
+      end
+      it "is not possible to miss lat in point radius search" do
+        params = {:lon => '120', :radius => '10000'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(false)
+        expect(granule.errors[:lat]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lon in point radius search" do
+        params = {:lat => '56', :radius => '10000'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(false)
+        expect(granule.errors[:lon]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss radius in point radius search" do
+        params = {:lat => '56', :lon => '120'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(false)
+        expect(granule.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lon and radius in point radius search" do
+        params = {:lat => '56'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(false)
+        expect(granule.errors[:lon]).to eq(['cannot be empty for point radius search'])
+        expect(granule.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lat and radius in point radius search" do
+        params = {:lon => '120'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(false)
+        expect(granule.errors[:lat]).to eq(['cannot be empty for point radius search'])
+        expect(granule.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss the point in point radius search" do
+        params = {:radius => '10000'}
+        granule = Granule.new(params)
+        expect(granule.valid?).to eq(false)
+        expect(granule.errors[:lat]).to eq(['cannot be empty for point radius search'])
+        expect(granule.errors[:lon]).to eq(['cannot be empty for point radius search'])
+      end
+    end
   end
 end
