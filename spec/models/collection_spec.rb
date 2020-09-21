@@ -1177,5 +1177,52 @@ describe Collection do
         expect(dataset.errors[:boundingBox]).to eq(['### is not a valid boundingBox'])
       end
     end
+
+    describe "point and radius" do
+      it "is possible to supply a valid point radius" do
+        params = {:lat => '56', :lon => '120', :radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(true)
+      end
+      it "is not possible to miss lat in point radius search" do
+        params = {:lon => '120', :radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lat]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lon in point radius search" do
+        params = {:lat => '56', :radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lon]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss radius in point radius search" do
+        params = {:lat => '56', :lon => '120'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lon and radius in point radius search" do
+        params = {:lat => '56'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lon]).to eq(['cannot be empty for point radius search'])
+        expect(dataset.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lat and radius in point radius search" do
+        params = {:lon => '120'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lat]).to eq(['cannot be empty for point radius search'])
+        expect(dataset.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss the point in point radius search" do
+        params = {:radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lat]).to eq(['cannot be empty for point radius search'])
+        expect(dataset.errors[:lon]).to eq(['cannot be empty for point radius search'])
+      end
+    end
   end
 end
