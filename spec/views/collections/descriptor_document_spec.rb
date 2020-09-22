@@ -33,9 +33,9 @@ describe 'collections/descriptor_document' do
 	                  <params:Parameter name="instrument" uiDisplay="Instrument" value="{echo:instrument}" title="Inventory associated with a satellite instrument expressed by this short name" minimum="0"/>
 	                  <params:Parameter name="satellite" uiDisplay="Satellite" value="{eo:platform}" title="Inventory associated with a Satellite/platform expressed by this short name" minimum="0"/>
 	                  <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
-	                  <params:Parameter name="lat" uiDisplay="Latitude" value="{geo:lat}" title="Inventory with latitude in decimal degrees, must be used together with lon and radius" minimum="0"/>
-	                  <params:Parameter name="lon" uiDisplay="Longitude" value="{geo:lon}" title="Inventory with longitude in decimal degrees, must be used together with lat and radius" minimum="0"/>
-	                  <params:Parameter name="radius" uiDisplay="Radius" value="{geo:radius}" title="Inventory with the search radius in meters, must be used together with lat and lon" minimum="0"/>
+	                  <params:Parameter name="lat" uiDisplay="Latitude" value="{geo:lat}" title="Inventory with latitude in decimal degrees, must be used together with lon and radius" minimum="0" minInclusive="-90.0" maxInclusive="90.0"/>
+	                  <params:Parameter name="lon" uiDisplay="Longitude" value="{geo:lon}" title="Inventory with longitude in decimal degrees, must be used together with lat and radius" minimum="0" minInclusive="-180.0" maxInclusive="180.0"/>
+	                  <params:Parameter name="radius" uiDisplay="Radius" value="{geo:radius}" title="Inventory with the search radius in meters, must be used together with lat and lon" minimum="0" minInclusive="10" maxInclusive="6000000"/>
 	                  <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	                    <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
 	                    <atom:link rel="profile" href="http://www.opengis.net/wkt/POINT" title="This service accepts WKT Points"/>
@@ -78,9 +78,9 @@ describe 'collections/descriptor_document' do
 	                  <params:Parameter name="instrument" uiDisplay="Instrument" value="{echo:instrument}" title="Inventory associated with a satellite instrument expressed by this short name" minimum="0"/>
 	                  <params:Parameter name="satellite" uiDisplay="Satellite" value="{eo:platform}" title="Inventory associated with a Satellite/platform expressed by this short name" minimum="0"/>
 	                  <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
-	                  <params:Parameter name="lat" uiDisplay="Latitude" value="{geo:lat}" title="Inventory with latitude in decimal degrees, must be used together with lon and radius" minimum="0"/>
-	                  <params:Parameter name="lon" uiDisplay="Longitude" value="{geo:lon}" title="Inventory with longitude in decimal degrees, must be used together with lat and radius" minimum="0"/>
-	                  <params:Parameter name="radius" uiDisplay="Radius" value="{geo:radius}" title="Inventory with the search radius in meters, must be used together with lat and lon" minimum="0"/>
+	                  <params:Parameter name="lat" uiDisplay="Latitude" value="{geo:lat}" title="Inventory with latitude in decimal degrees, must be used together with lon and radius" minimum="0" minInclusive="-90.0" maxInclusive="90.0"/>
+	                  <params:Parameter name="lon" uiDisplay="Longitude" value="{geo:lon}" title="Inventory with longitude in decimal degrees, must be used together with lat and radius" minimum="0" minInclusive="-180.0" maxInclusive="180.0"/>
+	                  <params:Parameter name="radius" uiDisplay="Radius" value="{geo:radius}" title="Inventory with the search radius in meters, must be used together with lat and lon" minimum="0" minInclusive="10" maxInclusive="6000000"/>
 	                  <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	                    <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
 	                    <atom:link rel="profile" href="http://www.opengis.net/wkt/POINT" title="This service accepts WKT Points"/>
