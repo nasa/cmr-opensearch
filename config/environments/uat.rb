@@ -48,10 +48,10 @@ EchoOpensearch::Application.configure do
   # when problems arise.
   config.log_level = :debug
 
-  # the endpoint used to generate CWIC granule OSDD links for the desired dataset
-  # CWIC has a single test environment
-  config.cwic_granules_osdd_endpoint = 'http://cwictest.wgiss.ceos.org/'
+  config.relative_url_root = '/opensearch'
 
+  config.cache_store = :memory_store, { size: 64.megabytes }
+  
   config.eosdis_providers = %w[
         SEDAC
         NSIDC_TS1

@@ -28,7 +28,7 @@ class Metadata
 
   attr_accessor :clientId, :keyword, :instrument, :satellite, :startTime, :endTime, :boundingBox, :campaign, :processingLevel, :sensor
   attr_accessor :geometry, :numberOfResults, :cursor, :offset, :shortName, :versionId, :dataCenter, :dataset_id, :provider
-  attr_accessor :placeName, :uid;
+  attr_accessor :placeName, :uid, :lat, :lon, :radius
 
   alias :start_time :startTime
   alias :end_time :endTime
@@ -51,6 +51,7 @@ class Metadata
   validate :temporal_must_be_rfc3339
   validate :geometry_is_point_line_polygon
   validate :bbox_is_valid
+  validate :point_radius_is_valid
 
   validate :place_name_exists
 
@@ -59,7 +60,7 @@ class Metadata
   def initialize(attributes = {})
     @invalid_param_errors = {}
     attributes.each do |name, value|
-      if %w(placeName clientId keyword instrument satellite sensor processingLevel campaign startTime endTime boundingBox geometry placeName numberOfResults cursor offset shortName versionId dataCenter dataset_id uid hasGranules isCwic isGeoss isCeos isEosdis parentIdentifier provider).include? name.to_s
+      if %w(placeName clientId keyword instrument satellite sensor processingLevel campaign startTime endTime boundingBox lat lon radius geometry placeName numberOfResults cursor offset shortName versionId dataCenter dataset_id uid hasGranules isCwic isGeoss isCeos isEosdis isFedeo parentIdentifier provider).include? name.to_s
         send("#{name}=", value)
       else
         # discard invalid query parameter per CEOS-BP-009B
@@ -125,6 +126,14 @@ class Metadata
         valid = lon_is_valid(:boundingBox, ordinates[2], boundingBox) if valid
         lat_is_valid(:boundingBox, ordinates[3], boundingBox) if valid
       end
+    end
+  end
+
+  def point_radius_is_valid
+    unless lat.blank? and lon.blank? and radius.blank?
+      errors.add(:lat, "cannot be empty for point radius search") if lat.blank?
+      errors.add(:lon, "cannot be empty for point radius search") if lon.blank?
+      errors.add(:radius, "cannot be empty for point radius search") if radius.blank?
     end
   end
 
@@ -273,6 +282,7 @@ class Metadata
     cmr_params[:include_facets] = params[:include_facets] unless params[:include_facets].blank?
 
     cmr_params[:bounding_box] = params[:boundingBox].gsub(/\s+/, "") unless params[:boundingBox].blank?
+    cmr_params[:circle] = "#{params[:lon]},#{params[:lat]},#{params[:radius]}" unless params[:lat].blank?
 
     cmr_params = WellFormedText.add_cmr_param(cmr_params, params[:geometry]) unless params[:geometry].blank?
 

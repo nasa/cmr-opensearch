@@ -64,7 +64,6 @@ module EchoOpensearch
     config.assets.compress = true
     config.assets.precompile = ['*.js', '*.css', '*.css.erb', '*.png', '*.jpg', '*.jpeg', '*.gif']
     config.assets.prefix = '/assets'
-    config.relative_url_root = '/opensearch'
     config.assets.initialize_on_precompile = false
 
     def self.load_version
@@ -80,11 +79,6 @@ module EchoOpensearch
 
     config.version = load_version
 
-    # the endpoint used to generate CWIC granule OSDD links for the desired dataset
-    # ALL environments will contain the endpoint value below unless overwritten in the environment specific .rb file
-    # or the application.yml file
-    config.cwic_granules_osdd_endpoint = 'http://cwic.wgiss.ceos.org/'
-
     config.cwic_tag = 'org.ceos.wgiss.cwic.*'
     config.cwic_descriptive_keyword = 'CWIC > CEOS WGISS Integrated Catalog'
 
@@ -96,6 +90,9 @@ module EchoOpensearch
 
     config.eosdis_tag = 'gov.nasa.eosdis'
     config.eosdis_descriptive_keyword = 'NASA Earth Science Data and Information System'
+
+    config.fedeo_tag = 'int.esa.fedeo'
+    config.fedeo_descriptive_keyword = 'Federated Earth Observation missions access'
 
     config.eosdis_providers = %w[
         NSIDCV0
@@ -212,7 +209,7 @@ module EchoOpensearch
         ENV.update({name => value})
       end
     end
-    update_env('opensearch_url', 'http://localhost:3000')
+    update_env('opensearch_url', 'http://localhost:3000/opensearch')
     update_env('catalog_rest_endpoint', 'https://cmr.earthdata.nasa.gov/search/')
     update_env('echo_rest_endpoint','https://api.echo.nasa.gov/echo-rest/')
     update_env('contact','echodev@echo.nasa.gov')

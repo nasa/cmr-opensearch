@@ -15,8 +15,8 @@ Feature: Retrieve collections in atom format with CWIC links
     Then I should see 10 results
     And result 1 should not have a link to a granule search
     And result 1 should have a link to a granule open search descriptor document
-    And result 1 should have a link href of 'http://cwictest.wgiss.ceos.org/opensearch/datasets/C1200018718-GCMDTEST/osdd.xml?clientId=foo' for the granule open search descriptor document
+    And result 1 should have a link href of 'http://localhost:3000/opensearch/granules/descriptor_document.xml?collectionConceptId=C1200018718-GCMDTEST&clientId=foo' for the granule open search descriptor document
     And result 2 should have a link to a granule open search descriptor document
-    And result 2 should have a link href of 'http://cwictest.wgiss.ceos.org/opensearch/datasets/C1200018712-GCMDTEST/osdd.xml?clientId=foo' for the granule open search descriptor document
+    And result 2 should have a link href of 'http://localhost:3000/opensearch/granules/descriptor_document.xml?collectionConceptId=C1200018712-GCMDTEST&clientId=foo' for the granule open search descriptor document
     And result 3 should not have a link to a granule search
     And result 3 should not have a link to a granule open search descriptor document

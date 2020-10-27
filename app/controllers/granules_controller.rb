@@ -1,4 +1,5 @@
 class GranulesController < ApplicationController
+  include GranulesHelper
   respond_to :xml, :only => :descriptor_document
   respond_to :atom, :html, :only => :index
 
@@ -6,15 +7,36 @@ class GranulesController < ApplicationController
   def descriptor_document
     @client_id_model = ClientId.new(params)
 
+    @collection_concept_id = params[:collectionConceptId].blank? ? nil : params[:collectionConceptId]
     @short_name = params[:shortName].blank? ? '{echo:shortName?}' : params[:shortName]
     @version_id = params[:versionId].blank? ? '{echo:versionId?}' : params[:versionId]
     @data_center = params[:dataCenter].blank? ? '{echo:dataCenter?}' : params[:dataCenter]
 
     @type = 'granules'
-
     if @client_id_model.valid?
-      respond_to do |format|
-        format.xml
+      if @collection_concept_id.present?
+        mapping_hash = parse_cwic_mapping_by_concept_id(@collection_concept_id)
+        if mapping_hash['erb_file'].present?
+          if mapping_hash['dataset_id'].present?
+            @dataset_id = URI.encode mapping_hash['dataset_id']
+            @geo_box = mapping_hash['geo_box'].include?("unknown") ? '{geo:box}' : mapping_hash['geo_box']
+            @begin = mapping_hash['begin'] == "unknown" ? '1970-01-01T00:00:00Z' : mapping_hash['begin']
+            @end = mapping_hash['end'] == "unknown" ? '2030-01-01T00:00:00Z' : mapping_hash['end']
+            render mapping_hash['erb_file']
+          else
+            error_msg = "Unable to find dataset_id for #{@collection_concept_id}"
+            flash.now[:error] = error_msg.chop!
+            render 'home/index.html.erb', :status => :bad_request
+          end
+        else
+          error_msg = "Unable to find mapping for collectionConceptId #{@collection_concept_id}"
+          flash.now[:error] = error_msg.chop!
+          render 'home/index.html.erb', :status => :bad_request
+        end
+      else
+        respond_to do |format|
+          format.xml
+        end
       end
     else
       error_msg = ''
@@ -74,19 +96,19 @@ class GranulesController < ApplicationController
             text = ''
             if @granule.valid? && !granules.nil?
               text = granules.to_xml(:indent => 2)
-              render :text => text
+              render :plain => text
             else
               if @granule.errors.count > 0
                 text = @granule.errors.to_xml(:indent => 2)
                 if (text.include?("is not supported"))
-                  render :text => text, :status => :not_implemented
+                  render :plain => text, :status => :not_implemented
                 else
-                  render :text => text, :status => :bad_request and return
+                  render :plain => text, :status => :bad_request and return
                 end
               else
                 if (!e.nil? && !e.response.code.nil?)
                   # need separate rendering for exceptions since they cannot be added to ActiveModel errors modified hash
-                  render :text => e.response, :status => e.response.code and return
+                  render :plain => e.response, :status => e.response.code and return
                 end
               end
             end
@@ -121,7 +143,7 @@ class GranulesController < ApplicationController
   # step 2: search for granules ONLY in the collection of interest indentified in step 1
   def two_step_search
     ret_val = true
-    if params.size == 2 && params['action'] == 'index' && params['controller'] == 'granules'
+    if params.values.size == 2 && params['action'] == 'index' && params['controller'] == 'granules'
       ret_val = false
     end
     return ret_val

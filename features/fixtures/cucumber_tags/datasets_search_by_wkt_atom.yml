@@ -60,7 +60,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:20:19 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&page_num=1&page_size=10&point=-5.0,-5.0
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&page_num=1&page_size=10&point=-5.0,-5.0
     body:
       encoding: US-ASCII
       string: ''
@@ -132,7 +132,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:20:20 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&page_num=1&page_size=10&point=30.0,30.0
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&page_num=1&page_size=10&point=30.0,30.0
     body:
       encoding: US-ASCII
       string: ''
@@ -189,7 +189,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:24:02 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&line=5.0,5.0,4.0,4.0&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&line=5.0,5.0,4.0,4.0&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -261,7 +261,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:24:02 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&line=30.0,30.0,35.0,35.0&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&line=30.0,30.0,35.0,35.0&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -318,7 +318,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:24:03 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&page_num=1&page_size=10&polygon=1.0,1.0,1.0,3.0,-1.0,2.0,1.0,1.0
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&page_num=1&page_size=10&polygon=1.0,1.0,1.0,3.0,-1.0,2.0,1.0,1.0
     body:
       encoding: US-ASCII
       string: ''
@@ -390,7 +390,7 @@ http_interactions:
   recorded_at: Fri, 18 Jul 2014 13:24:04 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=OPENSEARCH&page_num=1&page_size=10&polygon=30.0,10.0,40.0,40.0,20.0,40.0,10.0,20.0,30.0,10.0
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=OPENSEARCH&page_num=1&page_size=10&polygon=30.0,10.0,40.0,40.0,20.0,40.0,10.0,20.0,30.0,10.0
     body:
       encoding: US-ASCII
       string: ''

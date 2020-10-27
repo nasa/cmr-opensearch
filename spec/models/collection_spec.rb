@@ -74,7 +74,7 @@ describe Collection do
             <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
             <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
             <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
             <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -166,7 +166,7 @@ describe Collection do
             <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
             <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
             <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
             <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
              <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -260,7 +260,7 @@ describe Collection do
             <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
             <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
             <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
             <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -352,7 +352,7 @@ describe Collection do
             <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
             <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
             <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
             <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -463,7 +463,7 @@ describe Collection do
       <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
       <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
       <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-      <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+      <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
       <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
       <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
       <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -553,7 +553,7 @@ describe Collection do
     <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
     <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
     <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
     <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
     <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
     <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -643,7 +643,7 @@ describe Collection do
         <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
         <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
         <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-        <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+        <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
         <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
         <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
         <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -732,7 +732,7 @@ describe Collection do
             <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
             <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
             <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
             <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -811,7 +811,7 @@ describe Collection do
                 <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html"/>
                 <link href="http://gcmd.nasa.gov/getdif.htm?MOD02QKM" hreflang="en-US" type="text/html" rel="enclosure" title="MOD02QKM"/>
                 <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=MOD02QKM&amp;versionId=5&amp;dataCenter=LAADS" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-                <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=MOD02QKM&amp;versionId=5&amp;dataCenter=LAADS" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+                <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C90758174-LAADS&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
                 <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C90758174-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
                 <dc:identifier>C90758174-LAADS</dc:identifier>
                 <dc:date>1999-12-18T00:00:00.000Z/</dc:date>
@@ -905,7 +905,7 @@ describe Collection do
                     <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
                     <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
                     <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-                    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+                    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
                     <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
                     <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
                     <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -1175,6 +1175,53 @@ describe Collection do
         dataset = Collection.new(params)
         expect(dataset.valid?).to eq(false)
         expect(dataset.errors[:boundingBox]).to eq(['### is not a valid boundingBox'])
+      end
+    end
+
+    describe "point and radius" do
+      it "is possible to supply a valid point radius" do
+        params = {:lat => '56', :lon => '120', :radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(true)
+      end
+      it "is not possible to miss lat in point radius search" do
+        params = {:lon => '120', :radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lat]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lon in point radius search" do
+        params = {:lat => '56', :radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lon]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss radius in point radius search" do
+        params = {:lat => '56', :lon => '120'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lon and radius in point radius search" do
+        params = {:lat => '56'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lon]).to eq(['cannot be empty for point radius search'])
+        expect(dataset.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss lat and radius in point radius search" do
+        params = {:lon => '120'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lat]).to eq(['cannot be empty for point radius search'])
+        expect(dataset.errors[:radius]).to eq(['cannot be empty for point radius search'])
+      end
+      it "is not possible to miss the point in point radius search" do
+        params = {:radius => '10000'}
+        dataset = Collection.new(params)
+        expect(dataset.valid?).to eq(false)
+        expect(dataset.errors[:lat]).to eq(['cannot be empty for point radius search'])
+        expect(dataset.errors[:lon]).to eq(['cannot be empty for point radius search'])
       end
     end
   end

@@ -37,11 +37,9 @@ EchoOpensearch::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # the endpoint used to generate CWIC granule OSDD links for the desired dataset
-  # CWIC has a single test environment
-  config.cwic_granules_osdd_endpoint = 'http://cwictest.wgiss.ceos.org/'
-
   config.relative_url_root = ''
+
+  config.cache_store = :memory_store, { size: 64.megabytes }
 
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new

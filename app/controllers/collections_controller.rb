@@ -55,6 +55,7 @@ class CollectionsController < ApplicationController
       @is_geoss_type = params[:isGeoss] || nil
       @is_ceos_type = params[:isCeos] || nil
       @is_eosdis_type = params[:isEosdis] || nil
+      @is_fedeo_type = params[:isFedeo] || nil
       @collection_models = []
       @number_of_hits = 0
       @collection = nil
@@ -93,16 +94,16 @@ class CollectionsController < ApplicationController
               Facet.process_facet_search(collections, facet_params)
             end
             text = collections.to_xml(:indent => 2)
-            render :text => text
+            render :plain => text
           else
             if @collection.errors.count > 0
               text = @collection.errors.to_xml(:indent => 2)
-              render :text => text, :status => :bad_request and return
+              render :plain => text, :status => :bad_request and return
             else
               Rails.logger.error "Collection search exception: #{e}"
               if (!e.nil? && !e.response.code.nil?)
                 # need separate rendering for exceptions since they cannot be added to ActiveModel errors modified hash
-                render :text => e.response, :status => e.response.code and return
+                render :plain => e.response, :status => e.response.code and return
               end
             end
           end

@@ -62,7 +62,7 @@ http_interactions:
   recorded_at: Sat, 21 Nov 2015 13:17:57 GMT
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis%20&keyword=MODIS&page_num=1&page_size=10&temporal=2011-01-01T00:00:00Z,2011-01-02T00:00:00Z
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=MODIS&page_num=1&page_size=10&temporal=2011-01-01T00:00:00Z,2011-01-02T00:00:00Z
     body:
       encoding: US-ASCII
       string: ''

@@ -11,8 +11,8 @@ describe "granules/descriptor_document" do
     assign(:data_center, 'LAADS')
 
     render
-    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">")
-    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">")
 
   end
 
@@ -33,9 +33,12 @@ describe "granules/descriptor_document" do
                   	<os:Contact>#{ENV['contact']}</os:Contact>
                   	<os:Url type="application/atom+xml" rel="results"
                   	  params:method="GET"
-                  		template=\"#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">
-	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+                  		template=\"#{ENV['opensearch_url']}/granules.atom?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">
+	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
+	                    <params:Parameter name="lat" uiDisplay="Latitude" value="{geo:lat}" title="Inventory with latitude in decimal degrees, must be used together with lon and radius" minimum="0" minInclusive="-90.0" maxInclusive="90.0"/>
+	                    <params:Parameter name="lon" uiDisplay="Longitude" value="{geo:lon}" title="Inventory with longitude in decimal degrees, must be used together with lat and radius" minimum="0" minInclusive="-180.0" maxInclusive="180.0"/>
+	                    <params:Parameter name="radius" uiDisplay="Radius" value="{geo:radius}" title="Inventory with the search radius in meters, must be used together with lat and lon" minimum="0" minInclusive="10" maxInclusive="6000000"/>
 	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/POINT" title="This service accepts WKT Points"/>
@@ -53,10 +56,13 @@ describe "granules/descriptor_document" do
                     </os:Url>
                   	<os:Url type="text/html" rel="results"
                   	  params:method="GET"
-                  		template=\"#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">
-	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>                  
+                  		template=\"#{ENV['opensearch_url']}/granules.html?datasetId={echo:datasetId?}&amp;shortName=MOD02QKM&amp;versionId=005&amp;dataCenter=LAADS&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;geometry={geo:geometry?}&amp;placeName={geo:name?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;cursor={os:startPage?}&amp;numberOfResults={os:count?}&amp;offset={os:startIndex?}&amp;uid={geo:uid?}&amp;parentIdentifier={eo:parentIdentifier?}&amp;clientId=foo\">
+	                    <params:Parameter name="datasetId" uiDisplay="Collection identifier" value="{echo:datasetId}" title="Inventory associated with a dataset expressed as an ID" minimum="0"/>
 	                    <params:Parameter name="boundingBox" uiDisplay="Bounding box" value="{geo:box}" title="Inventory with a spatial extent overlapping this bounding box" minimum="0"/>
-	  	                <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
+	                    <params:Parameter name="lat" uiDisplay="Latitude" value="{geo:lat}" title="Inventory with latitude in decimal degrees, must be used together with lon and radius" minimum="0" minInclusive="-90.0" maxInclusive="90.0"/>
+	                    <params:Parameter name="lon" uiDisplay="Longitude" value="{geo:lon}" title="Inventory with longitude in decimal degrees, must be used together with lat and radius" minimum="0" minInclusive="-180.0" maxInclusive="180.0"/>
+	                    <params:Parameter name="radius" uiDisplay="Radius" value="{geo:radius}" title="Inventory with the search radius in meters, must be used together with lat and lon" minimum="0" minInclusive="10" maxInclusive="6000000"/>
+	                    <params:Parameter name="geometry" uiDisplay="Geometry" value="{geo:geometry}" title="Inventory with a spatial extent overlapping this geometry" minimum="0">
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/LINESTRING" title="This service accepts WKT LineStrings"/>
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/POINT" title="This service accepts WKT Points"/>
 	  	                  <atom:link rel="profile" href="http://www.opengis.net/wkt/POLYGON" title="This service accepts WKT Polygons"/>
