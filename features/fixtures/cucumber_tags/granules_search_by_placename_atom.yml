@@ -57,7 +57,7 @@ http_interactions:
           <client_id>foo-opensearch-dev</client_id>
           <user_ip_address>0.0.0.0</user_ip_address>
         </token>
-    http_version: 
+    http_version:
   recorded_at: Fri, 18 Jul 2014 13:45:06 GMT
 - request:
     method: get
@@ -109,7 +109,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:45:08.112Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10&amp;point=-3.21187%2C54.95389</id>
           <title type="text">CMR granule metadata</title>
@@ -128,7 +128,7 @@ http_interactions:
             <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
           </entry>
         </feed>
-    http_version: 
+    http_version:
   recorded_at: Fri, 18 Jul 2014 13:45:08 GMT
 - request:
     method: get
@@ -171,7 +171,7 @@ http_interactions:
       string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
         Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
         place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Feb 2016 14:54:13 GMT
 - request:
     method: get
@@ -214,7 +214,7 @@ http_interactions:
       string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
         Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
         place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Feb 2016 14:54:14 GMT
 - request:
     method: get
@@ -257,7 +257,7 @@ http_interactions:
       string: '{"totalResultsCount":2,"geonames":[{"countryId":"2635167","adminCode1":"ENG","countryName":"United
         Kingdom","fclName":"city, village,...","countryCode":"GB","lng":"-3.21187","fcodeName":"populated
         place","toponymName":"Bowness-on-Solway","fcl":"P","name":"Bowness-on-Solway","fcode":"PPL","geonameId":2655050,"lat":"54.95389","adminName1":"England","population":0}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Feb 2016 14:54:14 GMT
 - request:
     method: get
@@ -298,7 +298,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"totalResultsCount":0,"geonames":[]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Feb 2016 14:54:15 GMT
 - request:
     method: get
@@ -339,6 +339,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"totalResultsCount":0,"geonames":[]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Feb 2016 14:54:16 GMT
 recorded_with: VCR 2.9.2
