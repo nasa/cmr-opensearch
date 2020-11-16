@@ -108,7 +108,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:20:24.687Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=NonTraversal&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR dataset metadata</title>
@@ -180,7 +180,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:08.559Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Traversal&amp;page_num=1&amp;page_size=2</id>
           <title type="text">CMR dataset metadata</title>
@@ -267,7 +267,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:09.481Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Traversal&amp;page_num=2&amp;page_size=2</id>
           <title type="text">CMR dataset metadata</title>
@@ -339,7 +339,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:10.144Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=Traversal&amp;page_num=1&amp;page_size=2</id>
           <title type="text">CMR dataset metadata</title>
@@ -426,7 +426,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:12.554Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=LastCursor&amp;page_num=1&amp;page_size=2</id>
           <title type="text">CMR dataset metadata</title>
@@ -513,7 +513,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:13.923Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=LastCursor&amp;page_num=2&amp;page_size=2</id>
           <title type="text">CMR dataset metadata</title>
@@ -600,7 +600,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:14.977Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=LastCursor&amp;page_num=1&amp;page_size=3</id>
           <title type="text">CMR dataset metadata</title>
@@ -702,7 +702,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:24:16.178Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?keyword=LastCursor&amp;page_num=2&amp;page_size=3</id>
           <title type="text">CMR dataset metadata</title>

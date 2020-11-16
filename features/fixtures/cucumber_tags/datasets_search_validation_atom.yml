@@ -48,7 +48,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
         xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
-        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
+        xmlns:dc=\"http://purl.org/dc/elements/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
         xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
         esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2018-02-05T21:51:41.459Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.%2A%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis%2Cint.esa.fedeo+&amp;page_num=1&amp;page_size=10</id><title
         type=\"text\">CMR collection metadata</title><entry><id>C1214621811-SCIOPS</id><title
@@ -328,6 +328,6 @@ http_interactions:
         rel=\"http://esipfed.org/ns/fedsearch/1.1/documentation#\" hreflang=\"en-US\"
         href=\"http://data.aad.gov.au/aadc/metadata/citation.cfm?entry_id=ASAC_2357\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>-69
         75 -67 78</georss:box><echo:difId>ASAC_2357</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules><echo:hasVariables>false</echo:hasVariables><echo:hasFormats>false</echo:hasFormats><echo:hasTransforms>false</echo:hasTransforms><echo:hasSpatialSubsetting>false</echo:hasSpatialSubsetting></entry></feed>"
-    http_version: 
+    http_version:
   recorded_at: Mon, 05 Feb 2018 21:51:41 GMT
 recorded_with: VCR 2.9.2
