@@ -57,7 +57,7 @@ http_interactions:
           <client_id>none-supplied-opensearch-dev</client_id>
           <user_ip_address>0.0.0.0</user_ip_address>
         </token>
-    http_version: 
+    http_version:
   recorded_at: Fri, 18 Jul 2014 13:46:19 GMT
 - request:
     method: get
@@ -109,7 +109,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:46:20.020Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -271,7 +271,7 @@ http_interactions:
             <echo:dayNightFlag>UNSPECIFIED</echo:dayNightFlag>
           </entry>
         </feed>
-    http_version: 
+    http_version:
   recorded_at: Fri, 18 Jul 2014 13:46:20 GMT
 - request:
     method: get
@@ -323,7 +323,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/terms/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:46:31.000Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10</id>
           <title type="text">CMR dataset metadata</title>
@@ -475,7 +475,7 @@ http_interactions:
             <echo:browseFlag>false</echo:browseFlag>
           </entry>
         </feed>
-    http_version: 
+    http_version:
   recorded_at: Fri, 18 Jul 2014 13:46:31 GMT
 - request:
     method: get
@@ -513,7 +513,7 @@ http_interactions:
       encoding: US-ASCII
       string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/terms/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
+        xmlns:dc="http://purl.org/dc/elements/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
         esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2015-03-01T02:51:37.135Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?page_num=1&amp;page_size=10</id><title
         type="text">ECHO granule metadata</title><entry><id>G181127451-ASF</id><title
@@ -607,7 +607,7 @@ http_interactions:
         inherited="true"><echo:inherited></echo:inherited></link><echo:coordinateSystem>GEODETIC</echo:coordinateSystem><georss:polygon>19.799866
         -99.665047 19.861179 -99.665047 19.861506 -99.751503 19.800133 -99.751625
         19.799866 -99.665047</georss:polygon><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>true</echo:browseFlag></entry></feed>
-    http_version: 
+    http_version:
   recorded_at: Sun, 01 Mar 2015 02:51:37 GMT
 - request:
     method: get
@@ -647,7 +647,7 @@ http_interactions:
       encoding: US-ASCII
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
         xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
-        xmlns:dc=\"http://purl.org/dc/terms/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
+        xmlns:dc=\"http://purl.org/dc/elements/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
         xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
         esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2015-03-01T02:51:41.704Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?page_num=1&amp;page_size=10</id><title
         type=\"text\">ECHO dataset metadata</title><entry><id>C179003030-ORNL_DAAC</id><title
@@ -848,7 +848,7 @@ http_interactions:
         hreflang=\"en-US\" title=\"30 minute rainfall data for the Konza Prairie (VIEW
         RELATED INFORMATION)\" rel=\"http://esipfed.org/ns/fedsearch/1.1/metadata#\"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters></echo:orbitParameters><georss:box>39.08
         -96.6 39.11 -96.55</georss:box><echo:difId>FIFE_RAIN_30M</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag></entry></feed>"
-    http_version: 
+    http_version:
   recorded_at: Sun, 01 Mar 2015 02:51:42 GMT
 - request:
     method: get
@@ -889,6 +889,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"totalResultsCount":0,"geonames":[]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 04 Feb 2016 14:56:01 GMT
 recorded_with: VCR 2.9.2
