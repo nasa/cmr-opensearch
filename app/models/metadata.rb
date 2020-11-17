@@ -212,7 +212,7 @@ class Metadata
     # Add esip namespace
     doc.root.add_namespace 'eo', 'http://a9.com/-/opensearch/extensions/eo/1.0/'
     doc.root.add_namespace 'esipdiscovery', 'http://commons.esipfed.org/ns/discovery/1.2/'
-    doc.root.add_namespace 'dc', 'http://purl.org/dc/elements/'
+    doc.root.add_namespace 'dc', 'http://purl.org/dc/elements/1.1/'
     doc.root.add_namespace 'georss', 'http://www.georss.org/georss'
     doc.root.add_namespace 'time', 'http://a9.com/-/opensearch/extensions/time/1.0/'
     doc.root.add_namespace 'echo', 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom'
