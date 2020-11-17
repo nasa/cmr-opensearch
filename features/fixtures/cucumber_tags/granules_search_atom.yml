@@ -108,7 +108,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:44.304Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10&amp;bounding_box=-5%2C-5%2C5%2C5</id>
           <title type="text">CMR granule metadata</title>
@@ -179,7 +179,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:46.405Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10&amp;bounding_box=30%2C30%2C40%2C40</id>
           <title type="text">CMR granule metadata</title>
@@ -236,7 +236,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:48.185Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?provider=OS_PROV_1&amp;page_num=1&amp;page_size=10&amp;temporal=2001-01-01T22%3A00%3A00Z%2C2001-01-01T23%3A00%3A00Z</id>
           <title type="text">CMR granule metadata</title>
@@ -308,7 +308,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:49.895Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?provider=OS_PROV_1&amp;page_num=1&amp;page_size=10&amp;temporal=1999-01-01T22%3A00%3A00Z%2C1999-02-01T23%3A00%3A00Z</id>
           <title type="text">CMR granule metadata</title>
@@ -365,7 +365,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:51.481Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?provider=OS_PROV_1&amp;page_num=1&amp;page_size=10&amp;temporal=2001-01-01T22%3A00%3A00Z%2C2001-05-01T23%3A00%3A00Z</id>
           <title type="text">CMR granule metadata</title>
@@ -437,7 +437,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:53.266Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?provider=OS_PROV_1&amp;page_num=1&amp;page_size=10&amp;temporal=2000-01-01T22%3A00%3A00Z%2C2012-05-01T23%3A00%3A00Z</id>
           <title type="text">CMR granule metadata</title>
@@ -524,7 +524,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:54.814Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=ShortNameSearchTesting1&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -594,7 +594,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:55.888Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=bogus&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -651,7 +651,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:56.710Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?version=99&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -721,7 +721,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:57.664Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?version=101&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -780,7 +780,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:58.655Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=PagingGranuleSearchTesting1&amp;page_num=1&amp;page_size=2</id>
           <title type="text">CMR granule metadata</title>
@@ -865,7 +865,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:44:59.701Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=PagingGranuleSearchTesting1&amp;page_num=2&amp;page_size=2</id>
           <title type="text">CMR granule metadata</title>
@@ -935,7 +935,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:45:00.776Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=UrlGranuleTesting1&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -1011,7 +1011,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:45:02.047Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=UrlGranuleTesting2&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -1093,7 +1093,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:45:03.271Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=noresultsever&amp;page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
