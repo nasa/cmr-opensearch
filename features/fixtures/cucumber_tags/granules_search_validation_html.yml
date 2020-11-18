@@ -109,7 +109,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:46:20.020Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?page_num=1&amp;page_size=10</id>
           <title type="text">CMR granule metadata</title>
@@ -323,7 +323,7 @@ http_interactions:
       encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss/10" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" esipdiscovery:version="1.2">
           <updated>2014-07-18T13:46:31.000Z</updated>
           <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/datasets.atom?page_num=1&amp;page_size=10</id>
           <title type="text">CMR dataset metadata</title>
@@ -513,7 +513,7 @@ http_interactions:
       encoding: US-ASCII
       string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/elements/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
         esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2015-03-01T02:51:37.135Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/granules.atom?page_num=1&amp;page_size=10</id><title
         type="text">ECHO granule metadata</title><entry><id>G181127451-ASF</id><title
@@ -647,7 +647,7 @@ http_interactions:
       encoding: US-ASCII
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><feed xmlns:os=\"http://a9.com/-/spec/opensearch/1.1/\"
         xmlns:georss=\"http://www.georss.org/georss/10\" xmlns=\"http://www.w3.org/2005/Atom\"
-        xmlns:dc=\"http://purl.org/dc/elements/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
+        xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:echo=\"https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom\"
         xmlns:esipdiscovery=\"http://commons.esipfed.org/ns/discovery/1.2/\" xmlns:gml=\"http://www.opengis.net/gml\"
         esipdiscovery:version=\"1.2\" xmlns:time=\"http://a9.com/-/opensearch/extensions/time/1.0/\"><updated>2015-03-01T02:51:41.704Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?page_num=1&amp;page_size=10</id><title
         type=\"text\">ECHO dataset metadata</title><entry><id>C179003030-ORNL_DAAC</id><title

@@ -234,13 +234,13 @@ When(/^I navigate to the (next|previous) result$/) do |direction|
 end
 
 Then(/^result (\d+) should have a dublin core temporal extent of "(.*?)"$/) do |index, extent|
-  d_element = @response_doc.xpath("/atom:feed/atom:entry[#{index.to_i}]/dc:date", 'atom' => 'http://www.w3.org/2005/Atom', 'dc' => 'http://purl.org/dc/terms/').first
+  d_element = @response_doc.xpath("/atom:feed/atom:entry[#{index.to_i}]/dc:date", 'atom' => 'http://www.w3.org/2005/Atom', 'dc' => 'http://purl.org/dc/elements/1.1/').first
   expect(d_element).to be
   expect(d_element.content).to eq(extent)
 end
 
 Then(/^result (\d+) should have no dublin core temporal extent$/) do |index|
-  expect(@response_doc.xpath("/atom:feed/atom:entry[#{index.to_i}]/dc:date", 'atom' => 'http://www.w3.org/2005/Atom', 'dc' => 'http://purl.org/dc/terms/').first).to be nil
+  expect(@response_doc.xpath("/atom:feed/atom:entry[#{index.to_i}]/dc:date", 'atom' => 'http://www.w3.org/2005/Atom', 'dc' => 'http://purl.org/dc/elements/1.1/').first).to be nil
 end
 
 And(/^result (\d+) should not have an open search time temporal extent$/) do |index|
@@ -287,6 +287,3 @@ Then(/^result (\d+) (should|should not) have a geoss tag$/) do |index, should|
   end
 
 end
-
-
-
