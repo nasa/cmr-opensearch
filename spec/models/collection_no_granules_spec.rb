@@ -102,7 +102,7 @@ describe Collection do
               </feed>
       eos
       open_search_response_str = <<-eos
-        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/elements/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
           <updated>2013-02-13T19:57:44.080Z</updated>
           <id>#{ENV['opensearch_url']}/collections.atom</id>
           <author>
