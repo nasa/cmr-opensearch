@@ -397,7 +397,7 @@ describe Collection do
     end
   end
   describe "catalog-rest atom result to open search conversion" do
-    it "should convert a single catalog-rest result to a single open search result" do
+    it "should convert a single catalog-rest fedeo collection result to a single open search result" do
       cat_rest_response_str = <<-eos
         <feed xmlns="http://www.w3.org/2005/Atom">
           <updated>2013-02-13T19:57:44.080Z</updated>
@@ -424,6 +424,13 @@ describe Collection do
             <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
             <echo:browseFlag>false</echo:browseFlag>
             <echo:hasGranules>true</echo:hasGranules>
+            <echo:tag>
+              <echo:tagKey>int.esa.fedeo</echo:tagKey>
+            </echo:tag>
+            <echo:tag>
+              <echo:tagKey>opensearch.granule.osdd</echo:tagKey>
+              <echo:data>"https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database"</echo:data>
+            </echo:tag>
           </entry>
         </feed>
       eos
@@ -462,8 +469,7 @@ describe Collection do
       <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
       <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
       <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-      <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-      <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+      <link href="https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Non-CMR OpenSearch Provider Granule Open Search Descriptor Document"/>
       <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
       <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
       <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
@@ -472,6 +478,14 @@ describe Collection do
       <echo:versionId>005</echo:versionId>
       <echo:dataCenter>GSFCS4PA</echo:dataCenter>
       <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
+      <echo:tag>
+        <echo:tagKey>int.esa.fedeo</echo:tagKey>
+      </echo:tag>
+      <echo:tag>
+        <echo:tagKey>opensearch.granule.osdd</echo:tagKey>
+        <echo:data>"https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database"</echo:data>
+      </echo:tag>
+      <echo:is_fedeo>true</echo:is_fedeo>
       </entry>
   </feed>
       eos
