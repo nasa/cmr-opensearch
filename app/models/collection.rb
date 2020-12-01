@@ -76,6 +76,7 @@ class Collection < Metadata
         is_geoss = false
         is_eosdis = false
         is_fedeo = false
+        provider_osdd_link = nil
         # mark the collection as CEOS if needed
         is_ceos = ceos_collection?(node)
         non_atom = []
@@ -91,6 +92,7 @@ class Collection < Metadata
           entry_node[:type] = 'text' if entry_node.name == 'title'
           entry_node.content = 'CMR collection metadata' if entry_node.content == 'CMR dataset metadata'
 
+          provider_osdd_link = provider_granule_osdd_collection_link(entry_node) if provider_osdd_link.nil?
           short_name = entry_node.content if entry_node.name == 'shortName'
           version_id = entry_node.content if entry_node.name == 'versionId'
           data_center = entry_node.content if entry_node.name == 'dataCenter'
@@ -119,12 +121,15 @@ class Collection < Metadata
           add_link_as_child(doc, node, href, 'text/html', 'enclosure', short_name)
         end
 
-        unless !create_cwic_osdd_link && !has_granules
+        if is_fedeo && provider_osdd_link.present?
+          link_title = 'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document'
+          add_link_as_child(doc, node, provider_osdd_link, 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
+        elsif create_cwic_osdd_link
           link_title = "CWIC Granule Open Search Descriptor Document"
-          if !create_cwic_osdd_link
-            link_title = "Custom CMR Granule Open Search Descriptor Document"
-            add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules.atom?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/atom+xml', NEW_REL_MAPPING[:search], 'Search for granules')
-          end
+          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=#{id}&clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
+        elsif has_granules
+          link_title = "Custom CMR Granule Open Search Descriptor Document"
+          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules.atom?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/atom+xml', NEW_REL_MAPPING[:search], 'Search for granules')
           add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=#{id}&clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
         end
 
