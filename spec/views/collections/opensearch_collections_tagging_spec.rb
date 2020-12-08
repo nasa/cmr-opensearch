@@ -22,29 +22,25 @@ describe 'various provider granule OpenSearch API search behavior'  do
         # each entry has its index based ID in its id element
         expect(entry_id.include?((index+1).to_s)).to be true
         # various granule OSDDs that we can encounter
-        entry_cwic_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
-        entry_cmr_link = entry.at_xpath('os:link[@title = \'Custom CMR Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
+        entry_osdd_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
 
         # TEST entries
         if([2,5,8].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
           # test will NOT have the CWIC OSDD link when the header is NOT present
-          expect(!entry_cwic_link.nil?).to be true
-          expect(entry_cmr_link.nil?).to be true
+          expect(!entry_osdd_link.nil?).to be true
         end
         # PROD entries
         if([1,4,7,10].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
-          expect(!entry_cwic_link.nil?).to be true
-          expect(entry_cmr_link.nil?).to be true
+          expect(!entry_osdd_link.nil?).to be true
         end
         # OpenSearch entries
         if([3,6,9].include?(index+1))
           expect(entry_tag_value).to eq('opensearch.granule.osdd')
-          expect(entry_cwic_link.nil?).to be true
-          expect(entry_cmr_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be true
         end
       end
     end
@@ -66,28 +62,24 @@ describe 'various provider granule OpenSearch API search behavior'  do
         # each entry has its index based ID in its id element
         expect(entry_id.include?((index+1).to_s)).to be true
         # various granule OSDDs that we can encounter
-        entry_cwic_link = entry.at_xpath('os:link[@title = \'CWIC Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
-        entry_cmr_link = entry.at_xpath('os:link[@title = \'Custom CMR Granule Open Search Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
+        entry_osdd_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         # TEST entries
         if([2,5,8].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
           # test will NOT have the CWIC OSDD link when the header is NOT present
-          expect(entry_cwic_link.nil?).to be true
-          expect(entry_cmr_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be true
         end
         # PROD entries
         if([1,4,7,10].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
-          expect(!entry_cwic_link.nil?).to be true
-          expect(entry_cmr_link.nil?).to be true
+          expect(!entry_osdd_link.nil?).to be true
         end
         # OpenSearch entries
         if([3,6,9].include?(index+1))
           expect(entry_tag_value).to eq('opensearch.granule.osdd')
-          expect(entry_cwic_link.nil?).to be true
-          expect(entry_cmr_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be true
         end
       end
     end

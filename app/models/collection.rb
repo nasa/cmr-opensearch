@@ -124,13 +124,20 @@ class Collection < Metadata
         if is_fedeo && provider_osdd_link.present?
           link_title = 'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document'
           add_link_as_child(doc, node, provider_osdd_link, 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
-        elsif create_cwic_osdd_link
-          link_title = "CWIC Granule Open Search Descriptor Document"
-          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=#{id}&clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
-        elsif has_granules
-          link_title = "Custom CMR Granule Open Search Descriptor Document"
-          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules.atom?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/atom+xml', NEW_REL_MAPPING[:search], 'Search for granules')
-          add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=#{id}&clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
+        else
+          if has_granules
+            add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules.atom?clientId=#{params[:clientId]}&shortName=#{short_name}&versionId=#{version_id}&dataCenter=#{data_center}", 'application/atom+xml', NEW_REL_MAPPING[:search], 'Search for granules')
+          end
+          if create_cwic_osdd_link || has_granules
+            link_title = "Granule OpenSearch Descriptor Document"
+            if Rails.configuration.flipper.enabled?(:use_cwic_server)
+              Rails.logger.info "Flipper says use cwic server!"
+              add_link_as_child(doc, node, "#{Rails.configuration.cwic_granules_osdd_endpoint}opensearch/datasets/#{id}/osdd.xml?clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
+            else
+              Rails.logger.info "Flipper says DO NOT use cwic server!"
+              add_link_as_child(doc, node, "#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=#{id}&clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
+            end
+          end
         end
 
         add_link_as_child(doc, node, "#{ENV['public_catalog_rest_endpoint']}concepts/#{guid}.xml", 'application/xml', 'via', 'Product metadata')

@@ -7,7 +7,7 @@ require "rails/test_unit/railtie"
 require "sprockets/railtie"
 require "active_support/railtie"
 require "active_support/dependencies"
-
+require "flipper"
 
 Bundler.require(*Rails.groups)
 
@@ -201,6 +201,26 @@ module EchoOpensearch
           "data_centers": ["NASA/*", "ASF", "LP_DAAC", "MSFC", "ORNL_DAAC"]
       }'
   ]
+
+  Flipper.configure do |config|
+    config.default do
+      # pick an adapter, this uses memory, any will do
+      adapter = Flipper::Adapters::Memory.new
+      # pass adapter to handy DSL instance
+      Flipper.new(adapter)
+    end
+  end
+
+  if ENV["use_CWIC_server"] == "true"
+    puts "CWIC ENABLED BY FLIPPER"
+    Flipper.enable(:use_cwic_server)
+  else
+    puts "CWIC DISABLED BY FLIPPER"
+    Flipper.disable(:use_cwic_server)
+  end
+
+
+  config.flipper = Flipper
 
     ## additional default configuration parameters use to run tests or a basic local run with no scheduled tagging
     ## capabilities

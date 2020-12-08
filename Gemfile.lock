@@ -108,6 +108,7 @@ GEM
       tzinfo
     execjs (2.7.0)
     ffi (1.9.24)
+    flipper (0.19.1)
     fugit (1.3.6)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.3)
@@ -287,6 +288,7 @@ DEPENDENCIES
   cucumber-rails
   execjs (~> 2.7.0)
   ffi (= 1.9.24)
+  flipper
   georuby (~> 2.5.2)
   jquery-rails (~> 4.3.1)
   loofah (>= 2.3.1)
