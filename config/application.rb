@@ -202,6 +202,8 @@ module EchoOpensearch
       }'
   ]
 
+  config.cwic_granules_osdd_endpoint = "https://cwic.wgiss.ceos.org/"
+
   Flipper.configure do |config|
     config.default do
       # pick an adapter, this uses memory, any will do
@@ -211,7 +213,7 @@ module EchoOpensearch
     end
   end
 
-  if ENV["use_CWIC_server"] == "true"
+  if ENV["use_cwic_server"] == "true"
     puts "CWIC ENABLED BY FLIPPER"
     Flipper.enable(:use_cwic_server)
   else
