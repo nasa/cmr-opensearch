@@ -65,4 +65,4 @@ end
 
 Capybara.app_host = host
 
-
+Flipper.disable(:use_cwic_server)

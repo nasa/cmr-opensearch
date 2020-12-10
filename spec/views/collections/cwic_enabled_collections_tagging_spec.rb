@@ -29,12 +29,12 @@ describe 'faceted search behavior', :type => :controller  do
         entry_id = entry.at_xpath('os:id', 'os' => 'http://www.w3.org/2005/Atom').text
         # each entry has its index based ID in its id element
         expect(entry_id.include?((index+1).to_s)).to be true
-        entry_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
+        entry_osdd_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         # all entries will have the CWIC OSDD link since the header is present
-        expect(!entry_link.nil?).to be true
+        expect(!entry_osdd_link.nil?).to be true
         # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
-        entry_link_string = entry_link.to_s
-        expect(entry_link_string).to match(/.*cwic\.wgiss\.ceos\.org.*/)
+        entry_osdd_link_string = entry_osdd_link['href']
+        expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
         entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         # even entries are test entries, odd entries are prod entries
         if((index+1)%2 == 0)
@@ -62,22 +62,22 @@ describe 'faceted search behavior', :type => :controller  do
         entry_id = entry.at_xpath('os:id', 'os' => 'http://www.w3.org/2005/Atom').text
         # each entry has its index based ID in its id element
         expect(entry_id.include?((index+1).to_s)).to be true
-        entry_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
+        entry_osdd_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         # even entries are test entries, odd entries are prod entries
         if((index+1)%2 == 0)
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
           # test will NOT have the CWIC OSDD link when the header is NOT present
-          expect(entry_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be true
         end
         if((index+1)%2 == 1)
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
-          expect(!entry_link.nil?).to be true
+          expect(!entry_osdd_link.nil?).to be true
           # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
-          entry_link_string = entry_link.to_s
-          expect(entry_link_string).to match(/.*cwic\.wgiss\.ceos\.org.*/)
-          
+          entry_osdd_link_string = entry_osdd_link['href']
+          expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
+
         end
       end
     end
@@ -100,10 +100,10 @@ describe 'faceted search behavior', :type => :controller  do
         # GCMD dif link used the dif-id
         get_dif_link = entry.at_xpath('os:link[@rel = \'enclosure\']', 'os' => 'http://www.w3.org/2005/Atom')
         # CWIC OSDD link uses the concept-id
-        entry_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
+        entry_osdd_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         entry_tag_value = entry.at_xpath('echo:tag/echo:tagKey', 'os' => 'http://www.w3.org/2005/Atom', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom').text
         expect(entry_tag_value).to include('org.ceos.wgiss.cwic.granules.')
-        expect(entry_link['href']).to include(expected_concept_ids[index])
+        expect(entry_osdd_link['href']).to include(expected_concept_ids[index])
         # concept-id used in the cwic entry link is different from the dif-id
         expect(get_dif_link['href']).not_to include(expected_concept_ids[index])
       end

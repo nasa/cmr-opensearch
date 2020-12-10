@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Collection do
   before(:each) do
     @d = Collection.new({})
+    Flipper.disable(:use_cwic_server)
   end
   describe 'granule level OSDD link generation' do
     it 'should only generate granule level links if the collection has granules' do

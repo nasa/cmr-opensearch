@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Collection do
   before(:each) do
     @d = Collection.new({})
+    Flipper.disable(:use_cwic_server)
   end
   describe 'minimum bounding rectangle generation' do
     it 'should generate a MBR for a polygon' do
