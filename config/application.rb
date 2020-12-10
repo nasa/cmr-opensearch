@@ -213,6 +213,8 @@ module EchoOpensearch
     end
   end
 
+  puts "CWIC SERVER FLIPPER VARIBLE:"
+  puts ENV["USE_CWIC_SERVER"]
   if ENV["USE_CWIC_SERVER"] == "true"
     puts "CWIC ENABLED BY FLIPPER"
     Flipper.enable(:use_cwic_server)
