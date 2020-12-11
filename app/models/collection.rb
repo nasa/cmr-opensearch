@@ -130,6 +130,15 @@ class Collection < Metadata
           end
           if create_cwic_osdd_link || has_granules
             link_title = "Granule OpenSearch Descriptor Document"
+            #puts "CWIC SERVER FLIPPER VARIBLE:"
+            #puts ENV["USE_CWIC_SERVER"]
+            if ENV['USE_CWIC_SERVER'] == "true"
+              #puts "CWIC ENABLED BY FLIPPER"
+              Flipper.enable(:use_cwic_server)
+            else
+              #puts "CWIC DISABLED BY FLIPPER"
+              Flipper.disable(:use_cwic_server)
+            end
             if Rails.configuration.flipper.enabled?(:use_cwic_server)
               Rails.logger.info "Flipper says use cwic server!"
               add_link_as_child(doc, node, "#{Rails.configuration.cwic_granules_osdd_endpoint}opensearch/datasets/#{id}/osdd.xml?clientId=#{params[:clientId]}", 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
