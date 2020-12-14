@@ -8,6 +8,7 @@ require "sprockets/railtie"
 require "active_support/railtie"
 require "active_support/dependencies"
 require "flipper"
+require 'flipper/adapters/pstore'
 
 Bundler.require(*Rails.groups)
 
@@ -207,7 +208,7 @@ module EchoOpensearch
   Flipper.configure do |config|
     config.default do
       # pick an adapter, this uses memory, any will do
-      adapter = Flipper::Adapters::Memory.new
+      adapter = Flipper::Adapters::PStore.new
       # pass adapter to handy DSL instance
       Flipper.new(adapter)
     end
@@ -220,9 +221,6 @@ module EchoOpensearch
     puts "CWIC DISABLED BY FLIPPER"
     Flipper.disable(:use_cwic_server)
   end
-
-
-  config.flipper = Flipper
 
     ## additional default configuration parameters use to run tests or a basic local run with no scheduled tagging
     ## capabilities
