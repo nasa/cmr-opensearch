@@ -31,7 +31,7 @@ describe 'faceted search behavior', :type => :controller  do
         expect(entry_id.include?((index+1).to_s)).to be true
         entry_osdd_link = entry.at_xpath('os:link[@title = \'Granule OpenSearch Descriptor Document\']', 'os' => 'http://www.w3.org/2005/Atom')
         # all entries will have the CWIC OSDD link since the header is present
-        expect(!entry_osdd_link.nil?).to be true
+        expect(entry_osdd_link.nil?).to be false
         # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
         entry_osdd_link_string = entry_osdd_link['href']
         expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
@@ -73,7 +73,7 @@ describe 'faceted search behavior', :type => :controller  do
         if((index+1)%2 == 1)
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
-          expect(!entry_osdd_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be false
           # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
           entry_osdd_link_string = entry_osdd_link['href']
           expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")

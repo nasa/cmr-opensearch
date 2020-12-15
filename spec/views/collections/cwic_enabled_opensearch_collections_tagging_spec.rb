@@ -37,7 +37,7 @@ describe 'various provider granule OpenSearch API search behavior'  do
         if([2,5,8].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
           # test will NOT have the CWIC OSDD link when the header is NOT present
-          expect(!entry_osdd_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be false
           # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
           entry_osdd_link_string = entry_osdd_link['href']
           expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
@@ -47,7 +47,7 @@ describe 'various provider granule OpenSearch API search behavior'  do
         if([1,4,7,10].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
-          expect(!entry_osdd_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be false
           # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
           entry_osdd_link_string = entry_osdd_link['href']
           expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
@@ -89,7 +89,7 @@ describe 'various provider granule OpenSearch API search behavior'  do
         if([1,4,7,10].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
-          expect(!entry_osdd_link.nil?).to be true
+          expect(entry_osdd_link.nil?).to be false
           # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
           entry_osdd_link_string = entry_osdd_link['href']
           expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
