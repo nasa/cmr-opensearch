@@ -1,6 +1,7 @@
 current: &current
   opensearch_url: http://localhost:3000/opensearch
   catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
+  USE_CWIC_SERVER: true
   echo_rest_endpoint: https://api.echo.nasa.gov/echo-rest/
   contact: @MAIL_SENDER@
   mode: @MODE@
