@@ -7,7 +7,8 @@ require "rails/test_unit/railtie"
 require "sprockets/railtie"
 require "active_support/railtie"
 require "active_support/dependencies"
-
+require "flipper"
+require 'flipper/adapters/pstore'
 
 Bundler.require(*Rails.groups)
 
@@ -201,6 +202,25 @@ module EchoOpensearch
           "data_centers": ["NASA/*", "ASF", "LP_DAAC", "MSFC", "ORNL_DAAC"]
       }'
   ]
+
+  config.cwic_granules_osdd_endpoint = "https://cwic.wgiss.ceos.org/"
+
+  Flipper.configure do |config|
+    config.default do
+      # pick an adapter, this uses memory, any will do
+      adapter = Flipper::Adapters::PStore.new
+      # pass adapter to handy DSL instance
+      Flipper.new(adapter)
+    end
+  end
+
+  if ENV["USE_CWIC_SERVER"] == "true"
+    puts "CWIC ENABLED BY FLIPPER"
+    Flipper.enable(:use_cwic_server)
+  else
+    puts "CWIC DISABLED BY FLIPPER"
+    Flipper.disable(:use_cwic_server)
+  end
 
     ## additional default configuration parameters use to run tests or a basic local run with no scheduled tagging
     ## capabilities

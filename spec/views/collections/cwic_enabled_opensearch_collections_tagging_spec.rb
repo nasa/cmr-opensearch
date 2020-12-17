@@ -7,6 +7,14 @@ describe 'various provider granule OpenSearch API search behavior'  do
     Rails.application
   end
 
+  before (:each) do
+    Flipper.enable(:use_cwic_server)
+  end
+
+  after (:all) do
+    Flipper.disable(:use_cwic_server)
+  end
+
   it 'returns CWIC OSDD links for both PROD and TEST CWIC datasets when the CWIC request header is present and and Provider Specific links when collection is appropriately tagged' do
     VCR.use_cassette 'models/tag/cmr_cwic_opensearch_datasets_prod_test_tags_mix', :decode_compressed_response => true , :record => :once do
       header 'Cwic-User', 'test'
@@ -30,12 +38,19 @@ describe 'various provider granule OpenSearch API search behavior'  do
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.test')
           # test will NOT have the CWIC OSDD link when the header is NOT present
           expect(entry_osdd_link.nil?).to be false
+          # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
+          entry_osdd_link_string = entry_osdd_link['href']
+          expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
+
         end
         # PROD entries
         if([1,4,7,10].include?(index+1))
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
           expect(entry_osdd_link.nil?).to be false
+          # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
+          entry_osdd_link_string = entry_osdd_link['href']
+          expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
         end
         # OpenSearch entries
         if([3,6,9].include?(index+1))
@@ -75,6 +90,10 @@ describe 'various provider granule OpenSearch API search behavior'  do
           expect(entry_tag_value).to eq('org.ceos.wgiss.cwic.granules.prod')
           # prod will always have the CWIC OSDD link for 'prod' tag
           expect(entry_osdd_link.nil?).to be false
+          # since CWIC is enabled via Flipper, we are expecting a CWIC OSDD
+          entry_osdd_link_string = entry_osdd_link['href']
+          expect(entry_osdd_link_string).to start_with("https://cwic.wgiss.ceos.org/opensearch/datasets")
+
         end
         # OpenSearch entries
         if([3,6,9].include?(index+1))

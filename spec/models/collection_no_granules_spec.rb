@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Collection do
   before(:each) do
     @d = Collection.new({})
+    Flipper.disable(:use_cwic_server)
   end
   describe 'granule level OSDD link generation' do
     it 'should only generate granule level links if the collection has granules' do
@@ -138,7 +139,7 @@ describe Collection do
             <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
             <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
             <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Custom CMR Granule Open Search Descriptor Document"/>
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
             <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
