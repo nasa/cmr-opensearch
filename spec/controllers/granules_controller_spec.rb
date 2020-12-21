@@ -6,6 +6,14 @@ describe GranulesController do
         get :descriptor_document, :format => :xml, :params => { :clientId => 'foo', :shortName => 'MOD02QKM', :versionId => '005', :dataCenter => 'LAADS' }
         expect(response).to render_template("granules/descriptor_document")
       end
+      it "renders a descriptor document" do
+        get :descriptor_document, :format => :xml, :params => { :clientId => '', :shortName => 'MOD02QKM', :versionId => '005', :dataCenter => 'LAADS' }
+        expect(response).to render_template("granules/descriptor_document")
+      end
+      it "renders a descriptor document" do
+        get :descriptor_document, :format => :xml, :params => { :shortName => 'MOD02QKM', :versionId => '005', :dataCenter => 'LAADS' }
+        expect(response).to render_template("granules/descriptor_document")
+      end
     end
     context "with invalid attributes" do
       it "renders an error" do
