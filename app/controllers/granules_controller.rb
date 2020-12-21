@@ -13,7 +13,12 @@ class GranulesController < ApplicationController
     @data_center = params[:dataCenter].blank? ? '{echo:dataCenter?}' : params[:dataCenter]
 
     @type = 'granules'
-    if @client_id_model.valid?
+    if !@client_id_model.clientId.blank? && !@client_id_model.valid?
+        error_msg = ''
+        @client_id_model.errors.full_messages.each {|value| error_msg += "#{value}\n"}
+        flash.now[:error] = error_msg.chop!
+        render 'home/index.html.erb', :status => :bad_request
+    else
       if @collection_concept_id.present?
         mapping_hash = parse_cwic_mapping_by_concept_id(@collection_concept_id)
         if mapping_hash['erb_file'].present?
@@ -38,11 +43,6 @@ class GranulesController < ApplicationController
           format.xml
         end
       end
-    else
-      error_msg = ''
-      @client_id_model.errors.full_messages.each {|value| error_msg += "#{value}\n"}
-      flash.now[:error] = error_msg.chop!
-      render 'home/index.html.erb', :status => :bad_request
     end
   end
 
