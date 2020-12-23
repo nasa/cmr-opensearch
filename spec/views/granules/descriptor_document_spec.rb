@@ -109,3 +109,31 @@ describe "granules/descriptor_document" do
         expect(actual_doc.to_xml(:indent => 2)).to eq(expected_doc.to_xml(:indent => 2))
     end
 end
+
+describe "granules/mosdac" do
+  it "is possible to create a collection-specific granule open search descriptor document with a valid client id" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = 'foo'
+    assign(:client_id_model, stub_client_id)
+
+    assign(:dataset_id, '3DIMG_L2B_HEM')
+
+    render
+    expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;clientId=foo\">")
+  end
+
+  it "is possible to create a collection-specific granule open search descriptor document without a valid client id" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = ''
+    assign(:client_id_model, stub_client_id)
+
+    assign(:dataset_id, '3DIMG_L2B_HEM')
+
+    render
+    expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}\">")
+    expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}\">")
+  end
+
+
+end
