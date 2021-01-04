@@ -9,11 +9,8 @@ xmlns:params="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/" 	xmlns
     <os:Tags>ISRO SAC MOSDAC dataset</os:Tags>
     <os:Contact>admin@sac.isro.gov.in</os:Contact>
     <os:Url type="application/atom+xml" rel="results" params:method="GET"
-    <% if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>
-			template="https://mosdac.gov.in/opensearch/datasets.atom?datasetId=<%= @dataset_id %>&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}&amp;clientId=<%= @client_id_model.clientId %>">
-		<% else %>
-      template="https://mosdac.gov.in/opensearch/datasets.atom?datasetId=<%= @dataset_id %>&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}">
-		<% end %>
+    template="https://mosdac.gov.in/opensearch/datasets.atom?datasetId=<%= @dataset_id %>&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}<%
+		 	if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
     <params:Parameter name="datasetId" value='{geo:name}' title="Standard Products archived at MOSDAC registered at GCMD" minimum='1' maximum='1' />
     <params:Parameter name="boundingBox" value='{geo:box}' title="spatial extent overlapping this bound box WEST-LONG, SOUTH-LAT, EAST-LONG, NORTH-LAT" minimum='0' />
     <params:Parameter name="startTime" value='{time:start}'  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>'  title="temporal extent containing this start time. The string should match 'YYYY-MM-DD" minimum='0' />
@@ -25,11 +22,9 @@ xmlns:params="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/" 	xmlns
     </os:Url>
 
 	<os:Url type="application/atom+xml" rel="collection" params:method="GET"
-  <% if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>
-    template="https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;clientId=<%= @client_id_model.clientId %>">
-  <% else %>
-    template="https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}">
-  <% end %>
+  template="https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}<%
+    if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
+
 <params:Parameter name="keyword" uiDisplay="Search terms" value="{os:searchTerms}" title="Inventory with terms expressed by these search terms" minimum="0" />
 
 <params:Parameter name="instrument" uiDisplay="Instrument" value="{echo:instrument}" title="Inventory associated with a satellite instrument expressed by this short name" minimum="0"/>
