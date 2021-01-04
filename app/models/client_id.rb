@@ -5,7 +5,7 @@ class ClientId
 
   attr_accessor :clientId
   validates :clientId, :format => {:with => /\A[a-zA-Z0-9_\-]+\z/,
-                                :message => "is invalid, it must be an alpha-numeric string"}, :allow_blank => false
+                                :message => "is invalid, it must be an alpha-numeric string"}, :allow_blank => true
 
   def initialize(attributes = {})
       attributes.each do |name, value|
@@ -17,4 +17,3 @@ class ClientId
     false
   end
 end
-
