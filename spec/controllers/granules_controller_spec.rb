@@ -41,6 +41,28 @@ describe GranulesController do
       expect(response.status).to eq(400)
     end
   end
+  context "with a blank clientId" do
+    it "renders a ccmeo OSDD" do
+      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1214603059-SCIOPS' }
+      expect(response.status).to eq(200)
+      expect(response).to render_template("granules/ccmeo.xml.erb")
+    end
+    it "renders an eumetsat OSDD" do
+      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1588876552-EUMETSAT' }
+      expect(response.status).to eq(200)
+      expect(response).to render_template("granules/eumetsat.xml.erb")
+    end
+    it "renders an nrsc OSDD" do
+      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1373227010-ISRO' }
+      expect(response.status).to eq(200)
+      expect(response).to render_template("granules/nrsc.xml.erb")
+    end
+    it "renders a usgslsi OSDD" do
+      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1220567092-USGS_LTA' }
+      expect(response.status).to eq(200)
+      expect(response).to render_template("granules/usgslsi.xml.erb")
+    end
+  end
 
   describe "GET RestClient error" do
     context "with larger than allowed cursor value" do
