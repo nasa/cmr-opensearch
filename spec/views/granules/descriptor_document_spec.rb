@@ -133,6 +133,17 @@ describe "granules/mosdac" do
     expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}\">")
     expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}\">")
   end
+  it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = ' '
+    assign(:client_id_model, stub_client_id)
+
+    assign(:dataset_id, '3DIMG_L2B_HEM')
+
+    render
+    expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}&amp;gId={gId?}\">")
+    expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={os:searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={os:startPage?}&amp;count={os:count?}\">")
+  end
 end
 
 describe "granules/ccmeo" do
@@ -146,6 +157,14 @@ describe "granules/ccmeo" do
   end
   it "is possible to create a collection-specific granule open search descriptor document with a blank client id" do
     stub_client_id = stub_model(ClientId)
+    assign(:client_id_model, stub_client_id)
+
+    render
+    expect(rendered).to include("template=\"http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}\">")
+  end
+  it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = ' '
     assign(:client_id_model, stub_client_id)
 
     render
@@ -169,6 +188,14 @@ describe "granules/eumetsat" do
     render
     expect(rendered).to include("template=\"https://eoportal.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
   end
+  it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = ' '
+    assign(:client_id_model, stub_client_id)
+
+    render
+    expect(rendered).to include("template=\"https://eoportal.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
+  end
 end
 
 describe "granules/nrsc" do
@@ -184,6 +211,16 @@ describe "granules/nrsc" do
   end
   it "is possible to create a collection-specific granule open search descriptor document with a blank client id" do
     stub_client_id = stub_model(ClientId)
+    assign(:client_id_model, stub_client_id)
+
+    assign(:dataset_id, 'P6_AWIF_STUC00GTD')
+
+    render
+    expect(rendered).to include("template='https://uops.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}'>")
+  end
+  it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = ' '
     assign(:client_id_model, stub_client_id)
 
     assign(:dataset_id, 'P6_AWIF_STUC00GTD')
@@ -213,4 +250,14 @@ describe "granules/usgslsi" do
     render
     expect(rendered).to include("template=\"https://earthexplorer.usgs.gov/opensearch/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}\">")
   end
+    it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
+      stub_client_id = stub_model(ClientId)
+      stub_client_id.clientId = ' '
+      assign(:client_id_model, stub_client_id)
+
+      assign(:dataset_id, 'CALVAL_IS_TUZGOLU_TURKEY')
+
+      render
+      expect(rendered).to include("template=\"https://earthexplorer.usgs.gov/opensearch/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}\">")
+    end
 end
