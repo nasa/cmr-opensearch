@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").chomp.split('-')[1] { |f| "ruby '#{f}'"}
 
-gem 'rails', '5.2.4.3'
+gem 'rails', '5.2.4.5'
 gem 'activeresource', '>= 5.1.1'
 gem 'responders', '~> 2.0'
 gem 'unicorn'
