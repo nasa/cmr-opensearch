@@ -4,8 +4,6 @@ Feature: Retrieve granules in atom format and be able to navigate to and from gr
   as an open search user
   I should be able to search for granules (using the atom view) and discover granules from those results
 
-  Scenario: Search for granule without traversal
-
   Scenario: Search for granules no traversal
     Given I have executed a granule search with the following parameters:
       | clientId | shortName                  |
