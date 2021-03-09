@@ -3,7 +3,7 @@ Feature: Retrieve collections in atom format with dublin core temporal extents
   In order to obtain collection products
   as an open search user
   I should be able to search for collections using a machine-readable format that renders temporal extents compliant with the dublin-core (http://purl.org/dc/elements/1.1/) date element
-  Example: <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2010-04- 13T20:38:16.000Z/2010-04-13T20:40:00.000Z</dc:date>
+  # Example: <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2010-04- 13T20:38:16.000Z/2010-04-13T20:40:00.000Z</dc:date>
 
   Scenario: Search for collection with date range
     Given I have executed a collection search with the following parameters:
