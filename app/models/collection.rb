@@ -121,7 +121,7 @@ class Collection < Metadata
           add_link_as_child(doc, node, href, 'text/html', 'enclosure', short_name)
         end
 
-        if is_fedeo && provider_osdd_link.present?
+        if provider_osdd_link.present?
           link_title = 'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document'
           add_link_as_child(doc, node, provider_osdd_link, 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
         else
