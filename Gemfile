@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").chomp.split('-')[1] { |f| "ruby '#{f}'"}
 
-gem 'rails', '5.2.4.3'
+gem 'rails', '5.2.4.5'
 gem 'activeresource', '>= 5.1.1'
 gem 'responders', '~> 2.0'
 gem 'unicorn'
@@ -15,6 +15,8 @@ gem 'loofah', '>= 2.3.1'
 gem 'rack', '~> 2.0'
 gem 'ffi', '1.9.24'
 gem 'rails-controller-testing'
+gem 'flipper'
+gem 'mimemagic', '~> 0.3.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -45,6 +47,7 @@ end
 
 
 group :test do
+  gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
   gem 'vcr'
   gem 'webmock'
