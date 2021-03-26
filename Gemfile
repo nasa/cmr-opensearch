@@ -16,6 +16,7 @@ gem 'rack', '~> 2.0'
 gem 'ffi', '1.9.24'
 gem 'rails-controller-testing'
 gem 'flipper'
+gem 'mimemagic', '~> 0.3.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
