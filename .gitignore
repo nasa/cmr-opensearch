@@ -36,3 +36,5 @@ rails_best_practices.html
 config/secret_token.yml
 
 holepicker.txt
+
+/coverage
