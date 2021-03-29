@@ -140,6 +140,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     kgio (2.11.3)
+    libv8 (3.16.14.19)
     loofah (2.9.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -218,6 +219,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    ref (2.0.0)
     regexp_parser (2.0.3)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
@@ -279,6 +281,9 @@ GEM
       sprockets (>= 3.0.0)
     sys-uname (1.2.2)
       ffi (~> 1.1)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -336,6 +341,7 @@ DEPENDENCIES
   sass (~> 3.5.5)
   sass-rails (~> 5.0.7)
   simplecov
+  therubyracer (~> 0.12.3)
   uglifier (~> 4.1.6)
   unicorn
   vcr
