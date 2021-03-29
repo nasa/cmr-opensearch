@@ -37,4 +37,6 @@ config/secret_token.yml
 
 holepicker.txt
 
+*.code-workspace
+
 /coverage
