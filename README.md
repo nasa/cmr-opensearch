@@ -60,6 +60,9 @@ We found the following workarounds to the _**bundle install**_ failures due to l
     $ bundle config build.therubyracer --with-v8-dir=$(brew --prefix v8@3.15)
     $ bundle install
 
+Local problems with mimemagic on MACOSX?
+    brew install shared-mime-info
+
 ### Set up the required environment
 The application requires the environment variables below to be set in order to run the web application:  
 
