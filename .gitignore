@@ -38,5 +38,6 @@ config/secret_token.yml
 holepicker.txt
 
 *.code-workspace
+flipper.pstore
 
 /coverage
