@@ -55,10 +55,10 @@ solutions to fix the errors, we found that on some versions of OS X, you can ove
 operating system version of the libv8 library, rather than trying to build a new one during the normal gem install.
 We found the following workarounds to the _**bundle install**_ failures due to libv8:
 
-    gem uninstall libv8
-    gem install therubyracer
-    gem install libv8 -v 3.16.14.13 -- --with-system-v8
-    bundle install   
+    $ brew install v8@3.15
+    $ bundle config build.libv8 --with-system-v8
+    $ bundle config build.therubyracer --with-v8-dir=$(brew --prefix v8@3.15)
+    $ bundle install
 
 ### Set up the required environment
 The application requires the environment variables below to be set in order to run the web application:  
