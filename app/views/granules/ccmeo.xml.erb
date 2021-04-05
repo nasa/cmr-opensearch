@@ -10,10 +10,12 @@
    <Url type="text/html" template="http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=<%= @dataset_id %>&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}<%
      if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
         <param:Parameter name="dtstart" value="{time:start}" minimum="1"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' title="Temporal Start"/>
+        <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' maxPeriod="P14D" relativeTo="{time:start}" title="Temporal End" />
    </Url>
    <Url type="application/atom+xml" template="http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=<%= @dataset_id %>&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}&amp;format=atom<%
      if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
         <param:Parameter name="dtstart" value="{time:start}" minimum="1"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' title="Temporal Start"/>
+        <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' maxPeriod="P14D" relativeTo="{time:start}" title="Temporal End" />
    </Url>
    <LongName>Metadata and browse imagery are obtained from a search of the CEOCat-NEODF catalogues at CCMEO, Natural Resources Canada</LongName>
 <!-- the following 2 examples apply to searching for Radarsat-1 raw scenes -->
