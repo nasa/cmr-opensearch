@@ -170,6 +170,14 @@ describe "granules/ccmeo" do
     render
     expect(rendered).to include("template=\"http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}\">")
   end
+  it "creates a collection-specific granule open search descriptor document with a temporal range limit of 14 days" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = 'foo'
+    assign(:client_id_model, stub_client_id)
+
+    render
+    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive = '' maxInclusive = '' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
+  end
 end
 
 describe "granules/eumetsat" do
@@ -196,7 +204,7 @@ describe "granules/eumetsat" do
     render
     expect(rendered).to include("template=\"https://eoportal.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
   end
-  it "creates a collection-specific granule open search descriptor document with a temporal range limit" do
+  it "creates a collection-specific granule open search descriptor document with a temporal range limit of 30 days" do
     stub_client_id = stub_model(ClientId)
     stub_client_id.clientId = 'foo'
     assign(:client_id_model, stub_client_id)
