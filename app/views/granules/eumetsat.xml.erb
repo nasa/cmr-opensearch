@@ -9,7 +9,7 @@
         <param:Parameter name="si" value="{startIndex}" minimum="0" minInclusive="1" maxExclusive="10001" title="Start index of records to return"/>
         <param:Parameter name="pw" value="{startPage}" minimum="0" minInclusive="1" maxExclusive="1001" title="Start page of records to return"/>
         <param:Parameter name="dtstart" value="{time:start}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' title="Temporal Start"/>
-        <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' title="Temporal End"/>
+        <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' maxPeriod="P30D" relativeTo="{time:start}" title="Temporal End" />
         <param:Parameter name="bbox" value="{geo:box}" title="Inventory which has a spatial extent overlapping this bounding box (bboxes larger than half of the earth are ignored)" minimum="0"/>
         <param:Parameter name="iqd" value="{eop:productQualityStatus}" minimum="0" title="Image Qualitity Degradation">
             <param:Option value="NOMINAL" label="NOMINAL"/>
