@@ -176,7 +176,7 @@ describe "granules/ccmeo" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive = '' maxInclusive = '' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
+    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive='' maxInclusive='' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
   end
 end
 
@@ -210,7 +210,7 @@ describe "granules/eumetsat" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive = '' maxInclusive = '' maxPeriod=\"P30D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
+    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive='' maxInclusive='' maxPeriod=\"P30D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
   end
 end
 
