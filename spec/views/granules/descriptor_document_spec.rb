@@ -153,14 +153,14 @@ describe "granules/ccmeo" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("template=\"http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"https://eodms-sgdot.nrcan-rncan.gc.ca/apps/cgi/opensearch/eodms_opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}&amp;clientId=foo\">")
   end
   it "is possible to create a collection-specific granule open search descriptor document with a blank client id" do
     stub_client_id = stub_model(ClientId)
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("template=\"http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}\">")
+    expect(rendered).to include("template=\"https://eodms-sgdot.nrcan-rncan.gc.ca/apps/cgi/opensearch/eodms_opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}\">")
   end
   it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
     stub_client_id = stub_model(ClientId)
@@ -168,7 +168,7 @@ describe "granules/ccmeo" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("template=\"http://ceocat.ccrs.nrcan.gc.ca/cgi-bin/opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}\">")
+    expect(rendered).to include("template=\"https://eodms-sgdot.nrcan-rncan.gc.ca/apps/cgi/opensearch/eodms_opensearch_r1.sh?q=&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}\">")
   end
   it "creates a collection-specific granule open search descriptor document with a temporal range limit of 14 days" do
     stub_client_id = stub_model(ClientId)
@@ -176,7 +176,7 @@ describe "granules/ccmeo" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive = '' maxInclusive = '' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
+    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive='' maxInclusive='' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
   end
 end
 
