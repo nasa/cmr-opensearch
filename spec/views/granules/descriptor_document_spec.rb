@@ -178,6 +178,14 @@ describe "granules/ccmeo" do
     render
     expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive='' maxInclusive='' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
   end
+  it "creates a collection-specific granule open search descriptor document with a temporal range limit of 14 days" do
+    stub_client_id = stub_model(ClientId)
+    stub_client_id.clientId = 'foo'
+    assign(:client_id_model, stub_client_id)
+
+    render
+    expect(rendered).to include("<param:Parameter name=\"dtend\" value=\"{time:end}\" minimum=\"0\"  minInclusive = '' maxInclusive = '' maxPeriod=\"P14D\" relativeTo=\"{time:start}\" title=\"Temporal End\" />")
+  end
 end
 
 describe "granules/eumetsat" do
