@@ -12,7 +12,9 @@ describe 'collections/descriptor_document' do
 
   it "is comformant with draft 2 of the open search parameter extension" do
     osdd_response_str = <<-eos
-                <os:OpenSearchDescription xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+                <os:OpenSearchDescription
+									xmlns="http://a9.com/-/spec/opensearch/1.1/"
+									xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
                 	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
                 	xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
                 	xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
