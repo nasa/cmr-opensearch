@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <mappingList>
   <catalog id="NASA">
     <dataSet conceptId="C5841552-LARC_ASDC" entryId="SRB_REL3.1_LW_3HRLY_MONTHLY_1" datasetId="SRB_REL3.1_LW_3HRLY_MONTHLY" west="-180" east="180" north="90" south="-90" begin="1983-07-01T00:00:00Z" end="2007-12-31T23:59:59Z">SRB_REL3.1_LW_3HRLY_MONTHLY</dataSet>

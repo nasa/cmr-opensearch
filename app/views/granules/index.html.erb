@@ -30,8 +30,8 @@
         <%= text_field_tag :versionId, @granule.version_id, :placeholder => 'e.g. 5', :size => 124 %>
       </p>
       <p class="form-parameter">
-                <%= label_tag 'dataCenter', 'Data center: ' %>
-              <%= text_field_tag :dataCenter, @granule.data_center, :placeholder => 'e.g. LAADS', :size => 124 %>
+        <%= label_tag 'dataCenter', 'Data center: ' %>
+        <%= text_field_tag :dataCenter, @granule.data_center, :placeholder => 'e.g. LAADS', :size => 124 %>
       </p>
       <p class="form-parameter">
         <%= label_tag 'startTime', 'Start time: ' %>
@@ -70,7 +70,6 @@
         <%= text_field_tag :cursor, @cursor, :size => 48 %>
         <%= submit_tag 'Search', class: 'btn btn-default btn-round' %>
       </p>
-
   <% end %>
 </section>
 <div class="clear-no-pad">
@@ -93,4 +92,3 @@
                :locals => {:cursor => @cursor, :number_of_results => @number_of_results, :length => @granule_models.length, :number_of_hits => @number_of_hits, :parent => true, :model => @granule, :spatial_type => @spatial_type, :position => 'bottom'} %>
   </section>
 </div>
-
