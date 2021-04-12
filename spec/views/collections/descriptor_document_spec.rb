@@ -17,7 +17,6 @@ describe 'collections/descriptor_document' do
                 	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
                 	xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
                 	xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
-                	xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" esipdiscovery:version="1.2"
                   xmlns:params="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/"
                   xmlns:referrer="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0"
                   xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/"
