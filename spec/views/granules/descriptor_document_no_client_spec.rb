@@ -18,18 +18,18 @@ describe "granules/descriptor_document" do
 
   it "is comformant with draft 2 of the open search parameter extension" do
       osdd_response_str = <<-eos
-                  <os:OpenSearchDescription xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
-                  	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
-                  	xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
-                  	xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
-                  	xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" esipdiscovery:version="1.2"
-                    xmlns:params="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/"
-                    xmlns:referrer="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0"
-                    xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/"
-                    xmlns:atom="http://www.w3.org/2005/Atom" >
+                  <os:OpenSearchDescription
+									xmlns="http://a9.com/-/spec/opensearch/1.1/"
+										xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+										xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
+										xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
+										xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
+										xmlns:params="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/"
+										xmlns:referrer="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0"
+										xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/"
+										xmlns:atom="http://www.w3.org/2005/Atom">
                   	<os:ShortName>CMR Granules</os:ShortName>
                   	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-                  	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
                   	<os:Contact>#{ENV['contact']}</os:Contact>
                   	<os:Url type="application/atom+xml" rel="results"
                   	  params:method="GET"
@@ -87,6 +87,7 @@ describe "granules/descriptor_document" do
                   			title="Sample search" />
                   	<os:Attribution>NASA CMR</os:Attribution>
                   	<os:SyndicationRight>open</os:SyndicationRight>
+										<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
                   </os:OpenSearchDescription>
       eos
 
@@ -99,10 +100,10 @@ describe "granules/descriptor_document" do
       assign(:data_center, 'LAADS')
 
       render
-        expected_doc = Nokogiri::XML(osdd_response_str) do |config|
+        expected_doc = Nokogiri::XML(osdd_response_str, nil, 'UTF-8') do |config|
           config.default_xml.noblanks
         end
-        actual_doc = Nokogiri::XML(rendered) do |config|
+        actual_doc = Nokogiri::XML(rendered, nil, 'UTF-8') do |config|
           config.default_xml.noblanks
         end
 
@@ -128,18 +129,18 @@ describe "granules/descriptor_document" do
 
   it "is comformant with draft 2 of the open search parameter extension" do
       osdd_response_str = <<-eos
-                  <os:OpenSearchDescription xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+                  <os:OpenSearchDescription
+										xmlns="http://a9.com/-/spec/opensearch/1.1/"
+										xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
                   	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
                   	xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
                   	xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
-                  	xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" esipdiscovery:version="1.2"
                     xmlns:params="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/"
                     xmlns:referrer="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0"
-                    xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/"
+										xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/"
                     xmlns:atom="http://www.w3.org/2005/Atom" >
                   	<os:ShortName>CMR Granules</os:ShortName>
                   	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-                  	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
                   	<os:Contact>#{ENV['contact']}</os:Contact>
                   	<os:Url type="application/atom+xml" rel="results"
                   	  params:method="GET"
@@ -197,6 +198,7 @@ describe "granules/descriptor_document" do
                   			title="Sample search" />
                   	<os:Attribution>NASA CMR</os:Attribution>
                   	<os:SyndicationRight>open</os:SyndicationRight>
+										<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
                   </os:OpenSearchDescription>
       eos
 
@@ -208,10 +210,10 @@ describe "granules/descriptor_document" do
       assign(:data_center, 'LAADS')
 
       render
-        expected_doc = Nokogiri::XML(osdd_response_str) do |config|
+        expected_doc = Nokogiri::XML(osdd_response_str, nil, 'UTF-8') do |config|
           config.default_xml.noblanks
         end
-        actual_doc = Nokogiri::XML(rendered) do |config|
+        actual_doc = Nokogiri::XML(rendered, nil, 'UTF-8') do |config|
           config.default_xml.noblanks
         end
 

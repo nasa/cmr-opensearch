@@ -31,7 +31,7 @@ end
 Then /^I should see a collection open search descriptor document for client id "([^"]*)"$/ do |client_id|
 
   expected = <<-eos
-  <?xml version="1.0"?>
+  <?xml version="1.0" encoding="UTF-8" ?>
   <os:OpenSearchDescription xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
                   	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
                   	xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
@@ -43,7 +43,6 @@ Then /^I should see a collection open search descriptor document for client id "
                     xmlns:atom="http://www.w3.org/2005/Atom" >
                   	<os:ShortName>CMR Collections</os:ShortName>
                   	<os:Description>NASA CMR Collection search using geo, time and parameter extensions</os:Description>
-                  	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection pageOffset=1 indexOffset=0</os:Tags>
                   	<os:Contact>#{ENV['contact']}</os:Contact>
                   	<os:Url type="application/atom+xml" rel="collection"
                   	  params:method="GET"
@@ -140,6 +139,7 @@ Then /^I should see a collection open search descriptor document for client id "
                   	<os:Query role="example" searchTerms="Amazon River Basin Precipitation, 1972-1992" title="Sample search"/>
                   	<os:Attribution>NASA CMR</os:Attribution>
                   	<os:SyndicationRight>open</os:SyndicationRight>
+										<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection pageOffset=1 indexOffset=0</os:Tags>
                   </os:OpenSearchDescription>
   eos
 
@@ -148,7 +148,7 @@ end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)"$/ do |client_id|
   expected = <<-eos
-    <?xml version="1.0"?>
+    <?xml version="1.0" encoding="UTF-8" ?>
     <os:OpenSearchDescription
     	xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
     	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
@@ -161,7 +161,6 @@ Then /^I should see a granule open search descriptor document for client id "([^
       xmlns:atom="http://www.w3.org/2005/Atom" >
     	<os:ShortName>CMR Granules</os:ShortName>
     	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-    	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
     	<os:Contact>#{ENV['contact']}</os:Contact>
     	<os:Url type="application/atom+xml" rel="results"
     	  params:method="GET"
@@ -219,6 +218,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
     		title="Sample search" />
       <os:Attribution>NASA CMR</os:Attribution>
 	    <os:SyndicationRight>open</os:SyndicationRight>
+			<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
     </os:OpenSearchDescription>
   eos
 
@@ -227,7 +227,7 @@ end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)" and short name "([^"]*)"$/ do |client_id, short_name|
   expected = <<-eos
-      <?xml version="1.0"?>
+      <?xml version="1.0" encoding="UTF-8" ?>
       <os:OpenSearchDescription
       	xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
       	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
@@ -240,7 +240,6 @@ Then /^I should see a granule open search descriptor document for client id "([^
         xmlns:atom="http://www.w3.org/2005/Atom" >
       	<os:ShortName>CMR Granules</os:ShortName>
       	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-      	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
       	<os:Contact>#{ENV['contact']}</os:Contact>
       	<os:Url type="application/atom+xml" rel="results"
       	  params:method="GET"
@@ -298,6 +297,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
       		title="Sample search" />
       <os:Attribution>NASA CMR</os:Attribution>
 	    <os:SyndicationRight>open</os:SyndicationRight>
+			<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
       </os:OpenSearchDescription>
   eos
 
@@ -306,7 +306,7 @@ end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)" short name "(.*?)" and version id "([^"]*)"$/ do |client_id, short_name, version_id|
   expected = <<-eos
-        <?xml version="1.0"?>
+        <?xml version="1.0" encoding="UTF-8" ?>
         <os:OpenSearchDescription
         	xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
         	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
@@ -319,7 +319,6 @@ Then /^I should see a granule open search descriptor document for client id "([^
           xmlns:atom="http://www.w3.org/2005/Atom">
         	<os:ShortName>CMR Granules</os:ShortName>
         	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-        	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
         	<os:Contact>#{ENV['contact']}</os:Contact>
         	<os:Url type="application/atom+xml" rel="results"
         	  params:method="GET"
@@ -377,6 +376,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
         		title="Sample search" />
           <os:Attribution>NASA CMR</os:Attribution>
 	        <os:SyndicationRight>open</os:SyndicationRight>
+					<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
         </os:OpenSearchDescription>
   eos
 
@@ -385,7 +385,7 @@ end
 
 Then /^I should see a granule open search descriptor document for client id "([^"]*)" short name "([^"]*)" version id "([^"]*)" and data center "([^"]*)"$/ do |client_id, short_name, version_id, data_center|
   expected = <<-eos
-          <?xml version="1.0"?>
+          <?xml version="1.0" encoding="UTF-8" ?>
           <os:OpenSearchDescription
           	xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
           	xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
@@ -398,7 +398,6 @@ Then /^I should see a granule open search descriptor document for client id "([^
             xmlns:atom="http://www.w3.org/2005/Atom" >
           	<os:ShortName>CMR Granules</os:ShortName>
           	<os:Description>NASA CMR Granule search using geo, time and parameter extensions</os:Description>
-          	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
           	<os:Contact>#{ENV['contact']}</os:Contact>
           	<os:Url type="application/atom+xml" rel="results"
           	  params:method="GET"
@@ -456,6 +455,7 @@ Then /^I should see a granule open search descriptor document for client id "([^
           		title="Sample search" />
           <os:Attribution>NASA CMR</os:Attribution>
 	        <os:SyndicationRight>open</os:SyndicationRight>
+					<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC granule pageOffset=1 indexOffset=0</os:Tags>
           </os:OpenSearchDescription>
   eos
 

@@ -29,7 +29,6 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
                   xmlns:sru="http://docs.oasis-open.org/ns/search-ws/facetedResults" >
                 	<os:ShortName>CMR Collections</os:ShortName>
                 	<os:Description>NASA CMR Collection search using geo, time and parameter extensions with facet support</os:Description>
-                	<os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection facets pageOffset=1 indexOffset=0</os:Tags>
                 	<os:Contact>#{ENV['contact']}</os:Contact>
                 	<os:Url type="application/atom+xml" rel="collection"
                 	  params:method="GET"
@@ -128,6 +127,7 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
                 	<os:Query role="example" searchTerms="Amazon River Basin Precipitation, 1972-1992" title="Sample search"/>
                 	<os:Attribution>NASA CMR</os:Attribution>
                 	<os:SyndicationRight>open</os:SyndicationRight>
+                  <os:Tags>CMR NASA CWIC CEOS-OS-BP-V1.1/L3 ESIP OGC collection facets pageOffset=1 indexOffset=0</os:Tags>
                 </os:OpenSearchDescription>
     eos
 
@@ -135,10 +135,10 @@ describe 'collections/descriptor_document_facets' do include Rack::Test::Methods
     stub_client_id.clientId = 'foo'
     assign(:client_id_model, stub_client_id)
     render
-    expected_doc = Nokogiri::XML(osdd_response_str) do |config|
+    expected_doc = Nokogiri::XML(osdd_response_str, nil, 'UTF-8') do |config|
       config.default_xml.noblanks
     end
-    actual_doc = Nokogiri::XML(rendered) do |config|
+    actual_doc = Nokogiri::XML(rendered, nil, 'UTF-8') do |config|
       config.default_xml.noblanks
     end
 
