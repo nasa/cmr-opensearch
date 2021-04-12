@@ -24,13 +24,13 @@ describe Collection do
                   <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
                   <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
                   <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
                   <echo:browseFlag>false</echo:browseFlag>
@@ -48,12 +48,12 @@ describe Collection do
           </author>
           <title type="text">CMR collection metadata</title>
           <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/>
+          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" />
           <os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
@@ -66,17 +66,17 @@ describe Collection do
             </author>
             <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
 
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
             <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -118,13 +118,13 @@ describe Collection do
                   <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:line>45.256 -110.45 46.46 -109.48 43.84 -109.86</georss:line>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
                   <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
                   <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
                   <echo:browseFlag>false</echo:browseFlag>
@@ -142,12 +142,12 @@ describe Collection do
           </author>
           <title type="text">CMR collection metadata</title>
           <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
+          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
           <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -158,17 +158,17 @@ describe Collection do
               <email>#{ENV['contact']}</email>
             </author>
             <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
              <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
             <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -211,13 +211,13 @@ describe Collection do
                   <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:point>39.1 -96.6</georss:point>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
                   <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
                   <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
                   <echo:browseFlag>false</echo:browseFlag>
@@ -235,12 +235,12 @@ describe Collection do
           </author>
           <title type="text">CMR collection metadata</title>
           <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/>
+          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" />
           <os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
@@ -252,17 +252,17 @@ describe Collection do
               <email>#{ENV['contact']}</email>
             </author>
             <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
             <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -303,13 +303,13 @@ describe Collection do
                   <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
                   <georss:box>-1.36302971839905 -169.459686279297 22.4800090789795 -148.560791015625</georss:box>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
                   <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
                   <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
                   <echo:browseFlag>false</echo:browseFlag>
@@ -327,12 +327,12 @@ describe Collection do
           </author>
           <title type="text">CMR collection metadata</title>
           <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
+          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
           <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -344,17 +344,17 @@ describe Collection do
               <email>#{ENV['contact']}</email>
             </author>
             <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
             <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -414,13 +414,13 @@ describe Collection do
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
             <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             <time:start>2002-08-30T00:00:00.000Z</time:start>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
             <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
             <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
             <echo:browseFlag>false</echo:browseFlag>
@@ -445,12 +445,12 @@ describe Collection do
     </author>
     <title type="text">CMR collection metadata</title>
     <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-    <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-    <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-    <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
+    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+    <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+    <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+    <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>1</os:totalResults>
     <os:itemsPerPage>10</os:itemsPerPage>
     <os:startIndex>1</os:startIndex>
     <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -462,16 +462,16 @@ describe Collection do
         <email>#{ENV['contact']}</email>
       </author>
       <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-      <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-      <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-      <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-      <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-      <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-      <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-      <link href="https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Non-CMR OpenSearch Provider Granule Open Search Descriptor Document"/>
-      <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+      <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+      <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+      <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+      <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+      <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+      <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+      <link href="https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Non-CMR OpenSearch Provider Granule Open Search Descriptor Document" />
+      <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
       <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
       <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
       <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -519,13 +519,13 @@ describe Collection do
             <echo:dataCenter>GSFCS4PA</echo:dataCenter>
             <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
             <time:start>2002-08-30T00:00:00.000Z</time:start>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
             <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
             <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
             <echo:browseFlag>false</echo:browseFlag>
@@ -547,12 +547,12 @@ describe Collection do
     </author>
     <title type="text">CMR collection metadata</title>
     <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-    <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-    <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-    <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
+    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+    <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+    <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+    <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+    <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>1</os:totalResults>
     <os:itemsPerPage>10</os:itemsPerPage>
     <os:startIndex>1</os:startIndex>
     <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -564,16 +564,16 @@ describe Collection do
         <email>#{ENV['contact']}</email>
       </author>
       <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-      <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-      <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-      <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-      <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-      <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-      <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-      <link href="https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Non-CMR OpenSearch Provider Granule Open Search Descriptor Document"/>
-      <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+      <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+      <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+      <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+      <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+      <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+      <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+      <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+      <link href="https://fedeo.esa.int/opensearch/description.xml?parentIdentifier=EOP:ESA:EARTH-ONLINE:ADAM.Surface.Reflectance.Database" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Non-CMR OpenSearch Provider Granule Open Search Descriptor Document" />
+      <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
       <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
       <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
       <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -617,13 +617,13 @@ describe Collection do
           <echo:dataCenter>GSFCS4PA</echo:dataCenter>
           <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
           <time:start>2002-08-30T00:00:00.000Z</time:start>
-          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-          <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-          <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-          <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-          <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-          <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+          <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+          <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+          <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+          <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+          <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
           <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
           <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
           <echo:browseFlag>false</echo:browseFlag>
@@ -641,12 +641,12 @@ describe Collection do
   </author>
   <title type="text">CMR collection metadata</title>
   <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-  <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-  <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-  <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
+  <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+  <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+  <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>1</os:totalResults>
   <os:itemsPerPage>10</os:itemsPerPage>
   <os:startIndex>1</os:startIndex>
   <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -657,17 +657,17 @@ describe Collection do
       <email>#{ENV['contact']}</email>
     </author>
     <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-    <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-    <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-    <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-    <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-    <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-    <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-    <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+    <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+    <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+    <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+    <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+    <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+    <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+    <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
     <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
     <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
     <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -706,13 +706,13 @@ describe Collection do
               <echo:dataCenter>GSFCS4PA</echo:dataCenter>
               <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
               <time:start>2002-08-30T00:00:00.000Z</time:start>
-              <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-              <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-              <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-              <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-              <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-              <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-              <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+              <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+              <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+              <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+              <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+              <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+              <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+              <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
               <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
               <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
               <echo:browseFlag>false</echo:browseFlag>
@@ -730,12 +730,12 @@ describe Collection do
       </author>
       <title type="text">CMR collection metadata</title>
       <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-      <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-      <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-      <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-      <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-      <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-      <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>1</os:totalResults>
+      <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+      <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+      <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+      <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+      <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+      <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>1</os:totalResults>
       <os:itemsPerPage>10</os:itemsPerPage>
       <os:startIndex>1</os:startIndex>
       <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -747,17 +747,17 @@ describe Collection do
         </author>
         <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
         <summary type="text">foo</summary>
-        <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-        <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-        <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-        <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-        <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-        <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-        <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-        <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-        <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-        <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-        <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+        <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+        <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+        <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+        <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+        <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+        <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+        <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+        <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+        <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+        <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+        <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
         <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
         <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
         <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -795,13 +795,13 @@ describe Collection do
                   <echo:dataCenter>GSFCS4PA</echo:dataCenter>
                   <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                   <time:start>2002-08-30T00:00:00.000Z</time:start>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                  <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
                   <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
                   <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
                   <echo:browseFlag>false</echo:browseFlag>
@@ -819,12 +819,12 @@ describe Collection do
           </author>
           <title type="text">CMR collection metadata</title>
           <subtitle type="text">Search parameters: None</subtitle>
-          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request"/><os:totalResults>1</os:totalResults>
+          <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+          <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" /><os:totalResults>1</os:totalResults>
           <os:itemsPerPage>10</os:itemsPerPage>
           <os:startIndex>1</os:startIndex>
           <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -836,17 +836,17 @@ describe Collection do
             </author>
             <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
             <summary type="text">foo</summary>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+            <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+            <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+            <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+            <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+            <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+            <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+            <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+            <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
             <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
             <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
             <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
@@ -885,7 +885,7 @@ describe Collection do
                       <echo:archiveCenter>LAADS</echo:archiveCenter>
                       <echo:processingLevelId>1B</echo:processingLevelId>
                       <time:start>1999-12-18T00:00:00.000Z</time:start>
-                      <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
+                      <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
                       <georss:box>-90.0 -180.0 90.0 180.0</georss:box>
                       <echo:difId>MOD02QKM</echo:difId>
                       <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
@@ -904,12 +904,12 @@ describe Collection do
               </author>
               <title type="text">CMR collection metadata</title>
               <subtitle type="text">Search parameters: keyword =&gt; MOD02QKM</subtitle>
-              <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-              <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-              <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-              <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-              <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-              <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="MOD02QKM"/><os:totalResults>1</os:totalResults>
+              <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+              <link href="#{ENV['opensearch_url']}/collections?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+              <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+              <link href="#{ENV['opensearch_url']}/collections?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+              <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+              <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="MOD02QKM" /><os:totalResults>1</os:totalResults>
               <os:itemsPerPage>10</os:itemsPerPage>
               <os:startIndex>1</os:startIndex>
               <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -921,11 +921,11 @@ describe Collection do
                 <title type="text">MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</title>
                 <summary type="text">This Level 1B collection contains calibrated and geolocated radiances at-aperture for MODIS spectral bands 1 and 2 at 250m resolution.</summary>
                 <updated>2006-03-17T00:00:00.000Z</updated>
-                <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html"/>
-                <link href="http://gcmd.nasa.gov/getdif.htm?MOD02QKM" hreflang="en-US" type="text/html" rel="enclosure" title="MOD02QKM"/>
-                <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=MOD02QKM&amp;versionId=5&amp;dataCenter=LAADS" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-                <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C90758174-LAADS&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-                <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C90758174-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+                <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html" />
+                <link href="http://gcmd.nasa.gov/getdif.htm?MOD02QKM" hreflang="en-US" type="text/html" rel="enclosure" title="MOD02QKM" />
+                <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=MOD02QKM&amp;versionId=5&amp;dataCenter=LAADS" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+                <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C90758174-LAADS&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+                <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C90758174-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
                 <dc:identifier>C90758174-LAADS</dc:identifier>
                 <dc:date>1999-12-18T00:00:00.000Z/</dc:date>
                 <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
@@ -967,13 +967,13 @@ describe Collection do
                           <echo:archiveCenter>GEOSDISC</echo:archiveCenter>
                           <time:start>2002-08-30T00:00:00.000Z</time:start>
                           <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
-                          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                          <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                          <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                          <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                          <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                          <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#"/>
+                          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                          <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                          <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                          <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                          <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                          <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                          <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" />
                           <echo:difId>GES_DISC_AIRVBRAD_V005</echo:difId>
                           <echo:onlineAccessFlag>false</echo:onlineAccessFlag>
                           <echo:browseFlag>false</echo:browseFlag>
@@ -991,14 +991,14 @@ describe Collection do
                   </author>
                   <title type="text">CMR collection metadata</title>
                   <subtitle type="text">Search parameters: keyword =&gt; AIRVBRAD</subtitle>
-                  <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search"/>
-                  <link href="#{ENV['opensearch_url']}/collections?cursor=2&amp;numberOfResults=5" hreflang="en-US" type="application/atom+xml" rel="self"/>
-                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=4" hreflang="en-US" type="application/atom+xml" rel="last"/>
-                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="previous"/>
-                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=3" hreflang="en-US" type="application/atom+xml" rel="next"/>
-                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-                  <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-                  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD"/><os:totalResults>18</os:totalResults>
+                  <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" />
+                  <link href="#{ENV['opensearch_url']}/collections?cursor=2&amp;numberOfResults=5" hreflang="en-US" type="application/atom+xml" rel="self" />
+                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=4" hreflang="en-US" type="application/atom+xml" rel="last" />
+                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="previous" />
+                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=3" hreflang="en-US" type="application/atom+xml" rel="next" />
+                  <link href="#{ENV['opensearch_url']}/collections?numberOfResults=5&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+                  <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+                  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" os:searchTerms="AIRVBRAD" /><os:totalResults>18</os:totalResults>
                   <os:itemsPerPage>5</os:itemsPerPage>
                   <os:startIndex>6</os:startIndex>
                   <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
@@ -1009,17 +1009,17 @@ describe Collection do
                       <email>#{ENV['contact']}</email>
                     </author>
                     <title type="text">AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</title>
-                    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via"/>
-                    <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html"/>
-                    <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via"/>
-                    <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via"/>
-                    <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via"/>
-                    <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via"/>
-                    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf"/>
-                    <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD"/>
-                    <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules"/>
-                    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document"/>
-                    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+                    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa/Aqua_AIRS_Level1/AIRVBRAD.005/" hreflang="en-US" title="Access the AIRS Visible/Near Infrared VIS/NIR) geolocated and calibrated L1B radiances by FTP. (GET DATA : ON-LINE ARCHIVE)" rel="via" />
+                    <link href="http://mirador.gsfc.nasa.gov/cgi-bin/mirador/homepageAlt.pl?keyword=AIRVBRAD" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data via MIRADOR. (GET DATA : MIRADOR)" rel="via" type="text/html" />
+                    <link href="http://disc.sci.gsfc.nasa.gov/SSW" hreflang="en-US" title="Access the AIRS Level 1B Visible/Near Infrared (VIS/NIR) Geolocated and Calibrated Radiances data using Simple Subset Wizard (Search and subset  by date and spatial region). (GET DATA : SSW)" rel="via" />
+                    <link href="http://reverb.echo.nasa.gov/reverb/#utf8=%E2%9C%93&amp;spatial_map=satellite&amp;spatial_type=rectangle&amp;keywords=GES_DISC_AIRVBRAD_V005" hreflang="en-US" title="Refine your granule search with ECHO's next generation Earth Science discovery tool (Reverb) using information from this record. (GET DATA : REVERB)" rel="via" />
+                    <link href="http://www-airs.jpl.nasa.gov/" hreflang="en-US" title="AIRS home page at NASA/JPL. General information on the AIRS instrument, algorithms, and other AIRS-related activities can be found. (VIEW PROJECT HOME PAGE)" rel="via" />
+                    <link href="http://disc.gsfc.nasa.gov/AIRS/index.shtml" hreflang="en-US" title="AIRS data support home page at Goddard Earth Sciences Data Information and Service Center/Distributed Active Archive Center (GES DISC DAAC). Online documentation, software to read, visualize and analyze AIRS data and data access information are available from this web site. (VIEW PROJECT HOME PAGE)" rel="via" />
+                    <link href="ftp://airsl1.gesdisc.eosdis.nasa.gov/ftp/data/s4pa//Aqua_AIRS_Level1/AIRVBRAD.005/doc/README.AIRVBRAD.pdf" hreflang="en-US" title="product README file (VIEW RELATED INFORMATION : USER'S GUIDE)" rel="describedBy" type="application/pdf" />
+                    <link href="http://gcmd.nasa.gov/getdif.htm?GES_DISC_AIRVBRAD_V005" hreflang="en-US" type="text/html" rel="enclosure" title="AIRVBRAD" />
+                    <link href="#{ENV['opensearch_url']}/granules.atom?clientId=foo&amp;shortName=AIRVBRAD&amp;versionId=005&amp;dataCenter=GSFCS4PA" hreflang="en-US" type="application/atom+xml" rel="search" title="Search for granules" />
+                    <link href="#{ENV['opensearch_url']}/granules/descriptor_document.xml?collectionConceptId=C190465571-GSFCS4PA&amp;clientId=foo" hreflang="en-US" type="application/opensearchdescription+xml" rel="search" title="Granule OpenSearch Descriptor Document" />
+                    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/C190465571-GSFCS4PA.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
                     <dc:identifier>C190465571-GSFCS4PA</dc:identifier>
                     <dc:date>2002-08-30T00:00:00.000Z/</dc:date>
                     <echo:datasetId>AIRS/Aqua Level 1B Visible/Near Infrared (VIS/NIR) geolocated and calibrated radiances V005</echo:datasetId>
