@@ -226,7 +226,7 @@ describe "granules/nrsc" do
     assign(:dataset_id, 'P6_AWIF_STUC00GTD')
 
     render
-    expect(rendered).to include("template=\"https://uops.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"https://bhoonidhi.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;clientId=foo\">")
   end
 
   it "is possible to create a collection-specific granule open search descriptor document with a blank client id" do
@@ -236,7 +236,7 @@ describe "granules/nrsc" do
     assign(:dataset_id, 'P6_AWIF_STUC00GTD')
 
     render
-    expect(rendered).to include("template=\"https://uops.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}\">")
+    expect(rendered).to include("template=\"https://bhoonidhi.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}\">")
   end
 
   it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
@@ -247,7 +247,7 @@ describe "granules/nrsc" do
     assign(:dataset_id, 'P6_AWIF_STUC00GTD')
 
     render
-    expect(rendered).to include("template=\"https://uops.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}\">")
+    expect(rendered).to include("template=\"https://bhoonidhi.nrsc.gov.in/MetaSearch/irsSearch?datasetId=P6_AWIF_STUC00GTD&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}\">")
   end
 end
 
