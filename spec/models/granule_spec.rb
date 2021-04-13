@@ -22,8 +22,8 @@ describe Granule do
                   <time:start>2000-02-24T00:05:00.000Z</time:start>
                   <time:end>2000-02-24T00:10:00.000Z</time:end>
                   <georss:polygon>57.2230163579929 160.889088 56.6795680749406 160.605005 56.5414925833731 161.594859 57.0829684490569 161.89263 57.2230163579929 160.889088</georss:polygon>
-                  <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-                  <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+                  <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+                  <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" />
                   <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
                   <echo:browseFlag>true</echo:browseFlag>
                   <echo:dayNightFlag>BOTH</echo:dayNightFlag>
@@ -40,12 +40,12 @@ describe Granule do
                   </author>
                   <title type="text">CMR granule metadata</title>
                   <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-                  <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-                  <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-                  <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-                  <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-                  <link href="#{ENV['release_page']}" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-                  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
+                  <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+                  <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+                  <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+                  <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+                  <link href="#{ENV['release_page']}" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+                  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
                   <os:totalResults>1</os:totalResults>
                   <os:itemsPerPage>10</os:itemsPerPage>
                   <os:startIndex>1</os:startIndex>
@@ -53,9 +53,9 @@ describe Granule do
                     <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                     <title type="text">LAADS:4847654</title>
                     <updated>2013-02-14T15:51:38.801Z</updated>
-                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg"/>
-                    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg" />
+                    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
                     <dc:identifier>G92789465-LAADS</dc:identifier>
                     <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
                     <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
@@ -94,8 +94,8 @@ describe Granule do
                         <time:start>2000-02-24T00:05:00.000Z</time:start>
                         <time:end>2000-02-24T00:10:00.000Z</time:end>
                         <georss:line>45.256 -110.45 46.46 -109.48 43.84 -109.86</georss:line>
-                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" />
                         <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
                         <echo:browseFlag>true</echo:browseFlag>
                         <echo:dayNightFlag>BOTH</echo:dayNightFlag>
@@ -112,12 +112,12 @@ describe Granule do
                         </author>
                         <title type="text">CMR granule metadata</title>
                         <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-                        <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-                        <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-                        <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-                        <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
+                        <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+                        <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+                        <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+                        <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
                         <os:totalResults>1</os:totalResults>
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
@@ -125,9 +125,9 @@ describe Granule do
                           <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
-                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg"/>
-                          <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg" />
+                          <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
                           <dc:identifier>G92789465-LAADS</dc:identifier>
                           <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
                           <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
@@ -167,8 +167,8 @@ describe Granule do
                         <time:start>2000-02-24T00:05:00.000Z</time:start>
                         <time:end>2000-02-24T00:10:00.000Z</time:end>
                         <georss:point>39.1 -96.6</georss:point>
-                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" />
                         <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
                         <echo:browseFlag>true</echo:browseFlag>
                         <echo:dayNightFlag>BOTH</echo:dayNightFlag>
@@ -185,12 +185,12 @@ describe Granule do
                         </author>
                         <title type="text">CMR granule metadata</title>
                         <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-                        <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-                        <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-                        <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-                        <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
+                        <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+                        <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+                        <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+                        <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
                         <os:totalResults>1</os:totalResults>
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
@@ -198,9 +198,9 @@ describe Granule do
                           <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
-                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg"/>
-                          <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg" />
+                          <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
                           <dc:identifier>G92789465-LAADS</dc:identifier>
                           <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
                           <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
@@ -237,8 +237,8 @@ describe Granule do
                         <time:start>2000-02-24T00:05:00.000Z</time:start>
                         <time:end>2000-02-24T00:10:00.000Z</time:end>
                         <georss:box>-1.36302971839905 -169.459686279297 22.4800090789795 -148.560791015625</georss:box>
-                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+                        <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" />
                         <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
                         <echo:browseFlag>true</echo:browseFlag>
                         <echo:dayNightFlag>BOTH</echo:dayNightFlag>
@@ -255,12 +255,12 @@ describe Granule do
                         </author>
                         <title type="text">CMR granule metadata</title>
                         <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-                        <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-                        <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-                        <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-                        <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
+                        <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+                        <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+                        <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+                        <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+                        <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
                         <os:totalResults>1</os:totalResults>
                         <os:itemsPerPage>10</os:itemsPerPage>
                         <os:startIndex>1</os:startIndex>
@@ -268,9 +268,9 @@ describe Granule do
                           <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
                           <title type="text">LAADS:4847654</title>
                           <updated>2013-02-14T15:51:38.801Z</updated>
-                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg"/>
-                          <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
+                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+                          <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg" />
+                          <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
                           <dc:identifier>G92789465-LAADS</dc:identifier>
                           <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
                           <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
@@ -340,8 +340,8 @@ describe Granule do
             <echo:dataCenter>LAADS</echo:dataCenter>
             <time:start>2000-02-24T00:05:00.000Z</time:start>
             <time:end>2000-02-24T00:10:00.000Z</time:end>
-            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#"/>
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" />
             <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
             <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
             <echo:browseFlag>true</echo:browseFlag>
@@ -350,40 +350,40 @@ describe Granule do
         </feed>
       eos
       open_search_response_str = <<-eos
-          <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+          <updated>2013-02-14T15:51:38.801Z</updated>
+          <id>#{ENV['opensearch_url']}/granules.atom</id>
+          <author>
+            <name>CMR</name>
+            <email>#{ENV['contact']}</email>
+          </author>
+          <title type="text">CMR granule metadata</title>
+          <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
+          <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+          <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
+          <os:totalResults>1</os:totalResults>
+          <os:itemsPerPage>10</os:itemsPerPage>
+          <os:startIndex>1</os:startIndex>
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
+            <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
+            <title type="text">LAADS:4847654</title>
             <updated>2013-02-14T15:51:38.801Z</updated>
-            <id>#{ENV['opensearch_url']}/granules.atom</id>
-            <author>
-              <name>CMR</name>
-              <email>#{ENV['contact']}</email>
-            </author>
-            <title type="text">CMR granule metadata</title>
-            <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-            <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-            <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-            <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-            <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-            <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-            <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
-            <os:totalResults>1</os:totalResults>
-            <os:itemsPerPage>10</os:itemsPerPage>
-            <os:startIndex>1</os:startIndex>
-            <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-              <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
-              <title type="text">LAADS:4847654</title>
-              <updated>2013-02-14T15:51:38.801Z</updated>
-              <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-              <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg"/>
-              <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
-              <dc:identifier>G92789465-LAADS</dc:identifier>
-              <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
-              <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
-              <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
-              <echo:dataCenter>LAADS</echo:dataCenter>
-              <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
-              <georss:box>66.83662 -145.556275 84.145074 146.929625</georss:box>
-              </entry>
-          </feed>
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" type="image/jpeg" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
+            <dc:identifier>G92789465-LAADS</dc:identifier>
+            <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
+            <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
+            <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
+            <echo:dataCenter>LAADS</echo:dataCenter>
+            <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
+            <georss:box>66.83662 -145.556275 84.145074 146.929625</georss:box>
+          </entry>
+        </feed>
       eos
 
       catalog_rest_doc = Nokogiri::XML(cat_rest_response_str) do |config|
@@ -397,66 +397,65 @@ describe Granule do
     end
     it "should convert a single catalog-rest result to a single open search result with documentation link" do
       cat_rest_response_str = <<-eos
-            <feed xmlns="http://www.w3.org/2005/Atom">
-              <updated>2013-03-21T19:15:52.658Z</updated>
-              <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_size=1</id>
-              <title type="text">CMR granule metadata</title>
-              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                <id>G92789465-LAADS</id>
-                <title type="text">LAADS:4847654</title>
-                <updated>2010-02-02T03:56:37.983Z</updated>
-                <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
-                <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
-                <echo:dataCenter>LAADS</echo:dataCenter>
-                <time:start>2000-02-24T00:05:00.000Z</time:start>
-                <time:end>2000-02-24T00:10:00.000Z</time:end>
-                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-                <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="602271"/>
-                <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
-                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
-                <echo:browseFlag>true</echo:browseFlag>
-                <echo:dayNightFlag>BOTH</echo:dayNightFlag>
-              </entry>
-            </feed>
-
+        <feed xmlns="http://www.w3.org/2005/Atom">
+          <updated>2013-03-21T19:15:52.658Z</updated>
+          <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_size=1</id>
+          <title type="text">CMR granule metadata</title>
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
+            <id>G92789465-LAADS</id>
+            <title type="text">LAADS:4847654</title>
+            <updated>2010-02-02T03:56:37.983Z</updated>
+            <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
+            <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
+            <echo:dataCenter>LAADS</echo:dataCenter>
+            <time:start>2000-02-24T00:05:00.000Z</time:start>
+            <time:end>2000-02-24T00:10:00.000Z</time:end>
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+            <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="602271" />
+            <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
+            <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+            <echo:browseFlag>true</echo:browseFlag>
+            <echo:dayNightFlag>BOTH</echo:dayNightFlag>
+          </entry>
+        </feed>
       eos
       open_search_response_str = <<-eos
-            <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
-              <updated>2013-03-21T19:15:52.658Z</updated>
-              <id>#{ENV['opensearch_url']}/granules.atom</id>
-              <author>
-              <name>CMR</name>
-              <email>#{ENV['contact']}</email>
-              </author>
-              <title type="text">CMR granule metadata</title>
-              <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-              <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-              <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-              <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-              <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-              <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-              <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
-              <os:totalResults>1</os:totalResults>
-              <os:itemsPerPage>10</os:itemsPerPage>
-              <os:startIndex>1</os:startIndex>
-              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
-                <title type="text">LAADS:4847654</title>
-                <updated>2010-02-02T03:56:37.983Z</updated>
-                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-                <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html"/>
-                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" length="602271" type="image/jpeg"/>
-                <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
-                <dc:identifier>G92789465-LAADS</dc:identifier>
-                <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
-                <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
-                <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
-                <echo:dataCenter>LAADS</echo:dataCenter>
-                <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
-                <georss:box>66.83662 -145.556275 84.145074 146.929625</georss:box>
-              </entry>
-            </feed>
+        <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+          <updated>2013-03-21T19:15:52.658Z</updated>
+          <id>#{ENV['opensearch_url']}/granules.atom</id>
+          <author>
+          <name>CMR</name>
+          <email>#{ENV['contact']}</email>
+          </author>
+          <title type="text">CMR granule metadata</title>
+          <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
+          <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+          <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+          <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+          <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+          <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+          <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
+          <os:totalResults>1</os:totalResults>
+          <os:itemsPerPage>10</os:itemsPerPage>
+          <os:startIndex>1</os:startIndex>
+          <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
+            <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
+            <title type="text">LAADS:4847654</title>
+            <updated>2010-02-02T03:56:37.983Z</updated>
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+            <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html" />
+            <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" length="602271" type="image/jpeg" />
+            <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
+            <dc:identifier>G92789465-LAADS</dc:identifier>
+            <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
+            <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
+            <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
+            <echo:dataCenter>LAADS</echo:dataCenter>
+            <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
+            <georss:box>66.83662 -145.556275 84.145074 146.929625</georss:box>
+          </entry>
+        </feed>
       eos
       catalog_rest_doc = Nokogiri::XML(cat_rest_response_str) do |config|
         config.default_xml.noblanks
@@ -470,66 +469,65 @@ describe Granule do
 
     it 'should convert inherited attribute to echo:inherited' do
           cat_rest_response_str = <<-eos
-                <feed xmlns="http://www.w3.org/2005/Atom">
-                  <updated>2013-03-21T19:15:52.658Z</updated>
-                  <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_size=1</id>
-                  <title type="text">CMR granule metadata</title>
-                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                    <id>G92789465-LAADS</id>
-                    <title type="text">LAADS:4847654</title>
-                    <updated>2010-02-02T03:56:37.983Z</updated>
-                    <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
-                    <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
-                    <echo:dataCenter>LAADS</echo:dataCenter>
-                    <time:start>2000-02-24T00:05:00.000Z</time:start>
-                    <time:end>2000-02-24T00:10:00.000Z</time:end>
-                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#"/>
-                    <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#"/>
-                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="602271" inherited="true"/>
-                    <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
-                    <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
-                    <echo:browseFlag>true</echo:browseFlag>
-                    <echo:dayNightFlag>BOTH</echo:dayNightFlag>
-                  </entry>
-                </feed>
-
+            <feed xmlns="http://www.w3.org/2005/Atom">
+              <updated>2013-03-21T19:15:52.658Z</updated>
+              <id>https://api.echo.nasa.gov/catalog-rest/echo_catalog/granules.atom?short_name=MOD02QKM&amp;version=5&amp;provider=LAADS&amp;page_size=1</id>
+              <title type="text">CMR granule metadata</title>
+              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
+                <id>G92789465-LAADS</id>
+                <title type="text">LAADS:4847654</title>
+                <updated>2010-02-02T03:56:37.983Z</updated>
+                <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
+                <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
+                <echo:dataCenter>LAADS</echo:dataCenter>
+                <time:start>2000-02-24T00:05:00.000Z</time:start>
+                <time:end>2000-02-24T00:10:00.000Z</time:end>
+                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/data#" />
+                <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="http://esipfed.org/ns/fedsearch/1.1/metadata#" />
+                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="http://esipfed.org/ns/fedsearch/1.1/browse#" length="602271" inherited="true" />
+                <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
+                <echo:onlineAccessFlag>true</echo:onlineAccessFlag>
+                <echo:browseFlag>true</echo:browseFlag>
+                <echo:dayNightFlag>BOTH</echo:dayNightFlag>
+              </entry>
+            </feed>
           eos
           open_search_response_str = <<-eos
-                <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
-                  <updated>2013-03-21T19:15:52.658Z</updated>
-                  <id>#{ENV['opensearch_url']}/granules.atom</id>
-                  <author>
-                  <name>CMR</name>
-                  <email>#{ENV['contact']}</email>
-                  </author>
-                  <title type="text">CMR granule metadata</title>
-                  <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
-                  <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up"/>
-                  <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self"/>
-                  <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last"/>
-                  <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first"/>
-                  <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes"/>
-                  <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5"/>
-                  <os:totalResults>1</os:totalResults>
-                  <os:itemsPerPage>10</os:itemsPerPage>
-                  <os:startIndex>1</os:startIndex>
-                  <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
-                    <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
-                    <title type="text">LAADS:4847654</title>
-                    <updated>2010-02-02T03:56:37.983Z</updated>
-                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos"/>
-                    <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html"/>
-                    <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" length="602271" echo:inherited="true" type="image/jpeg"/>
-                    <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata"/>
-                    <dc:identifier>G92789465-LAADS</dc:identifier>
-                    <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
-                    <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
-                    <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
-                    <echo:dataCenter>LAADS</echo:dataCenter>
-                    <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
-                    <georss:box>66.83662 -145.556275 84.145074 146.929625</georss:box>
-                  </entry>
-                </feed>
+            <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:eo="http://a9.com/-/opensearch/extensions/eo/1.0/" xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml" esipdiscovery:version="1.2">
+              <updated>2013-03-21T19:15:52.658Z</updated>
+              <id>#{ENV['opensearch_url']}/granules.atom</id>
+              <author>
+              <name>CMR</name>
+              <email>#{ENV['contact']}</email>
+              </author>
+              <title type="text">CMR granule metadata</title>
+              <subtitle type="text">Search parameters: shortName =&gt; MOD02QKM versionId =&gt; 5 dataCenter =&gt; LAADS</subtitle>
+              <link href="#{ENV['opensearch_url']}/granules?datasetId=MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005" hreflang="en-US" type="application/atom+xml" rel="up" />
+              <link href="#{ENV['opensearch_url']}/granules?cursor=1&amp;numberOfResults=10" hreflang="en-US" type="application/atom+xml" rel="self" />
+              <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="last" />
+              <link href="#{ENV['opensearch_url']}/granules?numberOfResults=10&amp;cursor=1" hreflang="en-US" type="application/atom+xml" rel="first" />
+              <link href="https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information" hreflang="en-US" type="text/html" rel="describedBy" title="Release Notes" />
+              <os:Query xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" role="request" echo:dataCenter="LAADS" echo:shortName="MOD02QKM" echo:versionId="5" />
+              <os:totalResults>1</os:totalResults>
+              <os:itemsPerPage>10</os:itemsPerPage>
+              <os:startIndex>1</os:startIndex>
+              <entry xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom" xmlns:gml="http://www.opengis.net/gml">
+                <id>#{ENV['opensearch_url']}/granules.atom?uid=G92789465-LAADS</id>
+                <title type="text">LAADS:4847654</title>
+                <updated>2010-02-02T03:56:37.983Z</updated>
+                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOD02QKM/2000/055/MOD02QKM.A2000055.0005.005.2010029230803.hdf" hreflang="en-US" rel="enclosure" type="application/x-hdfeos" />
+                <link href="http://mcst.gsfc.nasa.gov/L1B/product.html" hreflang="en-US" title="MODIS Level 1B Product Information Page at MCST (MiscInformation)" rel="describedBy" type="text/html" />
+                <link href="ftp://ladsftp.nascom.nasa.gov/allData/5/MOBRGB/2000/055/MOBRGB.A2000055.0005.005.2006253053718.jpg" hreflang="en-US" rel="icon" length="602271" echo:inherited="true" type="image/jpeg" />
+                <link href="#{ENV['public_catalog_rest_endpoint']}concepts/G92789465-LAADS.xml" hreflang="en-US" type="application/xml" rel="via" title="Product metadata" />
+                <dc:identifier>G92789465-LAADS</dc:identifier>
+                <dc:date>2000-02-24T00:05:00.000Z/2000-02-24T00:10:00.000Z</dc:date>
+                <echo:datasetId>MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m V005</echo:datasetId>
+                <echo:producerGranuleId>MOD02QKM.A2000055.0005.005.2010029230803.hdf</echo:producerGranuleId>
+                <echo:dataCenter>LAADS</echo:dataCenter>
+                <georss:polygon>84.145074 10.005589 76.501732 146.929625 66.83662 -145.556275 70.511238 -94.81568 84.145074 10.005589</georss:polygon>
+                <georss:box>66.83662 -145.556275 84.145074 146.929625</georss:box>
+              </entry>
+            </feed>
           eos
           catalog_rest_doc = Nokogiri::XML(cat_rest_response_str) do |config|
             config.default_xml.noblanks
