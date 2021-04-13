@@ -1,36 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<OpenSearchDescription
-  xmlns="http://a9.com/-/spec/opensearch/1.1/"
-  xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
-  xmlns:param="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/"
-  xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
-  xmlns:eop="http://a9.com/-/opensearch/extensions/eo/1.0/">
-  <ShortName>EOPOS Adaptor</ShortName>
-  <LongName>EUMETSAT EO Portal Clearinghouse OpenSearch Catalogue Service for Earth Observation Products (EOP)</LongName>
-  <Description>The EUMETSAT EO Portal Clearinghouse OpenSearch EOP (EOPOS) Catalogue Service is the data cswDiscovery service for EUMETSAT EO Products, based on U-MARF (DataCentre).</Description>
-  <Contact>ops@eumetsat.int</Contact>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/" xmlns:param="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/" xmlns:eop="http://a9.com/-/opensearch/extensions/eo/1.0/">
+    <ShortName>EOPOS Adaptor</ShortName>
+    <Description>The EUMETSAT EO Portal Clearinghouse OpenSearch EOP (EOPOS) Catalogue Service is the data cswDiscovery service for EUMETSAT EO Products, based on U-MARF (DataCentre).</Description>
+    <Tags>CEOS-OS-BP-V1.1/L1 EUMETSAT meteorology satellite weather climate OpenSearch EOP Catalogue Service EOPOS CSW catalogue service</Tags>
+    <Contact>ops@eumetsat.int</Contact>
+    <Url type="application/atom+xml" template="https://navigator.eumetsat.int/eopos?pi=<%= @dataset_id %>&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}<%
+      if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
+        <param:Parameter name="c" value="{count}" minimum="0" minInclusive="1" maxExclusive="10001" title="Number of records to return"/>
+        <param:Parameter name="si" value="{startIndex}" minimum="0" minInclusive="1" maxExclusive="10001" title="Start index of records to return"/>
+        <param:Parameter name="pw" value="{startPage}" minimum="0" minInclusive="1" maxExclusive="1001" title="Start page of records to return"/>
+        <param:Parameter name="dtstart" value="{time:start}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' title="Temporal Start"/>
+        <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive = '<%= @begin %>' maxInclusive = '<%= @end %>' maxPeriod="P30D" relativeTo="{time:start}" title="Temporal End" />
+        <param:Parameter name="bbox" value="{geo:box}" title="Inventory which has a spatial extent overlapping this bounding box (bboxes larger than half of the earth are ignored)" minimum="0"/>
+        <param:Parameter name="iqd" value="{eop:productQualityStatus}" minimum="0" title="Image Qualitity Degradation">
+            <param:Option value="NOMINAL" label="NOMINAL"/>
+            <param:Option value="DEGRADED" label="DEGRADED"/>
+        </param:Parameter>
+    </Url>
+    <Url type="application/atom+xml" template="https://navigator.eumetsat.int/eopos?id={geo:uid}"/>
+    <LongName>EUMETSAT EO Portal Clearinghouse OpenSearch Catalogue Service for Earth Observation Products (EOP)</LongName>
+    <Query role="example" geo:box="-170.00,-70.00,140.00,80.00" time:start="2016-05-04" time:end="2016-05-08" eop:parentIdentifier="urn:ogc:def:EOP:EUM:acronym:OASW025:fileid:EO:EUM:DAT:METOP:ASCAT25"/>
+    <Developer>con terra GmbH</Developer>
 
-  <Url type="application/atom+xml" template="https://eoportal.eumetsat.int/eopos?pi=<%= @dataset_id %>&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
-    <param:Parameter name="c" value="{count}" minimum="0" minInclusive="1" maxExclusive="10001" title="Number of records to return" />
-    <param:Parameter name="si" value="{startIndex}" minimum="0" minInclusive="1" maxExclusive="10001" title="Start index of records to return" />
-    <param:Parameter name="pw" value="{startPage}" minimum="0" minInclusive="1" maxExclusive="1001" title="Start page of records to return" />
-    <param:Parameter name="dtstart" value="{time:start}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" title="Temporal Start" />
-    <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" maxPeriod="P30D" relativeTo="{time:start}" title="Temporal End" />
-    <param:Parameter name="bbox" value="{geo:box}" title="Inventory which has a spatial extent overlapping this bounding box (bboxes larger than half of the earth are ignored)" minimum="0" />
-    <param:Parameter name="iqd" value="{eop:productQualityStatus}" minimum="0" title="Image Qualitity Degradation">
-      <param:Option value="NOMINAL" label="NOMINAL" />
-      <param:Option value="DEGRADED" label="DEGRADED" />
-    </param:Parameter>
-  </Url>
-  <Url type="application/atom+xml" template="https://eoportal.eumetsat.int/eopos?id={geo:uid}" />
 
-  <Query role="example" geo:box="-170.00,-70.00,140.00,80.00" time:start="2016-05-04" time:end="2016-05-08" eop:parentIdentifier="urn:ogc:def:EOP:EUM:acronym:OASW025:fileid:EO:EUM:DAT:METOP:ASCAT25" />
-
-  <AdultContent>false</AdultContent>
-  <Developer>con terra GmbH</Developer>
-  <InputEncoding>UTF-8</InputEncoding>
-  <Language>*</Language>
-  <OutputEncoding>UTF-8</OutputEncoding>
-  <SyndicationRight>open</SyndicationRight>
-  <Tags>CEOS-OS-BP-V1.1/L1 EUMETSAT meteorology satellite weather climate OpenSearch EOP Catalogue Service EOPOS CSW catalogue service</Tags>
+    <SyndicationRight>open</SyndicationRight>
+    <AdultContent>false</AdultContent>
+    <Language>*</Language>
+    <OutputEncoding>UTF-8</OutputEncoding>
+    <InputEncoding>UTF-8</InputEncoding>
 </OpenSearchDescription>
