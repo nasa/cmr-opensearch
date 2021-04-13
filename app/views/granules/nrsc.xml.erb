@@ -8,7 +8,7 @@
   <Description>NRSC OpenSearch Services for IRS Data</Description>
   <Contact>uops_designer@nrsc.gov.in</Contact>
 
-  <Url type="application/atom+xml" template="https://uops.nrsc.gov.in/MetaSearch/irsSearch?datasetId=<%= @dataset_id %>&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
+  <Url type="application/atom+xml" template="https://bhoonidhi.nrsc.gov.in/MetaSearch/irsSearch?datasetId=<%= @dataset_id %>&amp;geoBox={geo:box?}&amp;startIndex={startIndex}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
     <params:Parameter name="datasetId" value="{geo:name}" title="Standard Products of all IRS Satellite" minimum="1" />
     <params:Parameter name="geoBox" value="{geo:box}" title="inventory which has a spatial extent overlapping this bounding box" minimum="0" />
     <params:Parameter name="timeStart" value="{time:start}" minInclusive = "<%= @begin %>" maxInclusive = "<%= @end %>" title="inventory which has a temporal extent containing this start time" minimum="0" />
