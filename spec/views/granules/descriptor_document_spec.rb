@@ -187,7 +187,7 @@ describe "granules/eumetsat" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("template=\"https://eoportal.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"https://navigator.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}&amp;clientId=foo\">")
   end
 
   it "is possible to create a collection-specific granule open search descriptor document with a blank client id" do
@@ -195,7 +195,7 @@ describe "granules/eumetsat" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("template=\"https://eoportal.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
+    expect(rendered).to include("template=\"https://navigator.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
   end
 
   it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
@@ -204,7 +204,7 @@ describe "granules/eumetsat" do
     assign(:client_id_model, stub_client_id)
 
     render
-    expect(rendered).to include("template=\"https://eoportal.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
+    expect(rendered).to include("template=\"https://navigator.eumetsat.int/eopos?pi=&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}\">")
   end
 
   it "creates a collection-specific granule open search descriptor document with a temporal range limit of 30 days" do
