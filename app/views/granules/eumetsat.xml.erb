@@ -2,7 +2,7 @@
 <OpenSearchDescription
   xmlns="http://a9.com/-/spec/opensearch/1.1/"
   xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/"
-  xmlns:param="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/"
+  xmlns:params="http://a9.com/-/spec/opensearch/extensions/paramseters/1.0/"
   xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"
   xmlns:eop="http://a9.com/-/opensearch/extensions/eo/1.0/">
   <ShortName>EOPOS Adaptor</ShortName>
@@ -11,16 +11,16 @@
   <Contact>ops@eumetsat.int</Contact>
 
   <Url type="application/atom+xml" template="https://navigator.eumetsat.int/eopos?pi=<%= @dataset_id %>&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
-    <param:Parameter name="c" value="{count}" minimum="0" minInclusive="1" maxExclusive="10001" title="Number of records to return" />
-    <param:Parameter name="si" value="{startIndex}" minimum="0" minInclusive="1" maxExclusive="10001" title="Start index of records to return" />
-    <param:Parameter name="pw" value="{startPage}" minimum="0" minInclusive="1" maxExclusive="1001" title="Start page of records to return" />
-    <param:Parameter name="dtstart" value="{time:start}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" title="Temporal Start" />
-    <param:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" maxPeriod="P30D" relativeTo="{time:start}" title="Temporal End" />
-    <param:Parameter name="bbox" value="{geo:box}" title="Inventory which has a spatial extent overlapping this bounding box (bboxes larger than half of the earth are ignored)" minimum="0" />
-    <param:Parameter name="iqd" value="{eop:productQualityStatus}" minimum="0" title="Image Qualitity Degradation">
-      <param:Option value="NOMINAL" label="NOMINAL" />
-      <param:Option value="DEGRADED" label="DEGRADED" />
-    </param:Parameter>
+    <params:Parameter name="c" value="{count}" minimum="0" minInclusive="1" maxExclusive="10001" title="Number of records to return" />
+    <params:Parameter name="si" value="{startIndex}" minimum="0" minInclusive="1" maxExclusive="10001" title="Start index of records to return" />
+    <params:Parameter name="pw" value="{startPage}" minimum="0" minInclusive="1" maxExclusive="1001" title="Start page of records to return" />
+    <params:Parameter name="dtstart" value="{time:start}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" title="Temporal Start" />
+    <params:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" maxPeriod="P30D" relativeTo="{time:start}" title="Temporal End" />
+    <params:Parameter name="bbox" value="{geo:box}" title="Inventory which has a spatial extent overlapping this bounding box (bboxes larger than half of the earth are ignored)" minimum="0" />
+    <params:Parameter name="iqd" value="{eop:productQualityStatus}" minimum="0" title="Image Qualitity Degradation">
+      <params:Option value="NOMINAL" label="NOMINAL" />
+      <params:Option value="DEGRADED" label="DEGRADED" />
+    </params:Parameter>
   </Url>
   <Url type="application/atom+xml" template="https://navigator.eumetsat.int/eopos?id={geo:uid}" />
 
