@@ -260,7 +260,7 @@ describe "granules/usgslsi" do
     assign(:dataset_id, 'CALVAL_IS_TUZGOLU_TURKEY')
 
     render
-    expect(rendered).to include("template=\"https://earthexplorer.usgs.gov/opensearch/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"https://m2m.cr.usgs.gov/api/open-search/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}&amp;clientId=foo\">")
   end
 
   it "is possible to create a collection-specific granule open search descriptor document with a valid client id" do
@@ -270,7 +270,7 @@ describe "granules/usgslsi" do
     assign(:dataset_id, 'CALVAL_IS_TUZGOLU_TURKEY')
 
     render
-    expect(rendered).to include("template=\"https://earthexplorer.usgs.gov/opensearch/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}\">")
+    expect(rendered).to include("template=\"https://m2m.cr.usgs.gov/api/open-search/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}\">")
   end
 
   it "is possible to create a collection-specific granule open search descriptor document with a whitespace client id" do
@@ -281,6 +281,6 @@ describe "granules/usgslsi" do
     assign(:dataset_id, 'CALVAL_IS_TUZGOLU_TURKEY')
 
     render
-    expect(rendered).to include("template=\"https://earthexplorer.usgs.gov/opensearch/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}\">")
+    expect(rendered).to include("template=\"https://m2m.cr.usgs.gov/api/open-search/granules.atom?uid={uid}&amp;datasetName=CALVAL_IS_TUZGOLU_TURKEY&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}\">")
   end
 end
