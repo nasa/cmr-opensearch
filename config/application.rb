@@ -229,7 +229,7 @@ module EchoOpensearch
     end
     update_env('opensearch_url', 'http://localhost:3000/opensearch')
     update_env('catalog_rest_endpoint', 'https://cmr.earthdata.nasa.gov/search/')
-    update_env('echo_rest_endpoint','https://api.echo.nasa.gov/echo-rest/')
+    update_env('echo_rest_endpoint','https://cmr.earthdata.nasa.gov/legacy-services/rest/')
     update_env('contact','echodev@echo.nasa.gov')
     update_env('public_catalog_rest_endpoint','https://cmr.earthdata.nasa.gov/search/')
     update_env('release_page', 'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')

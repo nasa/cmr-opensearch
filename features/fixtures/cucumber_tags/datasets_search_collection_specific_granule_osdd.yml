@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?echo_collection_id=C1200382883-CMR_ONLY&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin19.6.0 x86_64) ruby/2.5.3p105
+      Client-Id:
+      - cmr-open-search
+      Host:
+      - cmr.earthdata.nasa.gov
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/atom+xml; charset=utf-8
+      Content-Length:
+      - '3337'
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 28 May 2021 17:28:00 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      Cmr-Request-Id:
+      - e763b106-908e-4d50-855c-28ac65fa70db
+      Strict-Transport-Security:
+      - max-age=31536000
+      Cmr-Hits:
+      - '1'
+      Access-Control-Expose-Headers:
+      - CMR-Hits, CMR-Request-Id, X-Request-Id, CMR-Scroll-Id, CMR-Timed-Out, CMR-Shapefile-Original-Point-Count,
+        CMR-Shapefile-Simplified-Point-Count
+      X-Content-Type-Options:
+      - nosniff
+      Cmr-Took:
+      - '22'
+      X-Request-Id:
+      - e763b106-908e-4d50-855c-28ac65fa70db
+      Vary:
+      - Accept-Encoding, User-Agent
+      Server:
+      - ServerTokens ProductOnly
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 6f35734da951dcb591462352ba037615.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - IAD66-C1
+      X-Amz-Cf-Id:
+      - XDPkJbZ0VMTB__WfiuTdsab7om-iOu_iJy6R6FUIrJh-y4euAM5gsg==
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
+        xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2021-05-28T17:28:00.699Z</updated><id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?echo_collection_id=C1200382883-CMR_ONLY&amp;include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.*%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis%2Cint.esa.fedeo&amp;page_num=1&amp;page_size=10</id><title
+        type="text">ECHO dataset metadata</title><entry><id>C1200382883-CMR_ONLY</id><title
+        type="text">Mapping Example for UMM-C 1.16.3 DIF10</title><summary type="text">This
+        record is a Mapping Example.</summary><updated>2020-03-02T00:00:00.000Z</updated><echo:datasetId>Mapping
+        Example for UMM-C 1.16.3 DIF10</echo:datasetId><echo:shortName>Mapping Short
+        Name 1.16.3 DIF10</echo:shortName><echo:versionId>1.16.3</echo:versionId><echo:originalFormat>DIF10</echo:originalFormat><echo:collectionDataType>SCIENCE_QUALITY</echo:collectionDataType><echo:dataCenter>CMR_ONLY</echo:dataCenter><echo:archiveCenter>NSIDC</echo:archiveCenter><echo:organization>NSIDC</echo:organization><echo:organization>NASA/MSFC/AMSR-E
+        SIPS</echo:organization><echo:processingLevelId>3</echo:processingLevelId><time:start>2001-01-01T00:00:00.000Z</time:start><time:end>2001-06-01T00:00:00.000Z</time:end><link
+        rel="http://esipfed.org/ns/fedsearch/1.1/documentation#" hreflang="en-US"
+        href="http://wwwghcc.msfc.nasa.gov/AMSR/qa.html"></link><link length="0.0KB"
+        rel="http://esipfed.org/ns/fedsearch/1.1/data#" hreflang="en-US" href="http://www.foo.com"></link><link
+        length="0.0KB" rel="http://esipfed.org/ns/fedsearch/1.1/search#" hreflang="en-US"
+        href="http://osdd.org/data/amsre/someopensearchdescription.xml"></link><link
+        length="0.0KB" rel="http://esipfed.org/ns/fedsearch/1.1/search#" hreflang="en-US"
+        href="http://osdd.org/data/amsre/someopensearchdescription.xml"></link><echo:coordinateSystem>CARTESIAN</echo:coordinateSystem><echo:orbitParameters
+        swathWidth="22.0" period="1.0" inclinationAngle="4.0" numberOfOrbits="1.0"
+        startCircularLatitude="1.0"></echo:orbitParameters><georss:where><gml:Polygon><gml:exterior><gml:LinearRing><gml:posList>-10
+        -10 -10 10 10 10 10 -10 -10 -10</gml:posList></gml:LinearRing></gml:exterior><gml:interior><gml:LinearRing><gml:posList>-5
+        -5 -5 -1 -1 -1 -1 -5 -5 -5</gml:posList></gml:LinearRing><gml:LinearRing><gml:posList>0
+        0 0 5 5 5 5 0 0 0</gml:posList></gml:LinearRing></gml:interior></gml:Polygon></georss:where><echo:difId>Mapping
+        Short Name 1.16.3 DIF10_1.16.3</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules><echo:hasVariables>false</echo:hasVariables><echo:hasFormats>false</echo:hasFormats><echo:hasTransforms>false</echo:hasTransforms><echo:hasSpatialSubsetting>false</echo:hasSpatialSubsetting><echo:hasTemporalSubsetting>false</echo:hasTemporalSubsetting></entry></feed>
+    adapter_metadata:
+      vcr_decompressed: gzip
+  recorded_at: Fri, 28 May 2021 17:28:05 GMT
+recorded_with: VCR 6.0.0

@@ -21,6 +21,8 @@ VCR.cucumber_tags do |t|
 
   t.tags '@datasets_search_cwic_atom'
 
+  t.tags '@datasets_search_collection_specific_granule_osdd'
+
   t.tags '@datasets_search_by_granules_only_atom', '@datasets_search_by_granules_only_html'
 
   t.tags '@datasets_search_by_cwic_only_atom', '@datasets_search_by_cwic_only_html'
