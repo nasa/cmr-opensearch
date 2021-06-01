@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?echo_collection_id=C1200382883-CMR_ONLY&include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&page_num=1&page_size=10
+    uri: https://cmr.earthdata.nasa.gov/search/collections.atom?include_has_granules=true&include_tags=org.ceos.wgiss.cwic.*,opensearch.granule.osdd,org.geoss.geoss_data-core,gov.nasa.eosdis,int.esa.fedeo&keyword=C1200382883-CMR_ONLY&page_num=1&page_size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/atom+xml; charset=utf-8
       Content-Length:
-      - '3337'
+      - '3435'
       Connection:
       - keep-alive
       Date:
-      - Fri, 28 May 2021 17:28:00 GMT
+      - Tue, 01 Jun 2021 21:18:59 GMT
       X-Frame-Options:
       - SAMEORIGIN
       Access-Control-Allow-Origin:
@@ -37,7 +37,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       Cmr-Request-Id:
-      - e763b106-908e-4d50-855c-28ac65fa70db
+      - 332c02dc-534d-4f7c-871c-6460f2cfe16d
       Strict-Transport-Security:
       - max-age=31536000
       Cmr-Hits:
@@ -48,9 +48,9 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Cmr-Took:
-      - '22'
+      - '29'
       X-Request-Id:
-      - e763b106-908e-4d50-855c-28ac65fa70db
+      - 332c02dc-534d-4f7c-871c-6460f2cfe16d
       Vary:
       - Accept-Encoding, User-Agent
       Server:
@@ -58,18 +58,19 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 6f35734da951dcb591462352ba037615.cloudfront.net (CloudFront)
+      - 1.1 0a12845a71fd243bd8b2ed480b652910.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD66-C1
+      - IAD79-C3
       X-Amz-Cf-Id:
-      - XDPkJbZ0VMTB__WfiuTdsab7om-iOu_iJy6R6FUIrJh-y4euAM5gsg==
+      - pP_lqrL3EooQ-bBaE_SI1zLvS5TsFWnz5UO2LuBmF2lWVB6jX_WVnQ==
     body:
       encoding: ASCII-8BIT
-      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:os="http://a9.com/-/spec/opensearch/1.1/"
-        xmlns:georss="http://www.georss.org/georss/10" xmlns="http://www.w3.org/2005/Atom"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
+      string: <?xml version="1.0" encoding="UTF-8"?><feed xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/"
+        xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss/10"
+        xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:echo="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom"
         xmlns:esipdiscovery="http://commons.esipfed.org/ns/discovery/1.2/" xmlns:gml="http://www.opengis.net/gml"
-        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2021-05-28T17:28:00.699Z</updated><id>https://cmr.sit.earthdata.nasa.gov:443/search/collections.atom?echo_collection_id=C1200382883-CMR_ONLY&amp;include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.*%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis%2Cint.esa.fedeo&amp;page_num=1&amp;page_size=10</id><title
+        esipdiscovery:version="1.2" xmlns:time="http://a9.com/-/opensearch/extensions/time/1.0/"><updated>2021-06-01T21:18:59.970Z</updated><id>https://cmr.earthdata.nasa.gov:443/search/collections.atom?keyword=C1200382883-CMR_ONLY&amp;include_has_granules=true&amp;include_tags=org.ceos.wgiss.cwic.*%2Copensearch.granule.osdd%2Corg.geoss.geoss_data-core%2Cgov.nasa.eosdis%2Cint.esa.fedeo&amp;page_num=1&amp;page_size=10</id><title
         type="text">ECHO dataset metadata</title><entry><id>C1200382883-CMR_ONLY</id><title
         type="text">Mapping Example for UMM-C 1.16.3 DIF10</title><summary type="text">This
         record is a Mapping Example.</summary><updated>2020-03-02T00:00:00.000Z</updated><echo:datasetId>Mapping
@@ -88,8 +89,8 @@ http_interactions:
         -10 -10 10 10 10 10 -10 -10 -10</gml:posList></gml:LinearRing></gml:exterior><gml:interior><gml:LinearRing><gml:posList>-5
         -5 -5 -1 -1 -1 -1 -5 -5 -5</gml:posList></gml:LinearRing><gml:LinearRing><gml:posList>0
         0 0 5 5 5 5 0 0 0</gml:posList></gml:LinearRing></gml:interior></gml:Polygon></georss:where><echo:difId>Mapping
-        Short Name 1.16.3 DIF10_1.16.3</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules><echo:hasVariables>false</echo:hasVariables><echo:hasFormats>false</echo:hasFormats><echo:hasTransforms>false</echo:hasTransforms><echo:hasSpatialSubsetting>false</echo:hasSpatialSubsetting><echo:hasTemporalSubsetting>false</echo:hasTemporalSubsetting></entry></feed>
+        Short Name 1.16.3 DIF10_1.16.3</echo:difId><echo:onlineAccessFlag>true</echo:onlineAccessFlag><echo:browseFlag>false</echo:browseFlag><echo:hasGranules>false</echo:hasGranules><echo:hasVariables>false</echo:hasVariables><echo:hasFormats>false</echo:hasFormats><echo:hasTransforms>false</echo:hasTransforms><echo:hasSpatialSubsetting>false</echo:hasSpatialSubsetting><echo:hasTemporalSubsetting>false</echo:hasTemporalSubsetting><relevance:score>0.5</relevance:score></entry></feed>
     adapter_metadata:
       vcr_decompressed: gzip
-  recorded_at: Fri, 28 May 2021 17:28:05 GMT
+  recorded_at: Tue, 01 Jun 2021 21:19:00 GMT
 recorded_with: VCR 6.0.0

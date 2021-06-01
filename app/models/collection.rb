@@ -94,6 +94,7 @@ class Collection < Metadata
           entry_node.content = 'CMR collection metadata' if entry_node.content == 'CMR dataset metadata'
 
           provider_osdd_link = provider_granule_osdd_collection_link(entry_node) if provider_osdd_link.nil?
+          collection_specific_osdd_link = collection_specific_granule_osdd_link(entry_node, collection_specific_osdd_link)
           short_name = entry_node.content if entry_node.name == 'shortName'
           version_id = entry_node.content if entry_node.name == 'versionId'
           data_center = entry_node.content if entry_node.name == 'dataCenter'
