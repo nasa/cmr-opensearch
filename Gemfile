@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby File.read(".ruby-version").chomp.split('-')[1] { |f| "ruby '#{f}'"}
+File.read(".ruby-version").chomp.split('-')[1] { |f| "ruby '#{f}'"}
 
 gem 'rails', '5.2.4.6'
 gem 'activeresource', '>= 5.1.1'
@@ -37,6 +37,12 @@ end
 
 group :development do
   gem 'pry-rails'
+
+  # better error handling
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  gem 'byebug'
 end
 
 group :test, :development do

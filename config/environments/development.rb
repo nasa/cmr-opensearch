@@ -35,7 +35,7 @@ EchoOpensearch::Application.configure do
 
 
   config.application_url = 'http://localhost:3000'
-  config.relative_url_root = ''
+  config.relative_url_root = '/opensearch'
 
   config.cache_store = :memory_store, { size: 64.megabytes }
 
