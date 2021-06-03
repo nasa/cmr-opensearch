@@ -221,7 +221,6 @@ class Collection < Metadata
       # not yet assigned
       if entry_node.name == 'link' && entry_node.attributes.dig('rel')&.value == 'http://esipfed.org/ns/fedsearch/1.1/search#'
         collection_granule_osdd = entry_node.attributes.dig('href')&.value
-        puts "assigned collection_granule_osdd: #{collection_granule_osdd}"
       end
     else
       # already assigned, but we want to check if there is a second such link / Related URL
