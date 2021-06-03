@@ -77,6 +77,7 @@ class Collection < Metadata
         is_eosdis = false
         is_fedeo = false
         provider_osdd_link = nil
+        collection_specific_osdd_link = nil
         # mark the collection as CEOS if needed
         is_ceos = ceos_collection?(node)
         non_atom = []
@@ -93,6 +94,7 @@ class Collection < Metadata
           entry_node.content = 'CMR collection metadata' if entry_node.content == 'CMR dataset metadata'
 
           provider_osdd_link = provider_granule_osdd_collection_link(entry_node) if provider_osdd_link.nil?
+          collection_specific_osdd_link = collection_specific_granule_osdd_link(entry_node, collection_specific_osdd_link)
           short_name = entry_node.content if entry_node.name == 'shortName'
           version_id = entry_node.content if entry_node.name == 'versionId'
           data_center = entry_node.content if entry_node.name == 'dataCenter'
@@ -121,7 +123,10 @@ class Collection < Metadata
           add_link_as_child(doc, node, href, 'text/html', 'enclosure', short_name)
         end
 
-        if provider_osdd_link.present?
+        if collection_specific_osdd_link.present?
+          link_title = 'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document'
+          add_link_as_child(doc, node, collection_specific_osdd_link, 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
+        elsif provider_osdd_link.present?
           link_title = 'Non-CMR OpenSearch Provider Granule Open Search Descriptor Document'
           add_link_as_child(doc, node, provider_osdd_link, 'application/opensearchdescription+xml', NEW_REL_MAPPING[:search], link_title)
         else
@@ -195,6 +200,7 @@ class Collection < Metadata
   # represents the collection level, granule specific OSDD
   def provider_granule_osdd_collection_link(entry_node)
     granule_specific_osdd = nil
+
     if entry_node.name == 'tag'
       tag_key = entry_node.at_xpath('echo:tagKey', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
       tag_data = entry_node.at_xpath('echo:data', 'echo' => 'https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#atom')
@@ -206,6 +212,25 @@ class Collection < Metadata
       end
     end
     granule_specific_osdd
+  end
+
+  # a collection-specific granule OSDD would be provided as a Related URL
+  # that is a link node with a specific rel
+  def collection_specific_granule_osdd_link(entry_node, collection_granule_osdd)
+    if collection_granule_osdd.nil?
+      # not yet assigned
+      if entry_node.name == 'link' && entry_node.attributes.dig('rel')&.value == 'http://esipfed.org/ns/fedsearch/1.1/search#'
+        collection_granule_osdd = entry_node.attributes.dig('href')&.value
+      end
+    else
+      # already assigned, but we want to check if there is a second such link / Related URL
+      # in the collection
+      if entry_node.name == 'link' && entry_node.attributes.dig('rel')&.value == 'http://esipfed.org/ns/fedsearch/1.1/search#'
+        Rails.logger.error "Searching for collection-specific granule OSDD. One link has already been processed, but the collection contains more than one."
+      end
+    end
+
+    collection_granule_osdd
   end
 
   # a geoss collection exists and results in a creation of a echo:is_geoss element with value 'true' if the collection
