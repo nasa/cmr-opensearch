@@ -102,7 +102,7 @@ class EosdisTagger
           Rails.logger.info("PROVIDER #{provider} HAS #{hits} COLLECTIONS")
           post_body = '{"condition": {"provider": "' + provider + '"}}'
           response = RestClient::Request.execute :method => :post, :url => "#{@catalog_rest_endpoint}tags/#{@tag}/associations/by_query", :payload => post_body,
-                                                 :headers => {'Echo-token' => @token, 'Content-Type' => 'application/json'},
+                                                 :headers => {'Authorization' => @token, 'Content-Type' => 'application/json'},
                                                  :verify_ssl => OpenSSL::SSL::VERIFY_NONE
           if (response.code != 200)
             Rails.logger.info("COULD NOT TAG PROVIDER: #{provider}, ERROR: " + response.code)
@@ -153,7 +153,7 @@ class EosdisTagger
       Rails.logger.info("POST request body: #{post_body}")
       # one request takes much longer so we must increase the read_timeout (seconds)
       response = RestClient::Request.execute :method => :post, :url => "#{@catalog_rest_endpoint}tags/#{@tag}/associations/by_query", :payload => post_body,
-                                             :headers => {'Echo-token' => @token, 'Content-Type' => 'application/json'},
+                                             :headers => {'Authorization' => @token, 'Content-Type' => 'application/json'},
                                              :verify_ssl => OpenSSL::SSL::VERIFY_NONE, :timeout => 240
       if (response.code != 200)
         Rails.logger.info("COULD NOT TAG PROVIDERS, ERROR: #{response.code}, BODY: #{response.body} ")

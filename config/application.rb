@@ -220,7 +220,7 @@ module EchoOpensearch
     Flipper.disable(:use_cwic_server)
   end
 
-    ## additional default configuration parameters use to run tests or a basic local run with no scheduled tagging
+    ## additional default configuration parameters used to run tests or a basic local run with no scheduled tagging
     ## capabilities
     def self.update_env(name, value)
       if (ENV[name] == nil)
