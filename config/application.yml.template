@@ -3,6 +3,7 @@ current: &current
   catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
   USE_CWIC_SERVER: true
   echo_rest_endpoint: https://api.echo.nasa.gov/echo-rest/
+  edl_endpoint: https://urs.earthdata.nasa.gov/api/users/
   contact: @MAIL_SENDER@
   mode: @MODE@
   public_catalog_rest_endpoint: https://cmr.earthdata.nasa.gov/search/
