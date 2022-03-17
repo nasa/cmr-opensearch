@@ -33,6 +33,7 @@ group :production, :sit, :uat do
   # to compensate for the CMR static tagging functionality
   gem 'rufus-scheduler'
   gem 'rails_12factor'
+  gem 'redis'
 end
 
 group :development do
@@ -43,6 +44,8 @@ group :development do
   gem 'binding_of_caller'
 
   gem 'byebug'
+
+  gem 'rubocop'
 end
 
 group :test, :development do

@@ -50,8 +50,8 @@ EchoOpensearch::Application.configure do
 
   config.relative_url_root = '/opensearch'
 
-  config.cache_store = :memory_store, { size: 64.megabytes }
-  
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
+
   config.eosdis_providers = %w[
         SEDAC
         NSIDC_TS1

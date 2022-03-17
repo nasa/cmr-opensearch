@@ -50,7 +50,7 @@ EchoOpensearch::Application.configure do
 
   config.relative_url_root = '/opensearch'
 
-  config.cache_store = :memory_store, { size: 64.megabytes }
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
 
   # 12-factor
   config.assets.initialize_on_precompile = false
