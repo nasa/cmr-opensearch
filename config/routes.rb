@@ -6,8 +6,6 @@ EchoOpensearch::Application.routes.draw do
 
   get 'home/docs'
 
-  get 'cwic_mapping' => 'home#cwic_mapping', format: 'xml'
-
   get 'docs', to: 'home#docs'
 
   resources :collections do
@@ -21,9 +19,6 @@ EchoOpensearch::Application.routes.draw do
   end
 
   resources :granules do
-    member do
-
-    end
     collection do
       get 'descriptor_document'
     end

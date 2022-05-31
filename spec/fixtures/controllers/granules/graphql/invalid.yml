@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graphql.earthdata.nasa.gov/api
+    body:
+      encoding: UTF-8
+      string: '{"query":"query OpenSearchCollection(\n  $conceptId: String!\n) {\n  collection
+        (params: {\n    conceptId: $conceptId,\n    includeTags: \"opensearch.granule.osdd,
+        org.ceos.wgiss.cwic.granules.provider, org.ceos.wgiss.cwic.granules.native_id\"\n  })
+        {\n    conceptId\n    relatedUrls\n    spatialExtent\n    tags\n    temporalExtents\n    granules
+        {\n      count\n    }\n  }\n}\n","variables":{"conceptId":"invalid"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin21.3.0 x86_64) ruby/2.6.7p197
+      Content-Type:
+      - application/json
+      Client-Id:
+      - opensearch-test-client
+      Content-Length:
+      - '417'
+      Host:
+      - graphql.earthdata.nasa.gov
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '622'
+      Connection:
+      - keep-alive
+      Server:
+      - CloudFront
+      Date:
+      - Wed, 25 May 2022 12:44:20 GMT
+      X-Amzn-Remapped-X-Amzn-Requestid:
+      - d9b864d8-618c-48d3-80c8-3f36c85f7225
+      X-Amzn-Remapped-Content-Length:
+      - '622'
+      X-Amzn-Remapped-Connection:
+      - keep-alive
+      X-Amz-Apigw-Id:
+      - SrqpsHqHoAMFlKA=
+      Vary:
+      - Origin
+      X-Amzn-Remapped-Server:
+      - Server
+      Etag:
+      - W/"26e-nvcXbRUQTGlSIAs8Qjrt8CRWvhk"
+      X-Powered-By:
+      - Express
+      X-Amzn-Remapped-X-Amzn-Remapped-Content-Length:
+      - '622'
+      X-Amzn-Trace-Id:
+      - Root=1-628e24a4-4af5afe008394357378a9ab3;Sampled=0
+      X-Amzn-Remapped-Date:
+      - Wed, 25 May 2022 12:44:20 GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - um446Cx2aSKKx1rv2Oc1vEHRt9s0qqivylVq7K_lfYdwHjfgEaquow==
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Amzn-Requestid:
+      - d8fe2020-0bfa-44d6-bb29-873740d8639a
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 92d95cda7eaeed8a1f0f8b1603cfc362.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD53-C3
+      X-Amz-Cf-Id:
+      - um446Cx2aSKKx1rv2Oc1vEHRt9s0qqivylVq7K_lfYdwHjfgEaquow==
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"message":"Concept-id [invalid] is not valid.","locations":[{"line":4,"column":3}],"path":["collection"],"extensions":{"code":"CMR_ERROR","exception":{"stacktrace":["Error:
+        Concept-id [invalid] is not valid.","    at dn (/var/task/src/graphql/handler.js:1:331587)","    at
+        /var/task/src/graphql/handler.js:1:343991","    at Generator.throw (<anonymous>)","    at
+        Un (/var/task/src/graphql/handler.js:1:338330)","    at s (/var/task/src/graphql/handler.js:1:338571)","    at
+        runMicrotasks (<anonymous>)","    at processTicksAndRejections (internal/process/task_queues.js:95:5)"]}}}],"data":{"collection":null}}
+
+        '
+  recorded_at: Wed, 25 May 2022 12:44:20 GMT
+recorded_with: VCR 6.0.0

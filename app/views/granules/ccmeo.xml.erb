@@ -18,7 +18,7 @@
     <params:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" maxPeriod="P14D" relativeTo="{time:start}" title="Temporal End" />
   </Url>
 
-  <Url type="application/atom+xml" template="https://eodms-sgdot.nrcan-rncan.gc.ca/apps/cgi/opensearch/eodms_opensearch_r1.sh?q=<%= @dataset_id %>&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}&amp;format=atom<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
+  <Url type="application/atom+xml" rel="results" template="https://eodms-sgdot.nrcan-rncan.gc.ca/apps/cgi/opensearch/eodms_opensearch_r1.sh?q=<%= @dataset_id %>&amp;id={geo:id?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end?}&amp;pw={startPage?}&amp;startIndex={startIndex?}&amp;count={count?}&amp;format=atom">
     <params:Parameter name="dtstart" value="{time:start}" minimum="1"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" title="Temporal Start" />
     <params:Parameter name="dtend" value="{time:end}" minimum="0"  minInclusive="<%= @begin %>" maxInclusive="<%= @end %>" maxPeriod="P14D" relativeTo="{time:start}" title="Temporal End" />
   </Url>

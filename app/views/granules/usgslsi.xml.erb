@@ -10,7 +10,7 @@
   <Description>USGS&#47;EROS OpenSearch</Description>
   <Contact>custserv@usgs.gov</Contact>
 
-  <Url type="application/atom+xml" template="https://m2m.cr.usgs.gov/api/open-search/granules.atom?uid={uid}&amp;datasetName=<%= @dataset_id %>&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
+  <Url type="application/atom+xml" rel="results" template="https://m2m.cr.usgs.gov/api/open-search/granules.atom?uid={uid}&amp;datasetName=<%= @dataset_id %>&amp;entryId={lta:entryId}&amp;startIndex={startIndex?}&amp;count={count?}&amp;timeStart={time:start?}&amp;timeEnd={time:end?}&amp;geoBox={geo:box?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
     <params:Parameter name="datasetName" value="{lta:datasetName}" title="Dataset Name desired by the search client" minimum="0" maximum="1"></params:Parameter>
     <params:Parameter name="entryId" value="{lta:entryId}" title="IDN Entry ID - Can be used in place of lta:datasetName" minimum="0" maximum="1"></params:Parameter>
     <params:Parameter name="geoBox" value="{geo:box}" title="inventory which has a spatial extent overlapping this bounding box" minimum="0" />

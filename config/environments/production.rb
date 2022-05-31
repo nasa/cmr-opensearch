@@ -67,19 +67,20 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
-  #config.active_support.deprecation = :notify
+  # config.active_support.deprecation = :notify
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-  #config.active_record.dump_schema_after_migration = false
-  config.relative_url_root = '/opensearch'
+  # config.active_record.dump_schema_after_migration = false
 
-  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
+  config.relative_url_root = '/opensearch'
+  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']
+  config.cache_store = :redis_cache_store, { url: "redis://#{ENV['REDIS_URL']}:#{ENV['REDIS_PORT']}" }
 
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
-  #config.log_level = :trace
+
   puts 'This is a production deployment'
 end

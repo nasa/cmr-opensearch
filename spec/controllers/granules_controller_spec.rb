@@ -17,8 +17,10 @@ describe GranulesController do
     end
     context "with invalid attributes" do
       it "renders an error" do
-        get :descriptor_document, :format => :xml, :params => { :clientId => '###'}
-        expect(response.status).to eq(400)
+        VCR.use_cassette 'controllers/granules/graphql/C1231649308-ISRO', :record => :once do
+          get :descriptor_document, :format => :xml, :params => { :clientId => '###'}
+          expect(response.status).to eq(400)
+        end
       end
     end
     context 'with valid and invalid query parameters' do
@@ -31,63 +33,73 @@ describe GranulesController do
   end
   context "with valid collection concept id" do
     it "renders a descriptor document" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => 'foo', :collectionConceptId => 'C1214599108-SCIOPS' }
-      expect(response).to render_template("granules/ccmeo.xml.erb")
+      VCR.use_cassette 'controllers/granules/graphql/C1231649308-ISRO', :record => :once do
+        get :descriptor_document, :format => :xml, :params => { :clientId => 'foo', :collectionConceptId => 'C1231649308-ISRO' }
+        expect(response).to render_template("granules/mosdac.xml.erb")
+      end
     end
   end
   context "with invalid collection concept id" do
     it "renders an error" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'invalid' }
-      expect(response.status).to eq(400)
+      VCR.use_cassette 'controllers/granules/graphql/invalid', :record => :once do
+        get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'invalid' }
+        expect(response.status).to eq(400)
+      end
     end
   end
   context "with a blank clientId" do
-    it "renders a ccmeo OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1214603059-SCIOPS' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/ccmeo.xml.erb")
-    end
-    it "renders an eumetsat OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1588876552-EUMETSAT' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/eumetsat.xml.erb")
-    end
+    # it "renders a ccmeo OSDD" do
+    #   get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1214603059-SCIOPS' }
+    #   expect(response.status).to eq(200)
+    #   expect(response).to render_template("granules/ccmeo.xml.erb")
+    # end
+    # it "renders an eumetsat OSDD" do
+    #   get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1588876552-EUMETSAT' }
+    #   expect(response.status).to eq(200)
+    #   expect(response).to render_template("granules/eumetsat.xml.erb")
+    # end
     it "renders an nrsc OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1373227010-ISRO' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/nrsc.xml.erb")
+      VCR.use_cassette 'controllers/granules/graphql/C1443228137-ISRO', :record => :once do
+        get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1443228137-ISRO' }
+        expect(response.status).to eq(200)
+        expect(response).to render_template("granules/nrsc.xml.erb")
+      end
     end
     it "renders a usgslsi OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1220567092-USGS_LTA' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/usgslsi.xml.erb")
+      VCR.use_cassette 'controllers/granules/graphql/C1220566843-USGS_LTA', :record => :once do
+        get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1220566843-USGS_LTA' }
+        expect(response.status).to eq(200)
+        expect(response).to render_template("granules/usgslsi.xml.erb")
+      end
     end
   end
 
   context "with a whitespace clientId" do
-    it "renders a ccmeo OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1214603059-SCIOPS' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/ccmeo.xml.erb")
-    end
-    it "renders an eumetsat OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1588876552-EUMETSAT' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/eumetsat.xml.erb")
-    end
+    # it "renders a ccmeo OSDD" do
+    #   get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1214603059-SCIOPS' }
+    #   expect(response.status).to eq(200)
+    #   expect(response).to render_template("granules/ccmeo.xml.erb")
+    # end
+    # it "renders an eumetsat OSDD" do
+    #   get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1588876552-EUMETSAT' }
+    #   expect(response.status).to eq(200)
+    #   expect(response).to render_template("granules/eumetsat.xml.erb")
+    # end
     it "renders an nrsc OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1373227010-ISRO' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/nrsc.xml.erb")
+      VCR.use_cassette 'controllers/granules/graphql/C1443228137-ISRO', :record => :once do
+        get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1443228137-ISRO' }
+        expect(response.status).to eq(200)
+        expect(response).to render_template("granules/nrsc.xml.erb")
+      end
     end
     it "renders a usgslsi OSDD" do
-      get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1220567092-USGS_LTA' }
-      expect(response.status).to eq(200)
-      expect(response).to render_template("granules/usgslsi.xml.erb")
+      VCR.use_cassette 'controllers/granules/graphql/C1220566843-USGS_LTA', :record => :once do
+        get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1220566843-USGS_LTA' }
+        expect(response.status).to eq(200)
+        expect(response).to render_template("granules/usgslsi.xml.erb")
+      end
     end
   end
-
-
 
   describe "GET RestClient error" do
     context "with larger than allowed cursor value" do

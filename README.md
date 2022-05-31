@@ -78,6 +78,10 @@ URL of your specific CMR OpenSearch install:
 
     opensearch_url = <CMR OpenSearch application URL>
 
+URL of your specific GraphQL install:
+
+    GRAPHQL_ENDPOINT = <GraphQL application URL>
+
 URL of the public CMR search API instance used in OpenSearch results links in the response ATOM feed:
 
     public_catalog_rest_endpoint = <public endpoint for the CMR Search API instance>

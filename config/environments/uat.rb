@@ -49,29 +49,29 @@ EchoOpensearch::Application.configure do
   config.log_level = :debug
 
   config.relative_url_root = '/opensearch'
-
-  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
+  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']
+  config.cache_store = :redis_cache_store, { url: "redis://#{ENV['REDIS_URL']}:#{ENV['REDIS_PORT']}" }
 
   config.eosdis_providers = %w[
-        SEDAC
-        NSIDC_TS1
-        ORNL_DAAC
-        PODAAC
-        ASF
-        GHRC
-        LARC_TS1
-        LARC_ASDC
-        GES_DISC
-        CDDIS
-        NSIDCV0TST
-        LPDAAC_TS1
-        USGS_EROS
-        LPDAAC_TS2
-        OBPG
-        LANCEMODIS
-        LAADS
-        LANCEAMSR2
-        OMINRT
+    SEDAC
+    NSIDC_TS1
+    ORNL_DAAC
+    PODAAC
+    ASF
+    GHRC
+    LARC_TS1
+    LARC_ASDC
+    GES_DISC
+    CDDIS
+    NSIDCV0TST
+    LPDAAC_TS1
+    USGS_EROS
+    LPDAAC_TS2
+    OBPG
+    LANCEMODIS
+    LAADS
+    LANCEAMSR2
+    OMINRT
   ]
 
   # config.ceos_agencies = []
@@ -80,5 +80,4 @@ EchoOpensearch::Application.configure do
   Rails.logger.formatter = Logger::Formatter.new
 
   puts 'This is a uat deployment'
-
 end
