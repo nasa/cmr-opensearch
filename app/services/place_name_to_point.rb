@@ -1,21 +1,21 @@
 require 'json'
 
 class PlaceNameToPoint
-  URL = "http://api.geonames.org/searchJSON?"
-  FIXED_PARAMETERS = "&username=echo_reverb&maxRows=1"
+  URL = 'http://api.geonames.org/searchJSON?'
+  FIXED_PARAMETERS = '&username=echo_reverb&maxRows=1'
 
   def self.exists? place_name
     find(place_name)
   end
 
   def self.find(place_name)
-    url = "#{URL}q=#{URI.encode(place_name)}#{FIXED_PARAMETERS}"
+    url = "#{URL}q=#{ERB::Util.url_encode(place_name)}#{FIXED_PARAMETERS}"
     resp = Net::HTTP.get_response(URI.parse(url))
     data = resp.body
 
     result = JSON.parse(data)
     location = nil
-    location = result['geonames'].first if result and result['geonames']
+    location = result['geonames'].first if result && result['geonames']
 
     location
   end
