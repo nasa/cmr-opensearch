@@ -1,14 +1,5 @@
 class HomeController < ApplicationController
+  def index; end
 
-  def cwic_mapping
-    render 'home/cwic-mapping.xml'
-  end
-
-  def index
-
-  end
-
-  def docs
-
-  end
+  def docs; end
 end

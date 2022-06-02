@@ -33,15 +33,14 @@ EchoOpensearch::Application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-
   config.application_url = 'http://localhost:3000'
   config.relative_url_root = '/opensearch'
+  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']
+  config.cache_store = :redis_cache_store, { url: "redis://#{ENV['REDIS_URL']}:#{ENV['REDIS_PORT']}" }
 
-  config.cache_store = :memory_store, { size: 64.megabytes }
-
+  # Logging
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
 
   puts 'This is a dev deployment'
-
 end

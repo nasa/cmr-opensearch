@@ -10,7 +10,7 @@
   <Description>The EUMETSAT EO Portal Clearinghouse OpenSearch EOP (EOPOS) Catalogue Service is the data cswDiscovery service for EUMETSAT EO Products, based on U-MARF (DataCentre).</Description>
   <Contact>ops@eumetsat.int</Contact>
 
-  <Url type="application/atom+xml" template="https://navigator.eumetsat.int/eopos?pi=<%= @dataset_id %>&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
+  <Url type="application/atom+xml" rel="results" template="https://navigator.eumetsat.int/eopos?pi=<%= @dataset_id %>&amp;pw={startPage?}&amp;si={startIndex?}&amp;c={count?}&amp;bbox={geo:box?}&amp;dtstart={time:start?}&amp;dtend={time:end}&amp;iqd={eop:productQualityStatus?}<%-if @client_id_model.valid? && !@client_id_model.clientId.blank? -%>&amp;clientId=<%= @client_id_model.clientId %><% end %>">
     <params:Parameter name="c" value="{count}" minimum="0" minInclusive="1" maxExclusive="10001" title="Number of records to return" />
     <params:Parameter name="si" value="{startIndex}" minimum="0" minInclusive="1" maxExclusive="10001" title="Start index of records to return" />
     <params:Parameter name="pw" value="{startPage}" minimum="0" minInclusive="1" maxExclusive="1001" title="Start page of records to return" />

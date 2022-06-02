@@ -39,11 +39,11 @@ EchoOpensearch::Application.configure do
 
   config.relative_url_root = ''
 
+  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']
   config.cache_store = :memory_store, { size: 64.megabytes }
 
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
 
   puts 'This is a test deployment'
-
 end

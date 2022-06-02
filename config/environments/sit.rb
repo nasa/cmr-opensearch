@@ -49,28 +49,28 @@ EchoOpensearch::Application.configure do
   config.log_level = :debug
 
   config.relative_url_root = '/opensearch'
-
-  config.cache_store = :memory_store, { size: 64.megabytes }
+  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']
+  config.cache_store = :redis_cache_store, { url: "redis://#{ENV['REDIS_URL']}:#{ENV['REDIS_PORT']}" }
 
   # 12-factor
   config.assets.initialize_on_precompile = false
 
   config.eosdis_providers = %w[
-        GHRC
-        OB_DAAC
-        LPDAAC_ECS
-        LARC
-        ASF
-        NSIDC_ECS
-        GES_DISC
-        LARC_ASDC
-        LAADS
+    GHRC
+    OB_DAAC
+    LPDAAC_ECS
+    LARC
+    ASF
+    NSIDC_ECS
+    GES_DISC
+    LARC_ASDC
+    LAADS
   ]
+
   # config.ceos_agencies = []
 
   Rails.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log")
   Rails.logger.formatter = Logger::Formatter.new
 
   puts 'This is a sit deployment'
-
 end

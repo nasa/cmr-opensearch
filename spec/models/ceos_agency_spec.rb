@@ -49,7 +49,7 @@ describe CeosAgency do
         }'
         ]
     escaped_cmr_query_string = CeosAgency.create_all_ceos_agencies_cmr_query_string(json_ceos_agencies_array).to_query
-    unescaped_cmr_query_string = URI::decode(escaped_cmr_query_string)
+    unescaped_cmr_query_string = URI::decode_www_form_component(escaped_cmr_query_string)
     expected_unescaped_query_string = 'data_center[]=DC1&data_center[]=DC2&data_center[]=DC3&data_center[]=DC4&options[data_center][pattern]=true'
     expect(unescaped_cmr_query_string).to eq(expected_unescaped_query_string)
   end
