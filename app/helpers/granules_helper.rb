@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module GranulesHelper
   QUERY = <<~GRAPH_QUERY.freeze
     query OpenSearchCollection(
@@ -12,33 +14,35 @@ module GranulesHelper
         spatialExtent
         tags
         temporalExtents
-        granules {
-          count
-        }
       }
     }
   GRAPH_QUERY
 
   # query_graphql
   #
-  # @param [Hash] params Search parameters 
-  # @param [Hash] concept_id The concept id of the collection being requested
+  # @param [Hash] params Search parameters
+  # @param [String] request_id A GUID to send GraphQL for logging
   #
   # @return [RestClient::Response] Response from GraphQL
-  def query_graphql(params)
+  def query_graphql(params, request_id)
     url = Rails.configuration.graphql_endpoint
 
     RestClient::Request.execute(
       method: :post,
       url: url,
-      headers: { accept: :json, content_type: :json, 'Client-Id': "opensearch-#{Rails.env.downcase}-client" },
+      headers: {
+        accept: :json,
+        content_type: :json,
+        'Client-Id': "opensearch-#{Rails.env.downcase}-client",
+        'X-Request-Id': request_id
+      },
       payload: {
         query: QUERY,
         variables: params
       }.to_json
     )
   rescue StandardError => e
-    puts("{Error} Failed to retrieve collection descriptor for (#{url}) with message #{e.message}.")
+    puts("#{request_id} - Error - Failed to retrieve collection descriptor for (#{url}) with message #{e.message}.")
   end
 
   # determine_granule_url
@@ -115,18 +119,6 @@ module GranulesHelper
     if horizontal_spatial_domain
       geometry = horizontal_spatial_domain.fetch('geometry', {})
 
-      # orbit = horizontal_spatial_domain['orbit']
-
-      # if geometry.has_key?('points')
-      #   castedPoints = Array(points)
-
-      #   castedPoints.forEach((point) => {
-      #     { latitude, longitude } = point
-
-      #     spatial_list.push(`Point: (${latitude}, ${longitude})`)
-      #   })
-      # end
-
       if geometry.key?('boundingRectangles')
         boxes = Array(geometry.fetch('boundingRectangles', []))
 
@@ -139,6 +131,10 @@ module GranulesHelper
           spatial_list.push("#{west},#{south},#{east},#{north}")
         end
       end
+
+      # TODO: Ideally we can support a minimum bounding rectangle for polygons and lines in the future but
+      # at the moment. When we can determine how to set min/max values for spatial we should add support
+      # for these types as well
 
       # if geometry.has_key?('gPolygons')
       #   polygons = Array(gPolygons)
@@ -172,18 +168,6 @@ module GranulesHelper
       #     spatial_list.push(`Line: ((${latitude1}, ${longitude1}), (${latitude2}, ${longitude2}))`)
       #   })
       # end
-
-      # if (orbit) {
-      #   {
-      #     ascendingCrossing,
-      #     endDirection,
-      #     endLatitude,
-      #     startDirection,
-      #     startLatitude
-      #   } = orbit
-
-      #   spatial_list.push(`Orbit: Ascending Crossing: ${ascendingCrossing}, Start Latitude: ${startLatitude}, Start Direction: ${startDirection}, End Latitude: ${endLatitude}, End Direction: ${endDirection}`)
-      # }
     end
 
     spatial_list
@@ -243,8 +227,11 @@ module GranulesHelper
   #
   # @return [Hash] Mapping of data required to generate a descriptor document
   def fetch_opensearch_data(concept_id)
+    # Create a GUID that we include in each of our logs and send to GraphQL to better match requests
+    logging_request_id = SecureRandom.uuid
+
     # Query GraphQL
-    graphql_response = query_graphql({ conceptId: concept_id })
+    graphql_response = query_graphql({ conceptId: concept_id }, logging_request_id)
 
     parsed_response = JSON.parse(graphql_response)
 
@@ -273,7 +260,7 @@ module GranulesHelper
 
     unless provider.present?
       return {
-        'error' => "No provider present within the `org.ceos.wgiss.cwic.granules.provider` tag.",
+        'error' => 'No provider present within the `org.ceos.wgiss.cwic.granules.provider` tag.',
         'erb_file' => 'error.xml.erb'
       }
     end

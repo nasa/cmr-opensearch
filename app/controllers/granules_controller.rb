@@ -58,7 +58,7 @@ class GranulesController < ApplicationController
   # on a form submission we do not allow searches without the collection shortname or conceptid
   def index
     @time = Benchmark.realtime do
-      # do not allow the unrestricted granule seach if via the granule search form unless accessed as step 2 of a 2 step
+      # do not allow the unrestricted granule search if via the granule search form unless accessed as step 2 of a 2 step
       # search, where step 1 narrows down the search to a collection
       # Unrestricted granule searches are allowed via the API
       is_two_step_search = two_step_search

@@ -26,9 +26,6 @@ QUERY = <<~GRAPH_QUERY.freeze
         conceptId
         tags
         relatedUrls
-        granules {
-          count
-        }
       }
     }
   }
@@ -103,19 +100,9 @@ unless scheduler.down?
 
             concept_id = collection['conceptId']
 
-            granule_count = collection.fetch('granules', {}).fetch('count', 0)
-
             item_to_cache = cwic_providers_cache['items'].fetch(concept_id, {})
 
             error_message = nil
-
-            # If there are granules in CMR this collection shouldn't be considered an OpenSearch collection
-            if granule_count.to_i.positive?
-              # Ensure to decrement the collection count so that the holdings are accurate
-              collection_count -= 1
-
-              next
-            end
 
             begin
               granule_url = determine_granule_url(collection)

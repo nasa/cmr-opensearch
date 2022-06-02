@@ -67,13 +67,13 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
-  # config.active_support.deprecation = :notify
+  config.active_support.deprecation = :notify
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-  # config.active_record.dump_schema_after_migration = false
+  config.active_record.dump_schema_after_migration = false
 
   config.relative_url_root = '/opensearch'
   config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']

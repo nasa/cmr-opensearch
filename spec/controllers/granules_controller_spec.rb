@@ -48,6 +48,10 @@ describe GranulesController do
     end
   end
   context "with a blank clientId" do
+    # These test need to have GraphQL recordings but these providers do not have updated metdata
+    # that would allow the tests to pass. If/when these providers decide to update their metadata
+    # uncomment these tests, but its not really necessary because the clientId functionality isnt
+    # unique to any provider
     # it "renders a ccmeo OSDD" do
     #   get :descriptor_document, :format => :xml, :params => { :clientId => '', :collectionConceptId => 'C1214603059-SCIOPS' }
     #   expect(response.status).to eq(200)
@@ -75,6 +79,10 @@ describe GranulesController do
   end
 
   context "with a whitespace clientId" do
+    # These test need to have GraphQL recordings but these providers do not have updated metdata
+    # that would allow the tests to pass. If/when these providers decide to update their metadata
+    # uncomment these tests, but its not really necessary because the clientId functionality isnt
+    # unique to any provider
     # it "renders a ccmeo OSDD" do
     #   get :descriptor_document, :format => :xml, :params => { :clientId => ' ', :collectionConceptId => 'C1214603059-SCIOPS' }
     #   expect(response.status).to eq(200)
