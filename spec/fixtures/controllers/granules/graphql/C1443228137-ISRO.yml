@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graphql.earthdata.nasa.gov/api
+    body:
+      encoding: UTF-8
+      string: '{"query":"query OpenSearchCollection(\n  $conceptId: String!\n) {\n  collection
+        (params: {\n    conceptId: $conceptId,\n    includeTags: \"opensearch.granule.osdd,
+        org.ceos.wgiss.cwic.granules.provider, org.ceos.wgiss.cwic.granules.native_id\"\n  })
+        {\n    conceptId\n    relatedUrls\n    spatialExtent\n    tags\n    temporalExtents\n    granules
+        {\n      count\n    }\n  }\n}\n","variables":{"conceptId":"C1443228137-ISRO"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin21.3.0 x86_64) ruby/2.6.7p197
+      Content-Type:
+      - application/json
+      Client-Id:
+      - opensearch-test-client
+      Content-Length:
+      - '426'
+      Host:
+      - graphql.earthdata.nasa.gov
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '940'
+      Connection:
+      - keep-alive
+      Server:
+      - CloudFront
+      Date:
+      - Wed, 25 May 2022 03:18:59 GMT
+      X-Amzn-Remapped-X-Amzn-Requestid:
+      - 14705001-b8b4-47ad-941f-189849a908b2
+      X-Amzn-Remapped-Content-Length:
+      - '940'
+      X-Amzn-Remapped-Connection:
+      - keep-alive
+      X-Amz-Apigw-Id:
+      - SqX1hF96IAMF7QQ=
+      Vary:
+      - Origin
+      X-Amzn-Remapped-Server:
+      - Server
+      Etag:
+      - W/"3ac-4YtbepMEyAEI+PJNwCejOiFPW18"
+      X-Powered-By:
+      - Express
+      X-Amzn-Remapped-X-Amzn-Remapped-Content-Length:
+      - '940'
+      X-Amzn-Trace-Id:
+      - Root=1-628da023-2ae35f6c56822e6351518f8d;Sampled=0
+      X-Amzn-Remapped-Date:
+      - Wed, 25 May 2022 03:18:59 GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - KVVlYUxKVt38DDKg8dPL9HN8A7NHwWRQaAMYqKJpWffE3YQrpmE5hQ==
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Amzn-Requestid:
+      - db4fa265-bc82-4014-9ffa-24c99a896d8b
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 2e562a075bb04f6a4549186f5766f046.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD53-C3
+      X-Amz-Cf-Id:
+      - KVVlYUxKVt38DDKg8dPL9HN8A7NHwWRQaAMYqKJpWffE3YQrpmE5hQ==
+    body:
+      encoding: UTF-8
+      string: '{"data":{"collection":{"conceptId":"C1443228137-ISRO","relatedUrls":[{"urlContentType":"DistributionURL","type":"GET
+        DATA","url":"https://uops.nrsc.gov.in"}],"spatialExtent":{"spatialCoverageType":"HORIZONTAL","horizontalSpatialDomain":{"geometry":{"coordinateSystem":"CARTESIAN","boundingRectangles":[{"westBoundingCoordinate":-180,"northBoundingCoordinate":90,"eastBoundingCoordinate":180,"southBoundingCoordinate":-90}]}},"granuleSpatialRepresentation":"NO_SPATIAL"},"tags":{"org.ceos.wgiss.cwic.granules.native_id":{"data":"1C_LIS3_STUC00GTD"},"org.ceos.wgiss.cwic.granules.provider":{"data":"NRSC"},"opensearch.granule.osdd":{"data":"https://cmr.earthdata.nasa.gov/opensearch/granules/descriptor_document.xml?collectionConceptId=C1443228137-ISRO"}},"temporalExtents":[{"endsAtPresentFlag":false,"rangeDateTimes":[{"beginningDateTime":"1996-11-14T00:00:00.000Z","endingDateTime":"2007-09-20T23:59:59.999Z"}]}],"granules":{"count":0}}}}
+
+        '
+  recorded_at: Wed, 25 May 2022 03:18:58 GMT
+recorded_with: VCR 6.0.0

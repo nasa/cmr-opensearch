@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graphql.earthdata.nasa.gov/api
+    body:
+      encoding: UTF-8
+      string: '{"query":"query OpenSearchCollection(\n  $conceptId: String!\n) {\n  collection
+        (params: {\n    conceptId: $conceptId,\n    includeTags: \"opensearch.granule.osdd,
+        org.ceos.wgiss.cwic.granules.provider, org.ceos.wgiss.cwic.granules.native_id\"\n  })
+        {\n    conceptId\n    relatedUrls\n    spatialExtent\n    tags\n    temporalExtents\n    granules
+        {\n      count\n    }\n  }\n}\n","variables":{"conceptId":"C1231649308-ISRO"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin21.3.0 x86_64) ruby/2.6.7p197
+      Content-Type:
+      - application/json
+      Client-Id:
+      - opensearch-test-client
+      Content-Length:
+      - '426'
+      Host:
+      - graphql.earthdata.nasa.gov
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - CloudFront
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Date:
+      - Wed, 25 May 2022 03:22:29 GMT
+      X-Amzn-Remapped-X-Amzn-Requestid:
+      - be945a91-b5dd-4209-ae5f-5dd4c7aaf119
+      X-Amzn-Remapped-Content-Length:
+      - '1142'
+      X-Amzn-Remapped-Connection:
+      - keep-alive
+      X-Amz-Apigw-Id:
+      - SqYWWHfdoAMFhxQ=
+      X-Amzn-Remapped-Server:
+      - Server
+      Etag:
+      - W/"476-mVCAxwiNcSKKd317phs5ubEZJc4"
+      X-Powered-By:
+      - Express
+      X-Amzn-Remapped-X-Amzn-Remapped-Content-Length:
+      - '1142'
+      X-Amzn-Trace-Id:
+      - Root=1-628da0f5-61e2c5493a06ff277b000702;Sampled=0
+      X-Amzn-Remapped-Date:
+      - Wed, 25 May 2022 03:22:29 GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - bAGvWJgPQFKU2XInSNYVo5ItUDhXnsyDJpDOnhlFooYYI0ioRkLOIg==
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Amzn-Requestid:
+      - c6c3f6fb-8990-4485-ac68-e18614d39270
+      Content-Encoding:
+      - gzip
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 92d95cda7eaeed8a1f0f8b1603cfc362.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD53-C3
+      X-Amz-Cf-Id:
+      - bAGvWJgPQFKU2XInSNYVo5ItUDhXnsyDJpDOnhlFooYYI0ioRkLOIg==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA3xT70/bMBD9vr+i8te1TkKhg0gIpWnHogFFTZAmJlS5yZFaSuzIdlp+qP/7zjiBTkOL8sW+u3d37z2/koIZRsJXksuqgtxwKdxJ5NCYpCAhiYOjcTA5Phv7p6MkXS7IkCiomIHiTlWahL9fSQE6V7xx1eRSMdFWMEiBqXwzuFteDR6lGpgNDOKPLkPSqiqWwoAw2XMDWDjj2ii+bm0cqzDFuMDlPBvE0W00Ta6SLJmnGNHtugsuGhCulcPEq40xjQ49r5a6YDkt5ZZy4bGGS+3ZhTUYTZmR9UV3Sorz8Sy5vlxdBdNVms0QqQQz67jB6WtmEPfXtR2q5jV0E7OmqXjO7MCexDn02xwHdHx9qis7LX/B9OAEBxTcIv2ckv3+AQMNFrNq/mRpsL26i1huQbGy7/NjsUzuFzdZZPtvpOIvSByrUpc8kzXjb7qVIGsw6tlpKFXBBQqVPmsDtZUyWmbzNIluEGUtW4Hhcol6MFFW4KTcgTbTLhS/I5DQp6fH46OzyZAIqczms5TTgPrHwcl4SIB9DhJMxjQ4mXwLcHHZfo4y6mH2D/s9yuDM1G26hEaBRqpY57WbxSq9jbIEicFkw0ptV5eqpDlITXcl15rmO44mcECaNkpueQHKJjr3k+tFOotii/DfShyQb2HFi4PSv21jEd5t0BdSdOFhSe/OvFYUE83G3iO4ZtapBz7y+s5e7yipVoXM2xoZoOisi49XG/cv9vyf92ppRP0bqXqjOalBFDoyt47Q7xUrSfjIKg34vtEQgO6HDK3uktdQciFQq/4aFznyg/Eo8Ed+kPl++PZT3/fvCUr38C6ddmZsrb/9PX5f/gAAAP//AwCnG20udgQAAA==
+  recorded_at: Wed, 25 May 2022 03:22:29 GMT
+recorded_with: VCR 6.0.0
