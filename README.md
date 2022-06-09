@@ -32,7 +32,7 @@ See public/licenses.txt
 
 ## Installation
 
-* Ruby 2.5.3
+* Ruby 2.7.4
 * A Ruby version manager such as [RVM](http://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv) is strongly recommended.
 
 ### Initial setup

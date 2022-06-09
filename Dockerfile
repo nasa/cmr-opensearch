@@ -1,5 +1,5 @@
 # Ruby image
-FROM ruby:2.5.3
+FROM ruby:2.7.4
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -26,7 +26,6 @@ RUN gem install bundler
 # Finish establishing our Ruby enviornment
 RUN bundle config --global silence_root_warning 1
 RUN bundle install
-
 
 # Copy the Rails application into place
 COPY . /cmr-opensearch
