@@ -19,7 +19,7 @@ QUERY = <<~GRAPH_QUERY.freeze
       dataCenter: $dataCenter,
       dataCenters: $dataCenters,
       includeTags: "opensearch.granule.osdd, org.ceos.wgiss.cwic.granules.provider, org.ceos.wgiss.cwic.granules.native_id",
-      limit: 400
+      limit: 1000
     }){
       count
       items {
@@ -31,6 +31,12 @@ QUERY = <<~GRAPH_QUERY.freeze
   }
 GRAPH_QUERY
 
+# get_collections
+#
+# @param [Hash] params Search parameters
+# @param [String] request_id A GUID to send GraphQL for logging
+#
+# @return [RestClient::Response] Parsed response from GraphQL
 def get_collections(params, request_id)
   graphql_response = RestClient::Request.execute(
     method: :post,
@@ -53,7 +59,7 @@ def get_collections(params, request_id)
   # Return the results defaulting to an empty hash
   results.fetch('data', {}).fetch('collections', {})
 rescue StandardError => e
-  puts "#{request_id} #{e}"
+  puts "#{request_id} - #{e}"
 
   # Return an empty hash on error
   {}
