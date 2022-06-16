@@ -1,10 +1,10 @@
 Given /^I have executed a (collection|granule) search with the following parameters:$/ do |resource, table|
   query_string = ''
   table.hashes.each do |hash|
-    hash.each do |key, value|
-      query_string += "&#{key}=#{URI.escape(value)}"
-    end
+    query_string += URI.encode_www_form(hash) + '&'
   end
+  query_string = query_string.chop
+
   visit("/#{resource}s.atom?#{query_string}")
   @response = page.body
   @response_doc = Nokogiri::XML(@response.to_str)
