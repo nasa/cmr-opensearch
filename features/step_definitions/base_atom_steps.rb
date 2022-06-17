@@ -3,7 +3,7 @@ Given /^I have executed a (collection|granule) search with the following paramet
   table.hashes.each do |hash|
     query_string += URI.encode_www_form(hash) + '&'
   end
-  query_string = query_string.chop
+  query_string = query_string.chop if query_string.end_with? '&'
 
   visit("/#{resource}s.atom?#{query_string}")
   @response = page.body

@@ -34,6 +34,12 @@ Scenario: Generate granule open search descriptor document with client id, short
   And I click on "Generate" within the "granules" form
   Then I should see a granule open search descriptor document for client id "foo" short name "MOD02QKM" version id "5" and data center "LAADS"
 
+Scenario: Generate granule open search descriptor document using an invalid client id
+  Given I am on the open search home page
+  And I fill in the "granules" open search descriptor form with a client id of "foo bar"
+  And I click on "Generate" within the "granules" form
+  Then I should see the error message "Unable to process request : Clientid is invalid, it must be an alpha-numeric string"
+
 Scenario: Generate granule open search descriptor document and see attribution and syndication
   Given I am on the open search home page
   And I fill in the "granules" open search descriptor form with a client id of "foo"
