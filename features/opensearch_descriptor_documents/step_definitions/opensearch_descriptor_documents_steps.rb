@@ -466,3 +466,10 @@ And(/^I should see a syndication right of "(.*?)"$/) do |text|
   expect(syndication_element).not_to be_nil
   expect(text).to eq(syndication_element.content)
 end
+
+Then(/^I should see a granule open search descriptor document with "(\w+)" text "(.*)"$/) do |element, text|
+  document = Nokogiri::XML(page.body)
+  ele = document.root.xpath('//' + element).first
+  expect(ele).not_to be_nil
+  expect(text).to eq(ele.content)
+end
