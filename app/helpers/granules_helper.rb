@@ -64,12 +64,12 @@ module GranulesHelper
   #
   # @return [String] The url found within a correctly utilized related url object
   def determine_granule_url_by_related_url(collection)
-    return if collection.fetch('relatedUrls', []).empty?
+    return if collection.fetch('relatedUrls', []).blank?
 
     related_urls = collection.fetch('relatedUrls', []).select { |url| (url['urlContentType'] && url['urlContentType'] == 'DistributionURL') && (url['subtype'] && url['subtype'] == 'OpenSearch') }
 
     # Return a url if one was found within the related urls
-    return related_urls.first['url'] unless related_urls.empty?
+    return related_urls.first['url'] unless related_urls.blank?
   end
 
   # determine_granule_url_by_tags
@@ -238,7 +238,7 @@ module GranulesHelper
     errors = parsed_response.fetch('errors', [])
 
     # If any errors are returned return the error template
-    unless errors.empty?
+    unless errors.blank?
       return {
         'error' => errors[0].fetch('message'),
         'erb_file' => 'error.xml.erb'
