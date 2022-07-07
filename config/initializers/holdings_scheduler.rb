@@ -72,7 +72,7 @@ unless scheduler.down?
       cwic_providers_cache = {}
 
       [
-        { 'provider' => 'FEDEO',   'params' => { 'providers'   => %w[FEDEO ESA] } },
+        # { 'provider' => 'FEDEO',   'params' => { 'providers'   => %w[FEDEO ESA] } },
         { 'provider' => 'IRSO',    'params' => { 'dataCenters' => %w[IN/ISRO/NRSC-BHUVAN IN/ISRO/NDC IN/ISRO/MOSDAC] } },
         { 'provider' => 'NRSCC',   'params' => { 'provider'    => 'NRSCC' } },
         { 'provider' => 'USGSLSI', 'params' => { 'provider'    => 'USGS_LTA' } }
@@ -87,7 +87,7 @@ unless scheduler.down?
 
           results = get_collections(params, logging_request_id)
 
-          collection_count = results['count']
+          collection_count = results.fetch('count', 0)
 
           puts "#{logging_request_id} - #{provider} - - CMR indicates #{collection_count} collection(s)."
 
@@ -113,28 +113,37 @@ unless scheduler.down?
             begin
               granule_url = determine_granule_url(collection)
 
-              if granule_url.nil?
-                puts "#{logging_request_id} - #{provider} - #{concept_id} - No granule url found in tags or related url metadata."
+              if granule_url.blank?
+                error_message = "No granule url found in tags or related url metadata."
 
-                # Skip execution of any additional code
-                next
+                puts "#{logging_request_id} - #{provider} - #{concept_id} - #{error_message}"
+
+                item_to_cache['last_error'] = error_message
+                item_to_cache['last_requested_at'] = Time.now.utc.iso8601
               end
 
-              descriptor_document = RestClient::Request.execute(method: 'get', url: granule_url, timeout: 30)
-              descriptor_document = Nokogiri::XML.parse(descriptor_document)
-              descriptor_document.remove_namespaces!
+              unless granule_url.blank?
+                descriptor_document = RestClient::Request.execute(method: 'get', url: granule_url, timeout: 30)
+                descriptor_document = Nokogiri::XML.parse(descriptor_document)
+                descriptor_document.remove_namespaces!
 
-              puts "#{logging_request_id} - #{provider} - #{concept_id} - Granule descriptor successful after #{Time.now - granule_descriptor_start} seconds."
+                puts "#{logging_request_id} - #{provider} - #{concept_id} - Granule descriptor successful after #{Time.now - granule_descriptor_start} seconds."
 
-              # Strip all the unset template variables from the string
-              url = descriptor_document.xpath('/OpenSearchDescription/Url[@type="application/atom+xml" and @rel="results"]/@template').text.gsub(
-                /&\w+=\{.*?\}|\w+=\{.*?\}&/, ''
-              )
+                # Strip all the unset template variables from the string
+                url = descriptor_document.xpath('/OpenSearchDescription/Url[@type="application/atom+xml" and @rel="results"]/@template').text.gsub(
+                  /&\w+=\{.*?\}|\w+=\{.*?\}&/, ''
+                )
 
-              if url.nil? || url.empty?
-                puts "#{logging_request_id} - #{provider} - #{concept_id} - No granule search URL found in descriptor\n#{descriptor_document}"
-              else
-                puts "#{logging_request_id} - #{provider} - #{concept_id} - Found granule search URL #{url}"
+                if url.blank?
+                  error_message = "No granule search URL found in the granule descriptor (#{granule_url})."
+
+                  puts "#{logging_request_id} - #{provider} - #{concept_id} - #{error_message}\n#{descriptor_document}"
+
+                  item_to_cache['last_error'] = error_message
+                  item_to_cache['last_requested_at'] = Time.now.utc.iso8601
+                else
+                  puts "#{logging_request_id} - #{provider} - #{concept_id} - Found granule search URL #{url}"
+                end
               end
             rescue StandardError => e
               error_message = "Granule descriptor failed after #{Time.now - granule_descriptor_start} seconds with message \"#{e.message}\" (URL: #{granule_url})."
@@ -146,7 +155,7 @@ unless scheduler.down?
 
             granule_search_start = Time.now
 
-            unless url.nil? || url.empty?
+            unless url.blank?
               begin
                 granule_response = RestClient.get(url)
                 granule_response = Nokogiri::XML.parse(granule_response)
