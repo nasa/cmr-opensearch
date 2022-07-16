@@ -1,4 +1,4 @@
-# [Common Metadata Repository (CMR) OpenSearch](https://cmr.earthdata.nasa.gov/openseaarch)
+# [Common Metadata Repository (CMR) OpenSearch](https://cmr.earthdata.nasa.gov/opensearch)
 
 Visit NASA's EOSDIS CMR OpenSearch at:
 [https://cmr.earthdata.nasa.gov/opensearch](https://cmr.earthdata.nasa.gov/opensearch)
@@ -11,7 +11,7 @@ The CMR OpenSearch documentation page is at:
 ## About
 CMR OpenSearch is a web application developed by [NASA](http://nasa.gov) [EOSDIS](https://earthdata.nasa.gov)
 to enable data discovery, search, and access across Earth Science data holdings by using an open standard.
-It provides an interface compliant with the [OpenSearch 1.1 (Draft 5) specification](http://www.opensearch.org/Home)
+It provides an interface compliant with the [OpenSearch 1.1 (Draft 5) specification](https://www.opensearch.org/Home)
 by taking advantage of NASA's [Common Metadata Repository (CMR)](https://cmr.earthdata.nasa.gov/search/) APIs for data discovery and access.
 
 ## License
@@ -33,11 +33,11 @@ See public/licenses.txt
 ## Installation
 
 * Ruby 2.7.4
-* A Ruby version manager such as [RVM](http://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv) is strongly recommended.
+* A Ruby version manager such as [RVM](https://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv) is strongly recommended.
 
 ### Initial setup
 Once the repository is cloned locally and Ruby 2.5.3 is installed, you must install the dependencies.
-If you don't have the [bundler](http://bundler.io/) gem already installed, execute the command below in the project root directory:
+If you don't have the [bundler](https://bundler.io/) gem already installed, execute the command below in the project root directory:
 
     gem install bundler   
 
@@ -61,13 +61,14 @@ We found the following workarounds to the _**bundle install**_ failures due to l
     $ bundle install
 
 Local problems with mimemagic on MACOSX?
-    brew install shared-mime-info
+
+    $ brew install shared-mime-info
 
 ### Set up the required environment
 The application requires the environment variables below to be set in order to run the web application:  
 
 URL of the internal / back-end CMR API instance endpoint.  In a hosted environment, the application
-takes advantage of the direct access back-end interal URLs for increased performance in comparison to
+takes advantage of the direct access back-end internal URLs for increased performance in comparison to
 the public CMR API instance endpoint. For local installs or installs in non-CMR hosting environments,
 the _catalog_rest_endpoint_ and the _public_catalog_rest_endpoint_ should both point to the public
 CMR search API endpoint.
