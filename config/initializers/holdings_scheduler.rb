@@ -71,12 +71,7 @@ unless scheduler.down?
     if %w[production development].include?(ENV['RAILS_ENV'])
       cwic_providers_cache = {}
 
-      [
-        { 'provider' => 'FEDEO',   'params' => { 'providers'   => %w[FEDEO ESA] } },
-        { 'provider' => 'IRSO',    'params' => { 'dataCenters' => %w[IN/ISRO/NRSC-BHUVAN IN/ISRO/NDC IN/ISRO/MOSDAC] } },
-        { 'provider' => 'NRSCC',   'params' => { 'provider'    => 'NRSCC' } },
-        { 'provider' => 'USGSLSI', 'params' => { 'provider'    => 'USGS_LTA' } }
-      ].each do |query_config|
+      Rails.configuration.holdings_providers.each do |query_config|
         provider = query_config['provider']
 
         begin
@@ -95,11 +90,11 @@ unless scheduler.down?
 
           previous_provider_cache = Rails.cache.read("holdings-#{provider.downcase}") || {}
 
-          cwic_providers_cache = {
+          cwic_providers_cache = (previous_provider_cache).merge({
             'count' => collection_count,
             'last_requested_at' => Time.now.utc.iso8601,
             'items' => {}
-          }.merge(previous_provider_cache)
+          })
 
           results['items'].each do |collection|
             granule_descriptor_start = Time.now
