@@ -7,7 +7,7 @@ describe HoldingsController do
 
   before do
     allow(Rails).to receive(:cache).and_return(memory_store)
-    # Rails.cache.clear
+    Rails.cache.clear
   end
 
   after do
