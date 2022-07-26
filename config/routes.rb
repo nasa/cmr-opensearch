@@ -26,6 +26,8 @@ EchoOpensearch::Application.routes.draw do
 
   resources :collections, :path => 'datasets'
 
+  resources :holdings, only: :index, path: 'api/holdings'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

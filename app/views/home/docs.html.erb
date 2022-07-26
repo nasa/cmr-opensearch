@@ -9,6 +9,7 @@
     <li><a href="#cwic-collections">Searching for CWIC CMR collections using OpenSearch</a></li>
   </ul>
   <li><a href="#granules">Searching for CMR granules using OpenSearch</a></li>
+  <li><a href="#holdings">Retrieving OpenSearch Holdings</a></li>
   <li><a href="#osdd-validation">Validating the standards compliance of the CMR OpenSearch implementation</a></li>
   <li><a href="#schemas">XML and RELAX NG schemas used for validating the CMR OpenSearch Descriptor Document</a></li>
 </ul>
@@ -182,6 +183,29 @@
         /granules.atom?dataCenter=LARC_ASDC&shortName=ARESE_ER2_MAS&versionId=1&startTime=1995-09-06T00:00:00Z&endTime=2016-09-06T00:00:00Z&spatial_type=bbox&boundingBox=-179,-89,179,89&numberOfResults=10&clientId=cswOpenSearchDoc</a>
     </li>
   </ul>
+</section>
+
+<section>
+  <h2><a name="holdings"/>Retrieving OpenSearch Holdings</h2>
+  <p>
+    To retrieve information related to the holdings across supported OpenSearch providers (in JSON format) visit the
+    <a target="_blank" class="ext" href="<%= Rails.configuration.relative_url_root%>/api/holdings.json">holdings endpoint</a>.
+  </p>
+
+  <p>
+    For each provider, the endpoint will provide the number of collections, and the sum of all of their granules. Errors and timestamps are also returned for debugging purposes. An example response is provided below:
+  </p>
+
+  <pre>
+    {
+      "fedeo": {
+        "collections": 263,
+        "granules": 0,
+        "last_error": null,
+        "last_requested_at": "2022-07-22T14:38:02Z",
+        "updated_at": "2022-07-22T14:38:04Z"
+      }
+    }</pre>
 </section>
 
 <section>
