@@ -114,7 +114,7 @@ describe "granules/mosdac" do
     assign(:dataset_id, '3DIMG_L2B_HEM')
 
     render
-    expect(rendered).to include("template=\"https://mosdac.gov.in/apios/osdd.xml?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;gId={gId?}&amp;clientId=foo\">")
+    expect(rendered).to include("template=\"https://mosdac.gov.in/apios/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;gId={gId?}&amp;clientId=foo\">")
     expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;clientId=foo\">")
   end
 
@@ -126,7 +126,7 @@ describe "granules/mosdac" do
     assign(:dataset_id, '3DIMG_L2B_HEM')
 
     render
-    expect(rendered).to include("template=\"https://mosdac.gov.in/apios/osdd.xml?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;gId={gId?}\">")
+    expect(rendered).to include("template=\"https://mosdac.gov.in/apios/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;gId={gId?}\">")
     expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}\">")
   end
 
@@ -138,7 +138,7 @@ describe "granules/mosdac" do
     assign(:dataset_id, '3DIMG_L2B_HEM')
 
     render
-    expect(rendered).to include("template=\"https://mosdac.gov.in/apios/osdd.xml?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;gId={gId?}\">")
+    expect(rendered).to include("template=\"https://mosdac.gov.in/apios/datasets.atom?datasetId=3DIMG_L2B_HEM&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}&amp;gId={gId?}\">")
     expect(rendered).to include("template=\"https://mosdac.gov.in/opensearch/collections.atom?keyword={searchTerms?}&amp;instrument={echo:instrument?}&amp;satellite={eo:platform?}&amp;boundingBox={geo:box?}&amp;lat={geo:lat?}&amp;lon={geo:lon?}&amp;radius={geo:radius?}&amp;startTime={time:start?}&amp;endTime={time:end?}&amp;startIndex={startPage?}&amp;count={count?}\">")
   end
 end
