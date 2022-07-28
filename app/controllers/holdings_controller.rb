@@ -24,4 +24,19 @@ class HoldingsController < ApplicationController
       end
     end
   end
+
+  def show
+    @holdings = Holding.find(params[:id])
+
+
+    respond_to do |format|
+      format.json do
+        if @holdings.blank?
+          render :json => "{\"error\":\"Provider `#{params[:id]}` not found\"}", status: :not_found
+        else
+          render :json => @holdings, :status => :ok
+        end
+      end
+    end
+  end
 end
