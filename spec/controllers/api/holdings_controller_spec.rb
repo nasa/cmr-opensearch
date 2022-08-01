@@ -54,4 +54,44 @@ describe HoldingsController do
       end
     end
   end
+
+  describe "GET 'show'" do
+    describe "When the requested provider doesn't exist in the cache" do
+      it 'when' do
+        get 'show', :params => { id: 'not_found' }, :format => :json
+
+        expect(response.status).to eq(404)
+        expect(response.body).to eq('{"error":"Provider `not_found` not found"}')
+      end
+    end
+
+    describe "When the requested provider does exist in the cache" do
+      it 'returns a concatenated granule count' do
+        # Write a payload to the cache
+        Rails.cache.write('holdings-test', {
+          'count': 3,
+          'last_requested_at': '2022-07-28T17:26:46Z',
+          'items': {
+            'C100000001-CMR': {
+              'last_error': 'No granule url found in tags or related url metadata.',
+              'last_requested_at': '2022-07-28T17:26:46Z'
+            },
+            'C100000002-CMR': {
+              'last_error': 'No granule url found in tags or related url metadata.',
+              'last_requested_at': '2022-07-28T17:26:46Z'
+            },
+            'C100000003-CMR': {
+              'count': 2733598,
+              'updated_at': '2022-07-28T17:26:48Z'
+            }
+          }
+        })
+
+        get 'show', :params => { id: 'test' }, :format => :json
+
+        expect(response.status).to eq(200)
+        expect(response.body).to eq('{"count":3,"last_requested_at":"2022-07-28T17:26:46Z","items":{"C100000001-CMR":{"last_error":"No granule url found in tags or related url metadata.","last_requested_at":"2022-07-28T17:26:46Z"},"C100000002-CMR":{"last_error":"No granule url found in tags or related url metadata.","last_requested_at":"2022-07-28T17:26:46Z"},"C100000003-CMR":{"count":2733598,"updated_at":"2022-07-28T17:26:48Z"}}}')
+      end
+    end
+  end
 end

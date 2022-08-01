@@ -198,7 +198,7 @@
 
   <pre>
     {
-      "fedeo": {
+      "provider_name": {
         "collections": 263,
         "granules": 0,
         "last_error": null,
@@ -206,6 +206,27 @@
         "updated_at": "2022-07-22T14:38:04Z"
       }
     }</pre>
+
+  <p>
+    To retrieve information for a specific provider and their collections (in JSON format) visit the
+    <a target="_blank" class="ext" href="<%= Rails.configuration.relative_url_root%>/api/holdings/provider_name.json">provider holdings endpoint</a>, ensure to change `provider_name` to a supported OpenSearch provider.
+  </p>
+
+  <pre>{
+    "count": 263,
+    "last_requested_at": "2022-07-28T18:24:15Z",
+    "items": {
+      "C1000000001-TEST": {
+        "last_error": "No granule url found in tags or related url metadata.",
+        "last_requested_at": "2022-07-28T18:24:15Z"
+      },
+      "C1000000002-TEST": {
+        "count": 2733598,
+        "updated_at": "2022-07-28T18:24:17Z"
+      }
+      ...
+    }
+  }</pre>
 </section>
 
 <section>
