@@ -28,7 +28,6 @@ class HoldingsController < ApplicationController
   def show
     @holdings = Holding.find(params[:id])
 
-
     respond_to do |format|
       format.json do
         if @holdings.blank?
