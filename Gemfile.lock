@@ -153,7 +153,6 @@ GEM
     json (2.6.2)
     kgio (2.11.4)
     libv8 (3.16.14.19)
-    libv8 (3.16.14.19-x86_64-darwin-18)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -169,11 +168,13 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.2)
     multi_test (0.1.2)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.8-x86_64-darwin)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.0)
@@ -334,8 +335,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  x86_64-darwin-18
-  x86_64-darwin-21
+  ruby
 
 DEPENDENCIES
   activeresource (>= 5.1.1)
@@ -379,4 +379,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.3.8
+   2.1.4
