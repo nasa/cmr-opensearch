@@ -24,6 +24,7 @@ QUERY = <<~GRAPH_QUERY.freeze
       count
       items {
         conceptId
+        title
         tags
         relatedUrls
       }
@@ -100,8 +101,9 @@ unless scheduler.down?
             granule_descriptor_start = Time.now
 
             concept_id = collection['conceptId']
+            title = collection['title']
 
-            item_to_cache = cwic_providers_cache['items'].fetch(concept_id, {})
+            item_to_cache = cwic_providers_cache['items'].fetch(concept_id, {}).merge({ 'entry_title' => title })
 
             error_message = nil
 
