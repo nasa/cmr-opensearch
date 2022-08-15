@@ -81,6 +81,7 @@ describe HoldingsController do
               'last_requested_at': '2022-07-28T17:26:46Z'
             },
             'C100000003-CMR': {
+              'title': 'Maecenas faucibus mollis interdum',
               'count': 2733598,
               'updated_at': '2022-07-28T17:26:48Z'
             }
@@ -90,7 +91,7 @@ describe HoldingsController do
         get 'show', :params => { id: 'test' }, :format => :json
 
         expect(response.status).to eq(200)
-        expect(response.body).to eq('{"count":3,"last_requested_at":"2022-07-28T17:26:46Z","items":{"C100000001-CMR":{"last_error":"No granule url found in tags or related url metadata.","last_requested_at":"2022-07-28T17:26:46Z"},"C100000002-CMR":{"last_error":"No granule url found in tags or related url metadata.","last_requested_at":"2022-07-28T17:26:46Z"},"C100000003-CMR":{"count":2733598,"updated_at":"2022-07-28T17:26:48Z"}}}')
+        expect(response.body).to eq('{"count":3,"last_requested_at":"2022-07-28T17:26:46Z","items":{"C100000001-CMR":{"last_error":"No granule url found in tags or related url metadata.","last_requested_at":"2022-07-28T17:26:46Z"},"C100000002-CMR":{"last_error":"No granule url found in tags or related url metadata.","last_requested_at":"2022-07-28T17:26:46Z"},"C100000003-CMR":{"title":"Maecenas faucibus mollis interdum","count":2733598,"updated_at":"2022-07-28T17:26:48Z"}}}')
       end
     end
   end
