@@ -207,7 +207,7 @@ module EchoOpensearch
 
   config.holdings_providers = [
     { 'provider' => 'FEDEO',   'params' => { 'providers'   => %w[FEDEO ESA] } },
-    { 'provider' => 'IRSO',    'params' => { 'dataCenters' => %w[IN/ISRO/NRSC-BHUVAN IN/ISRO/NDC IN/ISRO/MOSDAC] } },
+    { 'provider' => 'ISRO',    'params' => { 'dataCenters' => %w[IN/ISRO/NRSC-BHUVAN IN/ISRO/NDC IN/ISRO/MOSDAC] } },
     { 'provider' => 'NRSCC',   'params' => { 'provider'    => 'NRSCC' } },
     { 'provider' => 'USGSLSI', 'params' => { 'provider'    => 'USGS_LTA' } }
   ]
