@@ -9,7 +9,7 @@ gem 'georuby', '~> 2.5.2'
 gem 'jquery-rails', '~> 4.4.0'
 gem 'loofah', '>= 2.3.1'
 gem 'mimemagic', '~> 0.3.7'
-gem 'nokogiri', '>= 1.13.9'
+gem 'nokogiri', '>= 1.12.5'
 gem 'rack', '~> 2.0'
 gem 'rails-controller-testing'
 gem 'rails', '5.2.8.1'
@@ -25,7 +25,7 @@ group :assets do
   gem 'execjs', '~> 2.7.0'
   gem 'sass-rails', '~> 5.0.7'
   gem 'sass', '~> 3.5.5'
-  gem 'mini_racer'
+  gem 'therubyracer', '~> 0.12.3'
   gem 'uglifier', '~> 4.1.6'
 end
 
