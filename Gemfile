@@ -9,7 +9,7 @@ gem 'georuby', '~> 2.5.2'
 gem 'jquery-rails', '~> 4.4.0'
 gem 'loofah', '>= 2.3.1'
 gem 'mimemagic', '~> 0.3.7'
-gem 'nokogiri', '>= 1.12.5'
+gem 'nokogiri', '>= 1.13.9'
 gem 'rack', '~> 2.0'
 gem 'rails-controller-testing'
 gem 'rails', '5.2.8.1'
@@ -53,7 +53,6 @@ group :test, :development do
   gem 'rspec-activemodel-mocks', '~> 1.0.3'
   gem 'rspec-rails', '~> 3.7.2'
 end
-
 
 group :test do
   gem 'simplecov', :require => false
