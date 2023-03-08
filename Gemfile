@@ -51,7 +51,7 @@ end
 group :test, :development do
   gem 'rspec_junit_formatter', '~> 0.3.0'
   gem 'rspec-activemodel-mocks', '~> 1.0.3'
-  gem 'rspec-rails', '~> 3.7.2'
+  gem 'rspec-rails'
 end
 
 group :test do
