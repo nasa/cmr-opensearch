@@ -50,14 +50,13 @@ Install all the gem dependencies:
     bundle install    
 
 In some cases, depending on your operating system type and/or version, the above command will fail while trying to install
-the libv8 and therubyracer gems.  While there might be lots of causes for the errors and lots of
+the libv8 gem.  While there might be lots of causes for the errors and lots of
 solutions to fix the errors, we found that on some versions of OS X, you can overcome the problem by trying to use the existing
 operating system version of the libv8 library, rather than trying to build a new one during the normal gem install.
 We found the following workarounds to the _**bundle install**_ failures due to libv8:
 
     $ brew install v8@3.15
     $ bundle config build.libv8 --with-system-v8
-    $ bundle config build.therubyracer --with-v8-dir=$(brew --prefix v8@3.15)
     $ bundle install
 
 Local problems with mimemagic on MACOSX?
