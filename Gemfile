@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 File.read('.ruby-version').chomp.split('-')[1] { |f| "ruby '#{f}'"}
 
 gem 'activeresource', '>= 5.1.1'
-gem 'ffi', '1.9.24'
+gem 'ffi', '1.15.5'
 gem 'flipper'
 gem 'georuby', '~> 2.5.2'
 gem 'jquery-rails', '~> 4.4.0'
@@ -25,7 +25,7 @@ group :assets do
   gem 'execjs', '~> 2.7.0'
   gem 'sass-rails', '~> 5.0.7'
   gem 'sass', '~> 3.5.5'
-  gem 'therubyracer', '~> 0.12.3'
+  gem 'mini_racer'
   gem 'uglifier', '~> 4.1.6'
 end
 

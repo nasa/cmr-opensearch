@@ -148,7 +148,7 @@ GEM
     et-orbi (1.2.7)
       tzinfo
     execjs (2.7.0)
-    ffi (1.9.24)
+    ffi (1.15.5)
     flipper (0.25.0)
     fugit (1.5.3)
       et-orbi (~> 1, >= 1.2.7)
@@ -167,7 +167,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.6.2)
     kgio (2.11.4)
-    libv8 (3.16.14.19)
+    libv8-node (16.10.0.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -187,6 +187,8 @@ GEM
       rake
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
+    mini_racer (0.6.3)
+      libv8-node (~> 16.10.0.0)
     minitest (5.18.0)
     multi_test (0.1.2)
     net-imap (0.3.4)
@@ -259,7 +261,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.7.1)
-    ref (2.0.0)
     regexp_parser (2.5.0)
     responders (3.1.0)
       actionpack (>= 5.2)
@@ -334,9 +335,6 @@ GEM
       sprockets (>= 3.0.0)
     sys-uname (1.2.2)
       ffi (~> 1.1)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (1.2.1)
     tilt (2.0.11)
     timeout (0.3.2)
@@ -376,12 +374,13 @@ DEPENDENCIES
   coffee-rails (~> 4.2.2)
   cucumber-rails
   execjs (~> 2.7.0)
-  ffi (= 1.9.24)
+  ffi (= 1.15.5)
   flipper
   georuby (~> 2.5.2)
   jquery-rails (~> 4.4.0)
   loofah (>= 2.3.1)
   mimemagic (~> 0.3.7)
+  mini_racer
   nokogiri (>= 1.13.9)
   pry-rails
   rack (~> 2.0)
@@ -401,11 +400,10 @@ DEPENDENCIES
   sass (~> 3.5.5)
   sass-rails (~> 5.0.7)
   simplecov
-  therubyracer (~> 0.12.3)
   uglifier (~> 4.1.6)
   unicorn
   vcr
   webmock
 
 BUNDLED WITH
-   2.1.4
+   2.4.10
