@@ -32,11 +32,11 @@ See public/licenses.txt
 
 ## Installation
 
-* Ruby 2.7.4
+* Ruby 3.1.4
 * A Ruby version manager such as [RVM](https://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv) is strongly recommended.
 
 ### Initial setup
-Once the repository is cloned locally and Ruby 2.5.3 is installed, you must install the dependencies.
+Once the repository is cloned locally and Ruby 3.1.4 is installed, you must install the dependencies.
 If you don't have the [bundler](https://bundler.io/) gem already installed, execute the command below in the project root directory:
 
     gem install bundler   
@@ -50,14 +50,13 @@ Install all the gem dependencies:
     bundle install    
 
 In some cases, depending on your operating system type and/or version, the above command will fail while trying to install
-the libv8 and therubyracer gems.  While there might be lots of causes for the errors and lots of
+the libv8 gem.  While there might be lots of causes for the errors and lots of
 solutions to fix the errors, we found that on some versions of OS X, you can overcome the problem by trying to use the existing
 operating system version of the libv8 library, rather than trying to build a new one during the normal gem install.
 We found the following workarounds to the _**bundle install**_ failures due to libv8:
 
     $ brew install v8@3.15
     $ bundle config build.libv8 --with-system-v8
-    $ bundle config build.therubyracer --with-v8-dir=$(brew --prefix v8@3.15)
     $ bundle install
 
 Local problems with mimemagic on MACOSX?
@@ -147,11 +146,9 @@ that the application needs in order to run.  A sample _config/application.yml_ f
 
     development:
         <<: *current
-        CMR_ECHO_SYSTEM_TOKEN: "CMR system token with tagging permissions in the CMR environment that development uses"
 
     production:
         <<: *current
-        CMR_ECHO_SYSTEM_TOKEN: "CMR system token with tagging permissions in the CMR PROD environment"
 
     test: &test
         # test values are already defaulted to enable CI automated Rspec and cucumber tests
