@@ -25,7 +25,6 @@ group :assets do
   gem 'execjs', '~> 2.7.0'
   gem 'sass-rails', '~> 5.0.7'
   gem 'sass', '~> 3.5.5'
-  gem 'mini_racer'
   gem 'uglifier', '~> 4.1.6'
 end
 
