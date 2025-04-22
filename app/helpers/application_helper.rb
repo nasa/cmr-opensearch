@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module ApplicationHelper
   def start_hit (cursor, number_of_results, number_of_hits)
     start_hit = 0

@@ -17,6 +17,7 @@ gem 'responders', '~> 3.0'
 gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
 gem 'unicorn'
+gem 'webrick'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,7 +26,6 @@ group :assets do
   gem 'execjs', '~> 2.7.0'
   gem 'sass-rails', '~> 5.0.7'
   gem 'sass', '~> 3.5.5'
-  gem 'mini_racer'
   gem 'uglifier', '~> 4.1.6'
 end
 

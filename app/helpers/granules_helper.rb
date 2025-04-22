@@ -233,7 +233,7 @@ module GranulesHelper
     # Query GraphQL
     graphql_response = query_graphql({ conceptId: concept_id }, logging_request_id)
 
-    parsed_response = JSON.parse(graphql_response)
+    parsed_response = graphql_response.nil? ? {} : JSON.parse(graphql_response)
 
     errors = parsed_response.fetch('errors', [])
 
