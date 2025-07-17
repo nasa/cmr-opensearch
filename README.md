@@ -11,7 +11,7 @@ The CMR OpenSearch documentation page is at:
 ## About
 CMR OpenSearch is a web application developed by [NASA](http://nasa.gov) [EOSDIS](https://earthdata.nasa.gov)
 to enable data discovery, search, and access across Earth Science data holdings by using an open standard.
-It provides an interface compliant with the [OpenSearch 1.1 (Draft 5) specification](https://www.opensearch.org/Home)
+It provides an interface compliant with the [OpenSearch 1.1 (Draft 5) specification](https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/1.1/Draft%205.wiki)
 by taking advantage of NASA's [Common Metadata Repository (CMR)](https://cmr.earthdata.nasa.gov/search/) APIs for data discovery and access.
 
 ## License

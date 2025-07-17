@@ -12,8 +12,8 @@ current: &current
   documentation_page: https://wiki.earthdata.nasa.gov/display/CMR/Common+Metadata+Repository+Home
   display_banner: '@DISPLAY_BANNER@'
   organization: NASA EOSDIS
-  organization_contact_email: stephen.w.berrick@nasa.gov
-  organization_contact_name: Stephen Berrick
+  organization_contact_email: douglas.j.newman@nasa.gov
+  organization_contact_name: Doug Newman
 
 development:
   <<: *current
