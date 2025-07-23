@@ -241,7 +241,7 @@ module EchoOpensearch
     update_env('public_catalog_rest_endpoint','https://cmr.earthdata.nasa.gov/search/')
     update_env('release_page', 'https://wiki.earthdata.nasa.gov/display/echo/Open+Search+API+release+information')
     update_env('documentation_page','https://wiki.earthdata.nasa.gov/display/CMR/Common+Metadata+Repository+Home')
-    update_env('organization_contact_name','Stephen Berrick')
+    update_env('organization_contact_name','Doug Newman')
 
   end
 end
