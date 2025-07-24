@@ -22,7 +22,7 @@ class GranulesController < ApplicationController
 
       @client_id_model.errors.full_messages.each { |value| @error += value.to_s }.join('\n')
 
-      render 'error.xml.erb', status: :bad_request
+      render 'error', status: :bad_request
     end
 
     if @client_id_model.valid? && @collection_concept_id.present?
@@ -44,7 +44,7 @@ class GranulesController < ApplicationController
       else
         @error = "Provider for collection with concept id #{@collection_concept_id} not found."
 
-        render 'error.xml.erb', status: :bad_request
+        render 'error', status: :bad_request
       end
     end
 
@@ -104,7 +104,7 @@ class GranulesController < ApplicationController
             render :plain => text
           else
             if @granule.errors.count > 0
-              text = @granule.errors.to_xml(:indent => 2)
+              text = "<errors>" + @granule.errors.full_messages.map { |msg| "  <error>#{msg}</error>" }.join("") + "</errors>"
               if (text.include?("is not supported"))
                 render :plain => text, :status => :not_implemented
               else
