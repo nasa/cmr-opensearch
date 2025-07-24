@@ -2,6 +2,7 @@ require 'json'
 require 'rufus-scheduler'
 require 'securerandom'
 
+require Rails.root.join('app', 'helpers', 'granules_helper')
 include GranulesHelper
 
 scheduler = Rufus::Scheduler.singleton

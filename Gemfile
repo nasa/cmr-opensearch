@@ -9,10 +9,10 @@ gem 'georuby', '~> 2.5.2'
 gem 'jquery-rails', '~> 4.4.0'
 gem 'loofah', '>= 2.3.1'
 gem 'mimemagic', '~> 0.3.7'
-gem 'nokogiri', '>= 1.13.9'
-gem 'rack', '~> 2.0'
+gem 'nokogiri', '>= 1.18.9'  
+gem 'rack', '>= 2.2.14' 
 gem 'rails-controller-testing'
-gem 'rails', '~> 6.0'
+gem 'rails', '~> 7.0.8', '>= 7.0.8.7'
 gem 'responders', '~> 3.0'
 gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
@@ -38,13 +38,10 @@ end
 
 group :development do
   gem 'pry-rails'
-
   # better error handling
   gem 'better_errors'
   gem 'binding_of_caller'
-
   gem 'byebug'
-
   gem 'rubocop'
 end
 
