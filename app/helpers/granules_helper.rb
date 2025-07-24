@@ -241,7 +241,7 @@ module GranulesHelper
     unless errors.blank?
       return {
         'error' => errors[0].fetch('message'),
-        'erb_file' => 'error.xml.erb'
+        'erb_file' => 'error'
       }
     end
 
@@ -251,7 +251,7 @@ module GranulesHelper
     if collection_metadata.nil?
       return {
         'error' => "Collection with id #{concept_id} not found.",
-        'erb_file' => 'error.xml.erb'
+        'erb_file' => 'error'
       }
     end
 
@@ -261,7 +261,7 @@ module GranulesHelper
     unless provider.present?
       return {
         'error' => 'No provider present within the `org.ceos.wgiss.cwic.granules.provider` tag.',
-        'erb_file' => 'error.xml.erb'
+        'erb_file' => 'error'
       }
     end
 
@@ -271,7 +271,7 @@ module GranulesHelper
     unless native_id_by_tag.present?
       return {
         'error' => 'No native id present within the `org.ceos.wgiss.cwic.granules.native_id` tag.',
-        'erb_file' => 'error.xml.erb'
+        'erb_file' => 'error'
       }
     end
 
@@ -281,7 +281,7 @@ module GranulesHelper
 
     if provider == 'NASA'
       {
-        'erb_file' => 'descriptor_document.xml.erb'
+        'erb_file' => 'descriptor_document'
       }
     else
       {
@@ -289,7 +289,7 @@ module GranulesHelper
         'dataset_id' => native_id_by_tag,
         'end' => temporal[1],
         'geo_box' => spatial,
-        'erb_file' => "#{provider.downcase}.xml.erb"
+        'erb_file' => "#{provider.downcase}"
       }
     end
   end
