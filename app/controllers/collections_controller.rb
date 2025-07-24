@@ -17,7 +17,7 @@ class CollectionsController < ApplicationController
       error_msg = ''
       @client_id_model.errors.full_messages.each { |value| error_msg += "#{value}\n" }
       flash.now[:error] = error_msg.chop!
-      render 'home/index.html.erb', :status => :bad_request
+      render 'home/index', :status => :bad_request, :formats => [:html]
     end
   end
 
@@ -34,7 +34,7 @@ class CollectionsController < ApplicationController
       error_msg = ''
       @client_id_model.errors.full_messages.each { |value| error_msg += "#{value}\n" }
       flash.now[:error] = error_msg.chop!
-      render 'home/index.html.erb', :status => :bad_request
+      render 'home/index', :status => :bad_request, :formats => [:html]
     end
   end
 
@@ -97,7 +97,7 @@ class CollectionsController < ApplicationController
             render :plain => text
           else
             if @collection.errors.count > 0
-              text = @collection.errors.to_xml(:indent => 2)
+              text = "<errors>" + @collection.errors.full_messages.map { |msg| "  <error>#{msg}</error>" }.join("") + "</errors>"
               render :plain => text, :status => :bad_request and return
             else
               Rails.logger.error "Collection search exception: #{e}"
