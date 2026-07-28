@@ -222,9 +222,13 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.5)
+    nokogiri (1.19.4-aarch64-linux-gnu)
+      racc (~> 1.4)
     nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     parallel (1.27.0)
     parser (3.3.8.0)
@@ -422,8 +426,10 @@ GEM
     zeitwerk (2.8.2)
 
 PLATFORMS
+  aarch64-linux-gnu
   arm64-darwin-24
   x86_64-darwin-23
+  x86_64-linux-gnu
 
 DEPENDENCIES
   activeresource (>= 5.1.1)
