@@ -1,5 +1,5 @@
 # Ruby image
-FROM ruby:3.1.4
+FROM ruby:3.2.7
 
 ENV DEBIAN_FRONTEND noninteractive
 
