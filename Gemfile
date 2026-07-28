@@ -12,7 +12,7 @@ gem 'mimemagic', '~> 0.3.7'
 gem 'nokogiri', '>= 1.18.9'  
 gem 'rack', '>= 2.2.14' 
 gem 'rails-controller-testing'
-gem 'rails', '~> 7.1.5'
+gem 'rails', '~> 7.2.3'
 gem 'responders', '~> 3.0'
 gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
@@ -59,3 +59,4 @@ group :test do
   gem 'capybara'
   gem 'rack-test'
 end
+gem "connection_pool", "~> 2.4"
