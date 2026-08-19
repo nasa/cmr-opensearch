@@ -9,6 +9,7 @@ require "active_support/railtie"
 require "active_support/dependencies"
 require "flipper"
 require 'flipper/adapters/pstore'
+require 'benchmark'
 
 Bundler.require(*Rails.groups)
 

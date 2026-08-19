@@ -13,17 +13,12 @@ WORKDIR /cmr-opensearch
 # Copy ruby version file
 COPY .ruby-version /cmr-opensearch/.ruby-version
 
-# Copy Gemfiles
+# Copy Gemfile
 COPY Gemfile /cmr-opensearch/Gemfile
-COPY Gemfile.lock /cmr-opensearch/Gemfile.lock
-
-#Always bundle before copying app src.
-# Prevent bundler warnings;
-# ensure that the bundler version executed is >= that which created Gemfile.lock
 
 RUN gem install bundler
 
-# Finish establishing our Ruby enviornment
+# Finish establishing our Ruby environment
 RUN bundle config --global silence_root_warning 1
 RUN bundle install
 

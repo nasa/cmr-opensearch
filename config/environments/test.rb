@@ -27,7 +27,7 @@ EchoOpensearch::Application.configure do
 
   config.relative_url_root = ''
 
-  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT']
+  config.graphql_endpoint = ENV['GRAPHQL_ENDPOINT'] || 'https://graphql.earthdata.nasa.gov/api'
   # config.cache_store = :memory_store, { size: 64.megabytes }
   config.cache_store = :null_store
 
