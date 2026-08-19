@@ -16,15 +16,10 @@ gem 'rails', '~> 8.0'
 gem 'responders', '~> 3.0'
 gem 'rest-client', '~> 2.0.2'
 gem 'rgeo', '~> 1.0.0'
+gem 'dartsass-sprockets'
+gem 'terser'
 gem 'unicorn'
 gem 'webrick'
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'dartsass-sprockets'
-  gem 'terser'
-end
 
 group :production, :sit, :uat do
   gem 'redis'
