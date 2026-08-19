@@ -14,7 +14,7 @@ Bundler.require(*Rails.groups)
 
 
 # if there is a yml file locally, load all keyword value pairs in the environment
-ENV.update YAML.load_file('config/application.yml')[Rails.env] rescue {}
+ENV.update YAML.safe_load_file('config/application.yml', permitted_classes: [], aliases: true)[Rails.env] rescue {}
 
 module EchoOpensearch
   class Application < Rails::Application
@@ -46,9 +46,6 @@ module EchoOpensearch
     # A workaround for https://issues.jboss.org/browse/TORQUE-955
     #config.middleware.use(TorqueboxBackslashFixMiddleware)
 
-    # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
-
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     config.autoload_paths += Dir["#{Rails.root}/app/services/**/"]
@@ -61,11 +58,8 @@ module EchoOpensearch
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Compress JavaScripts and CSS
-    config.assets.compress = true
     config.assets.precompile = ['*.js', '*.css', '*.css.erb', '*.png', '*.jpg', '*.jpeg', '*.gif']
     config.assets.prefix = '/assets'
-    config.assets.initialize_on_precompile = false
 
     def self.load_version
       version_file = "#{config.root}/version.txt"
