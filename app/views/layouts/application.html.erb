@@ -9,12 +9,21 @@
   <link href="https://cdn.earthdata.nasa.gov/eui/0.3.6/stylesheets/application.css" rel="stylesheet"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.earthdata.nasa.gov/eui/0.3.6/js/eui.js"></script>
-  <script type="text/javascript" src="https://cdn.earthdata.nasa.gov/tophat/tophat.js"></script>
+  <script
+    id="earthdata-tophat-script"
+    src="https://cdn.earthdata.nasa.gov/tophat2/tophat2.js"
+    async="async"
+    defer="defer"
+    data-app-title="CMR OpenSearch"
+    data-show-status="true"
+    data-status-api-url="https://status.earthdata.nasa.gov/api/v1/notifications"
+    data-show-outage-banner="true"></script>
   <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag 'application', :media => 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body class="eui-layout">
+<div id="earthdata-tophat2" class="th-wrapper" style="height: 34px; background: #000;"></div>
 <div class="midnight-blue">
   <div class="masthead-logo">
     <h1><a href="https://earthdata.nasa.gov"></a></h1>
